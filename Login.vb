@@ -3,8 +3,6 @@ Imports System.Data.SQLite
 Imports System.IO
 
 Public Class Login
-    Private dbCommand As String = ""
-
     Private dbName As String = "ESPCS.db"
     Private dbPath As String = Directory.GetCurrentDirectory & "\" & dbName
     'Private dbPath As String = Application.StartupPath & "\" & dbName
