@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class User
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,37 +20,37 @@ Partial Class User
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtMname = New System.Windows.Forms.TextBox()
+        Me.txtFname = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.txtLname = New System.Windows.Forms.TextBox()
+        Me.txtContactNo = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtUname = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbUsertype = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
-        'TextBox3
+        'txtMname
         '
-        Me.TextBox3.Location = New System.Drawing.Point(330, 25)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(153, 23)
-        Me.TextBox3.TabIndex = 7
+        Me.txtMname.Location = New System.Drawing.Point(330, 25)
+        Me.txtMname.Name = "txtMname"
+        Me.txtMname.Size = New System.Drawing.Size(153, 23)
+        Me.txtMname.TabIndex = 7
         '
-        'TextBox2
+        'txtFname
         '
-        Me.TextBox2.Location = New System.Drawing.Point(171, 25)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(153, 23)
-        Me.TextBox2.TabIndex = 6
+        Me.txtFname.Location = New System.Drawing.Point(171, 25)
+        Me.txtFname.Name = "txtFname"
+        Me.txtFname.Size = New System.Drawing.Size(153, 23)
+        Me.txtFname.TabIndex = 6
         '
         'Label1
         '
@@ -61,19 +61,19 @@ Partial Class User
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Full Name(Last name, First name, Middle Name)"
         '
-        'TextBox1
+        'txtLname
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 25)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(153, 23)
-        Me.TextBox1.TabIndex = 4
+        Me.txtLname.Location = New System.Drawing.Point(12, 25)
+        Me.txtLname.Name = "txtLname"
+        Me.txtLname.Size = New System.Drawing.Size(153, 23)
+        Me.txtLname.TabIndex = 4
         '
-        'TextBox9
+        'txtContactNo
         '
-        Me.TextBox9.Location = New System.Drawing.Point(12, 75)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(153, 23)
-        Me.TextBox9.TabIndex = 32
+        Me.txtContactNo.Location = New System.Drawing.Point(12, 75)
+        Me.txtContactNo.Name = "txtContactNo"
+        Me.txtContactNo.Size = New System.Drawing.Size(153, 23)
+        Me.txtContactNo.TabIndex = 32
         '
         'Label13
         '
@@ -84,12 +84,12 @@ Partial Class User
         Me.Label13.TabIndex = 31
         Me.Label13.Text = "Contact Number"
         '
-        'TextBox4
+        'txtUname
         '
-        Me.TextBox4.Location = New System.Drawing.Point(12, 124)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(153, 23)
-        Me.TextBox4.TabIndex = 34
+        Me.txtUname.Location = New System.Drawing.Point(12, 124)
+        Me.txtUname.Name = "txtUname"
+        Me.txtUname.Size = New System.Drawing.Size(153, 23)
+        Me.txtUname.TabIndex = 34
         '
         'Label2
         '
@@ -100,12 +100,12 @@ Partial Class User
         Me.Label2.TabIndex = 33
         Me.Label2.Text = "Username"
         '
-        'TextBox5
+        'txtPassword
         '
-        Me.TextBox5.Location = New System.Drawing.Point(171, 124)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(153, 23)
-        Me.TextBox5.TabIndex = 36
+        Me.txtPassword.Location = New System.Drawing.Point(171, 124)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(153, 23)
+        Me.txtPassword.TabIndex = 36
         '
         'Label3
         '
@@ -143,33 +143,33 @@ Partial Class User
         Me.Label4.TabIndex = 39
         Me.Label4.Text = "User Type"
         '
-        'ComboBox1
+        'cbUsertype
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(171, 75)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(153, 23)
-        Me.ComboBox1.TabIndex = 40
+        Me.cbUsertype.FormattingEnabled = True
+        Me.cbUsertype.Location = New System.Drawing.Point(171, 75)
+        Me.cbUsertype.Name = "cbUsertype"
+        Me.cbUsertype.Size = New System.Drawing.Size(153, 23)
+        Me.cbUsertype.TabIndex = 40
         '
         'User
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(494, 199)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbUsertype)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.txtUname)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox9)
+        Me.Controls.Add(Me.txtContactNo)
         Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtMname)
+        Me.Controls.Add(Me.txtFname)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtLname)
         Me.Name = "User"
         Me.Text = "User"
         Me.ResumeLayout(False)
@@ -177,18 +177,18 @@ Partial Class User
 
     End Sub
 
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtMname As TextBox
+    Friend WithEvents txtFname As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents txtLname As TextBox
+    Friend WithEvents txtContactNo As TextBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtUname As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtPassword As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Label4 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbUsertype As ComboBox
 End Class

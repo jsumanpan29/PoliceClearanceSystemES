@@ -53,8 +53,17 @@ Partial Class Admin
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnUserAdd = New System.Windows.Forms.Button()
         Me.dataUser = New System.Windows.Forms.DataGridView()
+        Me.dataUserID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataUserUname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataUserFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataUserMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataUserLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataUserContactNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataUserUtype = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataUserBtnEdit = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.dataUserBtnDelete = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
@@ -63,13 +72,6 @@ Partial Class Admin
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.MenuStrip1.SuspendLayout()
         Me.TabPage7.SuspendLayout()
         CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -348,7 +350,7 @@ Partial Class Admin
         '
         Me.TabPage2.Controls.Add(Me.Button2)
         Me.TabPage2.Controls.Add(Me.TextBox1)
-        Me.TabPage2.Controls.Add(Me.Button1)
+        Me.TabPage2.Controls.Add(Me.btnUserAdd)
         Me.TabPage2.Controls.Add(Me.dataUser)
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
@@ -374,27 +376,89 @@ Partial Class Admin
         Me.TextBox1.Size = New System.Drawing.Size(226, 23)
         Me.TextBox1.TabIndex = 2
         '
-        'Button1
+        'btnUserAdd
         '
-        Me.Button1.Location = New System.Drawing.Point(957, 430)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Add"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnUserAdd.Location = New System.Drawing.Point(957, 430)
+        Me.btnUserAdd.Name = "btnUserAdd"
+        Me.btnUserAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnUserAdd.TabIndex = 1
+        Me.btnUserAdd.Text = "Add"
+        Me.btnUserAdd.UseVisualStyleBackColor = True
         '
         'dataUser
         '
         Me.dataUser.AllowUserToAddRows = False
         Me.dataUser.AllowUserToDeleteRows = False
         Me.dataUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataUser.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
+        Me.dataUser.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataUserID, Me.dataUserUname, Me.dataUserFname, Me.dataUserMname, Me.dataUserLname, Me.dataUserContactNo, Me.dataUserUtype, Me.dataUserBtnEdit, Me.dataUserBtnDelete})
         Me.dataUser.Location = New System.Drawing.Point(6, 36)
         Me.dataUser.Name = "dataUser"
         Me.dataUser.ReadOnly = True
         Me.dataUser.RowTemplate.Height = 25
         Me.dataUser.Size = New System.Drawing.Size(1026, 388)
         Me.dataUser.TabIndex = 0
+        '
+        'dataUserID
+        '
+        Me.dataUserID.HeaderText = "ID"
+        Me.dataUserID.Name = "dataUserID"
+        Me.dataUserID.ReadOnly = True
+        '
+        'dataUserUname
+        '
+        Me.dataUserUname.HeaderText = "USERNAME"
+        Me.dataUserUname.Name = "dataUserUname"
+        Me.dataUserUname.ReadOnly = True
+        '
+        'dataUserFname
+        '
+        Me.dataUserFname.HeaderText = "FIRST NAME"
+        Me.dataUserFname.Name = "dataUserFname"
+        Me.dataUserFname.ReadOnly = True
+        '
+        'dataUserMname
+        '
+        Me.dataUserMname.HeaderText = "MIDDLE NAME"
+        Me.dataUserMname.Name = "dataUserMname"
+        Me.dataUserMname.ReadOnly = True
+        '
+        'dataUserLname
+        '
+        Me.dataUserLname.HeaderText = "LAST NAME"
+        Me.dataUserLname.Name = "dataUserLname"
+        Me.dataUserLname.ReadOnly = True
+        '
+        'dataUserContactNo
+        '
+        Me.dataUserContactNo.HeaderText = "CONTACT NUMBER"
+        Me.dataUserContactNo.Name = "dataUserContactNo"
+        Me.dataUserContactNo.ReadOnly = True
+        '
+        'dataUserUtype
+        '
+        Me.dataUserUtype.HeaderText = "USER ROLE"
+        Me.dataUserUtype.Name = "dataUserUtype"
+        Me.dataUserUtype.ReadOnly = True
+        '
+        'dataUserBtnEdit
+        '
+        Me.dataUserBtnEdit.HeaderText = ""
+        Me.dataUserBtnEdit.Name = "dataUserBtnEdit"
+        Me.dataUserBtnEdit.ReadOnly = True
+        Me.dataUserBtnEdit.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dataUserBtnEdit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.dataUserBtnEdit.Text = "Edit"
+        Me.dataUserBtnEdit.UseColumnTextForButtonValue = True
+        '
+        'dataUserBtnDelete
+        '
+        Me.dataUserBtnDelete.HeaderText = ""
+        Me.dataUserBtnDelete.Name = "dataUserBtnDelete"
+        Me.dataUserBtnDelete.ReadOnly = True
+        Me.dataUserBtnDelete.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dataUserBtnDelete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
+        Me.dataUserBtnDelete.Text = "Delete"
+        Me.dataUserBtnDelete.UseColumnTextForButtonValue = True
         '
         'TabPage1
         '
@@ -469,48 +533,6 @@ Partial Class Admin
         Me.TabControl1.Size = New System.Drawing.Size(1046, 621)
         Me.TabControl1.TabIndex = 0
         '
-        'Column1
-        '
-        Me.Column1.HeaderText = "ID"
-        Me.Column1.Name = "Column1"
-        Me.Column1.ReadOnly = True
-        '
-        'Column2
-        '
-        Me.Column2.HeaderText = "USERNAME"
-        Me.Column2.Name = "Column2"
-        Me.Column2.ReadOnly = True
-        '
-        'Column3
-        '
-        Me.Column3.HeaderText = "FIRST NAME"
-        Me.Column3.Name = "Column3"
-        Me.Column3.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.HeaderText = "MIDDLE NAME"
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "LAST NAME"
-        Me.Column5.Name = "Column5"
-        Me.Column5.ReadOnly = True
-        '
-        'Column6
-        '
-        Me.Column6.HeaderText = "CONTACT NUMBER"
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        '
-        'Column7
-        '
-        Me.Column7.HeaderText = "USER ROLE"
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        '
         'Admin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -578,7 +600,7 @@ Partial Class Admin
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents Button2 As Button
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnUserAdd As Button
     Friend WithEvents dataUser As DataGridView
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents Panel4 As Panel
@@ -588,11 +610,13 @@ Partial Class Admin
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel1 As Panel
     Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
-    Friend WithEvents Column2 As DataGridViewTextBoxColumn
-    Friend WithEvents Column3 As DataGridViewTextBoxColumn
-    Friend WithEvents Column4 As DataGridViewTextBoxColumn
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
-    Friend WithEvents Column6 As DataGridViewTextBoxColumn
-    Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents dataUserID As DataGridViewTextBoxColumn
+    Friend WithEvents dataUserUname As DataGridViewTextBoxColumn
+    Friend WithEvents dataUserFname As DataGridViewTextBoxColumn
+    Friend WithEvents dataUserMname As DataGridViewTextBoxColumn
+    Friend WithEvents dataUserLname As DataGridViewTextBoxColumn
+    Friend WithEvents dataUserContactNo As DataGridViewTextBoxColumn
+    Friend WithEvents dataUserUtype As DataGridViewTextBoxColumn
+    Friend WithEvents dataUserBtnEdit As DataGridViewButtonColumn
+    Friend WithEvents dataUserBtnDelete As DataGridViewButtonColumn
 End Class
