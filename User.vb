@@ -4,7 +4,7 @@ Imports System.IO
 Public Class User
     Friend user_id As Integer
     Private dbName As String = "ESPCS.db"
-    Private dbPath As String = Directory.GetCurrentDirectory & "\" & dbName
+    Private dbPath As String = Directory.GetCurrentDirectory & "\bin\Debug\db\" & dbName
     Private connString As String = "Data Source=" & dbPath & ";Version=3"
 
     Private connection As New SQLiteConnection(connString)
