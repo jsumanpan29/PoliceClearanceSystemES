@@ -31,9 +31,8 @@ Public Class Login
                 connection.Open()
                 If connection.State = ConnectionState.Open Then
                     MsgBox("Logging In")
-                    'command.Connection = connection
                     'command.CommandText = "SELECT * FROM user WHERE username = @user AND password= @pass"
-                    command.CommandText = "SELECT * FROM user WHERE username = @user AND password= @pass"
+                    command.CommandText = "SELECT * FROM user WHERE username = @user AND password= @pass AND deleted=0"
                     command.Parameters.AddWithValue("@user", txtUser.Text.Trim)
                     command.Parameters.AddWithValue("@pass", txtPassword.Text.Trim)
                     Dim da As New SQLiteDataAdapter(command)

@@ -1,4 +1,5 @@
-﻿Imports System.Data.SQLite
+﻿Imports System.Data.SqlClient
+Imports System.Data.SQLite
 Imports System.IO
 
 Public Class User
@@ -9,29 +10,70 @@ Public Class User
 
     Private connection As New SQLiteConnection(connString)
     Private command As New SQLiteCommand("", connection)
+    Private user_exists As Integer
+
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'If value of user_id is passed here, execute update data then
+
+
         If user_id Then
-            'MsgBox(Me.Name & " UserID:" & user_id)
             Try
-                SqlData("UPDATE user SET username = @uname, password = @pword, fname = @fname, mname = @mname, lname = @lname, contact_no = @contactno, usertype_id = @utype_id WHERE user_id =" & user_id)
-                Me.Dispose()
+                connection.Open()
+                command.CommandText = "SELECT COUNT(*) FROM user WHERE username =@uname AND deleted = 0"
+                command.Parameters.AddWithValue("@uname", txtUname.Text.Trim)
+                Dim da As New SQLiteDataAdapter(command)
+                Dim dt As New DataTable()
+                da.Fill(dt)
+                user_exists = dt.Rows(0)(0)
+                'closing connection early, if 2 connections are opened at the same time or nested connections it will prompt SQLiteDB lock!
+                connection.Close()
+                If (user_exists) Then
+                    MessageBox.Show("Username Taken", "Update Error", MessageBoxButtons.OK)
+                Else
+                    Try
+                        SqlData("UPDATE user SET username = @uname, password = @pword, fname = @fname, mname = @mname, lname = @lname, contact_no = @contactno, usertype_id = @utype_id WHERE user_id =" & user_id)
+                        Me.Dispose()
+                    Catch ex As Exception
+                        connection.Close()
+                        MsgBox("Update User error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+                    End Try
+                End If
+                connection.Close()
             Catch ex As Exception
                 connection.Close()
-                MsgBox("Update User error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+                MsgBox("Username count1 error" & vbCrLf & String.Format("Error: {0}", ex.Message))
             End Try
+            'MsgBox(Me.Name & " UserID:" & user_id)
         Else
             'If no user_id value then add new User to data table
             Try
-                SqlData("INSERT INTO user(username,password,fname,mname,lname,contact_no,usertype_id) VALUES(@uname,@pword,@fname,@mname,@lname,@contactno,@utype_id)")
-                Me.Dispose()
+                connection.Open()
+                command.CommandText = "SELECT COUNT(*) FROM user WHERE username =@uname AND deleted = 0"
+                command.Parameters.AddWithValue("@uname", txtUname.Text.Trim)
+                Dim da As New SQLiteDataAdapter(command)
+                Dim dt As New DataTable()
+                da.Fill(dt)
+                user_exists = dt.Rows(0)(0)
+                connection.Close()
+                If (user_exists > 0) Then
+                    MessageBox.Show("Username Taken", "Insert Error", MessageBoxButtons.OK)
+                Else
+                    Try
+                        SqlData("INSERT INTO user(username,password,fname,mname,lname,contact_no,usertype_id,deleted) VALUES(@uname,@pword,@fname,@mname,@lname,@contactno,@utype_id,0)")
+                        Me.Dispose()
+                    Catch ex As Exception
+                        connection.Close()
+                        MsgBox("Insert User error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+                    End Try
+                End If
+
             Catch ex As Exception
                 connection.Close()
-                MsgBox("Insert User error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+                MsgBox("Username count2 error" & vbCrLf & String.Format("Error: {0}", ex.Message))
             End Try
         End If
-        connection.Close()
+        If connection.State = ConnectionState.Open Then connection.Close()
     End Sub
     Private Sub SqlData(sqlCommand As String)
         connection.Open()
@@ -54,7 +96,7 @@ Public Class User
         If user_id Then
             'MsgBox(Me.Name & " UserID:" & user_id)
             connection.Open()
-            command.CommandText = "SELECT * FROM user WHERE user_id = " & user_id
+            command.CommandText = "SELECT * FROM user WHERE deleted = 0 AND user_id = " & user_id
             Dim da As New SQLiteDataAdapter(command)
             Dim dt As New DataTable()
             da.Fill(dt)
@@ -73,7 +115,7 @@ Public Class User
         End If
 
 
-        connection.Close()
+        If connection.State = ConnectionState.Open Then connection.Close()
     End Sub
 
     Private Sub PopulateCombobox()
@@ -90,5 +132,11 @@ Public Class User
         Catch ex As Exception
             MsgBox("Loading User error" & vbCrLf & String.Format("Error: {0}", ex.Message))
         End Try
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If connection.State = ConnectionState.Open Then connection.Close()
+        Me.Dispose()
+
     End Sub
 End Class

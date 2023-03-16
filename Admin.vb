@@ -27,7 +27,7 @@ Public Class Admin
     Private Sub LoadUserTable()
         Try
             connection.Open()
-            command.CommandText = "SELECT user.user_id AS 'ID', user.username AS 'USERNAME', user.fname AS 'FIRST NAME', user.mname AS 'MIDDLE NAME', user.lname AS 'LAST NAME', user.contact_no AS 'CONTACT NUMBER', usertype.name AS 'USER ROLE' FROM user INNER JOIN usertype ON user.usertype_id = usertype.usertype_id WHERE user.usertype_id != 1"
+            command.CommandText = "SELECT user.user_id AS 'ID', user.username AS 'USERNAME', user.fname AS 'FIRST NAME', user.mname AS 'MIDDLE NAME', user.lname AS 'LAST NAME', user.contact_no AS 'CONTACT NUMBER', usertype.name AS 'USER ROLE' FROM user INNER JOIN usertype ON user.usertype_id = usertype.usertype_id WHERE user.usertype_id != 1 AND deleted=0"
             Dim da As New SQLiteDataAdapter(command)
             Dim dt As New DataTable()
             da.Fill(dt)
@@ -68,7 +68,7 @@ Public Class Admin
                 Dim row As DataGridViewRow = dataUser.Rows(e.RowIndex)
                 Dim user_id_to_delete As Integer = row.Cells("dataUserID").Value
                 If (MessageBox.Show("Delete", "Are you sure you want to delete the data?", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
-                    deleteUser("DELETE FROM user WHERE user_id =" & user_id_to_delete)
+                    deleteUser("UPDATE user SET deleted = 1 WHERE user_id =" & user_id_to_delete)
                 End If
                 LoadUserTable()
             Catch ex As Exception
