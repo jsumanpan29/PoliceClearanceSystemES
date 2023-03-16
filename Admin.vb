@@ -8,8 +8,6 @@ Public Class Admin
 
     Private dbName As String = "ESPCS.db"
     Private dbPath As String = Directory.GetCurrentDirectory & "\bin\Debug\db\" & dbName
-    'Private dbPath As String = Application.StartupPath & "\" & dbName
-    'Private dbPath As String = "C:\Users\Predator\source\repos\PoliceClearanceSystemES" & "\" & dbName
     Private connString As String = "Data Source=" & dbPath & ";Version=3"
 
     Private connection As New SQLiteConnection(connString)
