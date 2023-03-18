@@ -22,12 +22,17 @@ Public Class Admin
 
     Private Sub LoadAllTable()
         LoadUserTable()
+        LoadPoliceTable()
     End Sub
 
-    Private Sub LoadUserTable()
+    Private Sub LoadUserTable(Optional searchString As String = "")
         Try
             connection.Open()
-            command.CommandText = "SELECT user.user_id AS 'ID', user.username AS 'USERNAME', user.fname AS 'FIRST NAME', user.mname AS 'MIDDLE NAME', user.lname AS 'LAST NAME', user.contact_no AS 'CONTACT NUMBER', usertype.name AS 'USER ROLE' FROM user INNER JOIN usertype ON user.usertype_id = usertype.usertype_id WHERE user.usertype_id != 1 AND deleted=0"
+            If searchString = "" Then
+                command.CommandText = "SELECT user.user_id AS 'ID', user.username AS 'USERNAME', user.fname AS 'FIRST NAME', user.mname AS 'MIDDLE NAME', user.lname AS 'LAST NAME', user.contact_no AS 'CONTACT NUMBER', usertype.name AS 'USER ROLE' FROM user INNER JOIN usertype ON user.usertype_id = usertype.usertype_id WHERE user.usertype_id != 1 AND deleted=0"
+            Else
+                command.CommandText = "SELECT user.user_id AS 'ID', user.username AS 'USERNAME', user.fname AS 'FIRST NAME', user.mname AS 'MIDDLE NAME', user.lname AS 'LAST NAME', user.contact_no AS 'CONTACT NUMBER', usertype.name AS 'USER ROLE' FROM user INNER JOIN usertype ON user.usertype_id = usertype.usertype_id WHERE (user.username LIKE '%" & searchString & "%' OR user.fname LIKE '%" & searchString & "%' OR user.mname LIKE '%" & searchString & "%' OR user.lname LIKE '%" & searchString & "%' OR usertype.name LIKE '%" & searchString & "%') AND user.usertype_id != 1 AND deleted=0"
+            End If
             Dim da As New SQLiteDataAdapter(command)
             Dim dt As New DataTable()
             da.Fill(dt)
@@ -43,6 +48,33 @@ Public Class Admin
             dataUser.Columns("dataUserContactNo").DataPropertyName = "CONTACT NUMBER"
             dataUser.Columns("dataUserUtype").DataPropertyName = "USER ROLE"
             dataUser.DataSource = dt
+            connection.Close()
+        Catch ex As Exception
+            connection.Close()
+            MsgBox("Loading User error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+        End Try
+
+    End Sub
+
+    Private Sub LoadPoliceTable()
+        Try
+            connection.Open()
+            command.CommandText = "SELECT police.police_id AS 'ID', police.fname  AS 'FIRST NAME', police.mname AS 'MIDDLE NAME', police.lname AS 'LAST NAME', police.contact_no  AS 'CONTACT NUMBER', rank.name AS 'RANK', position.name AS 'POSITION' FROM police INNER JOIN rank ON rank.rank_id = police.rank_id INNER JOIN position ON position.position_id = police.position_id WHERE deleted=0"
+            Dim da As New SQLiteDataAdapter(command)
+            Dim dt As New DataTable()
+            da.Fill(dt)
+            'Setting Autogenerating of Columns to False to Utilize Designer made Columns
+            dataPolice.AutoGenerateColumns = False
+            'Set DataPropertyName based on ColumnName from DataTable. ex. user.user_id AS 'ID' set dataUser.Columns(0).DataPropertyName = "ID"
+            'If DataProperty is not set Data Wont display in that specific Column
+            dataPolice.Columns("dataPoliceID").DataPropertyName = "ID"
+            dataPolice.Columns("dataPoliceFname").DataPropertyName = "FIRST NAME"
+            dataPolice.Columns("dataPoliceMname").DataPropertyName = "MIDDLE NAME"
+            dataPolice.Columns("dataPoliceLname").DataPropertyName = "LAST NAME"
+            dataPolice.Columns("dataPoliceContactNo").DataPropertyName = "CONTACT NUMBER"
+            dataPolice.Columns("dataPoliceRank").DataPropertyName = "RANK"
+            dataPolice.Columns("dataPolicePosition").DataPropertyName = "POSITION"
+            dataPolice.DataSource = dt
             connection.Close()
         Catch ex As Exception
             connection.Close()
@@ -91,5 +123,65 @@ Public Class Admin
         Dim userForm As New User
         userForm.ShowDialog()
         LoadUserTable()
+    End Sub
+
+    Private Sub btnPoliceAdd_Click(sender As Object, e As EventArgs) Handles btnPoliceAdd.Click
+        Dim policeForm As New Police
+        policeForm.ShowDialog()
+        LoadPoliceTable()
+    End Sub
+
+    Private Sub txtUserSearch_TextChanged(sender As Object, e As EventArgs) Handles txtUserSearch.TextChanged
+        LoadUserTable(txtUserSearch.Text.Trim)
+    End Sub
+
+    Private Sub dataUser_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles dataUser.CellPainting
+        If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
+            e.Handled = True
+            e.PaintBackground(e.CellBounds, True)
+            Dim sw As String = txtUserSearch.Text.Trim
+
+            If Not String.IsNullOrEmpty(sw) Then
+                Dim val As String = CStr(e.FormattedValue)
+                Dim sindx As Integer = val.ToLower().IndexOf(sw.ToLower())
+                If sindx >= 0 Then
+                    Dim hl_rect As New Rectangle()
+                    hl_rect.Y = e.CellBounds.Y + 2
+                    hl_rect.Height = e.CellBounds.Height - 5
+
+                    Dim sBefore As String = val.Substring(0, sindx)
+                    Dim sWord As String = val.Substring(sindx, sw.Length)
+                    Dim s1 As Size = TextRenderer.MeasureText(e.Graphics, sBefore, e.CellStyle.Font, e.CellBounds.Size)
+                    Dim s2 As Size = TextRenderer.MeasureText(e.Graphics, sWord, e.CellStyle.Font, e.CellBounds.Size)
+
+                    If s1.Width > 5 Then
+                        hl_rect.X = e.CellBounds.X + s1.Width - 5
+                        hl_rect.Width = s2.Width - 6
+                    Else
+                        hl_rect.X = e.CellBounds.X + 2
+                        hl_rect.Width = s2.Width - 6
+                    End If
+
+                    Dim hl_brush As SolidBrush = Nothing
+                    If (e.State And DataGridViewElementStates.Selected) <> DataGridViewElementStates.None Then
+                        hl_brush = New SolidBrush(Color.DarkGoldenrod)
+                    Else
+                        hl_brush = New SolidBrush(Color.Yellow)
+                    End If
+
+                    e.Graphics.FillRectangle(hl_brush, hl_rect)
+
+                    hl_brush.Dispose()
+                End If
+            End If
+
+            e.PaintContent(e.CellBounds)
+        End If
+    End Sub
+
+    Private Sub btnUserSearchRefresh_Click(sender As Object, e As EventArgs) Handles btnUserSearchRefresh.Click
+        LoadUserTable()
+        txtUserSearch.Text = ""
+
     End Sub
 End Class

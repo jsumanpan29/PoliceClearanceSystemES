@@ -33,11 +33,20 @@ Partial Class Admin
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.btnPoliceAdd = New System.Windows.Forms.Button()
+        Me.dataPolice = New System.Windows.Forms.DataGridView()
+        Me.dataPoliceID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPoliceFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPoliceMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPoliceLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPoliceContactNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPoliceRank = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPolicePosition = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPoliceBtnEdit = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.dataPoliceBtnDelete = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnUserSearchRefresh = New System.Windows.Forms.Button()
+        Me.txtUserSearch = New System.Windows.Forms.TextBox()
         Me.btnUserAdd = New System.Windows.Forms.Button()
         Me.dataUser = New System.Windows.Forms.DataGridView()
         Me.dataUserID = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -58,7 +67,7 @@ Partial Class Admin
         Me.TabPage7.SuspendLayout()
         CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dataPolice, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.dataUser, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
@@ -95,7 +104,7 @@ Partial Class Admin
         Me.TabPage7.Controls.Add(Me.DataGridView6)
         Me.TabPage7.Location = New System.Drawing.Point(4, 24)
         Me.TabPage7.Name = "TabPage7"
-        Me.TabPage7.Size = New System.Drawing.Size(1038, 593)
+        Me.TabPage7.Size = New System.Drawing.Size(1038, 459)
         Me.TabPage7.TabIndex = 6
         Me.TabPage7.Text = "Criminal Records"
         Me.TabPage7.UseVisualStyleBackColor = True
@@ -106,7 +115,7 @@ Partial Class Admin
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(75, 23)
         Me.Button11.TabIndex = 7
-        Me.Button11.Text = "Search"
+        Me.Button11.Text = "x"
         Me.Button11.UseVisualStyleBackColor = True
         '
         'TextBox6
@@ -138,11 +147,11 @@ Partial Class Admin
         '
         Me.TabPage3.Controls.Add(Me.Button3)
         Me.TabPage3.Controls.Add(Me.TextBox2)
-        Me.TabPage3.Controls.Add(Me.Button4)
-        Me.TabPage3.Controls.Add(Me.DataGridView2)
+        Me.TabPage3.Controls.Add(Me.btnPoliceAdd)
+        Me.TabPage3.Controls.Add(Me.dataPolice)
         Me.TabPage3.Location = New System.Drawing.Point(4, 24)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(1038, 593)
+        Me.TabPage3.Size = New System.Drawing.Size(1038, 459)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Police"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -153,7 +162,7 @@ Partial Class Admin
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 7
-        Me.Button3.Text = "Search"
+        Me.Button3.Text = "x"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'TextBox2
@@ -163,28 +172,90 @@ Partial Class Admin
         Me.TextBox2.Size = New System.Drawing.Size(226, 23)
         Me.TextBox2.TabIndex = 6
         '
-        'Button4
+        'btnPoliceAdd
         '
-        Me.Button4.Location = New System.Drawing.Point(954, 429)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 5
-        Me.Button4.Text = "Add"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.btnPoliceAdd.Location = New System.Drawing.Point(954, 429)
+        Me.btnPoliceAdd.Name = "btnPoliceAdd"
+        Me.btnPoliceAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnPoliceAdd.TabIndex = 5
+        Me.btnPoliceAdd.Text = "Add"
+        Me.btnPoliceAdd.UseVisualStyleBackColor = True
         '
-        'DataGridView2
+        'dataPolice
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(3, 35)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.RowTemplate.Height = 25
-        Me.DataGridView2.Size = New System.Drawing.Size(1026, 388)
-        Me.DataGridView2.TabIndex = 4
+        Me.dataPolice.AllowUserToAddRows = False
+        Me.dataPolice.AllowUserToDeleteRows = False
+        Me.dataPolice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dataPolice.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataPoliceID, Me.dataPoliceFname, Me.dataPoliceMname, Me.dataPoliceLname, Me.dataPoliceContactNo, Me.dataPoliceRank, Me.dataPolicePosition, Me.dataPoliceBtnEdit, Me.dataPoliceBtnDelete})
+        Me.dataPolice.Location = New System.Drawing.Point(3, 35)
+        Me.dataPolice.Name = "dataPolice"
+        Me.dataPolice.ReadOnly = True
+        Me.dataPolice.RowTemplate.Height = 25
+        Me.dataPolice.Size = New System.Drawing.Size(1026, 388)
+        Me.dataPolice.TabIndex = 4
+        '
+        'dataPoliceID
+        '
+        Me.dataPoliceID.HeaderText = "ID"
+        Me.dataPoliceID.Name = "dataPoliceID"
+        Me.dataPoliceID.ReadOnly = True
+        '
+        'dataPoliceFname
+        '
+        Me.dataPoliceFname.HeaderText = "FIRST NAME"
+        Me.dataPoliceFname.Name = "dataPoliceFname"
+        Me.dataPoliceFname.ReadOnly = True
+        '
+        'dataPoliceMname
+        '
+        Me.dataPoliceMname.HeaderText = "MIDDLE NAME"
+        Me.dataPoliceMname.Name = "dataPoliceMname"
+        Me.dataPoliceMname.ReadOnly = True
+        '
+        'dataPoliceLname
+        '
+        Me.dataPoliceLname.HeaderText = "LAST NAME"
+        Me.dataPoliceLname.Name = "dataPoliceLname"
+        Me.dataPoliceLname.ReadOnly = True
+        '
+        'dataPoliceContactNo
+        '
+        Me.dataPoliceContactNo.HeaderText = "CONTACT NUMBER"
+        Me.dataPoliceContactNo.Name = "dataPoliceContactNo"
+        Me.dataPoliceContactNo.ReadOnly = True
+        '
+        'dataPoliceRank
+        '
+        Me.dataPoliceRank.HeaderText = "RANK"
+        Me.dataPoliceRank.Name = "dataPoliceRank"
+        Me.dataPoliceRank.ReadOnly = True
+        '
+        'dataPolicePosition
+        '
+        Me.dataPolicePosition.HeaderText = "POSITION"
+        Me.dataPolicePosition.Name = "dataPolicePosition"
+        Me.dataPolicePosition.ReadOnly = True
+        '
+        'dataPoliceBtnEdit
+        '
+        Me.dataPoliceBtnEdit.HeaderText = ""
+        Me.dataPoliceBtnEdit.Name = "dataPoliceBtnEdit"
+        Me.dataPoliceBtnEdit.ReadOnly = True
+        Me.dataPoliceBtnEdit.Text = "EDIT"
+        Me.dataPoliceBtnEdit.UseColumnTextForButtonValue = True
+        '
+        'dataPoliceBtnDelete
+        '
+        Me.dataPoliceBtnDelete.HeaderText = ""
+        Me.dataPoliceBtnDelete.Name = "dataPoliceBtnDelete"
+        Me.dataPoliceBtnDelete.ReadOnly = True
+        Me.dataPoliceBtnDelete.Text = "DELETE"
+        Me.dataPoliceBtnDelete.UseColumnTextForButtonValue = True
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.Button2)
-        Me.TabPage2.Controls.Add(Me.TextBox1)
+        Me.TabPage2.Controls.Add(Me.btnUserSearchRefresh)
+        Me.TabPage2.Controls.Add(Me.txtUserSearch)
         Me.TabPage2.Controls.Add(Me.btnUserAdd)
         Me.TabPage2.Controls.Add(Me.dataUser)
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
@@ -195,21 +266,21 @@ Partial Class Admin
         Me.TabPage2.Text = "User"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnUserSearchRefresh
         '
-        Me.Button2.Location = New System.Drawing.Point(957, 7)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Search"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnUserSearchRefresh.Location = New System.Drawing.Point(957, 7)
+        Me.btnUserSearchRefresh.Name = "btnUserSearchRefresh"
+        Me.btnUserSearchRefresh.Size = New System.Drawing.Size(75, 23)
+        Me.btnUserSearchRefresh.TabIndex = 3
+        Me.btnUserSearchRefresh.Text = "x"
+        Me.btnUserSearchRefresh.UseVisualStyleBackColor = True
         '
-        'TextBox1
+        'txtUserSearch
         '
-        Me.TextBox1.Location = New System.Drawing.Point(725, 8)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(226, 23)
-        Me.TextBox1.TabIndex = 2
+        Me.txtUserSearch.Location = New System.Drawing.Point(725, 8)
+        Me.txtUserSearch.Name = "txtUserSearch"
+        Me.txtUserSearch.Size = New System.Drawing.Size(226, 23)
+        Me.txtUserSearch.TabIndex = 2
         '
         'btnUserAdd
         '
@@ -358,7 +429,7 @@ Partial Class Admin
         CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dataPolice, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.dataUser, System.ComponentModel.ISupportInitialize).EndInit()
@@ -379,11 +450,11 @@ Partial Class Admin
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents Button3 As Button
     Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Button4 As Button
-    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents btnPoliceAdd As Button
+    Friend WithEvents dataPolice As DataGridView
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents btnUserSearchRefresh As Button
+    Friend WithEvents txtUserSearch As TextBox
     Friend WithEvents btnUserAdd As Button
     Friend WithEvents dataUser As DataGridView
     Friend WithEvents TabPage1 As TabPage
@@ -400,4 +471,13 @@ Partial Class Admin
     Friend WithEvents dataUserUtype As DataGridViewTextBoxColumn
     Friend WithEvents dataUserBtnEdit As DataGridViewButtonColumn
     Friend WithEvents dataUserBtnDelete As DataGridViewButtonColumn
+    Friend WithEvents dataPoliceID As DataGridViewTextBoxColumn
+    Friend WithEvents dataPoliceFname As DataGridViewTextBoxColumn
+    Friend WithEvents dataPoliceMname As DataGridViewTextBoxColumn
+    Friend WithEvents dataPoliceLname As DataGridViewTextBoxColumn
+    Friend WithEvents dataPoliceContactNo As DataGridViewTextBoxColumn
+    Friend WithEvents dataPolicePosition As DataGridViewTextBoxColumn
+    Friend WithEvents dataPoliceRank As DataGridViewTextBoxColumn
+    Friend WithEvents dataPoliceBtnEdit As DataGridViewButtonColumn
+    Friend WithEvents dataPoliceBtnDelete As DataGridViewButtonColumn
 End Class
