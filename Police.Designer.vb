@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Police
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,38 +20,39 @@ Partial Class Police
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtMname = New System.Windows.Forms.TextBox()
+        Me.txtFname = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.txtLname = New System.Windows.Forms.TextBox()
+        Me.cbRank = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.txtContactNo = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cbPosition = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TextBox3
+        'txtMname
         '
-        Me.TextBox3.Location = New System.Drawing.Point(330, 29)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(153, 23)
-        Me.TextBox3.TabIndex = 11
+        Me.txtMname.Location = New System.Drawing.Point(330, 29)
+        Me.txtMname.Name = "txtMname"
+        Me.txtMname.Size = New System.Drawing.Size(153, 23)
+        Me.txtMname.TabIndex = 11
         '
-        'TextBox2
+        'txtFname
         '
-        Me.TextBox2.Location = New System.Drawing.Point(171, 29)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(153, 23)
-        Me.TextBox2.TabIndex = 10
+        Me.txtFname.Location = New System.Drawing.Point(171, 29)
+        Me.txtFname.Name = "txtFname"
+        Me.txtFname.Size = New System.Drawing.Size(153, 23)
+        Me.txtFname.TabIndex = 10
         '
         'Label1
         '
@@ -62,20 +63,20 @@ Partial Class Police
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Full Name(Last name, First name, Middle Name)"
         '
-        'TextBox1
+        'txtLname
         '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 29)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(153, 23)
-        Me.TextBox1.TabIndex = 8
+        Me.txtLname.Location = New System.Drawing.Point(12, 29)
+        Me.txtLname.Name = "txtLname"
+        Me.txtLname.Size = New System.Drawing.Size(153, 23)
+        Me.txtLname.TabIndex = 8
         '
-        'ComboBox1
+        'cbRank
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(171, 76)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(153, 23)
-        Me.ComboBox1.TabIndex = 44
+        Me.cbRank.FormattingEnabled = True
+        Me.cbRank.Location = New System.Drawing.Point(171, 76)
+        Me.cbRank.Name = "cbRank"
+        Me.cbRank.Size = New System.Drawing.Size(153, 23)
+        Me.cbRank.TabIndex = 44
         '
         'Label4
         '
@@ -86,12 +87,12 @@ Partial Class Police
         Me.Label4.TabIndex = 43
         Me.Label4.Text = "Rank"
         '
-        'TextBox9
+        'txtContactNo
         '
-        Me.TextBox9.Location = New System.Drawing.Point(12, 76)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(153, 23)
-        Me.TextBox9.TabIndex = 42
+        Me.txtContactNo.Location = New System.Drawing.Point(12, 76)
+        Me.txtContactNo.Name = "txtContactNo"
+        Me.txtContactNo.Size = New System.Drawing.Size(153, 23)
+        Me.txtContactNo.TabIndex = 42
         '
         'Label13
         '
@@ -102,13 +103,13 @@ Partial Class Police
         Me.Label13.TabIndex = 41
         Me.Label13.Text = "Contact Number"
         '
-        'ComboBox2
+        'cbPosition
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(330, 76)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(153, 23)
-        Me.ComboBox2.TabIndex = 46
+        Me.cbPosition.FormattingEnabled = True
+        Me.cbPosition.Location = New System.Drawing.Point(330, 76)
+        Me.cbPosition.Name = "cbPosition"
+        Me.cbPosition.Size = New System.Drawing.Size(153, 23)
+        Me.cbPosition.TabIndex = 46
         '
         'Label2
         '
@@ -121,7 +122,7 @@ Partial Class Police
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(407, 208)
+        Me.Button2.Location = New System.Drawing.Point(408, 222)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 48
@@ -130,7 +131,7 @@ Partial Class Police
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(326, 208)
+        Me.Button1.Location = New System.Drawing.Point(327, 222)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 47
@@ -142,6 +143,7 @@ Partial Class Police
         Me.PictureBox1.Location = New System.Drawing.Point(12, 120)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(153, 96)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 49
         Me.PictureBox1.TabStop = False
         '
@@ -154,25 +156,35 @@ Partial Class Police
         Me.Label3.TabIndex = 50
         Me.Label3.Text = "Police Signature"
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(48, 222)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 51
+        Me.Button3.Text = "Upload"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Police
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(489, 238)
+        Me.ClientSize = New System.Drawing.Size(491, 254)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ComboBox2)
+        Me.Controls.Add(Me.cbPosition)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cbRank)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox9)
+        Me.Controls.Add(Me.txtContactNo)
         Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtMname)
+        Me.Controls.Add(Me.txtFname)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtLname)
         Me.Name = "Police"
         Me.Text = "Police"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -181,18 +193,19 @@ Partial Class Police
 
     End Sub
 
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtMname As TextBox
+    Friend WithEvents txtFname As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents txtLname As TextBox
+    Friend WithEvents cbRank As ComboBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents txtContactNo As TextBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents cbPosition As ComboBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label3 As Label
+    Friend WithEvents Button3 As Button
 End Class

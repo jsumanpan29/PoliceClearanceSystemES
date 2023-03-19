@@ -32,18 +32,9 @@ Partial Class Admin
         Me.DataGridView6 = New System.Windows.Forms.DataGridView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtPoliceSearch = New System.Windows.Forms.TextBox()
         Me.btnPoliceAdd = New System.Windows.Forms.Button()
         Me.dataPolice = New System.Windows.Forms.DataGridView()
-        Me.dataPoliceID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPoliceFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPoliceMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPoliceLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPoliceContactNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPoliceRank = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPolicePosition = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPoliceBtnEdit = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.dataPoliceBtnDelete = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.btnUserSearchRefresh = New System.Windows.Forms.Button()
         Me.txtUserSearch = New System.Windows.Forms.TextBox()
@@ -63,6 +54,15 @@ Partial Class Admin
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.dataPoliceID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPoliceFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPoliceMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPoliceLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPoliceContactNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPoliceRank = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPolicePosition = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPoliceBtnEdit = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.dataPoliceBtnDelete = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.MenuStrip1.SuspendLayout()
         Me.TabPage7.SuspendLayout()
         CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -146,7 +146,7 @@ Partial Class Admin
         'TabPage3
         '
         Me.TabPage3.Controls.Add(Me.Button3)
-        Me.TabPage3.Controls.Add(Me.TextBox2)
+        Me.TabPage3.Controls.Add(Me.txtPoliceSearch)
         Me.TabPage3.Controls.Add(Me.btnPoliceAdd)
         Me.TabPage3.Controls.Add(Me.dataPolice)
         Me.TabPage3.Location = New System.Drawing.Point(4, 24)
@@ -165,12 +165,12 @@ Partial Class Admin
         Me.Button3.Text = "x"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txtPoliceSearch
         '
-        Me.TextBox2.Location = New System.Drawing.Point(722, 7)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(226, 23)
-        Me.TextBox2.TabIndex = 6
+        Me.txtPoliceSearch.Location = New System.Drawing.Point(722, 7)
+        Me.txtPoliceSearch.Name = "txtPoliceSearch"
+        Me.txtPoliceSearch.Size = New System.Drawing.Size(226, 23)
+        Me.txtPoliceSearch.TabIndex = 6
         '
         'btnPoliceAdd
         '
@@ -193,64 +193,6 @@ Partial Class Admin
         Me.dataPolice.RowTemplate.Height = 25
         Me.dataPolice.Size = New System.Drawing.Size(1026, 388)
         Me.dataPolice.TabIndex = 4
-        '
-        'dataPoliceID
-        '
-        Me.dataPoliceID.HeaderText = "ID"
-        Me.dataPoliceID.Name = "dataPoliceID"
-        Me.dataPoliceID.ReadOnly = True
-        '
-        'dataPoliceFname
-        '
-        Me.dataPoliceFname.HeaderText = "FIRST NAME"
-        Me.dataPoliceFname.Name = "dataPoliceFname"
-        Me.dataPoliceFname.ReadOnly = True
-        '
-        'dataPoliceMname
-        '
-        Me.dataPoliceMname.HeaderText = "MIDDLE NAME"
-        Me.dataPoliceMname.Name = "dataPoliceMname"
-        Me.dataPoliceMname.ReadOnly = True
-        '
-        'dataPoliceLname
-        '
-        Me.dataPoliceLname.HeaderText = "LAST NAME"
-        Me.dataPoliceLname.Name = "dataPoliceLname"
-        Me.dataPoliceLname.ReadOnly = True
-        '
-        'dataPoliceContactNo
-        '
-        Me.dataPoliceContactNo.HeaderText = "CONTACT NUMBER"
-        Me.dataPoliceContactNo.Name = "dataPoliceContactNo"
-        Me.dataPoliceContactNo.ReadOnly = True
-        '
-        'dataPoliceRank
-        '
-        Me.dataPoliceRank.HeaderText = "RANK"
-        Me.dataPoliceRank.Name = "dataPoliceRank"
-        Me.dataPoliceRank.ReadOnly = True
-        '
-        'dataPolicePosition
-        '
-        Me.dataPolicePosition.HeaderText = "POSITION"
-        Me.dataPolicePosition.Name = "dataPolicePosition"
-        Me.dataPolicePosition.ReadOnly = True
-        '
-        'dataPoliceBtnEdit
-        '
-        Me.dataPoliceBtnEdit.HeaderText = ""
-        Me.dataPoliceBtnEdit.Name = "dataPoliceBtnEdit"
-        Me.dataPoliceBtnEdit.ReadOnly = True
-        Me.dataPoliceBtnEdit.Text = "EDIT"
-        Me.dataPoliceBtnEdit.UseColumnTextForButtonValue = True
-        '
-        'dataPoliceBtnDelete
-        '
-        Me.dataPoliceBtnDelete.HeaderText = ""
-        Me.dataPoliceBtnDelete.Name = "dataPoliceBtnDelete"
-        Me.dataPoliceBtnDelete.ReadOnly = True
-        Me.dataPoliceBtnDelete.Text = "DELETE"
-        Me.dataPoliceBtnDelete.UseColumnTextForButtonValue = True
         '
         'TabPage2
         '
@@ -412,6 +354,64 @@ Partial Class Admin
         Me.TabControl1.Size = New System.Drawing.Size(1046, 487)
         Me.TabControl1.TabIndex = 0
         '
+        'dataPoliceID
+        '
+        Me.dataPoliceID.HeaderText = "ID"
+        Me.dataPoliceID.Name = "dataPoliceID"
+        Me.dataPoliceID.ReadOnly = True
+        '
+        'dataPoliceFname
+        '
+        Me.dataPoliceFname.HeaderText = "FIRST NAME"
+        Me.dataPoliceFname.Name = "dataPoliceFname"
+        Me.dataPoliceFname.ReadOnly = True
+        '
+        'dataPoliceMname
+        '
+        Me.dataPoliceMname.HeaderText = "MIDDLE NAME"
+        Me.dataPoliceMname.Name = "dataPoliceMname"
+        Me.dataPoliceMname.ReadOnly = True
+        '
+        'dataPoliceLname
+        '
+        Me.dataPoliceLname.HeaderText = "LAST NAME"
+        Me.dataPoliceLname.Name = "dataPoliceLname"
+        Me.dataPoliceLname.ReadOnly = True
+        '
+        'dataPoliceContactNo
+        '
+        Me.dataPoliceContactNo.HeaderText = "CONTACT NUMBER"
+        Me.dataPoliceContactNo.Name = "dataPoliceContactNo"
+        Me.dataPoliceContactNo.ReadOnly = True
+        '
+        'dataPoliceRank
+        '
+        Me.dataPoliceRank.HeaderText = "RANK"
+        Me.dataPoliceRank.Name = "dataPoliceRank"
+        Me.dataPoliceRank.ReadOnly = True
+        '
+        'dataPolicePosition
+        '
+        Me.dataPolicePosition.HeaderText = "POSITION"
+        Me.dataPolicePosition.Name = "dataPolicePosition"
+        Me.dataPolicePosition.ReadOnly = True
+        '
+        'dataPoliceBtnEdit
+        '
+        Me.dataPoliceBtnEdit.HeaderText = ""
+        Me.dataPoliceBtnEdit.Name = "dataPoliceBtnEdit"
+        Me.dataPoliceBtnEdit.ReadOnly = True
+        Me.dataPoliceBtnEdit.Text = "Edit"
+        Me.dataPoliceBtnEdit.UseColumnTextForButtonValue = True
+        '
+        'dataPoliceBtnDelete
+        '
+        Me.dataPoliceBtnDelete.HeaderText = ""
+        Me.dataPoliceBtnDelete.Name = "dataPoliceBtnDelete"
+        Me.dataPoliceBtnDelete.ReadOnly = True
+        Me.dataPoliceBtnDelete.Text = "Delete"
+        Me.dataPoliceBtnDelete.UseColumnTextForButtonValue = True
+        '
         'Admin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -449,7 +449,7 @@ Partial Class Admin
     Friend WithEvents DataGridView6 As DataGridView
     Friend WithEvents TabPage3 As TabPage
     Friend WithEvents Button3 As Button
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtPoliceSearch As TextBox
     Friend WithEvents btnPoliceAdd As Button
     Friend WithEvents dataPolice As DataGridView
     Friend WithEvents TabPage2 As TabPage
@@ -476,8 +476,8 @@ Partial Class Admin
     Friend WithEvents dataPoliceMname As DataGridViewTextBoxColumn
     Friend WithEvents dataPoliceLname As DataGridViewTextBoxColumn
     Friend WithEvents dataPoliceContactNo As DataGridViewTextBoxColumn
-    Friend WithEvents dataPolicePosition As DataGridViewTextBoxColumn
     Friend WithEvents dataPoliceRank As DataGridViewTextBoxColumn
+    Friend WithEvents dataPolicePosition As DataGridViewTextBoxColumn
     Friend WithEvents dataPoliceBtnEdit As DataGridViewButtonColumn
     Friend WithEvents dataPoliceBtnDelete As DataGridViewButtonColumn
 End Class

@@ -42,7 +42,7 @@ Public Class User
                 connection.Close()
             Catch ex As Exception
                 connection.Close()
-                MsgBox("Username count1 error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+                MsgBox("Username taken error(Update)" & vbCrLf & String.Format("Error: {0}", ex.Message))
             End Try
             'MsgBox(Me.Name & " UserID:" & user_id)
         Else
@@ -70,7 +70,7 @@ Public Class User
 
             Catch ex As Exception
                 connection.Close()
-                MsgBox("Username count2 error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+                MsgBox("Username taken error(Insert)" & vbCrLf & String.Format("Error: {0}", ex.Message))
             End Try
         End If
         If connection.State = ConnectionState.Open Then connection.Close()

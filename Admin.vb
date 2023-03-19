@@ -78,7 +78,7 @@ Public Class Admin
             connection.Close()
         Catch ex As Exception
             connection.Close()
-            MsgBox("Loading User error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+            MsgBox("Loading Police error" & vbCrLf & String.Format("Error: {0}", ex.Message))
         End Try
 
     End Sub
@@ -183,5 +183,46 @@ Public Class Admin
         LoadUserTable()
         txtUserSearch.Text = ""
 
+    End Sub
+
+    Private Sub txtPoliceSearch_TextChanged(sender As Object, e As EventArgs) Handles txtPoliceSearch.TextChanged
+
+    End Sub
+
+    Private Sub dataPolice_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataPolice.CellContentClick
+        Dim colname As String = dataPolice.Columns(e.ColumnIndex).Name
+        If colname = "dataPoliceBtnEdit" Then
+            Try
+                Dim row As DataGridViewRow = dataPolice.Rows(e.RowIndex)
+                Dim policeForm As New Police
+                policeForm.police_id = row.Cells("dataPoliceID").Value
+                policeForm.ShowDialog()
+                LoadPoliceTable()
+            Catch ex As Exception
+                MsgBox("Police Table error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+            End Try
+        ElseIf colname = "dataPoliceBtnDelete" Then
+            Try
+                Dim row As DataGridViewRow = dataPolice.Rows(e.RowIndex)
+                Dim police_id_to_delete As Integer = row.Cells("dataPoliceID").Value
+                If (MessageBox.Show("Delete", "Are you sure you want to delete the data?", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
+                    deletePolice("UPDATE police SET deleted = 1 WHERE police_id =" & police_id_to_delete)
+                End If
+                LoadPoliceTable()
+            Catch ex As Exception
+                MsgBox("Police Table error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+            End Try
+        Else
+            'MsgBox("Data User: Column name does not exist")
+            'Cellclick prompt
+        End If
+        connection.Close()
+    End Sub
+
+    Private Sub deletePolice(deletePoliceCommand As String)
+        connection.Open()
+        command.CommandText = deletePoliceCommand
+        command.ExecuteNonQuery()
+        connection.Close()
     End Sub
 End Class
