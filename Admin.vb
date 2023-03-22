@@ -23,6 +23,7 @@ Public Class Admin
     Private Sub LoadAllTable()
         LoadUserTable()
         LoadPoliceTable()
+        LoadCRTable()
     End Sub
 
     Private Sub LoadUserTable(Optional searchString As String = "")
@@ -56,17 +57,19 @@ Public Class Admin
 
     End Sub
 
-    Private Sub LoadPoliceTable()
+    Private Sub LoadPoliceTable(Optional searchString As String = "")
         Try
             connection.Open()
-            command.CommandText = "SELECT police.police_id AS 'ID', police.fname  AS 'FIRST NAME', police.mname AS 'MIDDLE NAME', police.lname AS 'LAST NAME', police.contact_no  AS 'CONTACT NUMBER', rank.name AS 'RANK', position.name AS 'POSITION' FROM police INNER JOIN rank ON rank.rank_id = police.rank_id INNER JOIN position ON position.position_id = police.position_id WHERE deleted=0"
+            If searchString = "" Then
+                command.CommandText = "SELECT police.police_id AS 'ID', police.fname  AS 'FIRST NAME', police.mname AS 'MIDDLE NAME', police.lname AS 'LAST NAME', police.contact_no  AS 'CONTACT NUMBER', rank.name AS 'RANK', position.name AS 'POSITION' FROM police INNER JOIN rank ON rank.rank_id = police.rank_id INNER JOIN position ON position.position_id = police.position_id WHERE deleted=0"
+            Else
+                command.CommandText = "SELECT police.police_id AS 'ID', police.fname  AS 'FIRST NAME', police.mname AS 'MIDDLE NAME', police.lname AS 'LAST NAME', police.contact_no  AS 'CONTACT NUMBER', rank.name AS 'RANK', position.name AS 'POSITION' FROM police INNER JOIN rank ON rank.rank_id = police.rank_id INNER JOIN position ON position.position_id = police.position_id WHERE (police.fname LIKE '%" & searchString & "%' OR police.mname LIKE '%" & searchString & "%' OR police.lname LIKE '%" & searchString & "%' OR rank.name LIKE '%" & searchString & "%' OR position.name LIKE '%" & searchString & "%') AND deleted=0"
+
+            End If
             Dim da As New SQLiteDataAdapter(command)
             Dim dt As New DataTable()
             da.Fill(dt)
-            'Setting Autogenerating of Columns to False to Utilize Designer made Columns
             dataPolice.AutoGenerateColumns = False
-            'Set DataPropertyName based on ColumnName from DataTable. ex. user.user_id AS 'ID' set dataUser.Columns(0).DataPropertyName = "ID"
-            'If DataProperty is not set Data Wont display in that specific Column
             dataPolice.Columns("dataPoliceID").DataPropertyName = "ID"
             dataPolice.Columns("dataPoliceFname").DataPropertyName = "FIRST NAME"
             dataPolice.Columns("dataPoliceMname").DataPropertyName = "MIDDLE NAME"
@@ -79,6 +82,34 @@ Public Class Admin
         Catch ex As Exception
             connection.Close()
             MsgBox("Loading Police error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+        End Try
+
+    End Sub
+
+    Private Sub LoadCRTable(Optional searchString As String = "")
+        Try
+            connection.Open()
+            If searchString = "" Then
+                command.CommandText = "SELECT cr_id AS 'ID', name AS 'NAME', crime_offense AS 'CRIME', ccno AS 'CC NO', isno AS 'IS NO', remarks AS 'REMARKS' FROM criminal_records WHERE deleted=0"
+            Else
+                command.CommandText = "SELECT cr_id AS 'ID', name AS 'NAME', crime_offense AS 'CRIME', ccno AS 'CC NO', isno AS 'IS NO', remarks AS 'REMARKS' FROM criminal_records WHERE deleted=0"
+
+            End If
+            Dim da As New SQLiteDataAdapter(command)
+            Dim dt As New DataTable()
+            da.Fill(dt)
+            dataCR.AutoGenerateColumns = False
+            dataCR.Columns("dataCriminalRecordsID").DataPropertyName = "ID"
+            dataCR.Columns("dataCriminalRecordsName").DataPropertyName = "NAME"
+            dataCR.Columns("dataCriminalRecordsOffense").DataPropertyName = "CRIME"
+            dataCR.Columns("dataCriminalRecordsCCNo").DataPropertyName = "CC NO"
+            dataCR.Columns("dataCriminalRecordsISNO").DataPropertyName = "IS NO"
+            dataCR.Columns("dataCriminalRecordsRemarks").DataPropertyName = "REMARKS"
+            dataCR.DataSource = dt
+            connection.Close()
+        Catch ex As Exception
+            connection.Close()
+            MsgBox("Loading Criminal Records error" & vbCrLf & String.Format("Error: {0}", ex.Message))
         End Try
 
     End Sub
@@ -186,7 +217,7 @@ Public Class Admin
     End Sub
 
     Private Sub txtPoliceSearch_TextChanged(sender As Object, e As EventArgs) Handles txtPoliceSearch.TextChanged
-
+        LoadPoliceTable(txtPoliceSearch.Text.Trim)
     End Sub
 
     Private Sub dataPolice_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataPolice.CellContentClick
@@ -223,6 +254,91 @@ Public Class Admin
         connection.Open()
         command.CommandText = deletePoliceCommand
         command.ExecuteNonQuery()
+        connection.Close()
+    End Sub
+
+    Private Sub btnPoliceSearchRefresh_Click(sender As Object, e As EventArgs) Handles btnPoliceSearchRefresh.Click
+        LoadPoliceTable()
+        txtPoliceSearch.Text = ""
+    End Sub
+
+    Private Sub dataPolice_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles dataPolice.CellPainting
+        If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
+            e.Handled = True
+            e.PaintBackground(e.CellBounds, True)
+            Dim sw As String = txtPoliceSearch.Text.Trim
+
+            If Not String.IsNullOrEmpty(sw) Then
+                Dim val As String = CStr(e.FormattedValue)
+                Dim sindx As Integer = val.ToLower().IndexOf(sw.ToLower())
+                If sindx >= 0 Then
+                    Dim hl_rect As New Rectangle()
+                    hl_rect.Y = e.CellBounds.Y + 2
+                    hl_rect.Height = e.CellBounds.Height - 5
+
+                    Dim sBefore As String = val.Substring(0, sindx)
+                    Dim sWord As String = val.Substring(sindx, sw.Length)
+                    Dim s1 As Size = TextRenderer.MeasureText(e.Graphics, sBefore, e.CellStyle.Font, e.CellBounds.Size)
+                    Dim s2 As Size = TextRenderer.MeasureText(e.Graphics, sWord, e.CellStyle.Font, e.CellBounds.Size)
+
+                    If s1.Width > 5 Then
+                        hl_rect.X = e.CellBounds.X + s1.Width - 5
+                        hl_rect.Width = s2.Width - 6
+                    Else
+                        hl_rect.X = e.CellBounds.X + 2
+                        hl_rect.Width = s2.Width - 6
+                    End If
+
+                    Dim hl_brush As SolidBrush = Nothing
+                    If (e.State And DataGridViewElementStates.Selected) <> DataGridViewElementStates.None Then
+                        hl_brush = New SolidBrush(Color.DarkGoldenrod)
+                    Else
+                        hl_brush = New SolidBrush(Color.Yellow)
+                    End If
+
+                    e.Graphics.FillRectangle(hl_brush, hl_rect)
+
+                    hl_brush.Dispose()
+                End If
+            End If
+
+            e.PaintContent(e.CellBounds)
+        End If
+    End Sub
+
+    Private Sub btnCRAdd_Click(sender As Object, e As EventArgs) Handles btnCRAdd.Click
+        Dim criminalRecordsForm As New CriminalRecords
+        criminalRecordsForm.ShowDialog()
+        LoadCRTable()
+    End Sub
+
+    Private Sub dataCR_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataCR.CellContentClick
+        Dim colname As String = dataCR.Columns(e.ColumnIndex).Name
+        If colname = "dataCriminalRecordsBtnEdit" Then
+            Try
+                Dim row As DataGridViewRow = dataCR.Rows(e.RowIndex)
+                Dim criminalrecordsForm As New CriminalRecords
+                criminalrecordsForm.cr_id = row.Cells("dataCriminalRecordsID").Value
+                criminalrecordsForm.ShowDialog()
+                LoadCRTable()
+            Catch ex As Exception
+                MsgBox("Criminal Record Table error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+            End Try
+        ElseIf colname = "dataCriminalRecordsBtnDelete" Then
+            Try
+                Dim row As DataGridViewRow = dataCR.Rows(e.RowIndex)
+                Dim cr_id_to_delete As Integer = row.Cells("dataCriminalRecordsID").Value
+                If (MessageBox.Show("Delete", "Are you sure you want to delete the data?", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
+                    deletePolice("UPDATE criminal_records SET deleted = 1 WHERE cr_id =" & cr_id_to_delete)
+                End If
+                LoadCRTable()
+            Catch ex As Exception
+                MsgBox("Criminal Record Table error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+            End Try
+        Else
+            'MsgBox("Data User: Column name does not exist")
+            'Cellclick prompt
+        End If
         connection.Close()
     End Sub
 End Class

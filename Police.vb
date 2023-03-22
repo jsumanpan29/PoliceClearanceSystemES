@@ -11,7 +11,6 @@ Public Class Police
 
     Private connection As New SQLiteConnection(connString)
     Private command As New SQLiteCommand("", connection)
-    Private police_exists As Integer
 
     Private imgsPath As String = Directory.GetCurrentDirectory & "\bin\Debug\img\"
     Private fileName As String
@@ -127,7 +126,6 @@ Public Class Police
                     imgFileToUpload = ""
                     fileName = ""
                     fileSavePath = ""
-                    Label5.Text = fileSavePath
                 End If
                 cbRank.SelectedValue = dt.Rows(0).Item("rank_id")
                 cbPosition.SelectedValue = dt.Rows(0).Item("position_id")
