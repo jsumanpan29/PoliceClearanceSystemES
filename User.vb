@@ -1,15 +1,13 @@
 ﻿Imports System.Data.SqlClient
-Imports System.Data.SQLite
-Imports System.IO
 
 Public Class User
     Friend user_id As Integer
-    Private dbName As String = "ESPCS.db"
-    Private dbPath As String = Directory.GetCurrentDirectory & "\bin\Debug\db\" & dbName
-    Private connString As String = "Data Source=" & dbPath & ";Version=3"
 
-    Private connection As New SQLiteConnection(connString)
-    Private command As New SQLiteCommand("", connection)
+
+    Private connString As String = "Data Source=(local)\SQLEXPRESS;Initial Catalog=ESPCS;Integrated Security=True"
+
+    Private connection As New SqlConnection(connString)
+    Private command As New SqlCommand("", connection)
     Private user_exists As Integer
 
 
@@ -20,9 +18,10 @@ Public Class User
         If user_id Then
             Try
                 connection.Open()
-                command.CommandText = "SELECT COUNT(*) FROM user WHERE username =@uname AND deleted = 0"
+                command.CommandText = "SELECT COUNT(*) FROM [user] WHERE username = @uname AND deleted = 0"
+                command.Parameters.Clear()
                 command.Parameters.AddWithValue("@uname", txtUname.Text.Trim)
-                Dim da As New SQLiteDataAdapter(command)
+                Dim da As New SqlDataAdapter(command)
                 Dim dt As New DataTable()
                 da.Fill(dt)
                 user_exists = dt.Rows(0)(0)
@@ -32,7 +31,7 @@ Public Class User
                     MessageBox.Show("Username Taken", "Update Error", MessageBoxButtons.OK)
                 Else
                     Try
-                        SqlData("UPDATE user SET username = @uname, password = @pword, fname = @fname, mname = @mname, lname = @lname, contact_no = @contactno, usertype_id = @utype_id WHERE user_id =" & user_id)
+                        SqlData("UPDATE [user] SET username = @uname, password = @pword, fname = @fname, mname = @mname, lname = @lname, contact_no = @contactno, usertype_id = @utype_id WHERE user_id =" & user_id)
                         Me.Dispose()
                     Catch ex As Exception
                         connection.Close()
@@ -49,9 +48,10 @@ Public Class User
             'If no user_id value then add new User to data table
             Try
                 connection.Open()
-                command.CommandText = "SELECT COUNT(*) FROM user WHERE username =@uname AND deleted = 0"
+                command.CommandText = "SELECT COUNT(*) FROM [user] WHERE username = @uname AND deleted = 0"
+                command.Parameters.Clear()
                 command.Parameters.AddWithValue("@uname", txtUname.Text.Trim)
-                Dim da As New SQLiteDataAdapter(command)
+                Dim da As New SqlDataAdapter(command)
                 Dim dt As New DataTable()
                 da.Fill(dt)
                 user_exists = dt.Rows(0)(0)
@@ -60,7 +60,7 @@ Public Class User
                     MessageBox.Show("Username Taken", "Insert Error", MessageBoxButtons.OK)
                 Else
                     Try
-                        SqlData("INSERT INTO user(username,password,fname,mname,lname,contact_no,usertype_id,deleted) VALUES(@uname,@pword,@fname,@mname,@lname,@contactno,@utype_id,0)")
+                        SqlData("INSERT INTO [user](username,password,fname,mname,lname,contact_no,usertype_id,deleted) VALUES(@uname,@pword,@fname,@mname,@lname,@contactno,@utype_id,0)")
                         Me.Dispose()
                     Catch ex As Exception
                         connection.Close()
@@ -78,6 +78,7 @@ Public Class User
     Private Sub SqlData(sqlCommand As String)
         connection.Open()
         command.CommandText = sqlCommand
+        command.Parameters.Clear()
         command.Parameters.AddWithValue("@uname", txtUname.Text.Trim)
         command.Parameters.AddWithValue("@pword", txtPassword.Text.Trim)
         command.Parameters.AddWithValue("@fname", txtFname.Text.Trim)
@@ -96,8 +97,8 @@ Public Class User
         If user_id Then
             'MsgBox(Me.Name & " UserID:" & user_id)
             connection.Open()
-            command.CommandText = "SELECT * FROM user WHERE deleted = 0 AND user_id = " & user_id
-            Dim da As New SQLiteDataAdapter(command)
+            command.CommandText = "SELECT * FROM [user] WHERE deleted = 0 AND user_id = " & user_id
+            Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
             da.Fill(dt)
             If (dt.Rows.Count > 0) Then
@@ -122,7 +123,7 @@ Public Class User
         Try
             connection.Open()
             command.CommandText = "SELECT usertype_id AS 'USERTYPE ID', name AS 'USERTYPE NAME' FROM usertype WHERE usertype_id != 1"
-            Dim da As New SQLiteDataAdapter(command)
+            Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
             da.Fill(dt)
             cbUsertype.DisplayMember = dt.Columns("USERTYPE NAME").ToString

@@ -32,6 +32,8 @@ Partial Class Validation_ForceValidation
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -107,30 +109,50 @@ Partial Class Validation_ForceValidation
         '
         Me.TextBox1.Location = New System.Drawing.Point(197, 101)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(141, 23)
+        Me.TextBox1.Size = New System.Drawing.Size(265, 23)
         Me.TextBox1.TabIndex = 55
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(12, 130)
+        Me.TextBox2.Location = New System.Drawing.Point(416, 134)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(217, 23)
         Me.TextBox2.TabIndex = 56
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(235, 130)
+        Me.Button3.Location = New System.Drawing.Point(639, 134)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 57
         Me.Button3.Text = "Search"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Validation_Hit
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(12, 138)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(102, 15)
+        Me.Label3.TabIndex = 58
+        Me.Label3.Text = "Records Matched:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(117, 138)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(51, 15)
+        Me.Label4.TabIndex = 59
+        Me.Label4.Text = "Number"
+        '
+        'Validation_ForceValidation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(722, 446)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
@@ -141,7 +163,7 @@ Partial Class Validation_ForceValidation
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Name = "Validation_Hit"
+        Me.Name = "Validation_ForceValidation"
         Me.Text = "Validation_Hit"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -159,4 +181,6 @@ Partial Class Validation_ForceValidation
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button3 As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class

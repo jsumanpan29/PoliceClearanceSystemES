@@ -26,8 +26,8 @@ Partial Class Admin
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabPage7 = New System.Windows.Forms.TabPage()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.btnCRSearchRefresh = New System.Windows.Forms.Button()
+        Me.txtCRSearch = New System.Windows.Forms.TextBox()
         Me.btnCRAdd = New System.Windows.Forms.Button()
         Me.dataCR = New System.Windows.Forms.DataGridView()
         Me.dataCriminalRecordsID = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -106,8 +106,8 @@ Partial Class Admin
         '
         'TabPage7
         '
-        Me.TabPage7.Controls.Add(Me.Button11)
-        Me.TabPage7.Controls.Add(Me.TextBox6)
+        Me.TabPage7.Controls.Add(Me.btnCRSearchRefresh)
+        Me.TabPage7.Controls.Add(Me.txtCRSearch)
         Me.TabPage7.Controls.Add(Me.btnCRAdd)
         Me.TabPage7.Controls.Add(Me.dataCR)
         Me.TabPage7.Location = New System.Drawing.Point(4, 24)
@@ -117,21 +117,21 @@ Partial Class Admin
         Me.TabPage7.Text = "Criminal Records"
         Me.TabPage7.UseVisualStyleBackColor = True
         '
-        'Button11
+        'btnCRSearchRefresh
         '
-        Me.Button11.Location = New System.Drawing.Point(954, 4)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(75, 23)
-        Me.Button11.TabIndex = 7
-        Me.Button11.Text = "x"
-        Me.Button11.UseVisualStyleBackColor = True
+        Me.btnCRSearchRefresh.Location = New System.Drawing.Point(954, 4)
+        Me.btnCRSearchRefresh.Name = "btnCRSearchRefresh"
+        Me.btnCRSearchRefresh.Size = New System.Drawing.Size(75, 23)
+        Me.btnCRSearchRefresh.TabIndex = 7
+        Me.btnCRSearchRefresh.Text = "x"
+        Me.btnCRSearchRefresh.UseVisualStyleBackColor = True
         '
-        'TextBox6
+        'txtCRSearch
         '
-        Me.TextBox6.Location = New System.Drawing.Point(722, 5)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(226, 23)
-        Me.TextBox6.TabIndex = 6
+        Me.txtCRSearch.Location = New System.Drawing.Point(722, 5)
+        Me.txtCRSearch.Name = "txtCRSearch"
+        Me.txtCRSearch.Size = New System.Drawing.Size(226, 23)
+        Me.txtCRSearch.TabIndex = 6
         '
         'btnCRAdd
         '
@@ -507,8 +507,8 @@ Partial Class Admin
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TabPage7 As TabPage
-    Friend WithEvents Button11 As Button
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents btnCRSearchRefresh As Button
+    Friend WithEvents txtCRSearch As TextBox
     Friend WithEvents btnCRAdd As Button
     Friend WithEvents dataCR As DataGridView
     Friend WithEvents TabPage3 As TabPage

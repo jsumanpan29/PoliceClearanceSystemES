@@ -1,18 +1,18 @@
-﻿Imports System.Data.SQLite
+﻿
+Imports System.Data.SqlClient
 Imports System.IO
 
 Public Class Police
 
     Friend police_id As Integer
 
-    Private dbName As String = "ESPCS.db"
-    Private dbPath As String = Directory.GetCurrentDirectory & "\bin\Debug\db\" & dbName
-    Private connString As String = "Data Source=" & dbPath & ";Version=3"
 
-    Private connection As New SQLiteConnection(connString)
-    Private command As New SQLiteCommand("", connection)
+    Private connString As String = "Data Source=(local)\SQLEXPRESS;Initial Catalog=ESPCS;Integrated Security=True"
 
-    Private imgsPath As String = Directory.GetCurrentDirectory & "\bin\Debug\img\"
+    Private connection As New SqlConnection(connString)
+    Private command As New SqlCommand("", connection)
+
+    Private imgsPath As String = Directory.GetCurrentDirectory & "\bin\Debug\img_policesig\"
     Private fileName As String
     Private imgFileToUpload As String = ""
     Private fileSavePath As String = ""
@@ -70,7 +70,7 @@ Public Class Police
         Try
             connection.Open()
             command.CommandText = "SELECT rank_id AS 'RANK ID', name AS 'RANK NAME' FROM rank"
-            Dim da As New SQLiteDataAdapter(command)
+            Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
             da.Fill(dt)
             cbRank.DisplayMember = dt.Columns("RANK NAME").ToString
@@ -85,7 +85,7 @@ Public Class Police
         Try
             connection.Open()
             command.CommandText = "SELECT position_id AS 'POSITION ID', name AS 'POSITION NAME' FROM position"
-            Dim da As New SQLiteDataAdapter(command)
+            Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
             da.Fill(dt)
             cbPosition.DisplayMember = dt.Columns("POSITION NAME").ToString
@@ -103,7 +103,7 @@ Public Class Police
         If police_id Then
             connection.Open()
             command.CommandText = "SELECT * FROM police WHERE deleted = 0 AND police_id = " & police_id
-            Dim da As New SQLiteDataAdapter(command)
+            Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
             da.Fill(dt)
             If (dt.Rows.Count > 0) Then

@@ -30,44 +30,44 @@ Partial Class Clerk
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dataApplicant_ToPay = New System.Windows.Forms.DataGridView()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.dataApplicant_ToValidate = New System.Windows.Forms.DataGridView()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.dataApplicant_ToPrint = New System.Windows.Forms.DataGridView()
         Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.DataGridView4 = New System.Windows.Forms.DataGridView()
+        Me.dataApplicant_Cancelled = New System.Windows.Forms.DataGridView()
         Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.DataGridView5 = New System.Windows.Forms.DataGridView()
+        Me.dataApplicant_UnderInvestigation = New System.Windows.Forms.DataGridView()
         Me.TabPage6 = New System.Windows.Forms.TabPage()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.DataGridView6 = New System.Windows.Forms.DataGridView()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.dataApplicant_Completed = New System.Windows.Forms.DataGridView()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.btnApplicantSearch_ToPayRefresh = New System.Windows.Forms.Button()
+        Me.txtApplicantSearch_ToPay = New System.Windows.Forms.TextBox()
+        Me.btnApplicantSearch_ToValidateRefresh = New System.Windows.Forms.Button()
+        Me.txtApplicantSearch_ToValidate = New System.Windows.Forms.TextBox()
+        Me.btnApplicantSearch_ToPrintRefresh = New System.Windows.Forms.Button()
+        Me.txtApplicantSearch_ToPrint = New System.Windows.Forms.TextBox()
+        Me.btnApplicantSearch_CancelledRefresh = New System.Windows.Forms.Button()
+        Me.txtApplicantSearch_Cancelled = New System.Windows.Forms.TextBox()
+        Me.btnApplicantSearch_UnderInvestigationRefresh = New System.Windows.Forms.Button()
+        Me.txtApplicantSearch_UnderInvestigation = New System.Windows.Forms.TextBox()
+        Me.btnApplicantSearch_CompletedRefresh = New System.Windows.Forms.Button()
+        Me.txtApplicantSearch_Completed = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dataApplicant_ToPay, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dataApplicant_ToValidate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage3.SuspendLayout()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dataApplicant_ToPrint, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage4.SuspendLayout()
-        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dataApplicant_Cancelled, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage5.SuspendLayout()
-        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dataApplicant_UnderInvestigation, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage6.SuspendLayout()
-        CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dataApplicant_Completed, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -75,7 +75,7 @@ Partial Class Clerk
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1066, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1067, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -116,8 +116,8 @@ Partial Class Clerk
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage5)
+        Me.TabControl1.Controls.Add(Me.TabPage4)
         Me.TabControl1.Controls.Add(Me.TabPage6)
         Me.TabControl1.Location = New System.Drawing.Point(12, 27)
         Me.TabControl1.Name = "TabControl1"
@@ -127,9 +127,9 @@ Partial Class Clerk
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.Button1)
-        Me.TabPage1.Controls.Add(Me.TextBox1)
-        Me.TabPage1.Controls.Add(Me.DataGridView1)
+        Me.TabPage1.Controls.Add(Me.btnApplicantSearch_ToPayRefresh)
+        Me.TabPage1.Controls.Add(Me.txtApplicantSearch_ToPay)
+        Me.TabPage1.Controls.Add(Me.dataApplicant_ToPay)
         Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
@@ -138,36 +138,20 @@ Partial Class Clerk
         Me.TabPage1.Text = "To Pay"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'Button1
+        'dataApplicant_ToPay
         '
-        Me.Button1.Location = New System.Drawing.Point(953, 5)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(6, 5)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(935, 23)
-        Me.TextBox1.TabIndex = 1
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 34)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(1022, 371)
-        Me.DataGridView1.TabIndex = 0
+        Me.dataApplicant_ToPay.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dataApplicant_ToPay.Location = New System.Drawing.Point(6, 34)
+        Me.dataApplicant_ToPay.Name = "dataApplicant_ToPay"
+        Me.dataApplicant_ToPay.RowTemplate.Height = 25
+        Me.dataApplicant_ToPay.Size = New System.Drawing.Size(1022, 371)
+        Me.dataApplicant_ToPay.TabIndex = 0
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.Button2)
-        Me.TabPage2.Controls.Add(Me.TextBox2)
-        Me.TabPage2.Controls.Add(Me.DataGridView2)
+        Me.TabPage2.Controls.Add(Me.btnApplicantSearch_ToValidateRefresh)
+        Me.TabPage2.Controls.Add(Me.txtApplicantSearch_ToValidate)
+        Me.TabPage2.Controls.Add(Me.dataApplicant_ToValidate)
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -176,36 +160,20 @@ Partial Class Clerk
         Me.TabPage2.Text = "To Validate"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'Button2
+        'dataApplicant_ToValidate
         '
-        Me.Button2.Location = New System.Drawing.Point(953, 6)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 5
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(6, 6)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(935, 23)
-        Me.TextBox2.TabIndex = 4
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(6, 35)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.RowTemplate.Height = 25
-        Me.DataGridView2.Size = New System.Drawing.Size(1022, 371)
-        Me.DataGridView2.TabIndex = 3
+        Me.dataApplicant_ToValidate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dataApplicant_ToValidate.Location = New System.Drawing.Point(6, 35)
+        Me.dataApplicant_ToValidate.Name = "dataApplicant_ToValidate"
+        Me.dataApplicant_ToValidate.RowTemplate.Height = 25
+        Me.dataApplicant_ToValidate.Size = New System.Drawing.Size(1022, 371)
+        Me.dataApplicant_ToValidate.TabIndex = 3
         '
         'TabPage3
         '
-        Me.TabPage3.Controls.Add(Me.Button3)
-        Me.TabPage3.Controls.Add(Me.TextBox3)
-        Me.TabPage3.Controls.Add(Me.DataGridView3)
+        Me.TabPage3.Controls.Add(Me.btnApplicantSearch_ToPrintRefresh)
+        Me.TabPage3.Controls.Add(Me.txtApplicantSearch_ToPrint)
+        Me.TabPage3.Controls.Add(Me.dataApplicant_ToPrint)
         Me.TabPage3.Location = New System.Drawing.Point(4, 24)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Size = New System.Drawing.Size(1034, 418)
@@ -213,36 +181,20 @@ Partial Class Clerk
         Me.TabPage3.Text = "To Print"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'Button3
+        'dataApplicant_ToPrint
         '
-        Me.Button3.Location = New System.Drawing.Point(956, 6)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 8
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(9, 6)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(935, 23)
-        Me.TextBox3.TabIndex = 7
-        '
-        'DataGridView3
-        '
-        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Location = New System.Drawing.Point(9, 35)
-        Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.RowTemplate.Height = 25
-        Me.DataGridView3.Size = New System.Drawing.Size(1022, 371)
-        Me.DataGridView3.TabIndex = 6
+        Me.dataApplicant_ToPrint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dataApplicant_ToPrint.Location = New System.Drawing.Point(9, 35)
+        Me.dataApplicant_ToPrint.Name = "dataApplicant_ToPrint"
+        Me.dataApplicant_ToPrint.RowTemplate.Height = 25
+        Me.dataApplicant_ToPrint.Size = New System.Drawing.Size(1022, 371)
+        Me.dataApplicant_ToPrint.TabIndex = 6
         '
         'TabPage4
         '
-        Me.TabPage4.Controls.Add(Me.Button4)
-        Me.TabPage4.Controls.Add(Me.TextBox4)
-        Me.TabPage4.Controls.Add(Me.DataGridView4)
+        Me.TabPage4.Controls.Add(Me.btnApplicantSearch_CancelledRefresh)
+        Me.TabPage4.Controls.Add(Me.txtApplicantSearch_Cancelled)
+        Me.TabPage4.Controls.Add(Me.dataApplicant_Cancelled)
         Me.TabPage4.Location = New System.Drawing.Point(4, 24)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Size = New System.Drawing.Size(1034, 418)
@@ -250,36 +202,20 @@ Partial Class Clerk
         Me.TabPage4.Text = "Cancelled"
         Me.TabPage4.UseVisualStyleBackColor = True
         '
-        'Button4
+        'dataApplicant_Cancelled
         '
-        Me.Button4.Location = New System.Drawing.Point(950, 5)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 8
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(3, 5)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(935, 23)
-        Me.TextBox4.TabIndex = 7
-        '
-        'DataGridView4
-        '
-        Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView4.Location = New System.Drawing.Point(3, 34)
-        Me.DataGridView4.Name = "DataGridView4"
-        Me.DataGridView4.RowTemplate.Height = 25
-        Me.DataGridView4.Size = New System.Drawing.Size(1022, 371)
-        Me.DataGridView4.TabIndex = 6
+        Me.dataApplicant_Cancelled.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dataApplicant_Cancelled.Location = New System.Drawing.Point(3, 34)
+        Me.dataApplicant_Cancelled.Name = "dataApplicant_Cancelled"
+        Me.dataApplicant_Cancelled.RowTemplate.Height = 25
+        Me.dataApplicant_Cancelled.Size = New System.Drawing.Size(1022, 371)
+        Me.dataApplicant_Cancelled.TabIndex = 6
         '
         'TabPage5
         '
-        Me.TabPage5.Controls.Add(Me.Button5)
-        Me.TabPage5.Controls.Add(Me.TextBox5)
-        Me.TabPage5.Controls.Add(Me.DataGridView5)
+        Me.TabPage5.Controls.Add(Me.btnApplicantSearch_UnderInvestigationRefresh)
+        Me.TabPage5.Controls.Add(Me.txtApplicantSearch_UnderInvestigation)
+        Me.TabPage5.Controls.Add(Me.dataApplicant_UnderInvestigation)
         Me.TabPage5.Location = New System.Drawing.Point(4, 24)
         Me.TabPage5.Name = "TabPage5"
         Me.TabPage5.Size = New System.Drawing.Size(1034, 418)
@@ -287,36 +223,20 @@ Partial Class Clerk
         Me.TabPage5.Text = "Under Investigation"
         Me.TabPage5.UseVisualStyleBackColor = True
         '
-        'Button5
+        'dataApplicant_UnderInvestigation
         '
-        Me.Button5.Location = New System.Drawing.Point(950, 7)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 8
-        Me.Button5.Text = "Button5"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Location = New System.Drawing.Point(3, 7)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(935, 23)
-        Me.TextBox5.TabIndex = 7
-        '
-        'DataGridView5
-        '
-        Me.DataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView5.Location = New System.Drawing.Point(3, 36)
-        Me.DataGridView5.Name = "DataGridView5"
-        Me.DataGridView5.RowTemplate.Height = 25
-        Me.DataGridView5.Size = New System.Drawing.Size(1022, 371)
-        Me.DataGridView5.TabIndex = 6
+        Me.dataApplicant_UnderInvestigation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dataApplicant_UnderInvestigation.Location = New System.Drawing.Point(3, 36)
+        Me.dataApplicant_UnderInvestigation.Name = "dataApplicant_UnderInvestigation"
+        Me.dataApplicant_UnderInvestigation.RowTemplate.Height = 25
+        Me.dataApplicant_UnderInvestigation.Size = New System.Drawing.Size(1022, 371)
+        Me.dataApplicant_UnderInvestigation.TabIndex = 6
         '
         'TabPage6
         '
-        Me.TabPage6.Controls.Add(Me.Button6)
-        Me.TabPage6.Controls.Add(Me.TextBox6)
-        Me.TabPage6.Controls.Add(Me.DataGridView6)
+        Me.TabPage6.Controls.Add(Me.btnApplicantSearch_CompletedRefresh)
+        Me.TabPage6.Controls.Add(Me.txtApplicantSearch_Completed)
+        Me.TabPage6.Controls.Add(Me.dataApplicant_Completed)
         Me.TabPage6.Location = New System.Drawing.Point(4, 24)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Size = New System.Drawing.Size(1034, 418)
@@ -324,46 +244,126 @@ Partial Class Clerk
         Me.TabPage6.Text = "Completed"
         Me.TabPage6.UseVisualStyleBackColor = True
         '
-        'Button6
+        'dataApplicant_Completed
         '
-        Me.Button6.Location = New System.Drawing.Point(956, 5)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 23)
-        Me.Button6.TabIndex = 8
-        Me.Button6.Text = "Button6"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.dataApplicant_Completed.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dataApplicant_Completed.Location = New System.Drawing.Point(9, 34)
+        Me.dataApplicant_Completed.Name = "dataApplicant_Completed"
+        Me.dataApplicant_Completed.RowTemplate.Height = 25
+        Me.dataApplicant_Completed.Size = New System.Drawing.Size(1022, 371)
+        Me.dataApplicant_Completed.TabIndex = 6
         '
-        'TextBox6
+        'btnAdd
         '
-        Me.TextBox6.Location = New System.Drawing.Point(9, 5)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(935, 23)
-        Me.TextBox6.TabIndex = 7
+        Me.btnAdd.Location = New System.Drawing.Point(975, 479)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnAdd.TabIndex = 2
+        Me.btnAdd.Text = "Add"
+        Me.btnAdd.UseVisualStyleBackColor = True
         '
-        'DataGridView6
+        'btnApplicantSearch_ToPayRefresh
         '
-        Me.DataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView6.Location = New System.Drawing.Point(9, 34)
-        Me.DataGridView6.Name = "DataGridView6"
-        Me.DataGridView6.RowTemplate.Height = 25
-        Me.DataGridView6.Size = New System.Drawing.Size(1022, 371)
-        Me.DataGridView6.TabIndex = 6
+        Me.btnApplicantSearch_ToPayRefresh.Location = New System.Drawing.Point(953, 6)
+        Me.btnApplicantSearch_ToPayRefresh.Name = "btnApplicantSearch_ToPayRefresh"
+        Me.btnApplicantSearch_ToPayRefresh.Size = New System.Drawing.Size(75, 23)
+        Me.btnApplicantSearch_ToPayRefresh.TabIndex = 9
+        Me.btnApplicantSearch_ToPayRefresh.Text = "x"
+        Me.btnApplicantSearch_ToPayRefresh.UseVisualStyleBackColor = True
         '
-        'Button7
+        'txtApplicantSearch_ToPay
         '
-        Me.Button7.Location = New System.Drawing.Point(975, 479)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(75, 23)
-        Me.Button7.TabIndex = 2
-        Me.Button7.Text = "Add"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.txtApplicantSearch_ToPay.Location = New System.Drawing.Point(721, 7)
+        Me.txtApplicantSearch_ToPay.Name = "txtApplicantSearch_ToPay"
+        Me.txtApplicantSearch_ToPay.Size = New System.Drawing.Size(226, 23)
+        Me.txtApplicantSearch_ToPay.TabIndex = 8
+        '
+        'btnApplicantSearch_ToValidateRefresh
+        '
+        Me.btnApplicantSearch_ToValidateRefresh.Location = New System.Drawing.Point(953, 6)
+        Me.btnApplicantSearch_ToValidateRefresh.Name = "btnApplicantSearch_ToValidateRefresh"
+        Me.btnApplicantSearch_ToValidateRefresh.Size = New System.Drawing.Size(75, 23)
+        Me.btnApplicantSearch_ToValidateRefresh.TabIndex = 9
+        Me.btnApplicantSearch_ToValidateRefresh.Text = "x"
+        Me.btnApplicantSearch_ToValidateRefresh.UseVisualStyleBackColor = True
+        '
+        'txtApplicantSearch_ToValidate
+        '
+        Me.txtApplicantSearch_ToValidate.Location = New System.Drawing.Point(721, 7)
+        Me.txtApplicantSearch_ToValidate.Name = "txtApplicantSearch_ToValidate"
+        Me.txtApplicantSearch_ToValidate.Size = New System.Drawing.Size(226, 23)
+        Me.txtApplicantSearch_ToValidate.TabIndex = 8
+        '
+        'btnApplicantSearch_ToPrintRefresh
+        '
+        Me.btnApplicantSearch_ToPrintRefresh.Location = New System.Drawing.Point(956, 6)
+        Me.btnApplicantSearch_ToPrintRefresh.Name = "btnApplicantSearch_ToPrintRefresh"
+        Me.btnApplicantSearch_ToPrintRefresh.Size = New System.Drawing.Size(75, 23)
+        Me.btnApplicantSearch_ToPrintRefresh.TabIndex = 9
+        Me.btnApplicantSearch_ToPrintRefresh.Text = "x"
+        Me.btnApplicantSearch_ToPrintRefresh.UseVisualStyleBackColor = True
+        '
+        'txtApplicantSearch_ToPrint
+        '
+        Me.txtApplicantSearch_ToPrint.Location = New System.Drawing.Point(724, 7)
+        Me.txtApplicantSearch_ToPrint.Name = "txtApplicantSearch_ToPrint"
+        Me.txtApplicantSearch_ToPrint.Size = New System.Drawing.Size(226, 23)
+        Me.txtApplicantSearch_ToPrint.TabIndex = 8
+        '
+        'btnApplicantSearch_CancelledRefresh
+        '
+        Me.btnApplicantSearch_CancelledRefresh.Location = New System.Drawing.Point(950, 5)
+        Me.btnApplicantSearch_CancelledRefresh.Name = "btnApplicantSearch_CancelledRefresh"
+        Me.btnApplicantSearch_CancelledRefresh.Size = New System.Drawing.Size(75, 23)
+        Me.btnApplicantSearch_CancelledRefresh.TabIndex = 9
+        Me.btnApplicantSearch_CancelledRefresh.Text = "x"
+        Me.btnApplicantSearch_CancelledRefresh.UseVisualStyleBackColor = True
+        '
+        'txtApplicantSearch_Cancelled
+        '
+        Me.txtApplicantSearch_Cancelled.Location = New System.Drawing.Point(718, 6)
+        Me.txtApplicantSearch_Cancelled.Name = "txtApplicantSearch_Cancelled"
+        Me.txtApplicantSearch_Cancelled.Size = New System.Drawing.Size(226, 23)
+        Me.txtApplicantSearch_Cancelled.TabIndex = 8
+        '
+        'btnApplicantSearch_UnderInvestigationRefresh
+        '
+        Me.btnApplicantSearch_UnderInvestigationRefresh.Location = New System.Drawing.Point(950, 7)
+        Me.btnApplicantSearch_UnderInvestigationRefresh.Name = "btnApplicantSearch_UnderInvestigationRefresh"
+        Me.btnApplicantSearch_UnderInvestigationRefresh.Size = New System.Drawing.Size(75, 23)
+        Me.btnApplicantSearch_UnderInvestigationRefresh.TabIndex = 9
+        Me.btnApplicantSearch_UnderInvestigationRefresh.Text = "x"
+        Me.btnApplicantSearch_UnderInvestigationRefresh.UseVisualStyleBackColor = True
+        '
+        'txtApplicantSearch_UnderInvestigation
+        '
+        Me.txtApplicantSearch_UnderInvestigation.Location = New System.Drawing.Point(718, 8)
+        Me.txtApplicantSearch_UnderInvestigation.Name = "txtApplicantSearch_UnderInvestigation"
+        Me.txtApplicantSearch_UnderInvestigation.Size = New System.Drawing.Size(226, 23)
+        Me.txtApplicantSearch_UnderInvestigation.TabIndex = 8
+        '
+        'btnApplicantSearch_CompletedRefresh
+        '
+        Me.btnApplicantSearch_CompletedRefresh.Location = New System.Drawing.Point(956, 5)
+        Me.btnApplicantSearch_CompletedRefresh.Name = "btnApplicantSearch_CompletedRefresh"
+        Me.btnApplicantSearch_CompletedRefresh.Size = New System.Drawing.Size(75, 23)
+        Me.btnApplicantSearch_CompletedRefresh.TabIndex = 9
+        Me.btnApplicantSearch_CompletedRefresh.Text = "x"
+        Me.btnApplicantSearch_CompletedRefresh.UseVisualStyleBackColor = True
+        '
+        'txtApplicantSearch_Completed
+        '
+        Me.txtApplicantSearch_Completed.Location = New System.Drawing.Point(724, 6)
+        Me.txtApplicantSearch_Completed.Name = "txtApplicantSearch_Completed"
+        Me.txtApplicantSearch_Completed.Size = New System.Drawing.Size(226, 23)
+        Me.txtApplicantSearch_Completed.TabIndex = 8
         '
         'Clerk
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1066, 515)
-        Me.Controls.Add(Me.Button7)
+        Me.ClientSize = New System.Drawing.Size(1067, 530)
+        Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -374,22 +374,22 @@ Partial Class Clerk
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dataApplicant_ToPay, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dataApplicant_ToValidate, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dataApplicant_ToPrint, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
-        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dataApplicant_Cancelled, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage5.ResumeLayout(False)
         Me.TabPage5.PerformLayout()
-        CType(Me.DataGridView5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dataApplicant_UnderInvestigation, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage6.ResumeLayout(False)
         Me.TabPage6.PerformLayout()
-        CType(Me.DataGridView6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dataApplicant_Completed, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -405,26 +405,26 @@ Partial Class Clerk
     Friend WithEvents TabPage4 As TabPage
     Friend WithEvents TabPage5 As TabPage
     Friend WithEvents TabPage6 As TabPage
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents Button3 As Button
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents DataGridView3 As DataGridView
-    Friend WithEvents Button4 As Button
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents DataGridView4 As DataGridView
-    Friend WithEvents Button5 As Button
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents DataGridView5 As DataGridView
-    Friend WithEvents Button6 As Button
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents DataGridView6 As DataGridView
-    Friend WithEvents Button7 As Button
+    Friend WithEvents dataApplicant_ToPay As DataGridView
+    Friend WithEvents dataApplicant_ToValidate As DataGridView
+    Friend WithEvents dataApplicant_ToPrint As DataGridView
+    Friend WithEvents dataApplicant_Cancelled As DataGridView
+    Friend WithEvents dataApplicant_UnderInvestigation As DataGridView
+    Friend WithEvents dataApplicant_Completed As DataGridView
+    Friend WithEvents btnAdd As Button
     Friend WithEvents GenerateReportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToPDFToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToCSVToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnApplicantSearch_ToPayRefresh As Button
+    Friend WithEvents txtApplicantSearch_ToPay As TextBox
+    Friend WithEvents btnApplicantSearch_ToValidateRefresh As Button
+    Friend WithEvents txtApplicantSearch_ToValidate As TextBox
+    Friend WithEvents btnApplicantSearch_ToPrintRefresh As Button
+    Friend WithEvents txtApplicantSearch_ToPrint As TextBox
+    Friend WithEvents btnApplicantSearch_CancelledRefresh As Button
+    Friend WithEvents txtApplicantSearch_Cancelled As TextBox
+    Friend WithEvents btnApplicantSearch_UnderInvestigationRefresh As Button
+    Friend WithEvents txtApplicantSearch_UnderInvestigation As TextBox
+    Friend WithEvents btnApplicantSearch_CompletedRefresh As Button
+    Friend WithEvents txtApplicantSearch_Completed As TextBox
 End Class

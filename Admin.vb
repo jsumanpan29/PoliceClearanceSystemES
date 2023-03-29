@@ -1,17 +1,16 @@
-﻿Imports System.Configuration
+﻿
 Imports System.Data.SqlClient
-Imports System.Data.SQLite
-Imports System.IO
 
 Public Class Admin
     Friend user_id As Integer
 
-    Private dbName As String = "ESPCS.db"
-    Private dbPath As String = Directory.GetCurrentDirectory & "\bin\Debug\db\" & dbName
-    Private connString As String = "Data Source=" & dbPath & ";Version=3"
+    'Private dbName As String = "ESPCS.db"
+    'Private dbPath As String = Directory.GetCurrentDirectory & "\bin\Debug\db\" & dbName
+    'Private connString As String = "Data Source=" & dbPath & ";Version=3"
 
-    Private connection As New SQLiteConnection(connString)
-    Private command As New SQLiteCommand("", connection)
+    Private connString As String = "Data Source=(local)\SQLEXPRESS;Initial Catalog=ESPCS;Integrated Security=True"
+    Private connection As New SqlConnection(connString)
+    Private command As New SqlCommand("", connection)
     Private Sub Admin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If user_id Then
             'MsgBox(Me.Name & " UserID:" & user_id)
@@ -30,11 +29,12 @@ Public Class Admin
         Try
             connection.Open()
             If searchString = "" Then
-                command.CommandText = "SELECT user.user_id AS 'ID', user.username AS 'USERNAME', user.fname AS 'FIRST NAME', user.mname AS 'MIDDLE NAME', user.lname AS 'LAST NAME', user.contact_no AS 'CONTACT NUMBER', usertype.name AS 'USER ROLE' FROM user INNER JOIN usertype ON user.usertype_id = usertype.usertype_id WHERE user.usertype_id != 1 AND deleted=0"
+                'command.CommandText = "SELECT user.user_id AS 'ID', user.username AS 'USERNAME', user.fname AS 'FIRST NAME', user.mname AS 'MIDDLE NAME', user.lname AS 'LAST NAME', user.contact_no AS 'CONTACT NUMBER', usertype.name AS 'USER ROLE' FROM user INNER JOIN usertype ON user.usertype_id = usertype.usertype_id WHERE user.usertype_id != 1 AND deleted=0"
+                command.CommandText = "SELECT [user].user_id AS 'ID',[user].username AS 'USERNAME', [user].fname AS 'FIRST NAME', [user].mname AS 'MIDDLE NAME', [user].lname AS 'LAST NAME', [user].contact_no AS 'CONTACT NUMBER', [usertype].name AS 'USER ROLE' FROM [dbo].[user] INNER JOIN [dbo].[usertype] ON [user].usertype_id = [usertype].usertype_id WHERE [user].usertype_id != 1 AND deleted=0"
             Else
-                command.CommandText = "SELECT user.user_id AS 'ID', user.username AS 'USERNAME', user.fname AS 'FIRST NAME', user.mname AS 'MIDDLE NAME', user.lname AS 'LAST NAME', user.contact_no AS 'CONTACT NUMBER', usertype.name AS 'USER ROLE' FROM user INNER JOIN usertype ON user.usertype_id = usertype.usertype_id WHERE (user.username LIKE '%" & searchString & "%' OR user.fname LIKE '%" & searchString & "%' OR user.mname LIKE '%" & searchString & "%' OR user.lname LIKE '%" & searchString & "%' OR usertype.name LIKE '%" & searchString & "%') AND user.usertype_id != 1 AND deleted=0"
+                command.CommandText = "SELECT [user].user_id AS 'ID',[user].username AS 'USERNAME', [user].fname AS 'FIRST NAME', [user].mname AS 'MIDDLE NAME', [user].lname AS 'LAST NAME', [user].contact_no AS 'CONTACT NUMBER', [usertype].name AS 'USER ROLE' FROM [dbo].[user] INNER JOIN [dbo].[usertype] ON [user].usertype_id = [usertype].usertype_id WHERE ([user].username LIKE '%" & searchString & "%' OR [user].fname LIKE '%" & searchString & "%' OR [user].mname LIKE '%" & searchString & "%' OR [user].lname LIKE '%" & searchString & "%' OR [usertype].name LIKE '%" & searchString & "%') AND [user].usertype_id != 1 AND deleted=0"
             End If
-            Dim da As New SQLiteDataAdapter(command)
+            Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
             da.Fill(dt)
             'Setting Autogenerating of Columns to False to Utilize Designer made Columns
@@ -61,12 +61,12 @@ Public Class Admin
         Try
             connection.Open()
             If searchString = "" Then
-                command.CommandText = "SELECT police.police_id AS 'ID', police.fname  AS 'FIRST NAME', police.mname AS 'MIDDLE NAME', police.lname AS 'LAST NAME', police.contact_no  AS 'CONTACT NUMBER', rank.name AS 'RANK', position.name AS 'POSITION' FROM police INNER JOIN rank ON rank.rank_id = police.rank_id INNER JOIN position ON position.position_id = police.position_id WHERE deleted=0"
+                command.CommandText = "SELECT police.police_id AS 'ID', police.fname  AS 'FIRST NAME', police.mname AS 'MIDDLE NAME', police.lname AS 'LAST NAME', police.contact_no  AS 'CONTACT NUMBER', rank.name AS 'RANK', position.name AS 'POSITION' FROM [dbo].police INNER JOIN [dbo].rank ON rank.rank_id = police.rank_id INNER JOIN [dbo].position ON position.position_id = police.position_id WHERE deleted=0"
             Else
-                command.CommandText = "SELECT police.police_id AS 'ID', police.fname  AS 'FIRST NAME', police.mname AS 'MIDDLE NAME', police.lname AS 'LAST NAME', police.contact_no  AS 'CONTACT NUMBER', rank.name AS 'RANK', position.name AS 'POSITION' FROM police INNER JOIN rank ON rank.rank_id = police.rank_id INNER JOIN position ON position.position_id = police.position_id WHERE (police.fname LIKE '%" & searchString & "%' OR police.mname LIKE '%" & searchString & "%' OR police.lname LIKE '%" & searchString & "%' OR rank.name LIKE '%" & searchString & "%' OR position.name LIKE '%" & searchString & "%') AND deleted=0"
+                command.CommandText = "SELECT police.police_id AS 'ID', police.fname  AS 'FIRST NAME', police.mname AS 'MIDDLE NAME', police.lname AS 'LAST NAME', police.contact_no  AS 'CONTACT NUMBER', rank.name AS 'RANK', position.name AS 'POSITION' FROM [dbo].police INNER JOIN [dbo].rank ON rank.rank_id = police.rank_id INNER JOIN [dbo].position ON position.position_id = police.position_id WHERE (police.fname LIKE '%" & searchString & "%' OR police.mname LIKE '%" & searchString & "%' OR police.lname LIKE '%" & searchString & "%' OR rank.name LIKE '%" & searchString & "%' OR position.name LIKE '%" & searchString & "%') AND deleted=0"
 
             End If
-            Dim da As New SQLiteDataAdapter(command)
+            Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
             da.Fill(dt)
             dataPolice.AutoGenerateColumns = False
@@ -92,10 +92,10 @@ Public Class Admin
             If searchString = "" Then
                 command.CommandText = "SELECT cr_id AS 'ID', name AS 'NAME', crime_offense AS 'CRIME', ccno AS 'CC NO', isno AS 'IS NO', remarks AS 'REMARKS' FROM criminal_records WHERE deleted=0"
             Else
-                command.CommandText = "SELECT cr_id AS 'ID', name AS 'NAME', crime_offense AS 'CRIME', ccno AS 'CC NO', isno AS 'IS NO', remarks AS 'REMARKS' FROM criminal_records WHERE deleted=0"
+                command.CommandText = "SELECT cr_id AS 'ID', name AS 'NAME', crime_offense AS 'CRIME', ccno AS 'CC NO', isno AS 'IS NO', remarks AS 'REMARKS' FROM criminal_records WHERE (name LIKE '%" & searchString & "%' OR crime_offense LIKE '%" & searchString & "%' OR ccno LIKE '%" & searchString & "%' OR isno LIKE '%" & searchString & "%' OR remarks LIKE '%" & searchString & "%') AND deleted=0"
 
             End If
-            Dim da As New SQLiteDataAdapter(command)
+            Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
             da.Fill(dt)
             dataCR.AutoGenerateColumns = False
@@ -131,7 +131,7 @@ Public Class Admin
                 Dim row As DataGridViewRow = dataUser.Rows(e.RowIndex)
                 Dim user_id_to_delete As Integer = row.Cells("dataUserID").Value
                 If (MessageBox.Show("Delete", "Are you sure you want to delete the data?", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
-                    deleteUser("UPDATE user SET deleted = 1 WHERE user_id =" & user_id_to_delete)
+                    deleteCommand("UPDATE [user] SET deleted = 1 WHERE user_id =" & user_id_to_delete)
                 End If
                 LoadUserTable()
             Catch ex As Exception
@@ -144,9 +144,9 @@ Public Class Admin
         connection.Close()
     End Sub
 
-    Private Sub deleteUser(deleteUserCommand As String)
+    Private Sub deleteCommand(deleteDataCommand As String)
         connection.Open()
-        command.CommandText = deleteUserCommand
+        command.CommandText = deleteDataCommand
         command.ExecuteNonQuery()
         connection.Close()
     End Sub
@@ -237,7 +237,7 @@ Public Class Admin
                 Dim row As DataGridViewRow = dataPolice.Rows(e.RowIndex)
                 Dim police_id_to_delete As Integer = row.Cells("dataPoliceID").Value
                 If (MessageBox.Show("Delete", "Are you sure you want to delete the data?", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
-                    deletePolice("UPDATE police SET deleted = 1 WHERE police_id =" & police_id_to_delete)
+                    deleteCommand("UPDATE police SET deleted = 1 WHERE police_id =" & police_id_to_delete)
                 End If
                 LoadPoliceTable()
             Catch ex As Exception
@@ -247,13 +247,6 @@ Public Class Admin
             'MsgBox("Data User: Column name does not exist")
             'Cellclick prompt
         End If
-        connection.Close()
-    End Sub
-
-    Private Sub deletePolice(deletePoliceCommand As String)
-        connection.Open()
-        command.CommandText = deletePoliceCommand
-        command.ExecuteNonQuery()
         connection.Close()
     End Sub
 
@@ -329,7 +322,7 @@ Public Class Admin
                 Dim row As DataGridViewRow = dataCR.Rows(e.RowIndex)
                 Dim cr_id_to_delete As Integer = row.Cells("dataCriminalRecordsID").Value
                 If (MessageBox.Show("Delete", "Are you sure you want to delete the data?", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
-                    deletePolice("UPDATE criminal_records SET deleted = 1 WHERE cr_id =" & cr_id_to_delete)
+                    deleteCommand("UPDATE criminal_records SET deleted = 1 WHERE cr_id =" & cr_id_to_delete)
                 End If
                 LoadCRTable()
             Catch ex As Exception
@@ -340,5 +333,58 @@ Public Class Admin
             'Cellclick prompt
         End If
         connection.Close()
+    End Sub
+
+    Private Sub txtCRSearch_TextChanged(sender As Object, e As EventArgs) Handles txtCRSearch.TextChanged
+        LoadCRTable(txtCRSearch.Text.Trim)
+    End Sub
+
+    Private Sub btnCRSearchRefresh_Click(sender As Object, e As EventArgs) Handles btnCRSearchRefresh.Click
+        LoadCRTable()
+        txtCRSearch.Text = ""
+    End Sub
+
+    Private Sub dataCR_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles dataCR.CellPainting
+        If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
+            e.Handled = True
+            e.PaintBackground(e.CellBounds, True)
+            Dim sw As String = txtCRSearch.Text.Trim
+
+            If Not String.IsNullOrEmpty(sw) Then
+                Dim val As String = CStr(e.FormattedValue)
+                Dim sindx As Integer = val.ToLower().IndexOf(sw.ToLower())
+                If sindx >= 0 Then
+                    Dim hl_rect As New Rectangle()
+                    hl_rect.Y = e.CellBounds.Y + 2
+                    hl_rect.Height = e.CellBounds.Height - 5
+
+                    Dim sBefore As String = val.Substring(0, sindx)
+                    Dim sWord As String = val.Substring(sindx, sw.Length)
+                    Dim s1 As Size = TextRenderer.MeasureText(e.Graphics, sBefore, e.CellStyle.Font, e.CellBounds.Size)
+                    Dim s2 As Size = TextRenderer.MeasureText(e.Graphics, sWord, e.CellStyle.Font, e.CellBounds.Size)
+
+                    If s1.Width > 5 Then
+                        hl_rect.X = e.CellBounds.X + s1.Width - 5
+                        hl_rect.Width = s2.Width - 6
+                    Else
+                        hl_rect.X = e.CellBounds.X + 2
+                        hl_rect.Width = s2.Width - 6
+                    End If
+
+                    Dim hl_brush As SolidBrush = Nothing
+                    If (e.State And DataGridViewElementStates.Selected) <> DataGridViewElementStates.None Then
+                        hl_brush = New SolidBrush(Color.DarkGoldenrod)
+                    Else
+                        hl_brush = New SolidBrush(Color.Yellow)
+                    End If
+
+                    e.Graphics.FillRectangle(hl_brush, hl_rect)
+
+                    hl_brush.Dispose()
+                End If
+            End If
+
+            e.PaintContent(e.CellBounds)
+        End If
     End Sub
 End Class

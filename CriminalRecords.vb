@@ -1,16 +1,15 @@
-﻿Imports System.Data.SQLite
+﻿Imports System.Data.SqlClient
 Imports System.IO
 
 Public Class CriminalRecords
 
     Friend cr_id As Integer
 
-    Private dbName As String = "ESPCS.db"
-    Private dbPath As String = Directory.GetCurrentDirectory & "\bin\Debug\db\" & dbName
-    Private connString As String = "Data Source=" & dbPath & ";Version=3"
 
-    Private connection As New SQLiteConnection(connString)
-    Private command As New SQLiteCommand("", connection)
+    Private connString As String = "Data Source=(local)\SQLEXPRESS;Initial Catalog=ESPCS;Integrated Security=True"
+
+    Private connection As New SqlConnection(connString)
+    Private command As New SqlCommand("", connection)
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If cr_id Then
@@ -48,7 +47,7 @@ Public Class CriminalRecords
         If cr_id Then
             connection.Open()
             command.CommandText = "SELECT * FROM criminal_records WHERE deleted = 0 AND cr_id = " & cr_id
-            Dim da As New SQLiteDataAdapter(command)
+            Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
             da.Fill(dt)
             If (dt.Rows.Count > 0) Then
