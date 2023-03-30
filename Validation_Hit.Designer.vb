@@ -29,11 +29,11 @@ Partial Class Validation_Hit
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(319, 44)
+        Me.Button1.Location = New System.Drawing.Point(169, 44)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 56
-        Me.Button1.Text = "Confirm"
+        Me.Button1.Text = "Next"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Label1
