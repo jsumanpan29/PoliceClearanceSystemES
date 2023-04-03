@@ -71,6 +71,7 @@ Partial Class Admin
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.TabPage7.SuspendLayout()
         CType(Me.dataCR, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -93,7 +94,7 @@ Partial Class Admin
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogoutToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem, Me.LogoutToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
@@ -101,7 +102,7 @@ Partial Class Admin
         'LogoutToolStripMenuItem
         '
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'TabPage7
@@ -476,6 +477,12 @@ Partial Class Admin
         Me.TabControl1.Size = New System.Drawing.Size(1046, 487)
         Me.TabControl1.TabIndex = 0
         '
+        'SettingsToolStripMenuItem
+        '
+        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.SettingsToolStripMenuItem.Text = "Settings"
+        '
         'Admin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -552,4 +559,5 @@ Partial Class Admin
     Friend WithEvents dataCriminalRecordsRemarks As DataGridViewTextBoxColumn
     Friend WithEvents dataCriminalRecordsBtnEdit As DataGridViewButtonColumn
     Friend WithEvents dataCriminalRecordsBtnDelete As DataGridViewButtonColumn
+    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
 End Class

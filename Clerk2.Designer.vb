@@ -84,6 +84,7 @@ Partial Class Clerk2
         Me.btnApplicantPendingSearchCancel = New System.Windows.Forms.Button()
         Me.txtApplicantPendingSearch = New System.Windows.Forms.TextBox()
         Me.dataApplicantPending = New System.Windows.Forms.DataGridView()
+        Me.dataPendingClearanceID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dataPendingClearanceNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dataPendingClearanceFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dataPendingClearanceMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -94,6 +95,7 @@ Partial Class Clerk2
         Me.dataPendingClearanceDelete = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.dataApplicantCompleted = New System.Windows.Forms.DataGridView()
+        Me.dataCompletedClearanceID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dataCompletedClearanceNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dataCompletedClearanceFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.dataCompletedClearanceMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -652,13 +654,19 @@ Partial Class Clerk2
         Me.dataApplicantPending.AllowUserToAddRows = False
         Me.dataApplicantPending.AllowUserToDeleteRows = False
         Me.dataApplicantPending.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataApplicantPending.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataPendingClearanceNo, Me.dataPendingClearanceFname, Me.dataPendingClearanceMname, Me.dataPendingClearanceLname, Me.dataPendingClearanceStatus, Me.dataPendingClearanceEdit, Me.dataPendingClearanceSetBtn, Me.dataPendingClearanceDelete})
+        Me.dataApplicantPending.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataPendingClearanceID, Me.dataPendingClearanceNo, Me.dataPendingClearanceFname, Me.dataPendingClearanceMname, Me.dataPendingClearanceLname, Me.dataPendingClearanceStatus, Me.dataPendingClearanceEdit, Me.dataPendingClearanceSetBtn, Me.dataPendingClearanceDelete})
         Me.dataApplicantPending.Location = New System.Drawing.Point(4, 35)
         Me.dataApplicantPending.Name = "dataApplicantPending"
         Me.dataApplicantPending.ReadOnly = True
         Me.dataApplicantPending.RowTemplate.Height = 25
         Me.dataApplicantPending.Size = New System.Drawing.Size(773, 514)
         Me.dataApplicantPending.TabIndex = 142
+        '
+        'dataPendingClearanceID
+        '
+        Me.dataPendingClearanceID.HeaderText = "ClearanceID"
+        Me.dataPendingClearanceID.Name = "dataPendingClearanceID"
+        Me.dataPendingClearanceID.ReadOnly = True
         '
         'dataPendingClearanceNo
         '
@@ -731,13 +739,19 @@ Partial Class Clerk2
         Me.dataApplicantCompleted.AllowUserToAddRows = False
         Me.dataApplicantCompleted.AllowUserToDeleteRows = False
         Me.dataApplicantCompleted.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataApplicantCompleted.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataCompletedClearanceNo, Me.dataCompletedClearanceFname, Me.dataCompletedClearanceMname, Me.dataCompletedClearanceLname, Me.dataCompletedClearanceStatus, Me.dataCompletedClearancePrint})
+        Me.dataApplicantCompleted.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataCompletedClearanceID, Me.dataCompletedClearanceNo, Me.dataCompletedClearanceFname, Me.dataCompletedClearanceMname, Me.dataCompletedClearanceLname, Me.dataCompletedClearanceStatus, Me.dataCompletedClearancePrint})
         Me.dataApplicantCompleted.Location = New System.Drawing.Point(4, 37)
         Me.dataApplicantCompleted.Name = "dataApplicantCompleted"
         Me.dataApplicantCompleted.ReadOnly = True
         Me.dataApplicantCompleted.RowTemplate.Height = 25
         Me.dataApplicantCompleted.Size = New System.Drawing.Size(773, 514)
         Me.dataApplicantCompleted.TabIndex = 150
+        '
+        'dataCompletedClearanceID
+        '
+        Me.dataCompletedClearanceID.HeaderText = "ClearanceID"
+        Me.dataCompletedClearanceID.Name = "dataCompletedClearanceID"
+        Me.dataCompletedClearanceID.ReadOnly = True
         '
         'dataCompletedClearanceNo
         '
@@ -959,16 +973,11 @@ Partial Class Clerk2
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents dataApplicantCompleted As DataGridView
-    Friend WithEvents dataCompletedClearanceNo As DataGridViewTextBoxColumn
-    Friend WithEvents dataCompletedClearanceFname As DataGridViewTextBoxColumn
-    Friend WithEvents dataCompletedClearanceMname As DataGridViewTextBoxColumn
-    Friend WithEvents dataCompletedClearanceLname As DataGridViewTextBoxColumn
-    Friend WithEvents dataCompletedClearanceStatus As DataGridViewTextBoxColumn
-    Friend WithEvents dataCompletedClearancePrint As DataGridViewButtonColumn
     Friend WithEvents chkbAll As CheckBox
     Friend WithEvents chkbPending As CheckBox
     Friend WithEvents chkbPaid As CheckBox
     Friend WithEvents chkbValidated As CheckBox
+    Friend WithEvents dataPendingClearanceID As DataGridViewTextBoxColumn
     Friend WithEvents dataPendingClearanceNo As DataGridViewTextBoxColumn
     Friend WithEvents dataPendingClearanceFname As DataGridViewTextBoxColumn
     Friend WithEvents dataPendingClearanceMname As DataGridViewTextBoxColumn
@@ -977,4 +986,11 @@ Partial Class Clerk2
     Friend WithEvents dataPendingClearanceEdit As DataGridViewButtonColumn
     Friend WithEvents dataPendingClearanceSetBtn As DataGridViewButtonColumn
     Friend WithEvents dataPendingClearanceDelete As DataGridViewButtonColumn
+    Friend WithEvents dataCompletedClearanceID As DataGridViewTextBoxColumn
+    Friend WithEvents dataCompletedClearanceNo As DataGridViewTextBoxColumn
+    Friend WithEvents dataCompletedClearanceFname As DataGridViewTextBoxColumn
+    Friend WithEvents dataCompletedClearanceMname As DataGridViewTextBoxColumn
+    Friend WithEvents dataCompletedClearanceLname As DataGridViewTextBoxColumn
+    Friend WithEvents dataCompletedClearanceStatus As DataGridViewTextBoxColumn
+    Friend WithEvents dataCompletedClearancePrint As DataGridViewButtonColumn
 End Class
