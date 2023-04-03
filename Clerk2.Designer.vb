@@ -69,7 +69,7 @@ Partial Class Clerk2
         Me.cbBarangay = New System.Windows.Forms.ComboBox()
         Me.cbZone = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtCleranceMname = New System.Windows.Forms.TextBox()
+        Me.txtClearanceMname = New System.Windows.Forms.TextBox()
         Me.txtClearanceFname = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.txtClearanceLname = New System.Windows.Forms.TextBox()
@@ -77,31 +77,34 @@ Partial Class Clerk2
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.dtPendingSearchDate = New System.Windows.Forms.DateTimePicker()
-        Me.Label23 = New System.Windows.Forms.Label()
+        Me.chkbValidated = New System.Windows.Forms.CheckBox()
+        Me.chkbPaid = New System.Windows.Forms.CheckBox()
+        Me.chkbPending = New System.Windows.Forms.CheckBox()
+        Me.chkbAll = New System.Windows.Forms.CheckBox()
         Me.btnApplicantPendingSearchCancel = New System.Windows.Forms.Button()
         Me.txtApplicantPendingSearch = New System.Windows.Forms.TextBox()
         Me.dataApplicantPending = New System.Windows.Forms.DataGridView()
-        Me.ClearanceID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ClearanceFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ClearanceMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ClearanceLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ClearanceStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.dataPendingClearanceNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPendingClearanceFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPendingClearanceMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPendingClearanceLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPendingClearanceStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPendingClearanceEdit = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.dataPendingClearanceSetBtn = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.dataPendingClearanceDelete = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.dtCompletedSearchDate = New System.Windows.Forms.DateTimePicker()
-        Me.Label24 = New System.Windows.Forms.Label()
+        Me.dataApplicantCompleted = New System.Windows.Forms.DataGridView()
+        Me.dataCompletedClearanceNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataCompletedClearanceFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataCompletedClearanceMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataCompletedClearanceLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataCompletedClearanceStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataCompletedClearancePrint = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.btnApplicantCompletedSearchCancel = New System.Windows.Forms.Button()
         Me.txtApplicantCompletedSearch = New System.Windows.Forms.TextBox()
-        Me.dataApplicantCompleted = New System.Windows.Forms.DataGridView()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewButtonColumn1 = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.DataGridViewButtonColumn2 = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,6 +113,7 @@ Partial Class Clerk2
         CType(Me.dataApplicantPending, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.dataApplicantCompleted, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnClear_Cancel
@@ -184,6 +188,7 @@ Partial Class Clerk2
         '
         'PictureBox3
         '
+        Me.PictureBox3.BackColor = System.Drawing.Color.White
         Me.PictureBox3.Location = New System.Drawing.Point(522, 380)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(100, 94)
@@ -210,6 +215,7 @@ Partial Class Clerk2
         '
         'PictureBox2
         '
+        Me.PictureBox2.BackColor = System.Drawing.Color.White
         Me.PictureBox2.Location = New System.Drawing.Point(522, 227)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(100, 94)
@@ -285,6 +291,7 @@ Partial Class Clerk2
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackColor = System.Drawing.Color.White
         Me.PictureBox1.Location = New System.Drawing.Point(522, 73)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(100, 94)
@@ -489,9 +496,9 @@ Partial Class Clerk2
         'cbBarangay
         '
         Me.cbBarangay.FormattingEnabled = True
-        Me.cbBarangay.Location = New System.Drawing.Point(162, 149)
+        Me.cbBarangay.Location = New System.Drawing.Point(93, 149)
         Me.cbBarangay.Name = "cbBarangay"
-        Me.cbBarangay.Size = New System.Drawing.Size(134, 23)
+        Me.cbBarangay.Size = New System.Drawing.Size(203, 23)
         Me.cbBarangay.TabIndex = 95
         '
         'cbZone
@@ -499,7 +506,7 @@ Partial Class Clerk2
         Me.cbZone.FormattingEnabled = True
         Me.cbZone.Location = New System.Drawing.Point(22, 149)
         Me.cbZone.Name = "cbZone"
-        Me.cbZone.Size = New System.Drawing.Size(134, 23)
+        Me.cbZone.Size = New System.Drawing.Size(68, 23)
         Me.cbZone.TabIndex = 94
         '
         'Label2
@@ -511,12 +518,12 @@ Partial Class Clerk2
         Me.Label2.TabIndex = 93
         Me.Label2.Text = "Address(Zone, Barangay)"
         '
-        'txtCleranceMname
+        'txtClearanceMname
         '
-        Me.txtCleranceMname.Location = New System.Drawing.Point(340, 100)
-        Me.txtCleranceMname.Name = "txtCleranceMname"
-        Me.txtCleranceMname.Size = New System.Drawing.Size(153, 23)
-        Me.txtCleranceMname.TabIndex = 92
+        Me.txtClearanceMname.Location = New System.Drawing.Point(340, 100)
+        Me.txtClearanceMname.Name = "txtClearanceMname"
+        Me.txtClearanceMname.Size = New System.Drawing.Size(153, 23)
+        Me.txtClearanceMname.TabIndex = 92
         '
         'txtClearanceFname
         '
@@ -543,7 +550,7 @@ Partial Class Clerk2
         '
         'txtClearanceNo
         '
-        Me.txtClearanceNo.Location = New System.Drawing.Point(109, 49)
+        Me.txtClearanceNo.Location = New System.Drawing.Point(109, 43)
         Me.txtClearanceNo.Name = "txtClearanceNo"
         Me.txtClearanceNo.Size = New System.Drawing.Size(77, 23)
         Me.txtClearanceNo.TabIndex = 88
@@ -569,8 +576,10 @@ Partial Class Clerk2
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.dtPendingSearchDate)
-        Me.TabPage1.Controls.Add(Me.Label23)
+        Me.TabPage1.Controls.Add(Me.chkbValidated)
+        Me.TabPage1.Controls.Add(Me.chkbPaid)
+        Me.TabPage1.Controls.Add(Me.chkbPending)
+        Me.TabPage1.Controls.Add(Me.chkbAll)
         Me.TabPage1.Controls.Add(Me.btnApplicantPendingSearchCancel)
         Me.TabPage1.Controls.Add(Me.txtApplicantPendingSearch)
         Me.TabPage1.Controls.Add(Me.dataApplicantPending)
@@ -582,22 +591,45 @@ Partial Class Clerk2
         Me.TabPage1.Text = "Pending"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'dtPendingSearchDate
+        'chkbValidated
         '
-        Me.dtPendingSearchDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtPendingSearchDate.Location = New System.Drawing.Point(47, 7)
-        Me.dtPendingSearchDate.Name = "dtPendingSearchDate"
-        Me.dtPendingSearchDate.Size = New System.Drawing.Size(99, 23)
-        Me.dtPendingSearchDate.TabIndex = 142
+        Me.chkbValidated.AutoSize = True
+        Me.chkbValidated.Location = New System.Drawing.Point(183, 9)
+        Me.chkbValidated.Name = "chkbValidated"
+        Me.chkbValidated.Size = New System.Drawing.Size(74, 19)
+        Me.chkbValidated.TabIndex = 148
+        Me.chkbValidated.Text = "Validated"
+        Me.chkbValidated.UseVisualStyleBackColor = True
         '
-        'Label23
+        'chkbPaid
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(7, 10)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(34, 15)
-        Me.Label23.TabIndex = 141
-        Me.Label23.Text = "Date:"
+        Me.chkbPaid.AutoSize = True
+        Me.chkbPaid.Location = New System.Drawing.Point(128, 9)
+        Me.chkbPaid.Name = "chkbPaid"
+        Me.chkbPaid.Size = New System.Drawing.Size(49, 19)
+        Me.chkbPaid.TabIndex = 147
+        Me.chkbPaid.Text = "Paid"
+        Me.chkbPaid.UseVisualStyleBackColor = True
+        '
+        'chkbPending
+        '
+        Me.chkbPending.AutoSize = True
+        Me.chkbPending.Location = New System.Drawing.Point(52, 9)
+        Me.chkbPending.Name = "chkbPending"
+        Me.chkbPending.Size = New System.Drawing.Size(70, 19)
+        Me.chkbPending.TabIndex = 146
+        Me.chkbPending.Text = "Pending"
+        Me.chkbPending.UseVisualStyleBackColor = True
+        '
+        'chkbAll
+        '
+        Me.chkbAll.AutoSize = True
+        Me.chkbAll.Location = New System.Drawing.Point(6, 9)
+        Me.chkbAll.Name = "chkbAll"
+        Me.chkbAll.Size = New System.Drawing.Size(40, 19)
+        Me.chkbAll.TabIndex = 145
+        Me.chkbAll.Text = "All"
+        Me.chkbAll.UseVisualStyleBackColor = True
         '
         'btnApplicantPendingSearchCancel
         '
@@ -617,60 +649,75 @@ Partial Class Clerk2
         '
         'dataApplicantPending
         '
+        Me.dataApplicantPending.AllowUserToAddRows = False
+        Me.dataApplicantPending.AllowUserToDeleteRows = False
         Me.dataApplicantPending.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataApplicantPending.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ClearanceID, Me.ClearanceFname, Me.ClearanceMname, Me.ClearanceLname, Me.ClearanceStatus, Me.Column1, Me.Column2})
+        Me.dataApplicantPending.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataPendingClearanceNo, Me.dataPendingClearanceFname, Me.dataPendingClearanceMname, Me.dataPendingClearanceLname, Me.dataPendingClearanceStatus, Me.dataPendingClearanceEdit, Me.dataPendingClearanceSetBtn, Me.dataPendingClearanceDelete})
         Me.dataApplicantPending.Location = New System.Drawing.Point(4, 35)
         Me.dataApplicantPending.Name = "dataApplicantPending"
+        Me.dataApplicantPending.ReadOnly = True
         Me.dataApplicantPending.RowTemplate.Height = 25
         Me.dataApplicantPending.Size = New System.Drawing.Size(773, 514)
         Me.dataApplicantPending.TabIndex = 142
         '
-        'ClearanceID
+        'dataPendingClearanceNo
         '
-        Me.ClearanceID.HeaderText = "Clearance Number"
-        Me.ClearanceID.Name = "ClearanceID"
+        Me.dataPendingClearanceNo.HeaderText = "Clearance Number"
+        Me.dataPendingClearanceNo.Name = "dataPendingClearanceNo"
+        Me.dataPendingClearanceNo.ReadOnly = True
         '
-        'ClearanceFname
+        'dataPendingClearanceFname
         '
-        Me.ClearanceFname.HeaderText = "First Name"
-        Me.ClearanceFname.Name = "ClearanceFname"
+        Me.dataPendingClearanceFname.HeaderText = "First Name"
+        Me.dataPendingClearanceFname.Name = "dataPendingClearanceFname"
+        Me.dataPendingClearanceFname.ReadOnly = True
         '
-        'ClearanceMname
+        'dataPendingClearanceMname
         '
-        Me.ClearanceMname.HeaderText = "Middle Name"
-        Me.ClearanceMname.Name = "ClearanceMname"
+        Me.dataPendingClearanceMname.HeaderText = "Middle Name"
+        Me.dataPendingClearanceMname.Name = "dataPendingClearanceMname"
+        Me.dataPendingClearanceMname.ReadOnly = True
         '
-        'ClearanceLname
+        'dataPendingClearanceLname
         '
-        Me.ClearanceLname.HeaderText = "Last Name"
-        Me.ClearanceLname.Name = "ClearanceLname"
+        Me.dataPendingClearanceLname.HeaderText = "Last Name"
+        Me.dataPendingClearanceLname.Name = "dataPendingClearanceLname"
+        Me.dataPendingClearanceLname.ReadOnly = True
         '
-        'ClearanceStatus
+        'dataPendingClearanceStatus
         '
-        Me.ClearanceStatus.HeaderText = "Status"
-        Me.ClearanceStatus.Name = "ClearanceStatus"
+        Me.dataPendingClearanceStatus.HeaderText = "Status"
+        Me.dataPendingClearanceStatus.Name = "dataPendingClearanceStatus"
+        Me.dataPendingClearanceStatus.ReadOnly = True
         '
-        'Column1
+        'dataPendingClearanceEdit
         '
-        Me.Column1.HeaderText = ""
-        Me.Column1.Name = "Column1"
-        Me.Column1.Text = "Edit"
-        Me.Column1.UseColumnTextForButtonValue = True
+        Me.dataPendingClearanceEdit.HeaderText = ""
+        Me.dataPendingClearanceEdit.Name = "dataPendingClearanceEdit"
+        Me.dataPendingClearanceEdit.ReadOnly = True
+        Me.dataPendingClearanceEdit.Text = "Edit"
+        Me.dataPendingClearanceEdit.UseColumnTextForButtonValue = True
         '
-        'Column2
+        'dataPendingClearanceSetBtn
         '
-        Me.Column2.HeaderText = ""
-        Me.Column2.Name = "Column2"
-        Me.Column2.Text = "Validate && Print"
-        Me.Column2.UseColumnTextForButtonValue = True
+        Me.dataPendingClearanceSetBtn.HeaderText = ""
+        Me.dataPendingClearanceSetBtn.Name = "dataPendingClearanceSetBtn"
+        Me.dataPendingClearanceSetBtn.ReadOnly = True
+        Me.dataPendingClearanceSetBtn.Text = ""
+        '
+        'dataPendingClearanceDelete
+        '
+        Me.dataPendingClearanceDelete.HeaderText = ""
+        Me.dataPendingClearanceDelete.Name = "dataPendingClearanceDelete"
+        Me.dataPendingClearanceDelete.ReadOnly = True
+        Me.dataPendingClearanceDelete.Text = "Delete"
+        Me.dataPendingClearanceDelete.UseColumnTextForButtonValue = True
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.dtCompletedSearchDate)
-        Me.TabPage2.Controls.Add(Me.Label24)
+        Me.TabPage2.Controls.Add(Me.dataApplicantCompleted)
         Me.TabPage2.Controls.Add(Me.btnApplicantCompletedSearchCancel)
         Me.TabPage2.Controls.Add(Me.txtApplicantCompletedSearch)
-        Me.TabPage2.Controls.Add(Me.dataApplicantCompleted)
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -679,22 +726,56 @@ Partial Class Clerk2
         Me.TabPage2.Text = "Completed"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'dtCompletedSearchDate
+        'dataApplicantCompleted
         '
-        Me.dtCompletedSearchDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtCompletedSearchDate.Location = New System.Drawing.Point(44, 7)
-        Me.dtCompletedSearchDate.Name = "dtCompletedSearchDate"
-        Me.dtCompletedSearchDate.Size = New System.Drawing.Size(99, 23)
-        Me.dtCompletedSearchDate.TabIndex = 149
+        Me.dataApplicantCompleted.AllowUserToAddRows = False
+        Me.dataApplicantCompleted.AllowUserToDeleteRows = False
+        Me.dataApplicantCompleted.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dataApplicantCompleted.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataCompletedClearanceNo, Me.dataCompletedClearanceFname, Me.dataCompletedClearanceMname, Me.dataCompletedClearanceLname, Me.dataCompletedClearanceStatus, Me.dataCompletedClearancePrint})
+        Me.dataApplicantCompleted.Location = New System.Drawing.Point(4, 37)
+        Me.dataApplicantCompleted.Name = "dataApplicantCompleted"
+        Me.dataApplicantCompleted.ReadOnly = True
+        Me.dataApplicantCompleted.RowTemplate.Height = 25
+        Me.dataApplicantCompleted.Size = New System.Drawing.Size(773, 514)
+        Me.dataApplicantCompleted.TabIndex = 150
         '
-        'Label24
+        'dataCompletedClearanceNo
         '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(4, 10)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(34, 15)
-        Me.Label24.TabIndex = 148
-        Me.Label24.Text = "Date:"
+        Me.dataCompletedClearanceNo.HeaderText = "Clearance Number"
+        Me.dataCompletedClearanceNo.Name = "dataCompletedClearanceNo"
+        Me.dataCompletedClearanceNo.ReadOnly = True
+        '
+        'dataCompletedClearanceFname
+        '
+        Me.dataCompletedClearanceFname.HeaderText = "First Name"
+        Me.dataCompletedClearanceFname.Name = "dataCompletedClearanceFname"
+        Me.dataCompletedClearanceFname.ReadOnly = True
+        '
+        'dataCompletedClearanceMname
+        '
+        Me.dataCompletedClearanceMname.HeaderText = "Middle Name"
+        Me.dataCompletedClearanceMname.Name = "dataCompletedClearanceMname"
+        Me.dataCompletedClearanceMname.ReadOnly = True
+        '
+        'dataCompletedClearanceLname
+        '
+        Me.dataCompletedClearanceLname.HeaderText = "Last Name"
+        Me.dataCompletedClearanceLname.Name = "dataCompletedClearanceLname"
+        Me.dataCompletedClearanceLname.ReadOnly = True
+        '
+        'dataCompletedClearanceStatus
+        '
+        Me.dataCompletedClearanceStatus.HeaderText = "Status"
+        Me.dataCompletedClearanceStatus.Name = "dataCompletedClearanceStatus"
+        Me.dataCompletedClearanceStatus.ReadOnly = True
+        '
+        'dataCompletedClearancePrint
+        '
+        Me.dataCompletedClearancePrint.HeaderText = ""
+        Me.dataCompletedClearancePrint.Name = "dataCompletedClearancePrint"
+        Me.dataCompletedClearancePrint.ReadOnly = True
+        Me.dataCompletedClearancePrint.Text = "Print"
+        Me.dataCompletedClearancePrint.UseColumnTextForButtonValue = True
         '
         'btnApplicantCompletedSearchCancel
         '
@@ -712,54 +793,27 @@ Partial Class Clerk2
         Me.txtApplicantCompletedSearch.Size = New System.Drawing.Size(249, 23)
         Me.txtApplicantCompletedSearch.TabIndex = 146
         '
-        'dataApplicantCompleted
+        'MenuStrip1
         '
-        Me.dataApplicantCompleted.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataApplicantCompleted.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewButtonColumn1, Me.DataGridViewButtonColumn2})
-        Me.dataApplicantCompleted.Location = New System.Drawing.Point(4, 34)
-        Me.dataApplicantCompleted.Name = "dataApplicantCompleted"
-        Me.dataApplicantCompleted.RowTemplate.Height = 25
-        Me.dataApplicantCompleted.Size = New System.Drawing.Size(773, 514)
-        Me.dataApplicantCompleted.TabIndex = 145
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(1438, 24)
+        Me.MenuStrip1.TabIndex = 141
+        Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'DataGridViewTextBoxColumn1
+        'FileToolStripMenuItem
         '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "Clearance Number"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogoutToolStripMenuItem})
+        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem.Text = "File"
         '
-        'DataGridViewTextBoxColumn2
+        'LogoutToolStripMenuItem
         '
-        Me.DataGridViewTextBoxColumn2.HeaderText = "First Name"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Middle Name"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.HeaderText = "Last Name"
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        '
-        'DataGridViewTextBoxColumn5
-        '
-        Me.DataGridViewTextBoxColumn5.HeaderText = "Status"
-        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
-        '
-        'DataGridViewButtonColumn1
-        '
-        Me.DataGridViewButtonColumn1.HeaderText = ""
-        Me.DataGridViewButtonColumn1.Name = "DataGridViewButtonColumn1"
-        Me.DataGridViewButtonColumn1.Text = "Edit"
-        Me.DataGridViewButtonColumn1.UseColumnTextForButtonValue = True
-        '
-        'DataGridViewButtonColumn2
-        '
-        Me.DataGridViewButtonColumn2.HeaderText = ""
-        Me.DataGridViewButtonColumn2.Name = "DataGridViewButtonColumn2"
-        Me.DataGridViewButtonColumn2.Text = "Validate && Print"
-        Me.DataGridViewButtonColumn2.UseColumnTextForButtonValue = True
+        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
+        Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'Clerk2
         '
@@ -814,12 +868,14 @@ Partial Class Clerk2
         Me.Controls.Add(Me.cbBarangay)
         Me.Controls.Add(Me.cbZone)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txtCleranceMname)
+        Me.Controls.Add(Me.txtClearanceMname)
         Me.Controls.Add(Me.txtClearanceFname)
         Me.Controls.Add(Me.Label14)
         Me.Controls.Add(Me.txtClearanceLname)
         Me.Controls.Add(Me.txtClearanceNo)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Clerk2"
         Me.Text = "Clerk"
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
@@ -832,6 +888,8 @@ Partial Class Clerk2
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         CType(Me.dataApplicantCompleted, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -883,7 +941,7 @@ Partial Class Clerk2
     Friend WithEvents cbBarangay As ComboBox
     Friend WithEvents cbZone As ComboBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents txtCleranceMname As TextBox
+    Friend WithEvents txtClearanceMname As TextBox
     Friend WithEvents txtClearanceFname As TextBox
     Friend WithEvents Label14 As Label
     Friend WithEvents txtClearanceLname As TextBox
@@ -894,26 +952,29 @@ Partial Class Clerk2
     Friend WithEvents btnApplicantPendingSearchCancel As Button
     Friend WithEvents txtApplicantPendingSearch As TextBox
     Friend WithEvents dataApplicantPending As DataGridView
-    Friend WithEvents ClearanceID As DataGridViewTextBoxColumn
-    Friend WithEvents ClearanceFname As DataGridViewTextBoxColumn
-    Friend WithEvents ClearanceMname As DataGridViewTextBoxColumn
-    Friend WithEvents ClearanceLname As DataGridViewTextBoxColumn
-    Friend WithEvents ClearanceStatus As DataGridViewTextBoxColumn
-    Friend WithEvents Column1 As DataGridViewButtonColumn
-    Friend WithEvents Column2 As DataGridViewButtonColumn
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents btnApplicantCompletedSearchCancel As Button
     Friend WithEvents txtApplicantCompletedSearch As TextBox
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents dataApplicantCompleted As DataGridView
-    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewButtonColumn1 As DataGridViewButtonColumn
-    Friend WithEvents DataGridViewButtonColumn2 As DataGridViewButtonColumn
-    Friend WithEvents dtPendingSearchDate As DateTimePicker
-    Friend WithEvents Label23 As Label
-    Friend WithEvents dtCompletedSearchDate As DateTimePicker
-    Friend WithEvents Label24 As Label
+    Friend WithEvents dataCompletedClearanceNo As DataGridViewTextBoxColumn
+    Friend WithEvents dataCompletedClearanceFname As DataGridViewTextBoxColumn
+    Friend WithEvents dataCompletedClearanceMname As DataGridViewTextBoxColumn
+    Friend WithEvents dataCompletedClearanceLname As DataGridViewTextBoxColumn
+    Friend WithEvents dataCompletedClearanceStatus As DataGridViewTextBoxColumn
+    Friend WithEvents dataCompletedClearancePrint As DataGridViewButtonColumn
+    Friend WithEvents chkbAll As CheckBox
+    Friend WithEvents chkbPending As CheckBox
+    Friend WithEvents chkbPaid As CheckBox
+    Friend WithEvents chkbValidated As CheckBox
+    Friend WithEvents dataPendingClearanceNo As DataGridViewTextBoxColumn
+    Friend WithEvents dataPendingClearanceFname As DataGridViewTextBoxColumn
+    Friend WithEvents dataPendingClearanceMname As DataGridViewTextBoxColumn
+    Friend WithEvents dataPendingClearanceLname As DataGridViewTextBoxColumn
+    Friend WithEvents dataPendingClearanceStatus As DataGridViewTextBoxColumn
+    Friend WithEvents dataPendingClearanceEdit As DataGridViewButtonColumn
+    Friend WithEvents dataPendingClearanceSetBtn As DataGridViewButtonColumn
+    Friend WithEvents dataPendingClearanceDelete As DataGridViewButtonColumn
 End Class

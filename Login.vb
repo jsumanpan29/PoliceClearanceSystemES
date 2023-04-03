@@ -50,8 +50,8 @@ Public Class Login
 
                         ElseIf dt.Rows(0).Item("usertype_id") = usertype_clerk Then
                             user_id = dt.Rows(0).Item("user_id")
-                            Clerk.user_id = user_id
-                            Clerk.Show()
+                            Clerk2.user_id = user_id
+                            Clerk2.Show()
                             Me.Hide()
                         ElseIf dt.Rows(0).Item("usertype_id") = usertype_cashier Then
                             user_id = dt.Rows(0).Item("user_id")

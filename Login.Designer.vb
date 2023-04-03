@@ -25,7 +25,6 @@ Partial Class Login
         Me.txtUser = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.prompt = New System.Windows.Forms.Label()
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -52,7 +51,6 @@ Partial Class Login
         '
         'Panel2
         '
-        Me.Panel2.Controls.Add(Me.prompt)
         Me.Panel2.Controls.Add(Me.btnLogin)
         Me.Panel2.Controls.Add(Me.txtPassword)
         Me.Panel2.Controls.Add(Me.Label1)
@@ -63,15 +61,6 @@ Partial Class Login
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(218, 626)
         Me.Panel2.TabIndex = 2
-        '
-        'prompt
-        '
-        Me.prompt.AutoSize = True
-        Me.prompt.Location = New System.Drawing.Point(19, 475)
-        Me.prompt.Name = "prompt"
-        Me.prompt.Size = New System.Drawing.Size(47, 15)
-        Me.prompt.TabIndex = 4
-        Me.prompt.Text = "prompt"
         '
         'btnLogin
         '
@@ -116,5 +105,4 @@ Partial Class Login
     Friend WithEvents Label1 As Label
     Friend WithEvents btnLogin As Button
     Friend WithEvents txtPassword As TextBox
-    Friend WithEvents prompt As Label
 End Class

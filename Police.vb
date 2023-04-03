@@ -12,7 +12,7 @@ Public Class Police
     Private connection As New SqlConnection(connString)
     Private command As New SqlCommand("", connection)
 
-    Private imgsPath As String = Directory.GetCurrentDirectory & "\bin\Debug\img_policesig\"
+    Private imgsPath_Police As String = Directory.GetCurrentDirectory & "\bin\Debug\img_policesig\"
     Private fileName As String
     Private imgFileToUpload As String = ""
     Private fileSavePath As String = ""
@@ -22,8 +22,8 @@ Public Class Police
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If Not Directory.Exists(imgsPath) Then
-            Directory.CreateDirectory(imgsPath)
+        If Not Directory.Exists(imgsPath_Police) Then
+            Directory.CreateDirectory(imgsPath_Police)
         End If
         If police_id Then
             Try
@@ -116,7 +116,7 @@ Public Class Police
 
                     imgFileToUpload = dt.Rows(0).Item("police_sig")
                     fileName = Path.GetFileName(imgFileToUpload)
-                    fileSavePath = Path.Combine(imgsPath, fileName)
+                    fileSavePath = Path.Combine(imgsPath_Police, fileName)
                     fileOldPath = fileSavePath
                     Using fs As New FileStream(imgFileToUpload, FileMode.Open, FileAccess.Read)
                         PictureBox1.Image = Image.FromStream(fs)
@@ -146,7 +146,7 @@ Public Class Police
         If opfDialog.ShowDialog = DialogResult.OK Then
             imgFileToUpload = opfDialog.FileName
             fileName = Path.GetFileName(imgFileToUpload)
-            fileSavePath = Path.Combine(imgsPath, fileName)
+            fileSavePath = Path.Combine(imgsPath_Police, fileName)
             Using fs As New FileStream(imgFileToUpload, FileMode.Open, FileAccess.Read)
                 PictureBox1.Image = Image.FromStream(fs)
             End Using
