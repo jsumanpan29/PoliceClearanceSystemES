@@ -34,6 +34,7 @@ Partial Class SignatureForm
         Me.pBoxSignature.Location = New System.Drawing.Point(3, 2)
         Me.pBoxSignature.Name = "pBoxSignature"
         Me.pBoxSignature.Size = New System.Drawing.Size(500, 500)
+        Me.pBoxSignature.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.pBoxSignature.TabIndex = 0
         Me.pBoxSignature.TabStop = False
         '

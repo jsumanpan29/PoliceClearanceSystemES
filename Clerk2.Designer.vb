@@ -30,10 +30,8 @@ Partial Class Clerk2
         Me.Label21 = New System.Windows.Forms.Label()
         Me.btnSignature = New System.Windows.Forms.Button()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.btnThumbmark = New System.Windows.Forms.Button()
         Me.Label19 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.btnCamera = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -42,7 +40,6 @@ Partial Class Clerk2
         Me.Label17 = New System.Windows.Forms.Label()
         Me.dtClearanceDate = New System.Windows.Forms.DateTimePicker()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.txtContactNo = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -107,20 +104,23 @@ Partial Class Clerk2
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.dataApplicantPending, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.dataApplicantCompleted, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnClear_Cancel
         '
-        Me.btnClear_Cancel.Location = New System.Drawing.Point(164, 569)
+        Me.btnClear_Cancel.Location = New System.Drawing.Point(159, 553)
         Me.btnClear_Cancel.Name = "btnClear_Cancel"
         Me.btnClear_Cancel.Size = New System.Drawing.Size(132, 23)
         Me.btnClear_Cancel.TabIndex = 135
@@ -129,7 +129,7 @@ Partial Class Clerk2
         '
         'btnAdd_Save
         '
-        Me.btnAdd_Save.Location = New System.Drawing.Point(22, 569)
+        Me.btnAdd_Save.Location = New System.Drawing.Point(17, 553)
         Me.btnAdd_Save.Name = "btnAdd_Save"
         Me.btnAdd_Save.Size = New System.Drawing.Size(132, 23)
         Me.btnAdd_Save.TabIndex = 134
@@ -139,7 +139,7 @@ Partial Class Clerk2
         'cbPoliceCertify
         '
         Me.cbPoliceCertify.FormattingEnabled = True
-        Me.cbPoliceCertify.Location = New System.Drawing.Point(22, 530)
+        Me.cbPoliceCertify.Location = New System.Drawing.Point(17, 514)
         Me.cbPoliceCertify.Name = "cbPoliceCertify"
         Me.cbPoliceCertify.Size = New System.Drawing.Size(471, 23)
         Me.cbPoliceCertify.TabIndex = 139
@@ -147,7 +147,7 @@ Partial Class Clerk2
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(22, 512)
+        Me.Label22.Location = New System.Drawing.Point(17, 496)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(68, 15)
         Me.Label22.TabIndex = 138
@@ -156,7 +156,7 @@ Partial Class Clerk2
         'cbPoliceVerify
         '
         Me.cbPoliceVerify.FormattingEnabled = True
-        Me.cbPoliceVerify.Location = New System.Drawing.Point(22, 481)
+        Me.cbPoliceVerify.Location = New System.Drawing.Point(17, 465)
         Me.cbPoliceVerify.Name = "cbPoliceVerify"
         Me.cbPoliceVerify.Size = New System.Drawing.Size(471, 23)
         Me.cbPoliceVerify.TabIndex = 137
@@ -164,7 +164,7 @@ Partial Class Clerk2
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(22, 465)
+        Me.Label21.Location = New System.Drawing.Point(17, 449)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(62, 15)
         Me.Label21.TabIndex = 136
@@ -172,7 +172,7 @@ Partial Class Clerk2
         '
         'btnSignature
         '
-        Me.btnSignature.Location = New System.Drawing.Point(535, 480)
+        Me.btnSignature.Location = New System.Drawing.Point(569, 612)
         Me.btnSignature.Name = "btnSignature"
         Me.btnSignature.Size = New System.Drawing.Size(75, 23)
         Me.btnSignature.TabIndex = 133
@@ -182,24 +182,15 @@ Partial Class Clerk2
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(545, 362)
+        Me.Label20.Location = New System.Drawing.Point(576, 438)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(57, 15)
         Me.Label20.TabIndex = 132
         Me.Label20.Text = "Signature"
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackColor = System.Drawing.Color.White
-        Me.PictureBox3.Location = New System.Drawing.Point(522, 380)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(100, 94)
-        Me.PictureBox3.TabIndex = 131
-        Me.PictureBox3.TabStop = False
-        '
         'btnThumbmark
         '
-        Me.btnThumbmark.Location = New System.Drawing.Point(535, 327)
+        Me.btnThumbmark.Location = New System.Drawing.Point(569, 405)
         Me.btnThumbmark.Name = "btnThumbmark"
         Me.btnThumbmark.Size = New System.Drawing.Size(75, 23)
         Me.btnThumbmark.TabIndex = 130
@@ -209,24 +200,15 @@ Partial Class Clerk2
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(525, 209)
+        Me.Label19.Location = New System.Drawing.Point(561, 231)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(85, 15)
         Me.Label19.TabIndex = 129
         Me.Label19.Text = "R. Thumbmark"
         '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackColor = System.Drawing.Color.White
-        Me.PictureBox2.Location = New System.Drawing.Point(522, 227)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(100, 94)
-        Me.PictureBox2.TabIndex = 128
-        Me.PictureBox2.TabStop = False
-        '
         'btnCamera
         '
-        Me.btnCamera.Location = New System.Drawing.Point(535, 173)
+        Me.btnCamera.Location = New System.Drawing.Point(569, 201)
         Me.btnCamera.Name = "btnCamera"
         Me.btnCamera.Size = New System.Drawing.Size(75, 23)
         Me.btnCamera.TabIndex = 127
@@ -236,7 +218,7 @@ Partial Class Clerk2
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(545, 55)
+        Me.Label18.Location = New System.Drawing.Point(581, 27)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(48, 15)
         Me.Label18.TabIndex = 126
@@ -245,7 +227,7 @@ Partial Class Clerk2
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(263, 361)
+        Me.Label16.Location = New System.Drawing.Point(258, 345)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(51, 15)
         Me.Label16.TabIndex = 125
@@ -253,14 +235,14 @@ Partial Class Clerk2
         '
         'txtORAmount
         '
-        Me.txtORAmount.Location = New System.Drawing.Point(263, 379)
+        Me.txtORAmount.Location = New System.Drawing.Point(258, 363)
         Me.txtORAmount.Name = "txtORAmount"
         Me.txtORAmount.Size = New System.Drawing.Size(230, 23)
         Me.txtORAmount.TabIndex = 124
         '
         'txtORNo
         '
-        Me.txtORNo.Location = New System.Drawing.Point(263, 332)
+        Me.txtORNo.Location = New System.Drawing.Point(258, 316)
         Me.txtORNo.Name = "txtORNo"
         Me.txtORNo.Size = New System.Drawing.Size(230, 23)
         Me.txtORNo.TabIndex = 123
@@ -268,7 +250,7 @@ Partial Class Clerk2
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(263, 314)
+        Me.Label17.Location = New System.Drawing.Point(258, 298)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(70, 15)
         Me.Label17.TabIndex = 122
@@ -277,7 +259,7 @@ Partial Class Clerk2
         'dtClearanceDate
         '
         Me.dtClearanceDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtClearanceDate.Location = New System.Drawing.Point(394, 46)
+        Me.dtClearanceDate.Location = New System.Drawing.Point(389, 30)
         Me.dtClearanceDate.Name = "dtClearanceDate"
         Me.dtClearanceDate.Size = New System.Drawing.Size(99, 23)
         Me.dtClearanceDate.TabIndex = 121
@@ -285,24 +267,15 @@ Partial Class Clerk2
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(354, 49)
+        Me.Label15.Location = New System.Drawing.Point(349, 33)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(34, 15)
         Me.Label15.TabIndex = 120
         Me.Label15.Text = "Date:"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackColor = System.Drawing.Color.White
-        Me.PictureBox1.Location = New System.Drawing.Point(522, 73)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 94)
-        Me.PictureBox1.TabIndex = 119
-        Me.PictureBox1.TabStop = False
-        '
         'txtContactNo
         '
-        Me.txtContactNo.Location = New System.Drawing.Point(340, 235)
+        Me.txtContactNo.Location = New System.Drawing.Point(335, 219)
         Me.txtContactNo.Name = "txtContactNo"
         Me.txtContactNo.Size = New System.Drawing.Size(153, 23)
         Me.txtContactNo.TabIndex = 118
@@ -310,7 +283,7 @@ Partial Class Clerk2
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(340, 219)
+        Me.Label13.Location = New System.Drawing.Point(335, 203)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(96, 15)
         Me.Label13.TabIndex = 117
@@ -319,7 +292,7 @@ Partial Class Clerk2
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(22, 408)
+        Me.Label12.Location = New System.Drawing.Point(17, 392)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(55, 15)
         Me.Label12.TabIndex = 116
@@ -327,7 +300,7 @@ Partial Class Clerk2
         '
         'txtCTCIssueAt
         '
-        Me.txtCTCIssueAt.Location = New System.Drawing.Point(22, 426)
+        Me.txtCTCIssueAt.Location = New System.Drawing.Point(17, 410)
         Me.txtCTCIssueAt.Name = "txtCTCIssueAt"
         Me.txtCTCIssueAt.Size = New System.Drawing.Size(230, 23)
         Me.txtCTCIssueAt.TabIndex = 115
@@ -335,7 +308,7 @@ Partial Class Clerk2
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(22, 361)
+        Me.Label10.Location = New System.Drawing.Point(17, 345)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(59, 15)
         Me.Label10.TabIndex = 114
@@ -344,14 +317,14 @@ Partial Class Clerk2
         'dtCTCIssueDate
         '
         Me.dtCTCIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtCTCIssueDate.Location = New System.Drawing.Point(22, 379)
+        Me.dtCTCIssueDate.Location = New System.Drawing.Point(17, 363)
         Me.dtCTCIssueDate.Name = "dtCTCIssueDate"
         Me.dtCTCIssueDate.Size = New System.Drawing.Size(230, 23)
         Me.dtCTCIssueDate.TabIndex = 113
         '
         'txtCTCNo
         '
-        Me.txtCTCNo.Location = New System.Drawing.Point(22, 335)
+        Me.txtCTCNo.Location = New System.Drawing.Point(17, 319)
         Me.txtCTCNo.Name = "txtCTCNo"
         Me.txtCTCNo.Size = New System.Drawing.Size(230, 23)
         Me.txtCTCNo.TabIndex = 112
@@ -359,7 +332,7 @@ Partial Class Clerk2
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(22, 317)
+        Me.Label11.Location = New System.Drawing.Point(17, 301)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(75, 15)
         Me.Label11.TabIndex = 111
@@ -368,7 +341,7 @@ Partial Class Clerk2
         'cbPurpose
         '
         Me.cbPurpose.FormattingEnabled = True
-        Me.cbPurpose.Location = New System.Drawing.Point(22, 285)
+        Me.cbPurpose.Location = New System.Drawing.Point(17, 269)
         Me.cbPurpose.Name = "cbPurpose"
         Me.cbPurpose.Size = New System.Drawing.Size(471, 23)
         Me.cbPurpose.TabIndex = 110
@@ -376,7 +349,7 @@ Partial Class Clerk2
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(22, 269)
+        Me.Label9.Location = New System.Drawing.Point(17, 253)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(50, 15)
         Me.Label9.TabIndex = 109
@@ -384,7 +357,7 @@ Partial Class Clerk2
         '
         'txtNationality
         '
-        Me.txtNationality.Location = New System.Drawing.Point(229, 235)
+        Me.txtNationality.Location = New System.Drawing.Point(224, 219)
         Me.txtNationality.Name = "txtNationality"
         Me.txtNationality.Size = New System.Drawing.Size(105, 23)
         Me.txtNationality.TabIndex = 108
@@ -392,7 +365,7 @@ Partial Class Clerk2
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(231, 219)
+        Me.Label8.Location = New System.Drawing.Point(226, 203)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(65, 15)
         Me.Label8.TabIndex = 107
@@ -400,7 +373,7 @@ Partial Class Clerk2
         '
         'txtHeight
         '
-        Me.txtHeight.Location = New System.Drawing.Point(145, 235)
+        Me.txtHeight.Location = New System.Drawing.Point(140, 219)
         Me.txtHeight.Name = "txtHeight"
         Me.txtHeight.Size = New System.Drawing.Size(78, 23)
         Me.txtHeight.TabIndex = 106
@@ -408,7 +381,7 @@ Partial Class Clerk2
         'rbFemale
         '
         Me.rbFemale.AutoSize = True
-        Me.rbFemale.Location = New System.Drawing.Point(79, 237)
+        Me.rbFemale.Location = New System.Drawing.Point(74, 221)
         Me.rbFemale.Name = "rbFemale"
         Me.rbFemale.Size = New System.Drawing.Size(63, 19)
         Me.rbFemale.TabIndex = 105
@@ -419,7 +392,7 @@ Partial Class Clerk2
         'rbMale
         '
         Me.rbMale.AutoSize = True
-        Me.rbMale.Location = New System.Drawing.Point(22, 237)
+        Me.rbMale.Location = New System.Drawing.Point(17, 221)
         Me.rbMale.Name = "rbMale"
         Me.rbMale.Size = New System.Drawing.Size(51, 19)
         Me.rbMale.TabIndex = 104
@@ -430,7 +403,7 @@ Partial Class Clerk2
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(145, 218)
+        Me.Label7.Location = New System.Drawing.Point(140, 202)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(59, 15)
         Me.Label7.TabIndex = 103
@@ -439,7 +412,7 @@ Partial Class Clerk2
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(22, 219)
+        Me.Label6.Location = New System.Drawing.Point(17, 203)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(25, 15)
         Me.Label6.TabIndex = 102
@@ -448,7 +421,7 @@ Partial Class Clerk2
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(340, 175)
+        Me.Label5.Location = New System.Drawing.Point(335, 159)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(73, 15)
         Me.Label5.TabIndex = 101
@@ -457,14 +430,14 @@ Partial Class Clerk2
         'dtBirthDate
         '
         Me.dtBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtBirthDate.Location = New System.Drawing.Point(340, 193)
+        Me.dtBirthDate.Location = New System.Drawing.Point(335, 177)
         Me.dtBirthDate.Name = "dtBirthDate"
         Me.dtBirthDate.Size = New System.Drawing.Size(153, 23)
         Me.dtBirthDate.TabIndex = 100
         '
         'txtBirthPlace
         '
-        Me.txtBirthPlace.Location = New System.Drawing.Point(22, 193)
+        Me.txtBirthPlace.Location = New System.Drawing.Point(17, 177)
         Me.txtBirthPlace.Name = "txtBirthPlace"
         Me.txtBirthPlace.Size = New System.Drawing.Size(274, 23)
         Me.txtBirthPlace.TabIndex = 99
@@ -472,7 +445,7 @@ Partial Class Clerk2
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(22, 175)
+        Me.Label4.Location = New System.Drawing.Point(17, 159)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(77, 15)
         Me.Label4.TabIndex = 98
@@ -481,7 +454,7 @@ Partial Class Clerk2
         'cbCivilStatus
         '
         Me.cbCivilStatus.FormattingEnabled = True
-        Me.cbCivilStatus.Location = New System.Drawing.Point(340, 149)
+        Me.cbCivilStatus.Location = New System.Drawing.Point(335, 133)
         Me.cbCivilStatus.Name = "cbCivilStatus"
         Me.cbCivilStatus.Size = New System.Drawing.Size(153, 23)
         Me.cbCivilStatus.TabIndex = 97
@@ -489,7 +462,7 @@ Partial Class Clerk2
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(340, 131)
+        Me.Label3.Location = New System.Drawing.Point(335, 115)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(65, 15)
         Me.Label3.TabIndex = 96
@@ -498,7 +471,7 @@ Partial Class Clerk2
         'cbBarangay
         '
         Me.cbBarangay.FormattingEnabled = True
-        Me.cbBarangay.Location = New System.Drawing.Point(93, 149)
+        Me.cbBarangay.Location = New System.Drawing.Point(88, 133)
         Me.cbBarangay.Name = "cbBarangay"
         Me.cbBarangay.Size = New System.Drawing.Size(203, 23)
         Me.cbBarangay.TabIndex = 95
@@ -506,7 +479,7 @@ Partial Class Clerk2
         'cbZone
         '
         Me.cbZone.FormattingEnabled = True
-        Me.cbZone.Location = New System.Drawing.Point(22, 149)
+        Me.cbZone.Location = New System.Drawing.Point(17, 133)
         Me.cbZone.Name = "cbZone"
         Me.cbZone.Size = New System.Drawing.Size(68, 23)
         Me.cbZone.TabIndex = 94
@@ -514,7 +487,7 @@ Partial Class Clerk2
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(22, 131)
+        Me.Label2.Location = New System.Drawing.Point(17, 115)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(139, 15)
         Me.Label2.TabIndex = 93
@@ -522,14 +495,14 @@ Partial Class Clerk2
         '
         'txtClearanceMname
         '
-        Me.txtClearanceMname.Location = New System.Drawing.Point(340, 100)
+        Me.txtClearanceMname.Location = New System.Drawing.Point(335, 84)
         Me.txtClearanceMname.Name = "txtClearanceMname"
         Me.txtClearanceMname.Size = New System.Drawing.Size(153, 23)
         Me.txtClearanceMname.TabIndex = 92
         '
         'txtClearanceFname
         '
-        Me.txtClearanceFname.Location = New System.Drawing.Point(181, 100)
+        Me.txtClearanceFname.Location = New System.Drawing.Point(176, 84)
         Me.txtClearanceFname.Name = "txtClearanceFname"
         Me.txtClearanceFname.Size = New System.Drawing.Size(153, 23)
         Me.txtClearanceFname.TabIndex = 91
@@ -537,7 +510,7 @@ Partial Class Clerk2
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(22, 82)
+        Me.Label14.Location = New System.Drawing.Point(17, 66)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(262, 15)
         Me.Label14.TabIndex = 90
@@ -545,14 +518,14 @@ Partial Class Clerk2
         '
         'txtClearanceLname
         '
-        Me.txtClearanceLname.Location = New System.Drawing.Point(22, 100)
+        Me.txtClearanceLname.Location = New System.Drawing.Point(17, 84)
         Me.txtClearanceLname.Name = "txtClearanceLname"
         Me.txtClearanceLname.Size = New System.Drawing.Size(153, 23)
         Me.txtClearanceLname.TabIndex = 89
         '
         'txtClearanceNo
         '
-        Me.txtClearanceNo.Location = New System.Drawing.Point(109, 43)
+        Me.txtClearanceNo.Location = New System.Drawing.Point(104, 27)
         Me.txtClearanceNo.Name = "txtClearanceNo"
         Me.txtClearanceNo.Size = New System.Drawing.Size(77, 23)
         Me.txtClearanceNo.TabIndex = 88
@@ -560,7 +533,7 @@ Partial Class Clerk2
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(22, 49)
+        Me.Label1.Location = New System.Drawing.Point(17, 33)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(81, 15)
         Me.Label1.TabIndex = 87
@@ -570,7 +543,7 @@ Partial Class Clerk2
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(628, 12)
+        Me.TabControl1.Location = New System.Drawing.Point(710, 27)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(788, 617)
@@ -812,7 +785,7 @@ Partial Class Clerk2
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1438, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1510, 24)
         Me.MenuStrip1.TabIndex = 141
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -829,11 +802,41 @@ Partial Class Clerk2
         Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(530, 45)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(150, 150)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 142
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Location = New System.Drawing.Point(530, 249)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(150, 150)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 143
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Location = New System.Drawing.Point(530, 456)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(150, 150)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox3.TabIndex = 144
+        Me.PictureBox3.TabStop = False
+        '
         'Clerk2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1438, 660)
+        Me.ClientSize = New System.Drawing.Size(1510, 679)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TabControl1)
         Me.Controls.Add(Me.btnClear_Cancel)
         Me.Controls.Add(Me.btnAdd_Save)
@@ -843,10 +846,8 @@ Partial Class Clerk2
         Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.btnSignature)
         Me.Controls.Add(Me.Label20)
-        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.btnThumbmark)
         Me.Controls.Add(Me.Label19)
-        Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.btnCamera)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.Label16)
@@ -855,7 +856,6 @@ Partial Class Clerk2
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.dtClearanceDate)
         Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.txtContactNo)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label12)
@@ -892,9 +892,6 @@ Partial Class Clerk2
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Clerk2"
         Me.Text = "Clerk"
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
@@ -904,6 +901,9 @@ Partial Class Clerk2
         CType(Me.dataApplicantCompleted, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -916,10 +916,8 @@ Partial Class Clerk2
     Friend WithEvents Label21 As Label
     Friend WithEvents btnSignature As Button
     Friend WithEvents Label20 As Label
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents btnThumbmark As Button
     Friend WithEvents Label19 As Label
-    Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents btnCamera As Button
     Friend WithEvents Label18 As Label
     Friend WithEvents Label16 As Label
@@ -928,7 +926,6 @@ Partial Class Clerk2
     Friend WithEvents Label17 As Label
     Friend WithEvents dtClearanceDate As DateTimePicker
     Friend WithEvents Label15 As Label
-    Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents txtContactNo As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
@@ -993,4 +990,7 @@ Partial Class Clerk2
     Friend WithEvents dataCompletedClearanceLname As DataGridViewTextBoxColumn
     Friend WithEvents dataCompletedClearanceStatus As DataGridViewTextBoxColumn
     Friend WithEvents dataCompletedClearancePrint As DataGridViewButtonColumn
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

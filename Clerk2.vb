@@ -4,6 +4,8 @@ Imports TableDependency.SqlClient.Base
 Imports TableDependency.SqlClient.Base.Enums
 Imports TableDependency.SqlClient
 Imports System.Net
+Imports System.Reflection
+Imports System.Drawing.Imaging
 
 Public Class Clerk2
     Friend user_id As Integer
@@ -26,6 +28,21 @@ Public Class Clerk2
     Private status_validated As String = "VALIDATED"
     Private status_completed As String = "COMPLETED"
 
+    'Dim bitmap_applicant_default As Bitmap()
+    'Dim bitmap_fingerprint_default As Bitmap()
+    'Dim bitmap_signature_default As Bitmap()
+
+    Dim now As DateTime = DateTime.Now
+    Dim fileNameDefault As String = String.Format("image_{0:yyyyMMdd_HHmmss}.png", now)
+
+    Dim bitmap_applicant_default
+    Dim bitmap_fingerprint_default
+    Dim bitmap_signature_default
+
+    Dim signatureFileName As String = ""
+    Dim applicantFileName As String = ""
+    Dim fingerprintFileName As String = ""
+
     'Private IsEditing As Boolean = False
     Private PccIDToEdit As Integer
     Dim pccDependencyPending As SqlTableDependency(Of PoliceClearanceCertificate)
@@ -37,7 +54,7 @@ Public Class Clerk2
             Try
                 connection.Open()
                 'UPDATE police SET fname = @fname, mname = @mname, lname = @lname, contact_no = @contactno, police_sig = @policesig, rank_id = @rankid, position_id = @positionid WHERE police_id =" & police_id
-                command.CommandText = "UPDATE dbo.[pcc] SET [fname] = @fname, [mname] = @mname, [lname] = @lname, [zone_id] = @zone_id,[barangay_id] = @barangay_id,[cs_id] = @cs_id,[place_of_birth] = @place_of_birth,[date_of_birth] = @date_of_birth,[sex] = @sex,[height] = @height,[nationality] = @nationality,[contact_no] = @contact_no,[purpose_id] = @purpose_id,[ctc_number] = @ctc_number,[ctc_issued_on] = @ctc_issued_on,[ctc_issued_at] = @ctc_issued_at,[signature] = 'signature',[img] = 'img',[thumb] = 'thumb',[pcc_number] = @pcc_number,[pcc_issue_date] = @pcc_issue_date,[police_id_verify] = @police_id_verify,[police_id_certify] = @police_id_certify,[payment_or_number] = @payment_or_number,[payment_amount] = @payment_amount WHERE [pcc_id] = " & PccIDToEdit
+                command.CommandText = "UPDATE dbo.[pcc] SET [fname] = @fname, [mname] = @mname, [lname] = @lname, [zone_id] = @zone_id,[barangay_id] = @barangay_id,[cs_id] = @cs_id,[place_of_birth] = @place_of_birth,[date_of_birth] = @date_of_birth,[sex] = @sex,[height] = @height,[nationality] = @nationality,[contact_no] = @contact_no,[purpose_id] = @purpose_id,[ctc_number] = @ctc_number,[ctc_issued_on] = @ctc_issued_on,[ctc_issued_at] = @ctc_issued_at,[signature] = @signature,[img] = @img,[thumb] = @thumb,[pcc_number] = @pcc_number,[pcc_issue_date] = @pcc_issue_date,[police_id_verify] = @police_id_verify,[police_id_certify] = @police_id_certify,[payment_or_number] = @payment_or_number,[payment_amount] = @payment_amount WHERE [pcc_id] = " & PccIDToEdit
                 command.Parameters.Clear()
                 command.Parameters.AddWithValue("@pcc_number", txtClearanceNo.Text.Trim)
                 command.Parameters.AddWithValue("@pcc_issue_date", dtClearanceDate.Value.Date)
@@ -65,9 +82,18 @@ Public Class Clerk2
                 command.Parameters.AddWithValue("@ctc_issued_on", dtCTCIssueDate.Value.Date)
                 command.Parameters.AddWithValue("@ctc_issued_at", txtCTCIssueAt.Text.Trim)
 
-                ''command.Parameters.AddWithValue("@signature", fileSavePath)
-                ''command.Parameters.AddWithValue("@img", fileSavePath)
-                ''command.Parameters.AddWithValue("@thumb", fileSavePath)
+                'If signatureFileName <> "" Then
+                '    PictureBox3.Image.Save(signatureFileName, ImageFormat.Png)
+                'End If
+                'If applicantFileName <> "" Then
+                '    PictureBox1.Image.Save(applicantFileName, ImageFormat.Png)
+                'End If
+                'If fingerprintFileName <> "" Then
+                '    PictureBox2.Image.Save(fingerprintFileName, ImageFormat.Png)
+                'End If
+                'command.Parameters.AddWithValue("@signature", signatureFileName)
+                'command.Parameters.AddWithValue("@img", applicantFileName)
+                'command.Parameters.AddWithValue("@thumb", fingerprintFileName)
 
                 command.Parameters.AddWithValue("@police_id_verify", cbPoliceVerify.SelectedValue.ToString)
                 command.Parameters.AddWithValue("@police_id_certify", cbPoliceCertify.SelectedValue.ToString)
@@ -91,7 +117,9 @@ Public Class Clerk2
                 'SqlData()
                 connection.Open()
                 'command.CommandText = "INSERT INTO dbo.[police_clearance_certificate]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[purpose_id],[ctc_number],[ctc_issued_on],[ctc_issued_at],[signature],[img],[thumb],[pcc_number],[pcc_issue_date],[police_id_verify],[police_id_certify],[payment_OR_number], [payment_amount],[user_id],[qrcode],[payment_confirmed_user],[payment_confirmed_date]) VALUES(@fname,@mname,@lname,@zone_id,@barangay_id,@cs_id,@place_of_birth,@date_of_birth,@sex,@height,@nationality,@contact_no,@purpose_id,@ctc_number,@ctc_issued_on,@ctc_issued_at,'signature','img','thumb',@pcc_number,@pcc_issue_date,@police_id_verify,@police_id_certify,@payment_OR_number, @payment_amount, " & user_id & ",'qrcode',1," & DateTime.Now.ToString("yyyy/MM/dd") & ")"
-                command.CommandText = "INSERT INTO dbo.[pcc]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[purpose_id],[ctc_number],[ctc_issued_on],[ctc_issued_at],[signature],[img],[thumb],[pcc_number],[pcc_issue_date],[police_id_verify],[police_id_certify],[payment_or_number],[payment_amount],[user_id]) VALUES(@fname,@mname,@lname,@zone_id,@barangay_id,@cs_id,@place_of_birth,@date_of_birth,@sex,@height,@nationality,@contact_no,@purpose_id,@ctc_number,@ctc_issued_on,@ctc_issued_at,'signature','img','thumb',@pcc_number,@pcc_issue_date,@police_id_verify,@police_id_certify,@payment_or_number, @payment_amount,@user_id)"
+                command.CommandText = "INSERT INTO dbo.[pcc]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[purpose_id],[ctc_number],[ctc_issued_on],[ctc_issued_at],[signature],[img],[thumb],[pcc_number],[pcc_issue_date],[police_id_verify],[police_id_certify],[payment_or_number],[payment_amount],[user_id]) VALUES(@fname,@mname,@lname,@zone_id,@barangay_id,@cs_id,@place_of_birth,@date_of_birth,@sex,@height,@nationality,@contact_no,@purpose_id,@ctc_number,@ctc_issued_on,@ctc_issued_at,@signature,@img,@thumb,@pcc_number,@pcc_issue_date,@police_id_verify,@police_id_certify,@payment_or_number, @payment_amount,@user_id)"
+                'command.CommandText = "INSERT INTO dbo.[pcc]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[purpose_id],[ctc_number],[ctc_issued_on],[ctc_issued_at],[pcc_number],[pcc_issue_date],[police_id_verify],[police_id_certify],[payment_or_number],[payment_amount],[user_id]) VALUES(@fname,@mname,@lname,@zone_id,@barangay_id,@cs_id,@place_of_birth,@date_of_birth,@sex,@height,@nationality,@contact_no,@purpose_id,@ctc_number,@ctc_issued_on,@ctc_issued_at,@pcc_number,@pcc_issue_date,@police_id_verify,@police_id_certify,@payment_or_number,@payment_amount,@user_id)"
+                'command.CommandText = "INSERT INTO dbo.[pcc]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[purpose_id],[ctc_number],[ctc_issued_on],[ctc_issued_at],[signature],[img],[thumb],[pcc_number],[pcc_issue_date],[police_id_verify],[police_id_certify],[payment_or_number],[payment_amount],[user_id]) VALUES('Wow','Wow','Wow',1,1,1,'Wow','2023-04-04',1,'123','123','123',1,'123','2023-04-04','123','','','','123','2023-04-04',1,1,'123', 123,1)"
                 command.Parameters.Clear()
                 command.Parameters.AddWithValue("@pcc_number", txtClearanceNo.Text.Trim)
                 command.Parameters.AddWithValue("@pcc_issue_date", dtClearanceDate.Value.Date)
@@ -119,9 +147,20 @@ Public Class Clerk2
                 command.Parameters.AddWithValue("@ctc_issued_on", dtCTCIssueDate.Value.Date)
                 command.Parameters.AddWithValue("@ctc_issued_at", txtCTCIssueAt.Text.Trim)
 
-                ''command.Parameters.AddWithValue("@signature", fileSavePath)
-                ''command.Parameters.AddWithValue("@img", fileSavePath)
-                ''command.Parameters.AddWithValue("@thumb", fileSavePath)
+
+                PictureBox1.Image.Tag = fileNameDefault
+                If signatureFileName <> "" Then
+                    PictureBox3.Image.Save(signatureFileName, ImageFormat.Png)
+                End If
+                If applicantFileName <> "" Then
+                    PictureBox1.Image.Save(applicantFileName, ImageFormat.Png)
+                End If
+                If fingerprintFileName <> "" Then
+                    PictureBox2.Image.Save(fingerprintFileName, ImageFormat.Png)
+                End If
+                command.Parameters.AddWithValue("@signature", signatureFileName)
+                command.Parameters.AddWithValue("@img", applicantFileName)
+                command.Parameters.AddWithValue("@thumb", fingerprintFileName)
 
                 command.Parameters.AddWithValue("@police_id_verify", cbPoliceVerify.SelectedValue.ToString)
                 command.Parameters.AddWithValue("@police_id_certify", cbPoliceCertify.SelectedValue.ToString)
@@ -132,11 +171,12 @@ Public Class Clerk2
                 command.ExecuteNonQuery()
                 connection.Close()
                 'File.Copy(imgFileToUpload, fileSavePath, True)
-                Clear()
+
             Catch ex As Exception
                 connection.Close()
                 MsgBox("Insert Police Clearance error" & vbCrLf & String.Format("Error: {0}", ex.Message))
             End Try
+            Clear()
         End If
 
     End Sub
@@ -168,6 +208,30 @@ Public Class Clerk2
         dtCTCIssueDate.Value = DateTime.Now
         txtCTCIssueAt.Text = ""
         'Insert Codes to Call Image Here([signature],[img],[thumb])
+        Dim imageCamera As Image = PictureBox1.Image
+        PictureBox1.Image = Nothing
+        If imageCamera IsNot Nothing Then
+            imageCamera.Dispose()
+        End If
+        Dim imageFingerprint As Image = PictureBox2.Image
+        PictureBox2.Image = Nothing
+        If imageFingerprint IsNot Nothing Then
+            imageFingerprint.Dispose()
+        End If
+        Dim imageSignature As Image = PictureBox3.Image
+        PictureBox3.Image = Nothing
+        If imageSignature IsNot Nothing Then
+            imageSignature.Dispose()
+        End If
+        'PictureBox1.Image = bitmap_applicant_default
+        'PictureBox2.Image = bitmap_fingerprint_default
+        'PictureBox3.Image = bitmap_signature_default
+        LoadDefaultImages()
+
+        signatureFileName = ""
+        applicantFileName = ""
+        fingerprintFileName = ""
+
         txtClearanceNo.Text = ""
         dtClearanceDate.Value = DateTime.Now
         cbPoliceVerify.SelectedIndex = 0
@@ -339,6 +403,14 @@ Public Class Clerk2
             Directory.CreateDirectory(imgsPath_ApplicantSig)
             Console.WriteLine("Images Path for Applicant Signature Created")
         End If
+
+        LoadDefaultImages()
+        'Dim names As String() = Me.GetType().Assembly.GetManifestResourceNames()
+        'For Each name As String In names
+        '    'Console.WriteLine(name)
+        '    MsgBox(name)
+        'Next
+
         'Populating ComboBoxes
         PopulateCombobox()
 
@@ -356,6 +428,26 @@ Public Class Clerk2
         pccDependencyPending.Start()
 
     End Sub
+
+    Private Sub LoadDefaultImages()
+        Dim applicant_stream As Stream = Me.GetType().Assembly.GetManifestResourceStream("PoliceClearanceSystemES.default-applicant.png")
+        If applicant_stream IsNot Nothing Then
+            bitmap_applicant_default = New Bitmap(applicant_stream)
+            PictureBox1.Image = bitmap_applicant_default
+        End If
+
+        Dim fingerprint_stream As Stream = Me.GetType().Assembly.GetManifestResourceStream("PoliceClearanceSystemES.default-fingerprint.png")
+        If fingerprint_stream IsNot Nothing Then
+            bitmap_fingerprint_default = New Bitmap(fingerprint_stream)
+            PictureBox2.Image = bitmap_fingerprint_default
+        End If
+        Dim signature_stream As Stream = Me.GetType().Assembly.GetManifestResourceStream("PoliceClearanceSystemES.default-signature.png")
+        If signature_stream IsNot Nothing Then
+            bitmap_signature_default = New Bitmap(signature_stream)
+            PictureBox3.Image = bitmap_signature_default
+        End If
+    End Sub
+
     Delegate Sub UpdatePccDependencyPending()
     Private Sub OnPccDependencyPendingChanged(ByVal sender As Object, ByVal e As TableDependency.SqlClient.Base.EventArgs.RecordChangedEventArgs(Of PoliceClearanceCertificate))
         'MsgBox("Updated:" + e.ChangeType)
@@ -371,17 +463,34 @@ Public Class Clerk2
     End Sub
     Private Sub btnCamera_Click(sender As Object, e As System.EventArgs) Handles btnCamera.Click
         Dim cameraForm As New CameraForm
-        cameraForm.ShowDialog()
+        If cameraForm.ShowDialog() = DialogResult.OK Then
+            ' the OK button was clicked
+            ' process the data entered on the form here
+            PictureBox1.Image = cameraForm.CameraImg
+            PictureBox1.Image.Tag = fileNameDefault
+            applicantFileName = imgsPath_ApplicantPix + PictureBox1.Image.Tag
+            'Else
+            ' the Cancel button was clicked or the form was closed without clicking any button
+        End If
+
     End Sub
 
     Private Sub btnThumbmark_Click(sender As Object, e As System.EventArgs) Handles btnThumbmark.Click
         Dim fingerprintForm As New FingerprintForm
-        fingerprintForm.ShowDialog()
+        If fingerprintForm.ShowDialog() = DialogResult.OK Then
+            PictureBox2.Image = fingerprintForm.Fingerprint
+            PictureBox2.Image.Tag = fileNameDefault
+            fingerprintFileName = imgsPath_ApplicantFingerprint + PictureBox2.Image.Tag
+        End If
     End Sub
 
     Private Sub btnSignature_Click(sender As Object, e As System.EventArgs) Handles btnSignature.Click
         Dim signatureForm As New SignatureForm
-        signatureForm.ShowDialog()
+        If signatureForm.ShowDialog() = DialogResult.OK Then
+            PictureBox3.Image = signatureForm.Singature
+            PictureBox3.Image.Tag = fileNameDefault
+            signatureFileName = imgsPath_ApplicantSig + PictureBox3.Image.Tag
+        End If
     End Sub
 
     Private Sub dataApplicantPending_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles dataApplicantPending.RowsAdded
@@ -448,6 +557,66 @@ Public Class Clerk2
                         dtCTCIssueDate.Value = dt.Rows(0).Item("ctc_issued_on")
                         txtCTCIssueAt.Text = dt.Rows(0).Item("ctc_issued_at")
                         'Insert Codes to Call Image Here([signature],[img],[thumb])
+                        If dt.Rows(0).Item("signature") = "" Then
+                            Dim imageSignature As Image = PictureBox3.Image
+                            PictureBox3.Image = Nothing
+                            If imageSignature IsNot Nothing Then
+                                imageSignature.Dispose()
+                            End If
+                            Dim signature_stream As Stream = Me.GetType().Assembly.GetManifestResourceStream("PoliceClearanceSystemES.default-signature.png")
+                            If signature_stream IsNot Nothing Then
+                                bitmap_signature_default = New Bitmap(signature_stream)
+                                PictureBox3.Image = bitmap_signature_default
+                            End If
+                        Else
+                            If System.IO.File.Exists(dt.Rows(0).Item("signature")) Then
+                                Using fs As New FileStream(dt.Rows(0).Item("signature"), FileMode.Open, FileAccess.Read)
+                                    PictureBox3.Image = Image.FromStream(fs)
+                                End Using
+                            Else
+                                MsgBox("Police Clearance Pending Table - Signature Image not found:")
+                            End If
+                        End If
+                        If dt.Rows(0).Item("img") = "" Then
+                            Dim imageCamera As Image = PictureBox1.Image
+                            PictureBox1.Image = Nothing
+                            If imageCamera IsNot Nothing Then
+                                imageCamera.Dispose()
+                            End If
+                            Dim applicant_stream As Stream = Me.GetType().Assembly.GetManifestResourceStream("PoliceClearanceSystemES.default-applicant.png")
+                            If applicant_stream IsNot Nothing Then
+                                bitmap_applicant_default = New Bitmap(applicant_stream)
+                                PictureBox1.Image = bitmap_applicant_default
+                            End If
+                        Else
+                            If System.IO.File.Exists(dt.Rows(0).Item("img")) Then
+                                Using fs As New FileStream(dt.Rows(0).Item("img"), FileMode.Open, FileAccess.Read)
+                                    PictureBox1.Image = Image.FromStream(fs)
+                                End Using
+                            Else
+                                MsgBox("Police Clearance Pending Table - Applicant Image not found:")
+                            End If
+                        End If
+                        If dt.Rows(0).Item("thumb") = "" Then
+                            Dim imageFingerprint As Image = PictureBox2.Image
+                            PictureBox2.Image = Nothing
+                            If imageFingerprint IsNot Nothing Then
+                                imageFingerprint.Dispose()
+                            End If
+                            Dim fingerprint_stream As Stream = Me.GetType().Assembly.GetManifestResourceStream("PoliceClearanceSystemES.default-fingerprint.png")
+                            If fingerprint_stream IsNot Nothing Then
+                                bitmap_fingerprint_default = New Bitmap(fingerprint_stream)
+                                PictureBox2.Image = bitmap_fingerprint_default
+                            End If
+                        Else
+                            If System.IO.File.Exists(dt.Rows(0).Item("thumb")) Then
+                                Using fs As New FileStream(dt.Rows(0).Item("thumb"), FileMode.Open, FileAccess.Read)
+                                    PictureBox2.Image = Image.FromStream(fs)
+                                End Using
+                            Else
+                                MsgBox("Police Clearance Pending Table - Fingerprint Image not found:")
+                            End If
+                        End If
                         ',[pcc_number],[pcc_issue_date]
                         txtClearanceNo.Text = dt.Rows(0).Item("pcc_number")
                         dtClearanceDate.Value = dt.Rows(0).Item("pcc_issue_date")
@@ -487,7 +656,19 @@ Public Class Clerk2
         connection.Close()
     End Sub
     Private Sub btnClear_Cancel_Click(sender As Object, e As System.EventArgs) Handles btnClear_Cancel.Click
-        Clear()
+        If PccIDToEdit <> Nothing Then
+            Clear()
+            PccIDToEdit = Nothing
+            btnAdd_Save.Text = "Add"
+            btnClear_Cancel.Text = "Clear"
+        Else
+            Clear()
+        End If
 
+
+    End Sub
+
+    Private Sub Clerk2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        e.Cancel = True
     End Sub
 End Class

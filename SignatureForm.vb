@@ -1,12 +1,26 @@
 ﻿Imports System.Drawing.Drawing2D
+Imports System.Drawing.Imaging
+Imports System.IO
 
 Public Class SignatureForm
     Private signatureObject As New Dictionary(Of Integer, List(Of Point))
     Private signaturePen As New Pen(Color.Black, 4)
     Private currentCurvePoints As List(Of Point)
     Private currentCurve As Integer = -1
+    Public Property Singature As Bitmap
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If currentCurve < 0 OrElse signatureObject(currentCurve).Count = 0 Then Return
 
+        Dim imgSignature As Bitmap = New Bitmap(pBoxSignature.Width, pBoxSignature.Height, PixelFormat.Format32bppArgb)
+        Using g As Graphics = Graphics.FromImage(imgSignature)
+            DrawSignature(g)
+            pBoxSignature.Image = imgSignature
+        End Using
+
+        Singature = pBoxSignature.Image
+        Me.DialogResult = DialogResult.OK
+        Me.Close()
+        Me.Dispose()
     End Sub
     Private Sub pBoxSignature_MouseDown(sender As Object, e As MouseEventArgs) Handles pBoxSignature.MouseDown
         currentCurvePoints = New List(Of Point)
@@ -33,5 +47,11 @@ Public Class SignatureForm
                 g.DrawPath(signaturePen, gPath)
             End Using
         Next
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.DialogResult = DialogResult.Cancel
+        Me.Close()
+        Me.Dispose()
     End Sub
 End Class

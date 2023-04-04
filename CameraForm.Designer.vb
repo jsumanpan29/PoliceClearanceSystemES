@@ -28,10 +28,10 @@ Partial Class CameraForm
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.ComboboxSources = New System.Windows.Forms.ComboBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button4 = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -47,7 +47,7 @@ Partial Class CameraForm
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(229, 371)
+        Me.Button2.Location = New System.Drawing.Point(320, 342)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 2
@@ -56,7 +56,7 @@ Partial Class CameraForm
         '
         'Button3
         '
-        Me.Button3.Location = New System.Drawing.Point(320, 371)
+        Me.Button3.Location = New System.Drawing.Point(229, 371)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 3
@@ -90,15 +90,6 @@ Partial Class CameraForm
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Capture"
         '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(320, 342)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 7
-        Me.Button4.Text = "Upload"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
         'ComboboxSources
         '
         Me.ComboboxSources.FormattingEnabled = True
@@ -115,6 +106,15 @@ Partial Class CameraForm
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
+        '
+        'Button4
+        '
+        Me.Button4.Location = New System.Drawing.Point(320, 371)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 7
+        Me.Button4.Text = "Cancel"
+        Me.Button4.UseVisualStyleBackColor = True
         '
         'CameraForm
         '
@@ -144,8 +144,8 @@ Partial Class CameraForm
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Button4 As Button
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents ComboboxSources As ComboBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button4 As Button
 End Class

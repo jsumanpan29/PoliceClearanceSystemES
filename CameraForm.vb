@@ -2,6 +2,7 @@
 Imports AForge.Video
 Imports AForge.Video.DirectShow
 Imports AForge.Imaging.Filters
+Imports System.Drawing.Imaging
 
 
 Public Class CameraForm
@@ -9,6 +10,8 @@ Public Class CameraForm
     Dim videoDevices As FilterInfoCollection
     Dim bmp As Bitmap
     Dim img As Image
+    Public Property CameraImg As Bitmap
+
 
 
 
@@ -66,34 +69,35 @@ Public Class CameraForm
 
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-
-    End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
-        SaveFileDialog1.DefaultExt = ".jpg"
-        'Dim imageNew As Image = ResizeImage(PictureBox2.Image, 300, 300)
+        'SaveFileDialog1.DefaultExt = ".jpg"
 
-        If SaveFileDialog1.ShowDialog = DialogResult.OK Then
-            'Dim bm_source As New Bitmap(PictureBox2.Image)
+        'If SaveFileDialog1.ShowDialog = DialogResult.OK Then
+        'Dim bm_source As New Bitmap(PictureBox2.Image)
 
-            'Dim rect1 As Rectangle = New Rectangle(0, 0, PictureBox2.Image.Width, PictureBox2.Image.Height)
-            Dim rect1 As Rectangle = New Rectangle(0, 0, img.Width, img.Height)
-            Dim rect2 As Rectangle = New Rectangle(PictureBox2.Bounds.X, PictureBox2.Bounds.Y, PictureBox2.Bounds.Width, PictureBox2.Bounds.Height)
+        'Dim rect1 As Rectangle = New Rectangle(0, 0, PictureBox2.Image.Width, PictureBox2.Image.Height)
+        Dim rect1 As Rectangle = New Rectangle(0, 0, img.Width, img.Height)
+        Dim rect2 As Rectangle = New Rectangle(PictureBox2.Bounds.X, PictureBox2.Bounds.Y, PictureBox2.Bounds.Width, PictureBox2.Bounds.Height)
 
-            rect2.X = CInt(rect1.X + ((rect1.Width / 2) - (rect2.Width / 2)))
-            rect2.Y = CInt(rect1.Y + ((rect1.Height / 2) - (rect2.Height / 2)))
-
+        rect2.X = CInt(rect1.X + ((rect1.Width / 2) - (rect2.Width / 2)))
+        rect2.Y = CInt(rect1.Y + ((rect1.Height / 2) - (rect2.Height / 2)))
 
 
-            Dim cropFilter As New Crop(rect2)
-            bmp = cropFilter.Apply(img)
 
-            PictureBox2.Image = bmp
+        Dim cropFilter As New Crop(rect2)
+        bmp = cropFilter.Apply(img)
 
-            PictureBox2.Image.Save(SaveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Jpeg)
-        End If
+        PictureBox2.Image = bmp
+
+        CameraImg = PictureBox2.Image
+
+        Me.DialogResult = DialogResult.OK
+        Me.Close()
+        Me.Dispose()
+        'PictureBox2.Image.Save(SaveFileDialog1.FileName, System.Drawing.Imaging.ImageFormat.Jpeg)
+        'End If
     End Sub
 
     Private Sub EnumerateVideoDevices()
@@ -159,4 +163,10 @@ Public Class CameraForm
         CameraStop()
     End Sub
 
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Me.DialogResult = DialogResult.Cancel
+        Me.Close()
+        Me.Dispose()
+    End Sub
 End Class

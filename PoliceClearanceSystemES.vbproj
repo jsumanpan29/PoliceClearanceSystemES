@@ -7,8 +7,8 @@
     <UseWindowsForms>True</UseWindowsForms>
     <MyType>WindowsForms</MyType>
     <ImportedNamespaces>System.Data=False,System.Drawing=False,System.Windows.Forms=False,Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,PoliceClearanceSystemES=True</ImportedNamespaces>
-    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
     <UseWPF>False</UseWPF>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -18,6 +18,19 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\default-applicant.png" />
+    <None Remove="Resources\default-fingerprint.png" />
+    <None Remove="Resources\default-signature.png" />
+    <None Remove="Resources\default.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\default-applicant.png" />
+    <EmbeddedResource Include="Resources\default-fingerprint.png" />
+    <EmbeddedResource Include="Resources\default-signature.png" />
+  </ItemGroup>
 
   <ItemGroup>
     <Import Include="System.Data" />
