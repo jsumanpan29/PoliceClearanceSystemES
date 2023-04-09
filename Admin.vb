@@ -32,7 +32,9 @@ Public Class Admin
                 'command.CommandText = "SELECT user.user_id AS 'ID', user.username AS 'USERNAME', user.fname AS 'FIRST NAME', user.mname AS 'MIDDLE NAME', user.lname AS 'LAST NAME', user.contact_no AS 'CONTACT NUMBER', usertype.name AS 'USER ROLE' FROM user INNER JOIN usertype ON user.usertype_id = usertype.usertype_id WHERE user.usertype_id != 1 AND deleted=0"
                 command.CommandText = "SELECT [user].user_id AS 'ID',[user].username AS 'USERNAME', [user].fname AS 'FIRST NAME', [user].mname AS 'MIDDLE NAME', [user].lname AS 'LAST NAME', [user].contact_no AS 'CONTACT NUMBER', [usertype].name AS 'USER ROLE' FROM [dbo].[user] INNER JOIN [dbo].[usertype] ON [user].usertype_id = [usertype].usertype_id WHERE [user].usertype_id != 1 AND deleted=0"
             Else
-                command.CommandText = "SELECT [user].user_id AS 'ID',[user].username AS 'USERNAME', [user].fname AS 'FIRST NAME', [user].mname AS 'MIDDLE NAME', [user].lname AS 'LAST NAME', [user].contact_no AS 'CONTACT NUMBER', [usertype].name AS 'USER ROLE' FROM [dbo].[user] INNER JOIN [dbo].[usertype] ON [user].usertype_id = [usertype].usertype_id WHERE ([user].username LIKE '%" & searchString & "%' OR [user].fname LIKE '%" & searchString & "%' OR [user].mname LIKE '%" & searchString & "%' OR [user].lname LIKE '%" & searchString & "%' OR [usertype].name LIKE '%" & searchString & "%') AND [user].usertype_id != 1 AND deleted=0"
+                command.CommandText = "SELECT [user].user_id AS 'ID',[user].username AS 'USERNAME', [user].fname AS 'FIRST NAME', [user].mname AS 'MIDDLE NAME', [user].lname AS 'LAST NAME', [user].contact_no AS 'CONTACT NUMBER', [usertype].name AS 'USER ROLE' FROM [dbo].[user] INNER JOIN [dbo].[usertype] ON [user].usertype_id = [usertype].usertype_id WHERE ([user].username LIKE @searchString OR [user].fname LIKE @searchString OR [user].mname LIKE @searchString OR [user].lname LIKE @searchString OR [usertype].name LIKE @searchString) AND [user].usertype_id != 1 AND deleted=0"
+                command.Parameters.Clear()
+                command.Parameters.AddWithValue("@searchString", "%" & searchString & "%")
             End If
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
@@ -63,8 +65,9 @@ Public Class Admin
             If searchString = "" Then
                 command.CommandText = "SELECT police.police_id AS 'ID', police.fname  AS 'FIRST NAME', police.mname AS 'MIDDLE NAME', police.lname AS 'LAST NAME', police.contact_no  AS 'CONTACT NUMBER', rank.name AS 'RANK', position.name AS 'POSITION' FROM [dbo].police INNER JOIN [dbo].rank ON rank.rank_id = police.rank_id INNER JOIN [dbo].position ON position.position_id = police.position_id WHERE deleted=0"
             Else
-                command.CommandText = "SELECT police.police_id AS 'ID', police.fname  AS 'FIRST NAME', police.mname AS 'MIDDLE NAME', police.lname AS 'LAST NAME', police.contact_no  AS 'CONTACT NUMBER', rank.name AS 'RANK', position.name AS 'POSITION' FROM [dbo].police INNER JOIN [dbo].rank ON rank.rank_id = police.rank_id INNER JOIN [dbo].position ON position.position_id = police.position_id WHERE (police.fname LIKE '%" & searchString & "%' OR police.mname LIKE '%" & searchString & "%' OR police.lname LIKE '%" & searchString & "%' OR rank.name LIKE '%" & searchString & "%' OR position.name LIKE '%" & searchString & "%') AND deleted=0"
-
+                command.CommandText = "SELECT police.police_id AS 'ID', police.fname  AS 'FIRST NAME', police.mname AS 'MIDDLE NAME', police.lname AS 'LAST NAME', police.contact_no  AS 'CONTACT NUMBER', rank.name AS 'RANK', position.name AS 'POSITION' FROM [dbo].police INNER JOIN [dbo].rank ON rank.rank_id = police.rank_id INNER JOIN [dbo].position ON position.position_id = police.position_id WHERE (police.fname LIKE @searchString OR police.mname LIKE @searchString OR police.lname LIKE @searchString OR rank.name LIKE @searchString OR position.name LIKE @searchString) AND deleted=0"
+                command.Parameters.Clear()
+                command.Parameters.AddWithValue("@searchString", "%" & searchString & "%")
             End If
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
@@ -92,8 +95,9 @@ Public Class Admin
             If searchString = "" Then
                 command.CommandText = "SELECT cr_id AS 'ID', name AS 'NAME', crime_offense AS 'CRIME', ccno AS 'CC NO', isno AS 'IS NO', remarks AS 'REMARKS' FROM criminal_records WHERE deleted=0"
             Else
-                command.CommandText = "SELECT cr_id AS 'ID', name AS 'NAME', crime_offense AS 'CRIME', ccno AS 'CC NO', isno AS 'IS NO', remarks AS 'REMARKS' FROM criminal_records WHERE (name LIKE '%" & searchString & "%' OR crime_offense LIKE '%" & searchString & "%' OR ccno LIKE '%" & searchString & "%' OR isno LIKE '%" & searchString & "%' OR remarks LIKE '%" & searchString & "%') AND deleted=0"
-
+                command.CommandText = "SELECT cr_id AS 'ID', name AS 'NAME', crime_offense AS 'CRIME', ccno AS 'CC NO', isno AS 'IS NO', remarks AS 'REMARKS' FROM criminal_records WHERE (name LIKE @searchString OR crime_offense LIKE @searchString OR ccno LIKE @searchString OR isno LIKE @searchString OR remarks LIKE @searchString) AND deleted=0"
+                command.Parameters.Clear()
+                command.Parameters.AddWithValue("@searchString", "%" & searchString & "%")
             End If
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()

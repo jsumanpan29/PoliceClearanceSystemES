@@ -26,16 +26,15 @@ Partial Class Cashier
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.dtPendingSearchDate = New System.Windows.Forms.DateTimePicker()
-        Me.Label23 = New System.Windows.Forms.Label()
         Me.ClearanceCheckBox = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ClearanceID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ClearanceNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClearanceFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClearanceMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClearanceLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.chbAll = New System.Windows.Forms.CheckBox()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -60,7 +59,7 @@ Partial Class Cashier
         'LogoutToolStripMenuItem
         '
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'DataGridView1
@@ -68,13 +67,42 @@ Partial Class Cashier
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ClearanceCheckBox, Me.ClearanceID, Me.ClearanceFname, Me.ClearanceMname, Me.ClearanceLname})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ClearanceCheckBox, Me.ClearanceID, Me.ClearanceNo, Me.ClearanceFname, Me.ClearanceMname, Me.ClearanceLname})
         Me.DataGridView1.Location = New System.Drawing.Point(25, 56)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Height = 25
         Me.DataGridView1.Size = New System.Drawing.Size(1001, 399)
         Me.DataGridView1.TabIndex = 1
+        '
+        'ClearanceCheckBox
+        '
+        Me.ClearanceCheckBox.HeaderText = ""
+        Me.ClearanceCheckBox.Name = "ClearanceCheckBox"
+        '
+        'ClearanceID
+        '
+        Me.ClearanceID.HeaderText = "Clearance ID"
+        Me.ClearanceID.Name = "ClearanceID"
+        '
+        'ClearanceNo
+        '
+        Me.ClearanceNo.HeaderText = "Clearance Number"
+        Me.ClearanceNo.Name = "ClearanceNo"
+        '
+        'ClearanceFname
+        '
+        Me.ClearanceFname.HeaderText = "First Name"
+        Me.ClearanceFname.Name = "ClearanceFname"
+        '
+        'ClearanceMname
+        '
+        Me.ClearanceMname.HeaderText = "Middle Name"
+        Me.ClearanceMname.Name = "ClearanceMname"
+        '
+        'ClearanceLname
+        '
+        Me.ClearanceLname.HeaderText = "Last Name"
+        Me.ClearanceLname.Name = "ClearanceLname"
         '
         'Button1
         '
@@ -101,53 +129,6 @@ Partial Class Cashier
         Me.TextBox1.Size = New System.Drawing.Size(279, 23)
         Me.TextBox1.TabIndex = 3
         '
-        'dtPendingSearchDate
-        '
-        Me.dtPendingSearchDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtPendingSearchDate.Location = New System.Drawing.Point(555, 27)
-        Me.dtPendingSearchDate.Name = "dtPendingSearchDate"
-        Me.dtPendingSearchDate.Size = New System.Drawing.Size(99, 23)
-        Me.dtPendingSearchDate.TabIndex = 144
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(515, 30)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(34, 15)
-        Me.Label23.TabIndex = 143
-        Me.Label23.Text = "Date:"
-        '
-        'ClearanceCheckBox
-        '
-        Me.ClearanceCheckBox.HeaderText = ""
-        Me.ClearanceCheckBox.Name = "ClearanceCheckBox"
-        Me.ClearanceCheckBox.ReadOnly = True
-        '
-        'ClearanceID
-        '
-        Me.ClearanceID.HeaderText = "Clearance Number"
-        Me.ClearanceID.Name = "ClearanceID"
-        Me.ClearanceID.ReadOnly = True
-        '
-        'ClearanceFname
-        '
-        Me.ClearanceFname.HeaderText = "First Name"
-        Me.ClearanceFname.Name = "ClearanceFname"
-        Me.ClearanceFname.ReadOnly = True
-        '
-        'ClearanceMname
-        '
-        Me.ClearanceMname.HeaderText = "Middle Name"
-        Me.ClearanceMname.Name = "ClearanceMname"
-        Me.ClearanceMname.ReadOnly = True
-        '
-        'ClearanceLname
-        '
-        Me.ClearanceLname.HeaderText = "Last Name"
-        Me.ClearanceLname.Name = "ClearanceLname"
-        Me.ClearanceLname.ReadOnly = True
-        '
         'chbAll
         '
         Me.chbAll.AutoSize = True
@@ -162,10 +143,8 @@ Partial Class Cashier
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1045, 497)
+        Me.ClientSize = New System.Drawing.Size(1045, 487)
         Me.Controls.Add(Me.chbAll)
-        Me.Controls.Add(Me.dtPendingSearchDate)
-        Me.Controls.Add(Me.Label23)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button1)
@@ -189,12 +168,11 @@ Partial Class Cashier
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents dtPendingSearchDate As DateTimePicker
-    Friend WithEvents Label23 As Label
+    Friend WithEvents chbAll As CheckBox
     Friend WithEvents ClearanceCheckBox As DataGridViewCheckBoxColumn
     Friend WithEvents ClearanceID As DataGridViewTextBoxColumn
+    Friend WithEvents ClearanceNo As DataGridViewTextBoxColumn
     Friend WithEvents ClearanceFname As DataGridViewTextBoxColumn
     Friend WithEvents ClearanceMname As DataGridViewTextBoxColumn
     Friend WithEvents ClearanceLname As DataGridViewTextBoxColumn
-    Friend WithEvents chbAll As CheckBox
 End Class

@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar
 
 Public Class User
     Friend user_id As Integer
@@ -18,20 +19,23 @@ Public Class User
         If user_id Then
             Try
                 connection.Open()
-                command.CommandText = "SELECT COUNT(*) FROM [user] WHERE username = @uname AND deleted = 0"
+                command.CommandText = "SELECT COUNT(*) FROM [dbo].[user] WHERE username = @uname AND deleted = 0"
                 command.Parameters.Clear()
                 command.Parameters.AddWithValue("@uname", txtUname.Text.Trim)
                 Dim da As New SqlDataAdapter(command)
                 Dim dt As New DataTable()
                 da.Fill(dt)
-                user_exists = dt.Rows(0)(0)
+                'user_exists = dt.Rows(0)(0)
+                If dt.Rows.Count > 0 AndAlso dt.Rows(0)(0) IsNot DBNull.Value Then
+                    user_exists = Convert.ToInt32(dt.Rows(0)(0))
+                End If
                 'closing connection early, if 2 connections are opened at the same time or nested connections it will prompt SQLiteDB lock!
                 connection.Close()
-                If (user_exists) Then
+                If (user_exists > 0) Then
                     MessageBox.Show("Username Taken", "Update Error", MessageBoxButtons.OK)
                 Else
                     Try
-                        SqlData("UPDATE [user] SET username = @uname, password = @pword, fname = @fname, mname = @mname, lname = @lname, contact_no = @contactno, usertype_id = @utype_id WHERE user_id =" & user_id)
+                        SqlData("UPDATE [dbo].[user] SET username = @uname, password = @pword, fname = @fname, mname = @mname, lname = @lname, contact_no = @contactno, usertype_id = @utype_id WHERE user_id =" & user_id)
                         Me.Dispose()
                     Catch ex As Exception
                         connection.Close()
@@ -48,19 +52,21 @@ Public Class User
             'If no user_id value then add new User to data table
             Try
                 connection.Open()
-                command.CommandText = "SELECT COUNT(*) FROM [user] WHERE username = @uname AND deleted = 0"
+                command.CommandText = "SELECT COUNT(*) FROM [dbo].[user] WHERE username = @uname AND deleted = 0"
                 command.Parameters.Clear()
                 command.Parameters.AddWithValue("@uname", txtUname.Text.Trim)
                 Dim da As New SqlDataAdapter(command)
                 Dim dt As New DataTable()
                 da.Fill(dt)
-                user_exists = dt.Rows(0)(0)
+                If dt.Rows.Count > 0 AndAlso dt.Rows(0)(0) IsNot DBNull.Value Then
+                    user_exists = Convert.ToInt32(dt.Rows(0)(0))
+                End If
                 connection.Close()
                 If (user_exists > 0) Then
                     MessageBox.Show("Username Taken", "Insert Error", MessageBoxButtons.OK)
                 Else
                     Try
-                        SqlData("INSERT INTO [user](username,password,fname,mname,lname,contact_no,usertype_id,deleted) VALUES(@uname,@pword,@fname,@mname,@lname,@contactno,@utype_id,0)")
+                        SqlData("INSERT INTO [dbo].[user](username,password,fname,mname,lname,contact_no,usertype_id,deleted) VALUES(@uname,@pword,@fname,@mname,@lname,@contactno,@utype_id,0)")
                         Me.Dispose()
                     Catch ex As Exception
                         connection.Close()

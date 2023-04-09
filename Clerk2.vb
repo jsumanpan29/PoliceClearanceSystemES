@@ -82,18 +82,18 @@ Public Class Clerk2
                 command.Parameters.AddWithValue("@ctc_issued_on", dtCTCIssueDate.Value.Date)
                 command.Parameters.AddWithValue("@ctc_issued_at", txtCTCIssueAt.Text.Trim)
 
-                'If signatureFileName <> "" Then
-                '    PictureBox3.Image.Save(signatureFileName, ImageFormat.Png)
-                'End If
-                'If applicantFileName <> "" Then
-                '    PictureBox1.Image.Save(applicantFileName, ImageFormat.Png)
-                'End If
-                'If fingerprintFileName <> "" Then
-                '    PictureBox2.Image.Save(fingerprintFileName, ImageFormat.Png)
-                'End If
-                'command.Parameters.AddWithValue("@signature", signatureFileName)
-                'command.Parameters.AddWithValue("@img", applicantFileName)
-                'command.Parameters.AddWithValue("@thumb", fingerprintFileName)
+                If signatureFileName <> "" Then
+                    PictureBox3.Image.Save(signatureFileName, ImageFormat.Png)
+                End If
+                If applicantFileName <> "" Then
+                    PictureBox1.Image.Save(applicantFileName, ImageFormat.Png)
+                End If
+                If fingerprintFileName <> "" Then
+                    PictureBox2.Image.Save(fingerprintFileName, ImageFormat.Png)
+                End If
+                command.Parameters.AddWithValue("@signature", signatureFileName)
+                command.Parameters.AddWithValue("@img", applicantFileName)
+                command.Parameters.AddWithValue("@thumb", fingerprintFileName)
 
                 command.Parameters.AddWithValue("@police_id_verify", cbPoliceVerify.SelectedValue.ToString)
                 command.Parameters.AddWithValue("@police_id_certify", cbPoliceCertify.SelectedValue.ToString)
@@ -148,7 +148,6 @@ Public Class Clerk2
                 command.Parameters.AddWithValue("@ctc_issued_at", txtCTCIssueAt.Text.Trim)
 
 
-                PictureBox1.Image.Tag = fileNameDefault
                 If signatureFileName <> "" Then
                     PictureBox3.Image.Save(signatureFileName, ImageFormat.Png)
                 End If
@@ -198,14 +197,14 @@ Public Class Clerk2
         cbBarangay.SelectedIndex = 0
         cbCivilStatus.SelectedIndex = 0
         txtBirthPlace.Text = ""
-        dtBirthDate.Value = DateTime.Now
+        dtBirthDate.Value = now
         rbMale.Checked = True
         txtHeight.Text = ""
         txtNationality.Text = ""
         txtContactNo.Text = ""
         cbPurpose.SelectedIndex = 0
         txtCTCNo.Text = ""
-        dtCTCIssueDate.Value = DateTime.Now
+        dtCTCIssueDate.Value = now
         txtCTCIssueAt.Text = ""
         'Insert Codes to Call Image Here([signature],[img],[thumb])
         Dim imageCamera As Image = PictureBox1.Image
@@ -250,6 +249,8 @@ Public Class Clerk2
             cbZone.ValueMember = dt.Columns("ZONE ID").ToString
             cbZone.DataSource = dt
             connection.Close()
+            command = Nothing
+
         Catch ex As Exception
             connection.Close()
             MsgBox("Loading Zone error" & vbCrLf & String.Format("Error: {0}", ex.Message))
@@ -266,6 +267,7 @@ Public Class Clerk2
             cbBarangay.ValueMember = dt.Columns("BARANGAY ID").ToString
             cbBarangay.DataSource = dt
             connection.Close()
+            command = Nothing
         Catch ex As Exception
             connection.Close()
             MsgBox("Loading Barangay error" & vbCrLf & String.Format("Error: {0}", ex.Message))
@@ -282,6 +284,7 @@ Public Class Clerk2
             cbCivilStatus.ValueMember = dt.Columns("CIVILSTATUS ID").ToString
             cbCivilStatus.DataSource = dt
             connection.Close()
+            command = Nothing
         Catch ex As Exception
             connection.Close()
             MsgBox("Loading Civil Status error" & vbCrLf & String.Format("Error: {0}", ex.Message))
@@ -298,6 +301,7 @@ Public Class Clerk2
             cbPurpose.ValueMember = dt.Columns("PURPOSE ID").ToString
             cbPurpose.DataSource = dt
             connection.Close()
+            command = Nothing
         Catch ex As Exception
             connection.Close()
             MsgBox("Loading Purpose error" & vbCrLf & String.Format("Error: {0}", ex.Message))
@@ -314,6 +318,7 @@ Public Class Clerk2
             cbPoliceVerify.ValueMember = dt.Columns("POLICE ID").ToString
             cbPoliceVerify.DataSource = dt
             connection.Close()
+            command = Nothing
         Catch ex As Exception
             connection.Close()
             MsgBox("Loading Police - Verified By error" & vbCrLf & String.Format("Error: {0}", ex.Message))
@@ -330,6 +335,7 @@ Public Class Clerk2
             cbPoliceCertify.ValueMember = dt.Columns("POLICE ID").ToString
             cbPoliceCertify.DataSource = dt
             connection.Close()
+            command = Nothing
         Catch ex As Exception
             connection.Close()
             MsgBox("Loading Police  - Certified By error" & vbCrLf & String.Format("Error: {0}", ex.Message))
@@ -355,6 +361,7 @@ Public Class Clerk2
             dataApplicantPending.Columns("dataPendingClearanceID").Visible = False
             dataApplicantPending.DataSource = dt
             connection.Close()
+            command = Nothing
         Catch ex As Exception
             connection.Close()
             MsgBox("Loading Police Clearance Certificate - Pending Data Error" & vbCrLf & String.Format("Error: {0}", ex.Message))
@@ -380,6 +387,7 @@ Public Class Clerk2
             dataApplicantCompleted.Columns("dataCompletedClearanceID").Visible = False
             dataApplicantCompleted.DataSource = dt
             connection.Close()
+            command = Nothing
         Catch ex As Exception
             connection.Close()
             MsgBox("Loading Police Clearance Certificate - Completed Data Error" & vbCrLf & String.Format("Error: {0}", ex.Message))
@@ -496,10 +504,11 @@ Public Class Clerk2
     Private Sub dataApplicantPending_RowsAdded(sender As Object, e As DataGridViewRowsAddedEventArgs) Handles dataApplicantPending.RowsAdded
         For index As Integer = e.RowIndex To e.RowIndex + e.RowCount - 1
             Dim row As DataGridViewRow = dataApplicantPending.Rows(index)
-            If dataApplicantPending.Rows(index).Cells("dataPendingClearanceStatus").Value.ToString.Trim.ToUpper = status_pending Then
-                dataApplicantPending.Rows(index).Cells("dataPendingClearanceSetBtn").Value = "Validate"
-                'ElseIf dataApplicantPending.Rows(index).Cells("dataPendingClearanceStatus").Value.ToString = "0" Then
-                '    dataApplicantPending.Rows(index).Cells("dataButton").Value = "Confirm"
+            Dim status As String = row.Cells("dataPendingClearanceStatus").Value.ToString.Trim.ToUpper
+            If status = status_pending Or status = status_paid Then
+                row.Cells("dataPendingClearanceSetBtn").Value = "Validate"
+            ElseIf status = status_validated Then
+                row.Cells("dataPendingClearanceSetBtn").Value = "Print"
             End If
         Next
     End Sub
@@ -572,6 +581,7 @@ Public Class Clerk2
                             If System.IO.File.Exists(dt.Rows(0).Item("signature")) Then
                                 Using fs As New FileStream(dt.Rows(0).Item("signature"), FileMode.Open, FileAccess.Read)
                                     PictureBox3.Image = Image.FromStream(fs)
+                                    signatureFileName = dt.Rows(0).Item("signature")
                                 End Using
                             Else
                                 MsgBox("Police Clearance Pending Table - Signature Image not found:")
@@ -592,6 +602,7 @@ Public Class Clerk2
                             If System.IO.File.Exists(dt.Rows(0).Item("img")) Then
                                 Using fs As New FileStream(dt.Rows(0).Item("img"), FileMode.Open, FileAccess.Read)
                                     PictureBox1.Image = Image.FromStream(fs)
+                                    applicantFileName = dt.Rows(0).Item("img")
                                 End Using
                             Else
                                 MsgBox("Police Clearance Pending Table - Applicant Image not found:")
@@ -612,6 +623,7 @@ Public Class Clerk2
                             If System.IO.File.Exists(dt.Rows(0).Item("thumb")) Then
                                 Using fs As New FileStream(dt.Rows(0).Item("thumb"), FileMode.Open, FileAccess.Read)
                                     PictureBox2.Image = Image.FromStream(fs)
+                                    fingerprintFileName = dt.Rows(0).Item("thumb")
                                 End Using
                             Else
                                 MsgBox("Police Clearance Pending Table - Fingerprint Image not found:")
@@ -643,6 +655,64 @@ Public Class Clerk2
             Catch ex As Exception
                 MsgBox("Police Clearance Pending Table - Delete Button error" & vbCrLf & String.Format("Error: {0}", ex.Message))
             End Try
+
+        ElseIf colname = "dataPendingClearanceSetBtn" Then
+            Try
+                Dim row As DataGridViewRow = dataApplicantPending.Rows(e.RowIndex)
+                Dim status As String = row.Cells("dataPendingClearanceStatus").Value.ToString.Trim.ToUpper
+                If status = status_pending Then
+                    MessageBox.Show("Can't Validate Applicant Until Applicant's Payment is Confirmed By the Cashier!", "Validate Applicant", MessageBoxButtons.OK)
+                ElseIf status = status_paid Then
+                    'Search for Hit in Criminal Records Here
+                    Try
+                        connection.Open()
+                        '[pcc].[fname] LIKE @searchString OR [pcc].[mname] LIKE @searchString OR [pcc].[lname] LIKE @searchString
+                        command.CommandText = "SELECT COUNT(name) FROM [dbo].[criminal_records] WHERE (name LIKE @fname OR name LIKE @mname OR name LIKE @lname)"
+                        command.Parameters.Clear()
+                        command.Parameters.AddWithValue("@fname", "%" & row.Cells("dataPendingClearanceFname").Value.ToString.Trim & "%")
+                        command.Parameters.AddWithValue("@mname", "%" & row.Cells("dataPendingClearanceMname").Value.ToString.Trim & "%")
+                        command.Parameters.AddWithValue("@lname", "%" & row.Cells("dataPendingClearanceLname").Value.ToString.Trim & "%")
+                        Dim da As New SqlDataAdapter(command)
+                        Dim dt As New DataTable()
+                        da.Fill(dt)
+                        connection.Close()
+                        command = Nothing
+                        Dim hit_record As Integer
+                        If dt.Rows.Count > 0 AndAlso dt.Rows(0)(0) IsNot DBNull.Value Then
+                            hit_record = Convert.ToInt32(dt.Rows(0)(0))
+                        End If
+                        If (hit_record > 0) Then
+                            Dim hitForm As New Validation_Hit
+                            If hitForm.ShowDialog() = DialogResult.OK Then
+                                'Codes for Hit commands Here
+                            End If
+                        Else
+                            Dim NoHitForm As New Validation_NoHit
+                            If NoHitForm.ShowDialog() = DialogResult.OK Then
+                                connection.Open()
+                                command.CommandText = "UPDATE dbo.[pcc] SET [pcc].[status] = 'VALIDATED' WHERE [pcc].[pcc_id] = @pcc_id"
+                                command.Parameters.Clear()
+                                command.Parameters.AddWithValue("@pcc_id", row.Cells("dataPendingClearanceID").Value)
+                                command.ExecuteNonQuery()
+                                command = Nothing
+                                connection.Close()
+                            End If
+                        End If
+
+                    Catch ex As Exception
+                        MsgBox("Police Clearance Pending Table - Validation error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+                    End Try
+                ElseIf status = status_validated Then
+                    'Print Function Here
+                    Try
+
+                    Catch ex As Exception
+                        MsgBox("Police Clearance Pending Table - Print error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+                    End Try
+                End If
+            Catch ex As Exception
+                MsgBox("Police Clearance Pending Table - Validate/Print Button error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+            End Try
         Else
             'MsgBox("Data User: Column name does not exist")
             'Cellclick prompt
@@ -653,6 +723,7 @@ Public Class Clerk2
         connection.Open()
         command.CommandText = commandString
         command.ExecuteNonQuery()
+        command = Nothing
         connection.Close()
     End Sub
     Private Sub btnClear_Cancel_Click(sender As Object, e As System.EventArgs) Handles btnClear_Cancel.Click
@@ -670,5 +741,9 @@ Public Class Clerk2
 
     Private Sub Clerk2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         e.Cancel = True
+    End Sub
+
+    Private Sub txtApplicantPendingSearch_TextChanged(sender As Object, e As System.EventArgs) Handles txtApplicantPendingSearch.TextChanged
+
     End Sub
 End Class
