@@ -14,7 +14,7 @@ Public Class CriminalRecords
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If cr_id Then
             Try
-                SqlData("UPDATE criminal_records SET name = @name, crime_offense = @crimeoffense, ccno = @ccno, isno = @isno, remarks = @remarks WHERE cr_id =" & cr_id)
+                SqlData("UPDATE criminal_records SET fname = @fname, mname = @mname, lname = @lname, crime_offense = @crimeoffense, ccno = @ccno, isno = @isno, remarks = @remarks WHERE cr_id =" & cr_id)
                 Me.Dispose()
             Catch ex As Exception
                 connection.Close()
@@ -22,7 +22,7 @@ Public Class CriminalRecords
             End Try
         Else
             Try
-                SqlData("INSERT INTO criminal_records(name,crime_offense,ccno,isno,remarks,deleted) VALUES(@name,@crimeoffense,@ccno,@isno,@remarks,0)")
+                SqlData("INSERT INTO criminal_records(fname,mname,lname,crime_offense,ccno,isno,remarks,deleted) VALUES(@fname,@mname,@lname,@crimeoffense,@ccno,@isno,@remarks,0)")
                 Me.Dispose()
             Catch ex As Exception
                 connection.Close()
@@ -34,7 +34,9 @@ Public Class CriminalRecords
     Private Sub SqlData(sqlCommand As String)
         connection.Open()
         command.CommandText = sqlCommand
-        command.Parameters.AddWithValue("@name", txtName.Text.Trim)
+        command.Parameters.AddWithValue("@fname", txtFName.Text.Trim)
+        command.Parameters.AddWithValue("@mname", txtMName.Text.Trim)
+        command.Parameters.AddWithValue("@lname", txtLName.Text.Trim)
         command.Parameters.AddWithValue("@crimeoffense", txtCrime.Text.Trim)
         command.Parameters.AddWithValue("@ccno", txtCCNO.Text.Trim)
         command.Parameters.AddWithValue("@isno", txtISNO.Text.Trim)
@@ -51,7 +53,9 @@ Public Class CriminalRecords
             Dim dt As New DataTable()
             da.Fill(dt)
             If (dt.Rows.Count > 0) Then
-                txtName.Text = dt.Rows(0).Item("name")
+                txtFName.Text = dt.Rows(0).Item("fname")
+                txtMName.Text = dt.Rows(0).Item("mname")
+                txtLName.Text = dt.Rows(0).Item("lname")
                 txtCrime.Text = dt.Rows(0).Item("crime_offense")
                 txtCCNO.Text = dt.Rows(0).Item("ccno")
                 txtISNO.Text = dt.Rows(0).Item("isno")

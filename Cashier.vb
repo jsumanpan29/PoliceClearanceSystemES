@@ -8,7 +8,7 @@ Public Class Cashier
 
     Private connString As String = "Data Source=(local)\SQLEXPRESS;Initial Catalog=ESPCS;Integrated Security=True"
     Private connection As New SqlConnection(connString)
-    Private command As New SqlCommand("", connection)
+    Private command
 
     Private status_pending As String = "PENDING"
     Private status_paid As String = "PAID"
@@ -42,9 +42,14 @@ Public Class Cashier
                               MessageBoxButtons.YesNo)
                 If result = DialogResult.Yes Then
                     connection.Open()
-                    command.CommandText = "UPDATE dbo.[pcc] SET [pcc].[status] = 'PAID' WHERE [pcc].[pcc_id] =" & pcc_id
+                    command = New SqlCommand("", connection)
+                    command.CommandText = "UPDATE dbo.[pcc] SET [pcc].[status] = 'PAID', [pcc].[payment_confirmed_date] = @cashier_confirmed_date, [pcc].[payment_confirmed_user] = @user_id_cashier WHERE [pcc].[pcc_id] =" & pcc_id
+                    command.Parameters.Clear()
+                    command.Parameters.AddWithValue("@user_id_cashier", user_id)
+                    command.Parameters.AddWithValue("@cashier_confirmed_date", now.Date)
                     command.ExecuteNonQuery()
                     connection.Close()
+                    command = Nothing
                 End If
             End If
         Next
@@ -58,11 +63,12 @@ Public Class Cashier
     Private Sub LoadPCC(Optional searchString As String = "")
         Try
             connection.Open()
+            command = New SqlCommand("", connection)
             If searchString = "" Then
-                command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname] FROM dbo.[pcc] WHERE [pcc].[status] = 'PENDING'"
+                command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname] FROM dbo.[pcc] WHERE [pcc].[status] = 'PENDING' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
             Else
                 'command.CommandText = "SELECT cr_id AS 'ID', name AS 'NAME', crime_offense AS 'CRIME', ccno AS 'CC NO', isno AS 'IS NO', remarks AS 'REMARKS' FROM criminal_records WHERE (name LIKE '%" & searchString & "%' OR crime_offense LIKE '%" & searchString & "%' OR ccno LIKE '%" & searchString & "%' OR isno LIKE '%" & searchString & "%' OR remarks LIKE '%" & searchString & "%') AND deleted=0"
-                command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname] FROM dbo.[pcc] WHERE ([pcc].[pcc_number] LIKE @searchString OR [pcc].[fname] LIKE @searchString OR [pcc].[mname] LIKE @searchString OR [pcc].[lname] LIKE @searchString) AND [pcc].[status] = 'PENDING'"
+                command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname] FROM dbo.[pcc] WHERE ([pcc].[pcc_number] LIKE @searchString OR [pcc].[fname] LIKE @searchString OR [pcc].[mname] LIKE @searchString OR [pcc].[lname] LIKE @searchString) AND [pcc].[status] = 'PENDING' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
                 command.Parameters.Clear()
                 command.Parameters.AddWithValue("@searchString", "%" & searchString & "%")
             End If
@@ -90,6 +96,7 @@ Public Class Cashier
 
             DataGridView1.DataSource = dt
             connection.Close()
+            command = Nothing
         Catch ex As Exception
             connection.Close()
             MsgBox("Loading Police Clearance Certificate - Pending Data Error" & vbCrLf & String.Format("Error: {0}", ex.Message))

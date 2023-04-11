@@ -25,7 +25,7 @@
     <None Remove="Resources\default-signature.png" />
     <None Remove="Resources\default.jpg" />
     <None Remove="Resources\elsalvadorcity.png" />
-    <None Remove="Resources\PCCReceipt.rdlc" />
+    <None Remove="Resources\PCC.rdlc" />
     <None Remove="Resources\pnp.png" />
   </ItemGroup>
 
@@ -33,9 +33,15 @@
     <EmbeddedResource Include="Resources\default-applicant.png" />
     <EmbeddedResource Include="Resources\default-fingerprint.png" />
     <EmbeddedResource Include="Resources\default-signature.png" />
-    <EmbeddedResource Include="Resources\elsalvadorcity.png" />
-    <EmbeddedResource Include="Resources\PCCReceipt.rdlc" />
-    <EmbeddedResource Include="Resources\pnp.png" />
+    <EmbeddedResource Include="Resources\elsalvadorcity.png">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>PoliceClearanceSystemES</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\PCC.rdlc" />
+    <EmbeddedResource Include="Resources\pnp.png">
+      <Generator>MSBuild:Compile</Generator>
+      <CustomToolNamespace>PoliceClearanceSystemES</CustomToolNamespace>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
@@ -52,6 +58,7 @@
     <PackageReference Include="AForge.Video" Version="2.2.5" />
     <PackageReference Include="AForge.Video.DirectShow" Version="2.2.5" />
     <PackageReference Include="QRCoder" Version="1.4.3" />
+    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.17" />
     <PackageReference Include="SqlTableDependency" Version="8.5.8" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
@@ -76,6 +83,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Update="PCCDataSet.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PCCDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="SampleDataSet.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>SampleDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -87,6 +104,14 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Update="PCCDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PCCDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Update="SampleDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SampleDataSet.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
 

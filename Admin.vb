@@ -93,9 +93,9 @@ Public Class Admin
         Try
             connection.Open()
             If searchString = "" Then
-                command.CommandText = "SELECT cr_id AS 'ID', name AS 'NAME', crime_offense AS 'CRIME', ccno AS 'CC NO', isno AS 'IS NO', remarks AS 'REMARKS' FROM criminal_records WHERE deleted=0"
+                command.CommandText = "SELECT cr_id AS 'ID', fname AS 'FNAME', mname AS 'MNAME', lname AS 'LNAME', crime_offense AS 'CRIME', ccno AS 'CC NO', isno AS 'IS NO', remarks AS 'REMARKS' FROM criminal_records WHERE deleted=0"
             Else
-                command.CommandText = "SELECT cr_id AS 'ID', name AS 'NAME', crime_offense AS 'CRIME', ccno AS 'CC NO', isno AS 'IS NO', remarks AS 'REMARKS' FROM criminal_records WHERE (name LIKE @searchString OR crime_offense LIKE @searchString OR ccno LIKE @searchString OR isno LIKE @searchString OR remarks LIKE @searchString) AND deleted=0"
+                command.CommandText = "SELECT cr_id AS 'ID', fname AS 'FNAME', mname AS 'MNAME', lname AS 'LNAME', crime_offense AS 'CRIME', ccno AS 'CC NO', isno AS 'IS NO', remarks AS 'REMARKS' FROM criminal_records WHERE (fname LIKE @searchString OR mname LIKE @searchString OR lname LIKE @searchString OR crime_offense LIKE @searchString OR ccno LIKE @searchString OR isno LIKE @searchString OR remarks LIKE @searchString) AND deleted=0"
                 command.Parameters.Clear()
                 command.Parameters.AddWithValue("@searchString", "%" & searchString & "%")
             End If
@@ -104,7 +104,9 @@ Public Class Admin
             da.Fill(dt)
             dataCR.AutoGenerateColumns = False
             dataCR.Columns("dataCriminalRecordsID").DataPropertyName = "ID"
-            dataCR.Columns("dataCriminalRecordsName").DataPropertyName = "NAME"
+            dataCR.Columns("dataCriminalRecordsFName").DataPropertyName = "FNAME"
+            dataCR.Columns("dataCriminalRecordsMName").DataPropertyName = "MNAME"
+            dataCR.Columns("dataCriminalRecordsLName").DataPropertyName = "LNAME"
             dataCR.Columns("dataCriminalRecordsOffense").DataPropertyName = "CRIME"
             dataCR.Columns("dataCriminalRecordsCCNo").DataPropertyName = "CC NO"
             dataCR.Columns("dataCriminalRecordsISNO").DataPropertyName = "IS NO"

@@ -24,20 +24,13 @@ Partial Class Admin
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TabPage7 = New System.Windows.Forms.TabPage()
         Me.btnCRSearchRefresh = New System.Windows.Forms.Button()
         Me.txtCRSearch = New System.Windows.Forms.TextBox()
         Me.btnCRAdd = New System.Windows.Forms.Button()
         Me.dataCR = New System.Windows.Forms.DataGridView()
-        Me.dataCriminalRecordsID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCriminalRecordsName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCriminalRecordsOffense = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCriminalRecordsCCNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCriminalRecordsISNO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCriminalRecordsRemarks = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCriminalRecordsBtnEdit = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.dataCriminalRecordsBtnDelete = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
         Me.btnPoliceSearchRefresh = New System.Windows.Forms.Button()
         Me.txtPoliceSearch = New System.Windows.Forms.TextBox()
@@ -71,7 +64,16 @@ Partial Class Admin
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.dataCriminalRecordsID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataCriminalRecordsFName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataCriminalRecordsMName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataCriminalRecordsLName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataCriminalRecordsOffense = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataCriminalRecordsCCNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataCriminalRecordsISNO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataCriminalRecordsRemarks = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataCriminalRecordsBtnEdit = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.dataCriminalRecordsBtnDelete = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.MenuStrip1.SuspendLayout()
         Me.TabPage7.SuspendLayout()
         CType(Me.dataCR, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -98,6 +100,12 @@ Partial Class Admin
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
+        '
+        'SettingsToolStripMenuItem
+        '
+        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'LogoutToolStripMenuItem
         '
@@ -148,65 +156,13 @@ Partial Class Admin
         Me.dataCR.AllowUserToAddRows = False
         Me.dataCR.AllowUserToDeleteRows = False
         Me.dataCR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataCR.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataCriminalRecordsID, Me.dataCriminalRecordsName, Me.dataCriminalRecordsOffense, Me.dataCriminalRecordsCCNo, Me.dataCriminalRecordsISNO, Me.dataCriminalRecordsRemarks, Me.dataCriminalRecordsBtnEdit, Me.dataCriminalRecordsBtnDelete})
+        Me.dataCR.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataCriminalRecordsID, Me.dataCriminalRecordsFName, Me.dataCriminalRecordsMName, Me.dataCriminalRecordsLName, Me.dataCriminalRecordsOffense, Me.dataCriminalRecordsCCNo, Me.dataCriminalRecordsISNO, Me.dataCriminalRecordsRemarks, Me.dataCriminalRecordsBtnEdit, Me.dataCriminalRecordsBtnDelete})
         Me.dataCR.Location = New System.Drawing.Point(3, 33)
         Me.dataCR.Name = "dataCR"
         Me.dataCR.ReadOnly = True
         Me.dataCR.RowTemplate.Height = 25
         Me.dataCR.Size = New System.Drawing.Size(1026, 388)
         Me.dataCR.TabIndex = 4
-        '
-        'dataCriminalRecordsID
-        '
-        Me.dataCriminalRecordsID.HeaderText = "ID"
-        Me.dataCriminalRecordsID.Name = "dataCriminalRecordsID"
-        Me.dataCriminalRecordsID.ReadOnly = True
-        '
-        'dataCriminalRecordsName
-        '
-        Me.dataCriminalRecordsName.HeaderText = "NAME"
-        Me.dataCriminalRecordsName.Name = "dataCriminalRecordsName"
-        Me.dataCriminalRecordsName.ReadOnly = True
-        '
-        'dataCriminalRecordsOffense
-        '
-        Me.dataCriminalRecordsOffense.HeaderText = "CRIME/OFFENSE COMMITTED"
-        Me.dataCriminalRecordsOffense.Name = "dataCriminalRecordsOffense"
-        Me.dataCriminalRecordsOffense.ReadOnly = True
-        '
-        'dataCriminalRecordsCCNo
-        '
-        Me.dataCriminalRecordsCCNo.HeaderText = "CRIMINAL CASE NO."
-        Me.dataCriminalRecordsCCNo.Name = "dataCriminalRecordsCCNo"
-        Me.dataCriminalRecordsCCNo.ReadOnly = True
-        '
-        'dataCriminalRecordsISNO
-        '
-        Me.dataCriminalRecordsISNO.HeaderText = "I.S. NO."
-        Me.dataCriminalRecordsISNO.Name = "dataCriminalRecordsISNO"
-        Me.dataCriminalRecordsISNO.ReadOnly = True
-        '
-        'dataCriminalRecordsRemarks
-        '
-        Me.dataCriminalRecordsRemarks.HeaderText = "REMARKS"
-        Me.dataCriminalRecordsRemarks.Name = "dataCriminalRecordsRemarks"
-        Me.dataCriminalRecordsRemarks.ReadOnly = True
-        '
-        'dataCriminalRecordsBtnEdit
-        '
-        Me.dataCriminalRecordsBtnEdit.HeaderText = ""
-        Me.dataCriminalRecordsBtnEdit.Name = "dataCriminalRecordsBtnEdit"
-        Me.dataCriminalRecordsBtnEdit.ReadOnly = True
-        Me.dataCriminalRecordsBtnEdit.Text = "Edit"
-        Me.dataCriminalRecordsBtnEdit.UseColumnTextForButtonValue = True
-        '
-        'dataCriminalRecordsBtnDelete
-        '
-        Me.dataCriminalRecordsBtnDelete.HeaderText = ""
-        Me.dataCriminalRecordsBtnDelete.Name = "dataCriminalRecordsBtnDelete"
-        Me.dataCriminalRecordsBtnDelete.ReadOnly = True
-        Me.dataCriminalRecordsBtnDelete.Text = "Delete"
-        Me.dataCriminalRecordsBtnDelete.UseColumnTextForButtonValue = True
         '
         'TabPage3
         '
@@ -477,11 +433,69 @@ Partial Class Admin
         Me.TabControl1.Size = New System.Drawing.Size(1046, 487)
         Me.TabControl1.TabIndex = 0
         '
-        'SettingsToolStripMenuItem
+        'dataCriminalRecordsID
         '
-        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
-        Me.SettingsToolStripMenuItem.Text = "Settings"
+        Me.dataCriminalRecordsID.HeaderText = "ID"
+        Me.dataCriminalRecordsID.Name = "dataCriminalRecordsID"
+        Me.dataCriminalRecordsID.ReadOnly = True
+        '
+        'dataCriminalRecordsFName
+        '
+        Me.dataCriminalRecordsFName.HeaderText = "FIRST NAME"
+        Me.dataCriminalRecordsFName.Name = "dataCriminalRecordsFName"
+        Me.dataCriminalRecordsFName.ReadOnly = True
+        '
+        'dataCriminalRecordsMName
+        '
+        Me.dataCriminalRecordsMName.HeaderText = "MIDDLE NAME"
+        Me.dataCriminalRecordsMName.Name = "dataCriminalRecordsMName"
+        Me.dataCriminalRecordsMName.ReadOnly = True
+        '
+        'dataCriminalRecordsLName
+        '
+        Me.dataCriminalRecordsLName.HeaderText = "LAST NAME"
+        Me.dataCriminalRecordsLName.Name = "dataCriminalRecordsLName"
+        Me.dataCriminalRecordsLName.ReadOnly = True
+        '
+        'dataCriminalRecordsOffense
+        '
+        Me.dataCriminalRecordsOffense.HeaderText = "CRIME/OFFENSE COMMITTED"
+        Me.dataCriminalRecordsOffense.Name = "dataCriminalRecordsOffense"
+        Me.dataCriminalRecordsOffense.ReadOnly = True
+        '
+        'dataCriminalRecordsCCNo
+        '
+        Me.dataCriminalRecordsCCNo.HeaderText = "CRIMINAL CASE NO."
+        Me.dataCriminalRecordsCCNo.Name = "dataCriminalRecordsCCNo"
+        Me.dataCriminalRecordsCCNo.ReadOnly = True
+        '
+        'dataCriminalRecordsISNO
+        '
+        Me.dataCriminalRecordsISNO.HeaderText = "I.S. NO."
+        Me.dataCriminalRecordsISNO.Name = "dataCriminalRecordsISNO"
+        Me.dataCriminalRecordsISNO.ReadOnly = True
+        '
+        'dataCriminalRecordsRemarks
+        '
+        Me.dataCriminalRecordsRemarks.HeaderText = "REMARKS"
+        Me.dataCriminalRecordsRemarks.Name = "dataCriminalRecordsRemarks"
+        Me.dataCriminalRecordsRemarks.ReadOnly = True
+        '
+        'dataCriminalRecordsBtnEdit
+        '
+        Me.dataCriminalRecordsBtnEdit.HeaderText = ""
+        Me.dataCriminalRecordsBtnEdit.Name = "dataCriminalRecordsBtnEdit"
+        Me.dataCriminalRecordsBtnEdit.ReadOnly = True
+        Me.dataCriminalRecordsBtnEdit.Text = "Edit"
+        Me.dataCriminalRecordsBtnEdit.UseColumnTextForButtonValue = True
+        '
+        'dataCriminalRecordsBtnDelete
+        '
+        Me.dataCriminalRecordsBtnDelete.HeaderText = ""
+        Me.dataCriminalRecordsBtnDelete.Name = "dataCriminalRecordsBtnDelete"
+        Me.dataCriminalRecordsBtnDelete.ReadOnly = True
+        Me.dataCriminalRecordsBtnDelete.Text = "Delete"
+        Me.dataCriminalRecordsBtnDelete.UseColumnTextForButtonValue = True
         '
         'Admin
         '
@@ -551,13 +565,15 @@ Partial Class Admin
     Friend WithEvents dataPolicePosition As DataGridViewTextBoxColumn
     Friend WithEvents dataPoliceBtnEdit As DataGridViewButtonColumn
     Friend WithEvents dataPoliceBtnDelete As DataGridViewButtonColumn
+    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents dataCriminalRecordsID As DataGridViewTextBoxColumn
-    Friend WithEvents dataCriminalRecordsName As DataGridViewTextBoxColumn
+    Friend WithEvents dataCriminalRecordsFName As DataGridViewTextBoxColumn
+    Friend WithEvents dataCriminalRecordsMName As DataGridViewTextBoxColumn
+    Friend WithEvents dataCriminalRecordsLName As DataGridViewTextBoxColumn
     Friend WithEvents dataCriminalRecordsOffense As DataGridViewTextBoxColumn
     Friend WithEvents dataCriminalRecordsCCNo As DataGridViewTextBoxColumn
     Friend WithEvents dataCriminalRecordsISNO As DataGridViewTextBoxColumn
     Friend WithEvents dataCriminalRecordsRemarks As DataGridViewTextBoxColumn
     Friend WithEvents dataCriminalRecordsBtnEdit As DataGridViewButtonColumn
     Friend WithEvents dataCriminalRecordsBtnDelete As DataGridViewButtonColumn
-    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -12,8 +12,8 @@ Public Class Clerk2
 
     Private connString As String = "Data Source=(local)\SQLEXPRESS;Initial Catalog=ESPCS;Integrated Security=True"
     Private connection As New SqlConnection(connString)
-    Private command As New SqlCommand("", connection)
-
+    'Private command As New SqlCommand("", connection)
+    Private command
     Private imgsPath_ApplicantPix As String = Directory.GetCurrentDirectory & "\bin\Debug\img_applicantpix\"
     Private imgsPath_ApplicantFingerprint As String = Directory.GetCurrentDirectory & "\bin\Debug\img_applicantfingerprint\"
     Private imgsPath_ApplicantSig As String = Directory.GetCurrentDirectory & "\bin\Debug\img_applicantsig\"
@@ -54,6 +54,7 @@ Public Class Clerk2
             Try
                 connection.Open()
                 'UPDATE police SET fname = @fname, mname = @mname, lname = @lname, contact_no = @contactno, police_sig = @policesig, rank_id = @rankid, position_id = @positionid WHERE police_id =" & police_id
+                command = New SqlCommand("", connection)
                 command.CommandText = "UPDATE dbo.[pcc] SET [fname] = @fname, [mname] = @mname, [lname] = @lname, [zone_id] = @zone_id,[barangay_id] = @barangay_id,[cs_id] = @cs_id,[place_of_birth] = @place_of_birth,[date_of_birth] = @date_of_birth,[sex] = @sex,[height] = @height,[nationality] = @nationality,[contact_no] = @contact_no,[purpose_id] = @purpose_id,[ctc_number] = @ctc_number,[ctc_issued_on] = @ctc_issued_on,[ctc_issued_at] = @ctc_issued_at,[signature] = @signature,[img] = @img,[thumb] = @thumb,[pcc_number] = @pcc_number,[pcc_issue_date] = @pcc_issue_date,[police_id_verify] = @police_id_verify,[police_id_certify] = @police_id_certify,[payment_or_number] = @payment_or_number,[payment_amount] = @payment_amount WHERE [pcc_id] = " & PccIDToEdit
                 command.Parameters.Clear()
                 command.Parameters.AddWithValue("@pcc_number", txtClearanceNo.Text.Trim)
@@ -103,6 +104,7 @@ Public Class Clerk2
                 command.Parameters.AddWithValue("@user_id", user_id)
                 command.ExecuteNonQuery()
                 connection.Close()
+                command = Nothing
             Catch ex As Exception
                 connection.Close()
                 MsgBox("Update Police Clearance error" & vbCrLf & String.Format("Error: {0}", ex.Message))
@@ -116,6 +118,7 @@ Public Class Clerk2
             Try
                 'SqlData()
                 connection.Open()
+                command = New SqlCommand("", connection)
                 'command.CommandText = "INSERT INTO dbo.[police_clearance_certificate]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[purpose_id],[ctc_number],[ctc_issued_on],[ctc_issued_at],[signature],[img],[thumb],[pcc_number],[pcc_issue_date],[police_id_verify],[police_id_certify],[payment_OR_number], [payment_amount],[user_id],[qrcode],[payment_confirmed_user],[payment_confirmed_date]) VALUES(@fname,@mname,@lname,@zone_id,@barangay_id,@cs_id,@place_of_birth,@date_of_birth,@sex,@height,@nationality,@contact_no,@purpose_id,@ctc_number,@ctc_issued_on,@ctc_issued_at,'signature','img','thumb',@pcc_number,@pcc_issue_date,@police_id_verify,@police_id_certify,@payment_OR_number, @payment_amount, " & user_id & ",'qrcode',1," & DateTime.Now.ToString("yyyy/MM/dd") & ")"
                 command.CommandText = "INSERT INTO dbo.[pcc]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[purpose_id],[ctc_number],[ctc_issued_on],[ctc_issued_at],[signature],[img],[thumb],[pcc_number],[pcc_issue_date],[police_id_verify],[police_id_certify],[payment_or_number],[payment_amount],[user_id]) VALUES(@fname,@mname,@lname,@zone_id,@barangay_id,@cs_id,@place_of_birth,@date_of_birth,@sex,@height,@nationality,@contact_no,@purpose_id,@ctc_number,@ctc_issued_on,@ctc_issued_at,@signature,@img,@thumb,@pcc_number,@pcc_issue_date,@police_id_verify,@police_id_certify,@payment_or_number, @payment_amount,@user_id)"
                 'command.CommandText = "INSERT INTO dbo.[pcc]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[purpose_id],[ctc_number],[ctc_issued_on],[ctc_issued_at],[pcc_number],[pcc_issue_date],[police_id_verify],[police_id_certify],[payment_or_number],[payment_amount],[user_id]) VALUES(@fname,@mname,@lname,@zone_id,@barangay_id,@cs_id,@place_of_birth,@date_of_birth,@sex,@height,@nationality,@contact_no,@purpose_id,@ctc_number,@ctc_issued_on,@ctc_issued_at,@pcc_number,@pcc_issue_date,@police_id_verify,@police_id_certify,@payment_or_number,@payment_amount,@user_id)"
@@ -169,6 +172,7 @@ Public Class Clerk2
                 command.Parameters.AddWithValue("@user_id", user_id)
                 command.ExecuteNonQuery()
                 connection.Close()
+                command = Nothing
                 'File.Copy(imgFileToUpload, fileSavePath, True)
 
             Catch ex As Exception
@@ -202,7 +206,7 @@ Public Class Clerk2
         txtHeight.Text = ""
         txtNationality.Text = ""
         txtContactNo.Text = ""
-        cbPurpose.SelectedIndex = 0
+        'cbPurpose.SelectedIndex = 0
         txtCTCNo.Text = ""
         dtCTCIssueDate.Value = now
         txtCTCIssueAt.Text = ""
@@ -222,9 +226,6 @@ Public Class Clerk2
         If imageSignature IsNot Nothing Then
             imageSignature.Dispose()
         End If
-        'PictureBox1.Image = bitmap_applicant_default
-        'PictureBox2.Image = bitmap_fingerprint_default
-        'PictureBox3.Image = bitmap_signature_default
         LoadDefaultImages()
 
         signatureFileName = ""
@@ -233,14 +234,15 @@ Public Class Clerk2
 
         txtClearanceNo.Text = ""
         dtClearanceDate.Value = DateTime.Now
-        cbPoliceVerify.SelectedIndex = 0
-        cbPoliceCertify.SelectedIndex = 0
+        'cbPoliceVerify.SelectedIndex = 0
+        'cbPoliceCertify.SelectedIndex = 0
         txtORNo.Text = ""
         txtORAmount.Text = ""
     End Sub
     Private Sub PopulateComboboxZone()
         Try
             connection.Open()
+            command = New SqlCommand("", connection)
             command.CommandText = "SELECT zone_id AS 'ZONE ID', name AS 'ZONE NAME' FROM zone"
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
@@ -259,6 +261,7 @@ Public Class Clerk2
     Private Sub PopulateComboboxBarangay()
         Try
             connection.Open()
+            command = New SqlCommand("", connection)
             command.CommandText = "SELECT barangay_id AS 'BARANGAY ID', name AS 'BARANGAY NAME' FROM barangay"
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
@@ -276,6 +279,7 @@ Public Class Clerk2
     Private Sub PopulateComboboxCivilStatus()
         Try
             connection.Open()
+            command = New SqlCommand("", connection)
             command.CommandText = "SELECT cs_id AS 'CIVILSTATUS ID', name AS 'CIVILSTATUS NAME' FROM civil_status"
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
@@ -293,6 +297,7 @@ Public Class Clerk2
     Private Sub PopulateComboboxPurpose()
         Try
             connection.Open()
+            command = New SqlCommand("", connection)
             command.CommandText = "SELECT purpose_id AS 'PURPOSE ID', name AS 'PURPOSE NAME' FROM purpose"
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
@@ -310,6 +315,7 @@ Public Class Clerk2
     Private Sub PopulateComboboxVerifiedBy()
         Try
             connection.Open()
+            command = New SqlCommand("", connection)
             command.CommandText = "SELECT police_id AS 'POLICE ID', CONCAT(fname,' ',mname,' ',lname) AS 'POLICE NAME' FROM police"
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
@@ -327,6 +333,7 @@ Public Class Clerk2
     Private Sub PopulateComboboxCertifiedBy()
         Try
             connection.Open()
+            command = New SqlCommand("", connection)
             command.CommandText = "SELECT police_id AS 'POLICE ID', CONCAT(fname,' ',mname,' ',lname) AS 'POLICE NAME' FROM police"
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
@@ -345,7 +352,9 @@ Public Class Clerk2
     Private Sub LoadPCCPending()
         Try
             connection.Open()
-            command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[status] FROM dbo.[pcc] WHERE [pcc].[status] <> '" & status_completed & "'"
+            command = New SqlCommand("", connection)
+            command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[status] FROM dbo.[pcc] WHERE [pcc].[status] <> 'COMPLETED' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
+
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
             da.Fill(dt)
@@ -371,7 +380,9 @@ Public Class Clerk2
     Private Sub LoadPCCCompleted()
         Try
             connection.Open()
-            command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[status] FROM dbo.[pcc] WHERE [pcc].[status] = '" & status_completed & "'"
+            command = New SqlCommand("", connection)
+            command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[status] FROM dbo.[pcc] WHERE [pcc].[status] = 'COMPLETED' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
+
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
             da.Fill(dt)
@@ -534,6 +545,7 @@ Public Class Clerk2
                         btnClear_Cancel.Text = "Cancel"
                     End If
                     connection.Open()
+                    command = New SqlCommand("", connection)
                     command.CommandText = "SELECT [pcc_id],[fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[purpose_id],[ctc_number],[ctc_issued_on],[ctc_issued_at],[signature],[img],[thumb],[pcc_number],[pcc_issue_date],[police_id_verify],[police_id_certify],[payment_OR_number],[payment_amount] FROM [pcc] WHERE [pcc_id] = " & pcc_id
                     Dim da As New SqlDataAdapter(command)
                     Dim dt As New DataTable()
@@ -638,6 +650,7 @@ Public Class Clerk2
                         txtORAmount.Text = dt.Rows(0).Item("payment_amount")
                     End If
                     connection.Close()
+                    command = Nothing
                 End If
             Catch ex As Exception
                 MsgBox("Police Clearance Pending Table - Edit Button error" & vbCrLf & String.Format("Error: {0}", ex.Message))
@@ -667,7 +680,9 @@ Public Class Clerk2
                     Try
                         connection.Open()
                         '[pcc].[fname] LIKE @searchString OR [pcc].[mname] LIKE @searchString OR [pcc].[lname] LIKE @searchString
-                        command.CommandText = "SELECT COUNT(name) FROM [dbo].[criminal_records] WHERE (name LIKE @fname OR name LIKE @mname OR name LIKE @lname)"
+                        command = New SqlCommand("", connection)
+                        command.CommandText = "SELECT COUNT(*) FROM [dbo].[criminal_records] WHERE (fname LIKE @fname OR mname LIKE @mname OR lname LIKE @lname)"
+                        'command.CommandText = "SELECT COUNT(name) FROM [dbo].[criminal_records] WHERE (name LIKE @fname OR name LIKE @mname OR name LIKE @lname)"
                         command.Parameters.Clear()
                         command.Parameters.AddWithValue("@fname", "%" & row.Cells("dataPendingClearanceFname").Value.ToString.Trim & "%")
                         command.Parameters.AddWithValue("@mname", "%" & row.Cells("dataPendingClearanceMname").Value.ToString.Trim & "%")
@@ -690,6 +705,7 @@ Public Class Clerk2
                             Dim NoHitForm As New Validation_NoHit
                             If NoHitForm.ShowDialog() = DialogResult.OK Then
                                 connection.Open()
+                                command = New SqlCommand("", connection)
                                 command.CommandText = "UPDATE dbo.[pcc] SET [pcc].[status] = 'VALIDATED' WHERE [pcc].[pcc_id] = @pcc_id"
                                 command.Parameters.Clear()
                                 command.Parameters.AddWithValue("@pcc_id", row.Cells("dataPendingClearanceID").Value)
@@ -704,11 +720,26 @@ Public Class Clerk2
                     End Try
                 ElseIf status = status_validated Then
                     'Print Function Here
-                    Try
-
-                    Catch ex As Exception
-                        MsgBox("Police Clearance Pending Table - Print error" & vbCrLf & String.Format("Error: {0}", ex.Message))
-                    End Try
+                    Dim result As DialogResult = MessageBox.Show("Confirm Print?",
+                              "Print Certificate",
+                              MessageBoxButtons.YesNo)
+                    If result = DialogResult.Yes Then
+                        Try
+                            'connection.Open()
+                            'command = New SqlCommand("", connection)
+                            'command.CommandText = "UPDATE dbo.[pcc] SET [pcc].[status] = 'COMPLETED' WHERE [pcc].[pcc_id] = @pcc_id"
+                            'command.Parameters.Clear()
+                            'command.Parameters.AddWithValue("@pcc_id", row.Cells("dataPendingClearanceID").Value)
+                            'command.ExecuteNonQuery()
+                            'command = Nothing
+                            'connection.Close()
+                            Dim printForm As New PrintForm
+                            printForm.pcc_id = row.Cells("dataPendingClearanceID").Value
+                            printForm.ShowDialog()
+                        Catch ex As Exception
+                            MsgBox("Police Clearance Pending Table - Print error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+                        End Try
+                    End If
                 End If
             Catch ex As Exception
                 MsgBox("Police Clearance Pending Table - Validate/Print Button error" & vbCrLf & String.Format("Error: {0}", ex.Message))
@@ -721,6 +752,7 @@ Public Class Clerk2
     End Sub
     Private Sub quickSqlCommand(commandString As String)
         connection.Open()
+        command = New SqlCommand("", connection)
         command.CommandText = commandString
         command.ExecuteNonQuery()
         command = Nothing
