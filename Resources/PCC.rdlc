@@ -836,7 +836,7 @@
         </Paragraphs>
         <Top>6.35026cm</Top>
         <Left>4.75919cm</Left>
-        <Height>1.02678cm</Height>
+        <Height>0.45889cm</Height>
         <Width>8.43129cm</Width>
         <ZIndex>23</ZIndex>
         <Style>
@@ -929,8 +929,8 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>7.47873cm</Top>
-        <Left>0.78633cm</Left>
+        <Top>8.0577cm</Top>
+        <Left>0.78636cm</Left>
         <Height>0.45889cm</Height>
         <Width>3.79646cm</Width>
         <ZIndex>25</ZIndex>
@@ -960,8 +960,8 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>7.47873cm</Top>
-        <Left>4.75918cm</Left>
+        <Top>8.0577cm</Top>
+        <Left>4.75921cm</Left>
         <Height>0.45889cm</Height>
         <Width>3.79646cm</Width>
         <ZIndex>26</ZIndex>
@@ -1007,8 +1007,8 @@
             </Style>
           </Paragraph>
         </Paragraphs>
-        <Top>7.93762cm</Top>
-        <Left>0.78632cm</Left>
+        <Top>8.51659cm</Top>
+        <Left>0.78635cm</Left>
         <Height>0.45889cm</Height>
         <Width>3.79646cm</Width>
         <ZIndex>27</ZIndex>
@@ -1054,8 +1054,8 @@
             </Style>
           </Paragraph>
         </Paragraphs>
-        <Top>8.39651cm</Top>
-        <Left>0.78633cm</Left>
+        <Top>8.97548cm</Top>
+        <Left>0.78636cm</Left>
         <Height>0.45889cm</Height>
         <Width>3.79646cm</Width>
         <ZIndex>28</ZIndex>
@@ -1085,8 +1085,8 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>8.39651cm</Top>
-        <Left>4.75918cm</Left>
+        <Top>8.97548cm</Top>
+        <Left>4.75921cm</Left>
         <Height>0.45889cm</Height>
         <Width>3.79646cm</Width>
         <ZIndex>29</ZIndex>
@@ -1118,8 +1118,8 @@
             </Style>
           </Paragraph>
         </Paragraphs>
-        <Top>8.89067cm</Top>
-        <Left>0.78632cm</Left>
+        <Top>9.46964cm</Top>
+        <Left>0.78635cm</Left>
         <Height>0.45889cm</Height>
         <Width>3.79646cm</Width>
         <ZIndex>30</ZIndex>
@@ -1149,8 +1149,8 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>8.89067cm</Top>
-        <Left>4.75919cm</Left>
+        <Top>9.46964cm</Top>
+        <Left>4.75922cm</Left>
         <Height>0.45889cm</Height>
         <Width>3.79646cm</Width>
         <ZIndex>31</ZIndex>
@@ -1180,8 +1180,8 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>9.34956cm</Top>
-        <Left>0.78632cm</Left>
+        <Top>9.92853cm</Top>
+        <Left>0.78635cm</Left>
         <Height>0.45889cm</Height>
         <Width>3.79646cm</Width>
         <ZIndex>32</ZIndex>
@@ -1211,8 +1211,8 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>9.34956cm</Top>
-        <Left>4.75917cm</Left>
+        <Top>9.92853cm</Top>
+        <Left>4.7592cm</Left>
         <Height>0.45889cm</Height>
         <Width>3.79646cm</Width>
         <ZIndex>33</ZIndex>
@@ -1488,8 +1488,8 @@
         <Value>=First(Fields!QrImage.Value, "PCCDataSet")</Value>
         <MIMEType>image/bmp</MIMEType>
         <Sizing>FitProportional</Sizing>
-        <Top>7.80845cm</Top>
-        <Left>9.69953cm</Left>
+        <Top>8.38742cm</Top>
+        <Left>9.69956cm</Left>
         <Height>2cm</Height>
         <Width>2cm</Width>
         <ZIndex>42</ZIndex>
@@ -1596,11 +1596,42 @@
             <Style />
           </Paragraph>
         </Paragraphs>
-        <Top>7.93762cm</Top>
-        <Left>4.75919cm</Left>
+        <Top>8.51659cm</Top>
+        <Left>4.75922cm</Left>
         <Height>0.45889cm</Height>
         <Width>3.79646cm</Width>
         <ZIndex>48</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+        </Style>
+      </Textbox>
+      <Textbox Name="txtFindings2">
+        <CanShrink>true</CanShrink>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!findingsRemarks.Value, "PCCDataSet")</Value>
+                <Style>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <Top>6.87971cm</Top>
+        <Left>4.7592cm</Left>
+        <Height>1.0016cm</Height>
+        <Width>8.43129cm</Width>
+        <ZIndex>49</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2005,7 +2036,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>ddf071ea-ab4b-4c8e-912b-847b169081bf</rd:DataSourceID>
+      <rd:DataSourceID>6595fe13-8822-4646-a9c5-b9fbb1955d9b</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -2134,6 +2165,10 @@
         <Field Name="PoliceCSignature">
           <DataField>PoliceCSignature</DataField>
           <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="findingsRemarks">
+          <DataField>findingsRemarks</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>

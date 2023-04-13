@@ -32,6 +32,8 @@ Public Class Clerk2
     'Dim bitmap_fingerprint_default As Bitmap()
     'Dim bitmap_signature_default As Bitmap()
 
+    Dim findingsRemarksDefault As String = "No Criminal/Derogatory Record on file as of this Date!"
+
     Dim now As DateTime = DateTime.Now
     Dim fileNameDefault As String = String.Format("image_{0:yyyyMMdd_HHmmss}.png", now)
 
@@ -681,7 +683,7 @@ Public Class Clerk2
                         connection.Open()
                         '[pcc].[fname] LIKE @searchString OR [pcc].[mname] LIKE @searchString OR [pcc].[lname] LIKE @searchString
                         command = New SqlCommand("", connection)
-                        command.CommandText = "SELECT COUNT(*) FROM [dbo].[criminal_records] WHERE (fname LIKE @fname OR mname LIKE @mname OR lname LIKE @lname)"
+                        command.CommandText = "SELECT COUNT(*) FROM [dbo].[criminal_records] WHERE (fname LIKE @fname OR mname LIKE @mname OR lname LIKE @lname) AND deleted = 0"
                         'command.CommandText = "SELECT COUNT(name) FROM [dbo].[criminal_records] WHERE (name LIKE @fname OR name LIKE @mname OR name LIKE @lname)"
                         command.Parameters.Clear()
                         command.Parameters.AddWithValue("@fname", "%" & row.Cells("dataPendingClearanceFname").Value.ToString.Trim & "%")
@@ -698,17 +700,32 @@ Public Class Clerk2
                         End If
                         If (hit_record > 0) Then
                             Dim hitForm As New Validation_Hit
+                            hitForm.Label2.Text = hit_record
                             If hitForm.ShowDialog() = DialogResult.OK Then
+                                hitForm.Dispose()
                                 'Codes for Hit commands Here
+                                Dim forceValidationForm As New Validation_ForceValidation
+                                forceValidationForm.lblNumberRecords.Text = hit_record
+                                forceValidationForm.pcc_id = row.Cells("dataPendingClearanceID").Value
+                                forceValidationForm.Fname = row.Cells("dataPendingClearanceFname").Value.ToString.Trim
+                                forceValidationForm.Mname = row.Cells("dataPendingClearanceMname").Value.ToString.Trim
+                                forceValidationForm.Lname = row.Cells("dataPendingClearanceLname").Value.ToString.Trim
+                                forceValidationForm.ShowDialog()
+                                'If forceValidationForm.ShowDialog() = DialogResult.OK Then
+
+                                'End If
                             End If
                         Else
                             Dim NoHitForm As New Validation_NoHit
                             If NoHitForm.ShowDialog() = DialogResult.OK Then
                                 connection.Open()
                                 command = New SqlCommand("", connection)
-                                command.CommandText = "UPDATE dbo.[pcc] SET [pcc].[status] = 'VALIDATED' WHERE [pcc].[pcc_id] = @pcc_id"
+                                'command.CommandText = "UPDATE dbo.[pcc] SET [pcc].[status] = 'VALIDATED' WHERE [pcc].[pcc_id] = @pcc_id;" &
+                                '    "INSERT INTO dbo.[findings]([pcc_id], [specify]) VALUES(@pcc_id, 'No Criminal/Derogatory Record on file as of this Date!');"
+                                command.CommandText = "UPDATE dbo.[pcc] SET [pcc].[status] = 'VALIDATED', [pcc].[findingsRemarks] = @findingsremarks WHERE [pcc].[pcc_id] = @pcc_id"
                                 command.Parameters.Clear()
                                 command.Parameters.AddWithValue("@pcc_id", row.Cells("dataPendingClearanceID").Value)
+                                command.Parameters.AddWithValue("@findingsremarks", findingsRemarksDefault)
                                 command.ExecuteNonQuery()
                                 command = Nothing
                                 connection.Close()

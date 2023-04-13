@@ -19,8 +19,9 @@ police_certify.lname As 'police_clname',
 police_certify_rank.name As 'police_crank',
 police_certify_position.name As 'police_cposition',
 police_certify.police_sig  As 'police_csig',
-[findings].cr_id,[findings].specify,
-criminal_records.crime_offense
+pcc.cr_id,pcc.findingsRemarks,criminal_records.crime_offense
+--[findings].cr_id,[findings].specify,
+--criminal_records.crime_offense
 FROM [dbo].[pcc] 
 INNER JOIN [police] police_verify
 ON [pcc].police_id_verify = police_verify.police_id
@@ -43,8 +44,9 @@ ON [pcc].cs_id = [civil_status].cs_id
 INNER JOIN [purpose]
 ON [pcc].purpose_id = [purpose].purpose_id
 
+LEFT JOIN criminal_records ON criminal_records.cr_id = pcc.cr_id
 
-INNER JOIN [findings]
-ON pcc.pcc_id = [findings].pcc_id
-LEFT JOIN criminal_records 
-ON criminal_records.cr_id = [findings].cr_id
+-- INNER JOIN [findings]
+-- ON pcc.pcc_id = [findings].pcc_id
+-- LEFT JOIN criminal_records 
+-- ON criminal_records.cr_id = [findings].cr_id

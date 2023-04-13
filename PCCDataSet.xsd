@@ -45,6 +45,7 @@
               <xs:element name="SignatureImage" msprop:Generator_ColumnPropNameInTable="SignatureImageColumn" msprop:Generator_ColumnPropNameInRow="SignatureImage" msprop:Generator_UserColumnName="SignatureImage" msprop:Generator_ColumnVarNameInTable="columnSignatureImage" type="xs:base64Binary" minOccurs="0" />
               <xs:element name="PoliceVSignature" msprop:Generator_ColumnPropNameInTable="PoliceVSignatureColumn" msprop:Generator_ColumnPropNameInRow="PoliceVSignature" msprop:Generator_UserColumnName="PoliceVSignature" msprop:Generator_ColumnVarNameInTable="columnPoliceVSignature" type="xs:base64Binary" minOccurs="0" />
               <xs:element name="PoliceCSignature" msprop:Generator_ColumnPropNameInTable="PoliceCSignatureColumn" msprop:Generator_ColumnPropNameInRow="PoliceCSignature" msprop:Generator_UserColumnName="PoliceCSignature" msprop:Generator_ColumnVarNameInTable="columnPoliceCSignature" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="findingsRemarks" msprop:Generator_ColumnPropNameInRow="findingsRemarks" msprop:Generator_ColumnPropNameInTable="findingsRemarksColumn" msprop:Generator_ColumnVarNameInTable="columnfindingsRemarks" msprop:Generator_UserColumnName="findingsRemarks" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -344,6 +344,8 @@ Namespace PoliceClearanceSystemES
             
             Private columnPoliceCSignature As Global.System.Data.DataColumn
             
+            Private columnfindingsRemarks As Global.System.Data.DataColumn
+            
             <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
              Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
             Public Sub New()
@@ -620,6 +622,14 @@ Namespace PoliceClearanceSystemES
             End Property
             
             <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+             Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+            Public ReadOnly Property findingsRemarksColumn() As Global.System.Data.DataColumn
+                Get
+                    Return Me.columnfindingsRemarks
+                End Get
+            End Property
+            
+            <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
              Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0"),  _
              Global.System.ComponentModel.Browsable(false)>  _
             Public ReadOnly Property Count() As Integer
@@ -686,9 +696,10 @@ Namespace PoliceClearanceSystemES
                         ByVal FingerprintImage() As Byte,  _
                         ByVal SignatureImage() As Byte,  _
                         ByVal PoliceVSignature() As Byte,  _
-                        ByVal PoliceCSignature() As Byte) As PCCRow
+                        ByVal PoliceCSignature() As Byte,  _
+                        ByVal findingsRemarks As String) As PCCRow
                 Dim rowPCCRow As PCCRow = CType(Me.NewRow,PCCRow)
-                Dim columnValuesArray() As Object = New Object() {QrImage, pccno, fullname, address, birthplace, birthdate, pccdate, sex, civilstatus, nationality, height, contactno, purpose, findings, ctcno, ctcdate, ctcissuedat, orno, amount, police_vname, police_vrank, police_vposition, police_cname, police_crank, police_cposition, ApplicantImage, FingerprintImage, SignatureImage, PoliceVSignature, PoliceCSignature}
+                Dim columnValuesArray() As Object = New Object() {QrImage, pccno, fullname, address, birthplace, birthdate, pccdate, sex, civilstatus, nationality, height, contactno, purpose, findings, ctcno, ctcdate, ctcissuedat, orno, amount, police_vname, police_vrank, police_vposition, police_cname, police_crank, police_cposition, ApplicantImage, FingerprintImage, SignatureImage, PoliceVSignature, PoliceCSignature, findingsRemarks}
                 rowPCCRow.ItemArray = columnValuesArray
                 Me.Rows.Add(rowPCCRow)
                 Return rowPCCRow
@@ -741,6 +752,7 @@ Namespace PoliceClearanceSystemES
                 Me.columnSignatureImage = MyBase.Columns("SignatureImage")
                 Me.columnPoliceVSignature = MyBase.Columns("PoliceVSignature")
                 Me.columnPoliceCSignature = MyBase.Columns("PoliceCSignature")
+                Me.columnfindingsRemarks = MyBase.Columns("findingsRemarks")
             End Sub
             
             <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -806,6 +818,8 @@ Namespace PoliceClearanceSystemES
                 MyBase.Columns.Add(Me.columnPoliceVSignature)
                 Me.columnPoliceCSignature = New Global.System.Data.DataColumn("PoliceCSignature", GetType(Byte()), Nothing, Global.System.Data.MappingType.Element)
                 MyBase.Columns.Add(Me.columnPoliceCSignature)
+                Me.columnfindingsRemarks = New Global.System.Data.DataColumn("findingsRemarks", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+                MyBase.Columns.Add(Me.columnfindingsRemarks)
             End Sub
             
             <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1402,6 +1416,21 @@ Namespace PoliceClearanceSystemES
             
             <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
              Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+            Public Property findingsRemarks() As String
+                Get
+                    Try 
+                        Return CType(Me(Me.tablePCC.findingsRemarksColumn),String)
+                    Catch e As Global.System.InvalidCastException
+                        Throw New Global.System.Data.StrongTypingException("The value for column 'findingsRemarks' in table 'PCC' is DBNull.", e)
+                    End Try
+                End Get
+                Set
+                    Me(Me.tablePCC.findingsRemarksColumn) = value
+                End Set
+            End Property
+            
+            <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+             Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
             Public Function IsQrImageNull() As Boolean
                 Return Me.IsNull(Me.tablePCC.QrImageColumn)
             End Function
@@ -1758,6 +1787,18 @@ Namespace PoliceClearanceSystemES
              Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
             Public Sub SetPoliceCSignatureNull()
                 Me(Me.tablePCC.PoliceCSignatureColumn) = Global.System.Convert.DBNull
+            End Sub
+            
+            <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+             Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+            Public Function IsfindingsRemarksNull() As Boolean
+                Return Me.IsNull(Me.tablePCC.findingsRemarksColumn)
+            End Function
+            
+            <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+             Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")>  _
+            Public Sub SetfindingsRemarksNull()
+                Me(Me.tablePCC.findingsRemarksColumn) = Global.System.Convert.DBNull
             End Sub
         End Class
         
