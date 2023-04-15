@@ -742,14 +742,14 @@ Public Class Clerk2
                               MessageBoxButtons.YesNo)
                     If result = DialogResult.Yes Then
                         Try
-                            'connection.Open()
-                            'command = New SqlCommand("", connection)
-                            'command.CommandText = "UPDATE dbo.[pcc] SET [pcc].[status] = 'COMPLETED' WHERE [pcc].[pcc_id] = @pcc_id"
-                            'command.Parameters.Clear()
-                            'command.Parameters.AddWithValue("@pcc_id", row.Cells("dataPendingClearanceID").Value)
-                            'command.ExecuteNonQuery()
-                            'command = Nothing
-                            'connection.Close()
+                            connection.Open()
+                            command = New SqlCommand("", connection)
+                            command.CommandText = "UPDATE dbo.[pcc] SET [pcc].[status] = 'COMPLETED' WHERE [pcc].[pcc_id] = @pcc_id"
+                            command.Parameters.Clear()
+                            command.Parameters.AddWithValue("@pcc_id", row.Cells("dataPendingClearanceID").Value)
+                            command.ExecuteNonQuery()
+                            command = Nothing
+                            connection.Close()
                             Dim printForm As New PrintForm
                             printForm.pcc_id = row.Cells("dataPendingClearanceID").Value
                             printForm.ShowDialog()
@@ -793,6 +793,12 @@ Public Class Clerk2
     End Sub
 
     Private Sub txtApplicantPendingSearch_TextChanged(sender As Object, e As System.EventArgs) Handles txtApplicantPendingSearch.TextChanged
+
+    End Sub
+
+    Private Sub ReportToolStripMenuItem_Click(sender As Object, e As System.EventArgs) Handles ReportToolStripMenuItem.Click
+        Dim reportForm As New ReportForm
+        reportForm.ShowDialog()
 
     End Sub
 End Class

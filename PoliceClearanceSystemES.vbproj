@@ -25,6 +25,7 @@
     <None Remove="Resources\default-signature.png" />
     <None Remove="Resources\default.jpg" />
     <None Remove="Resources\elsalvadorcity.png" />
+    <None Remove="Resources\GenerateReport.rdlc" />
     <None Remove="Resources\PCC.rdlc" />
     <None Remove="Resources\pnp.png" />
   </ItemGroup>
@@ -37,6 +38,7 @@
       <Generator>MSBuild:Compile</Generator>
       <CustomToolNamespace>PoliceClearanceSystemES</CustomToolNamespace>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\GenerateReport.rdlc" />
     <EmbeddedResource Include="Resources\PCC.rdlc" />
     <EmbeddedResource Include="Resources\pnp.png">
       <Generator>MSBuild:Compile</Generator>
@@ -88,6 +90,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>PCCDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Update="ReportDataSet.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -103,6 +110,10 @@
     <None Update="PCCDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>PCCDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Update="ReportDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportDataSet.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
 

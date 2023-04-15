@@ -103,6 +103,7 @@ Partial Class Clerk2
         Me.txtApplicantCompletedSearch = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -547,7 +548,7 @@ Partial Class Clerk2
         Me.TabControl1.Location = New System.Drawing.Point(710, 27)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(788, 617)
+        Me.TabControl1.Size = New System.Drawing.Size(788, 579)
         Me.TabControl1.TabIndex = 140
         '
         'TabPage1
@@ -562,7 +563,7 @@ Partial Class Clerk2
         Me.TabPage1.Location = New System.Drawing.Point(4, 24)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(780, 589)
+        Me.TabPage1.Size = New System.Drawing.Size(780, 551)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Pending"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -703,7 +704,7 @@ Partial Class Clerk2
         Me.TabPage2.Location = New System.Drawing.Point(4, 24)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(780, 589)
+        Me.TabPage2.Size = New System.Drawing.Size(780, 551)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Completed"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -792,15 +793,21 @@ Partial Class Clerk2
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogoutToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportToolStripMenuItem, Me.LogoutToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "File"
         '
+        'ReportToolStripMenuItem
+        '
+        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
+        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.ReportToolStripMenuItem.Text = "Report"
+        '
         'LogoutToolStripMenuItem
         '
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'PictureBox1
@@ -994,4 +1001,5 @@ Partial Class Clerk2
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
 End Class

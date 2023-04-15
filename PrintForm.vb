@@ -87,7 +87,6 @@ Public Class PrintForm
                     ImageBitmap = code.GetGraphic(10)
                     ImageBitmap.Save(qrMS, ImageFormat.Bmp)
                     row.QrImage = qrMS.ToArray
-                    pccDataSet.PCC.AddPCCRow(row)
                     ImageBitmap.Dispose()
                 End Using
                 Dim applicantImgPath As String = dt.Rows(0).Item("img")
@@ -167,6 +166,7 @@ Public Class PrintForm
                     row.PoliceCSignature = policeCSigImgStream.ToArray
                 End Using
 
+                pccDataSet.PCC.AddPCCRow(row)
                 Dim reportDataSource As New ReportDataSource
                 reportDataSource.Name = "PCCDataSet"
                 reportDataSource.Value = pccDataSet.PCC
