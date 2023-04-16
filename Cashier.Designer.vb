@@ -26,16 +26,16 @@ Partial Class Cashier
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.chbAll = New System.Windows.Forms.CheckBox()
         Me.ClearanceCheckBox = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ClearanceID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClearanceNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClearanceFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClearanceMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClearanceLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.chbAll = New System.Windows.Forms.CheckBox()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -74,6 +74,40 @@ Partial Class Cashier
         Me.DataGridView1.Size = New System.Drawing.Size(1001, 399)
         Me.DataGridView1.TabIndex = 1
         '
+        'ClearanceCheckBox
+        '
+        Me.ClearanceCheckBox.HeaderText = ""
+        Me.ClearanceCheckBox.Name = "ClearanceCheckBox"
+        '
+        'ClearanceID
+        '
+        Me.ClearanceID.HeaderText = "Clearance ID"
+        Me.ClearanceID.Name = "ClearanceID"
+        '
+        'ClearanceNo
+        '
+        Me.ClearanceNo.HeaderText = "Clearance Number"
+        Me.ClearanceNo.Name = "ClearanceNo"
+        Me.ClearanceNo.ReadOnly = True
+        '
+        'ClearanceFname
+        '
+        Me.ClearanceFname.HeaderText = "First Name"
+        Me.ClearanceFname.Name = "ClearanceFname"
+        Me.ClearanceFname.ReadOnly = True
+        '
+        'ClearanceMname
+        '
+        Me.ClearanceMname.HeaderText = "Middle Name"
+        Me.ClearanceMname.Name = "ClearanceMname"
+        Me.ClearanceMname.ReadOnly = True
+        '
+        'ClearanceLname
+        '
+        Me.ClearanceLname.HeaderText = "Last Name"
+        Me.ClearanceLname.Name = "ClearanceLname"
+        Me.ClearanceLname.ReadOnly = True
+        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(951, 461)
@@ -108,40 +142,6 @@ Partial Class Cashier
         Me.chbAll.TabIndex = 145
         Me.chbAll.Text = "Select All"
         Me.chbAll.UseVisualStyleBackColor = True
-        '
-        'ClearanceCheckBox
-        '
-        Me.ClearanceCheckBox.HeaderText = ""
-        Me.ClearanceCheckBox.Name = "ClearanceCheckBox"
-        '
-        'ClearanceID
-        '
-        Me.ClearanceID.HeaderText = "Clearance ID"
-        Me.ClearanceID.Name = "ClearanceID"
-        '
-        'ClearanceNo
-        '
-        Me.ClearanceNo.HeaderText = "Clearance Number"
-        Me.ClearanceNo.Name = "ClearanceNo"
-        Me.ClearanceNo.ReadOnly = True
-        '
-        'ClearanceFname
-        '
-        Me.ClearanceFname.HeaderText = "First Name"
-        Me.ClearanceFname.Name = "ClearanceFname"
-        Me.ClearanceFname.ReadOnly = True
-        '
-        'ClearanceMname
-        '
-        Me.ClearanceMname.HeaderText = "Middle Name"
-        Me.ClearanceMname.Name = "ClearanceMname"
-        Me.ClearanceMname.ReadOnly = True
-        '
-        'ClearanceLname
-        '
-        Me.ClearanceLname.HeaderText = "Last Name"
-        Me.ClearanceLname.Name = "ClearanceLname"
-        Me.ClearanceLname.ReadOnly = True
         '
         'Cashier
         '

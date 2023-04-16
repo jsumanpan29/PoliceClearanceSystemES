@@ -48,6 +48,7 @@ Public Class Clerk2
     'Private IsEditing As Boolean = False
     Private PccIDToEdit As Integer
     Dim pccDependencyPending As SqlTableDependency(Of PoliceClearanceCertificate)
+    'Dim pccDependencyComplete As SqlTableDependency(Of PoliceClearanceCertificate)
 
     Private Sub btnAdd_Save_Click(sender As Object, e As System.EventArgs) Handles btnAdd_Save.Click
         If PccIDToEdit <> Nothing Then
@@ -351,11 +352,18 @@ Public Class Clerk2
         End Try
     End Sub
 
-    Private Sub LoadPCCPending()
+    Private Sub LoadPCCPending(Optional searchString As String = "")
         Try
             connection.Open()
             command = New SqlCommand("", connection)
-            command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[status] FROM dbo.[pcc] WHERE [pcc].[status] <> 'COMPLETED' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
+            If searchString = "" Then
+                command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[status] FROM dbo.[pcc] WHERE [pcc].[status] <> 'COMPLETED' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
+            Else
+                command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[status] FROM dbo.[pcc] WHERE (pcc.fname LIKE @searchString OR pcc.mname LIKE @searchString OR pcc.lname LIKE @searchString OR pcc.pcc_number LIKE @searchString) AND [pcc].[status] <> 'COMPLETED' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
+                command.Parameters.Clear()
+                command.Parameters.AddWithValue("@searchString", "%" & searchString & "%")
+            End If
+
 
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
@@ -379,11 +387,17 @@ Public Class Clerk2
         End Try
     End Sub
 
-    Private Sub LoadPCCCompleted()
+    Private Sub LoadPCCCompleted(Optional searchString As String = "")
         Try
             connection.Open()
             command = New SqlCommand("", connection)
-            command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[status] FROM dbo.[pcc] WHERE [pcc].[status] = 'COMPLETED' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
+            If searchString = "" Then
+                command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[status] FROM dbo.[pcc] WHERE [pcc].[status] = 'COMPLETED' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
+            Else
+                command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[status] FROM dbo.[pcc] WHERE (pcc.fname LIKE @searchString OR pcc.mname LIKE @searchString OR pcc.lname LIKE @searchString OR pcc.pcc_number LIKE @searchString) AND [pcc].[status] = 'COMPLETED' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
+                command.Parameters.Clear()
+                command.Parameters.AddWithValue("@searchString", "%" & searchString & "%")
+            End If
 
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
@@ -448,6 +462,14 @@ Public Class Clerk2
 
         pccDependencyPending.Start()
 
+
+        'Dim pccDependencyMapper2 = New TableDependency.SqlClient.Base.ModelToTableMapper(Of PoliceClearanceCertificate)()
+        'pccDependencyMapper2.AddMapping(Function(c) c.PccNo, "pcc_number").AddMapping(Function(c) c.Fname, "fname").AddMapping(Function(c) c.Mname, "mname").AddMapping(Function(c) c.Lname, "lname").AddMapping(Function(c) c.Status, "status")
+        'pccDependencyComplete = New SqlTableDependency(Of PoliceClearanceCertificate)(connString, "pcc", "dbo", pccDependencyMapper2)
+
+        'AddHandler pccDependencyComplete.OnChanged, AddressOf OnPccDependencyPendingChanged
+
+        'pccDependencyPending.Start()
     End Sub
 
     Private Sub LoadDefaultImages()
@@ -469,17 +491,34 @@ Public Class Clerk2
         End If
     End Sub
 
+    Delegate Sub UpdatePccDependencyComplete()
+    'Private Sub OnPccDependencyCompleteChanged(ByVal sender As Object, ByVal e As TableDependency.SqlClient.Base.EventArgs.RecordChangedEventArgs(Of PoliceClearanceCertificate))
+    '    'MsgBox("Updated:" + e.ChangeType)
+
+    '    If e.ChangeType <> TableDependency.SqlClient.Base.Enums.ChangeType.None Then
+    '        Dim changedEntity = e.Entity
+    '        Console.WriteLine("DML operation: " & e.ChangeType.ToString())
+    '        Console.WriteLine("value: " & changedEntity.Fname)
+    '        Dim reloadPccPendingData As UpdatePccDependencyPending = New UpdatePccDependencyPending(AddressOf LoadPCCPending)
+    '        Me.Invoke(reloadPccPendingData, Nothing)
+
+    '    End If
+    'End Sub
+
     Delegate Sub UpdatePccDependencyPending()
     Private Sub OnPccDependencyPendingChanged(ByVal sender As Object, ByVal e As TableDependency.SqlClient.Base.EventArgs.RecordChangedEventArgs(Of PoliceClearanceCertificate))
         'MsgBox("Updated:" + e.ChangeType)
 
         If e.ChangeType <> TableDependency.SqlClient.Base.Enums.ChangeType.None Then
-            Dim changedEntity = e.Entity
-            Console.WriteLine("DML operation: " & e.ChangeType.ToString())
-            Console.WriteLine("value: " & changedEntity.Fname)
+            'Dim changedEntity = e.Entity
+            ''Console.WriteLine("DML operation: " & e.ChangeType.ToString())
+            ''Console.WriteLine("value: " & changedEntity.Fname)
             Dim reloadPccPendingData As UpdatePccDependencyPending = New UpdatePccDependencyPending(AddressOf LoadPCCPending)
             Me.Invoke(reloadPccPendingData, Nothing)
-
+            Dim reloadPccCompleteData As UpdatePccDependencyComplete = New UpdatePccDependencyComplete(AddressOf LoadPCCCompleted)
+            Me.Invoke(reloadPccCompleteData, Nothing)
+            txtApplicantPendingSearch.Text = ""
+            txtApplicantCompletedSearch.Text = ""
         End If
     End Sub
     Private Sub btnCamera_Click(sender As Object, e As System.EventArgs) Handles btnCamera.Click
@@ -528,7 +567,7 @@ Public Class Clerk2
 
     Private Sub Clerk2_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         pccDependencyPending.Stop()
-
+        pccDependencyPending.Dispose()
     End Sub
 
     Private Sub dataApplicantPending_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataApplicantPending.CellContentClick
@@ -793,12 +832,142 @@ Public Class Clerk2
     End Sub
 
     Private Sub txtApplicantPendingSearch_TextChanged(sender As Object, e As System.EventArgs) Handles txtApplicantPendingSearch.TextChanged
-
+        LoadPCCPending(txtApplicantPendingSearch.Text.Trim)
     End Sub
 
     Private Sub ReportToolStripMenuItem_Click(sender As Object, e As System.EventArgs) Handles ReportToolStripMenuItem.Click
         Dim reportForm As New ReportForm
         reportForm.ShowDialog()
 
+    End Sub
+
+    Private Sub dataApplicantCompleted_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataApplicantCompleted.CellContentClick
+        Dim colname As String = dataApplicantCompleted.Columns(e.ColumnIndex).Name
+        If colname = "dataCompletedClearancePrint" Then
+            Dim row As DataGridViewRow = dataApplicantCompleted.Rows(e.RowIndex)
+            Dim result As DialogResult = MessageBox.Show("Confirm Print?",
+                           "Print Certificate",
+                           MessageBoxButtons.YesNo)
+            If result = DialogResult.Yes Then
+                Try
+                    Dim printForm As New PrintForm
+                    printForm.pcc_id = row.Cells("dataCompletedClearanceID").Value
+                    printForm.ShowDialog()
+                Catch ex As Exception
+                    MsgBox("Police Clearance Completed Table - Print error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+                End Try
+            End If
+        Else
+
+        End If
+    End Sub
+
+    Private Sub btnApplicantPendingSearchCancel_Click(sender As Object, e As System.EventArgs) Handles btnApplicantPendingSearchCancel.Click
+        LoadPCCPending()
+        txtApplicantPendingSearch.Text = ""
+    End Sub
+
+    Private Sub dataApplicantPending_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles dataApplicantPending.CellPainting
+        If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
+            e.Handled = True
+            e.PaintBackground(e.CellBounds, True)
+            Dim sw As String = txtApplicantPendingSearch.Text.Trim
+
+            If Not String.IsNullOrEmpty(sw) Then
+                Dim val As String = CStr(e.FormattedValue)
+                Dim sindx As Integer = val.ToLower().IndexOf(sw.ToLower())
+                If sindx >= 0 Then
+                    Dim hl_rect As New Rectangle()
+                    hl_rect.Y = e.CellBounds.Y + 2
+                    hl_rect.Height = e.CellBounds.Height - 5
+
+                    Dim sBefore As String = val.Substring(0, sindx)
+                    Dim sWord As String = val.Substring(sindx, sw.Length)
+                    Dim s1 As Size = TextRenderer.MeasureText(e.Graphics, sBefore, e.CellStyle.Font, e.CellBounds.Size)
+                    Dim s2 As Size = TextRenderer.MeasureText(e.Graphics, sWord, e.CellStyle.Font, e.CellBounds.Size)
+
+                    If s1.Width > 5 Then
+                        hl_rect.X = e.CellBounds.X + s1.Width - 5
+                        hl_rect.Width = s2.Width - 6
+                    Else
+                        hl_rect.X = e.CellBounds.X + 2
+                        hl_rect.Width = s2.Width - 6
+                    End If
+
+                    Dim hl_brush As SolidBrush = Nothing
+                    If (e.State And DataGridViewElementStates.Selected) <> DataGridViewElementStates.None Then
+                        hl_brush = New SolidBrush(Color.DarkGoldenrod)
+                    Else
+                        hl_brush = New SolidBrush(Color.Yellow)
+                    End If
+
+                    e.Graphics.FillRectangle(hl_brush, hl_rect)
+
+                    hl_brush.Dispose()
+                End If
+            End If
+
+            e.PaintContent(e.CellBounds)
+        End If
+    End Sub
+
+    Private Sub txtApplicantCompletedSearch_TextChanged(sender As Object, e As System.EventArgs) Handles txtApplicantCompletedSearch.TextChanged
+        LoadPCCCompleted(txtApplicantCompletedSearch.Text.Trim)
+    End Sub
+
+    Private Sub btnApplicantCompletedSearchCancel_Click(sender As Object, e As System.EventArgs) Handles btnApplicantCompletedSearchCancel.Click
+        LoadPCCCompleted()
+        txtApplicantCompletedSearch.Text = ""
+    End Sub
+
+    Private Sub dataApplicantCompleted_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles dataApplicantCompleted.CellPainting
+        If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
+            e.Handled = True
+            e.PaintBackground(e.CellBounds, True)
+            Dim sw As String = txtApplicantCompletedSearch.Text.Trim
+
+            If Not String.IsNullOrEmpty(sw) Then
+                Dim val As String = CStr(e.FormattedValue)
+                Dim sindx As Integer = val.ToLower().IndexOf(sw.ToLower())
+                If sindx >= 0 Then
+                    Dim hl_rect As New Rectangle()
+                    hl_rect.Y = e.CellBounds.Y + 2
+                    hl_rect.Height = e.CellBounds.Height - 5
+
+                    Dim sBefore As String = val.Substring(0, sindx)
+                    Dim sWord As String = val.Substring(sindx, sw.Length)
+                    Dim s1 As Size = TextRenderer.MeasureText(e.Graphics, sBefore, e.CellStyle.Font, e.CellBounds.Size)
+                    Dim s2 As Size = TextRenderer.MeasureText(e.Graphics, sWord, e.CellStyle.Font, e.CellBounds.Size)
+
+                    If s1.Width > 5 Then
+                        hl_rect.X = e.CellBounds.X + s1.Width - 5
+                        hl_rect.Width = s2.Width - 6
+                    Else
+                        hl_rect.X = e.CellBounds.X + 2
+                        hl_rect.Width = s2.Width - 6
+                    End If
+
+                    Dim hl_brush As SolidBrush = Nothing
+                    If (e.State And DataGridViewElementStates.Selected) <> DataGridViewElementStates.None Then
+                        hl_brush = New SolidBrush(Color.DarkGoldenrod)
+                    Else
+                        hl_brush = New SolidBrush(Color.Yellow)
+                    End If
+
+                    e.Graphics.FillRectangle(hl_brush, hl_rect)
+
+                    hl_brush.Dispose()
+                End If
+            End If
+
+            e.PaintContent(e.CellBounds)
+        End If
+    End Sub
+
+    Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As System.EventArgs) Handles LogoutToolStripMenuItem.Click
+        pccDependencyPending.Stop()
+        pccDependencyPending.Dispose()
+        Me.Dispose()
+        Login.Show()
     End Sub
 End Class

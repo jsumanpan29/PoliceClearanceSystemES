@@ -16,8 +16,6 @@ Public Class Login
     Private usertype_admin As Integer = 1
     Private usertype_clerk As Integer = 2
     Private usertype_cashier As Integer = 3
-    'User default values
-    Private user_id As Integer
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
 
@@ -31,42 +29,64 @@ Public Class Login
             Try
                 connection.Open()
                 If connection.State = ConnectionState.Open Then
-                    MsgBox("Logging In")
-                    'command.CommandText = "SELECT * FROM user WHERE username = @user AND password= @pass"
-                    command.CommandText = "SELECT * FROM [dbo].[user] WHERE username = @user AND password= @pass AND deleted=0"
+                    'MsgBox("Logging In")
+                    command.CommandText = "SELECT salt, password, usertype_id, user_id FROM [dbo].[user] WHERE username = @user AND deleted=0"
+                    command.Parameters.Clear()
                     command.Parameters.AddWithValue("@user", txtUser.Text.Trim)
-                    command.Parameters.AddWithValue("@pass", txtPassword.Text.Trim)
-                    Dim da As New SqlDataAdapter(command)
-                    Dim dt As New DataTable()
-                    da.Fill(dt)
-                    If (dt.Rows.Count > 0) Then
-                        'MsgBox("Logged In")
-                        If dt.Rows(0).Item("usertype_id") = usertype_admin Then
-                            'prompt.Text = "Username:" & dt.Rows(0).Item("username") & ",Usertype:" & usertype_admin
-                            user_id = dt.Rows(0).Item("user_id")
-                            Admin.user_id = user_id
-                            Admin.Show()
-                            Me.Hide()
 
-                        ElseIf dt.Rows(0).Item("usertype_id") = usertype_clerk Then
-                            user_id = dt.Rows(0).Item("user_id")
-                            Clerk2.user_id = user_id
-                            Clerk2.Show()
-                            Me.Hide()
-                        ElseIf dt.Rows(0).Item("usertype_id") = usertype_cashier Then
-                            user_id = dt.Rows(0).Item("user_id")
-                            Cashier.user_id = user_id
-                            Cashier.Show()
-                            Me.Hide()
+                    Dim reader As SqlDataReader = command.ExecuteReader()
+                    If reader.HasRows Then
+                        ' Read the first row of results
+                        reader.Read()
+                        MsgBox("Logging In")
+                        ' Retrieve the salt and hashed password values from the row
+                        Dim saltIndex As Integer = reader.GetOrdinal("salt")
+                        Dim salt As String = reader.GetString(saltIndex)
+                        Dim hashedPasswordIndex As Integer = reader.GetOrdinal("password")
+                        Dim hashedPassword As String = reader.GetString(hashedPasswordIndex)
+                        Dim utypeIndex As Integer = reader.GetOrdinal("usertype_id")
+                        Dim utype As Integer = reader.GetInt32(utypeIndex)
+                        Dim userIndex As Integer = reader.GetOrdinal("user_id")
+                        Dim userID As Integer = reader.GetInt32(userIndex)
+
+                        ' Verify the password entered by the user against the stored hashed password
+                        If SecurityHelper.VerifyPassword(txtPassword.Text.Trim, salt, hashedPassword) Then
+                            ' Login successful, do something here (e.g., redirect to a secured page)
+                            If utype = usertype_admin Then
+                                Dim adminForm As New Admin
+                                adminForm.user_id = userID
+                                adminForm.Show()
+                                Me.Hide()
+                            ElseIf utype = usertype_clerk Then
+                                Dim clerkForm As New Clerk2
+                                clerkForm.user_id = userID
+                                clerkForm.Show()
+                                Me.Hide()
+                            ElseIf utype = usertype_cashier Then
+                                Dim cashierForm As New Cashier
+                                cashierForm.user_id = userID
+                                cashierForm.Show()
+                                Me.Hide()
+                            Else
+                                MsgBox("User Usertype nonexistent")
+                                connection.Close()
+                            End If
+
                         Else
-                            MsgBox("User Usertype nonexistent")
+                            ' Login failed, show an error message to the user
+                            MessageBox.Show("Invalid username or password.")
+                            connection.Close()
                         End If
                     Else
-                        MsgBox("User nonexistent")
+                        ' No rows were returned, show an error message to the user
+                        MessageBox.Show("User nonexistent.")
+                        connection.Close()
                     End If
+                    reader.Close()
                 End If
                 connection.Close()
             Catch ex As Exception
+                connection.Close()
                 MsgBox("Connection Error!: Cannot Proceed" & vbCrLf & String.Format("Error: {0}", ex.Message))
             End Try
         End If
@@ -75,16 +95,16 @@ Public Class Login
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
-            connection.Open()
-            If connection.State = ConnectionState.Open Then
-                MsgBox("Database Connected")
-                connection.Close()
-            End If
-        Catch ex As Exception
-            MsgBox("Connection Error!: Cannot connect to Database" & vbCrLf & String.Format("Error: {0}", ex.Message))
-            connection.Close()
-        End Try
+        'Try
+        '    connection.Open()
+        '    If connection.State = ConnectionState.Open Then
+        '        MsgBox("Database Connected")
+        '        connection.Close()
+        '    End If
+        'Catch ex As Exception
+        '    MsgBox("Connection Error!: Cannot connect to Database" & vbCrLf & String.Format("Error: {0}", ex.Message))
+        '    connection.Close()
+        'End Try
 
 
     End Sub

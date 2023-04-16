@@ -196,4 +196,16 @@ Public Class Cashier
         LoadPCC()
         TextBox1.Text = ""
     End Sub
+
+    Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As System.EventArgs) Handles LogoutToolStripMenuItem.Click
+        pccDependency.Stop()
+        pccDependency.Dispose()
+        Me.Dispose()
+        Login.Show()
+    End Sub
+
+    Private Sub Cashier_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        pccDependency.Stop()
+        pccDependency.Dispose()
+    End Sub
 End Class

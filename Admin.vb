@@ -4,9 +4,6 @@ Imports System.Data.SqlClient
 Public Class Admin
     Friend user_id As Integer
 
-    'Private dbName As String = "ESPCS.db"
-    'Private dbPath As String = Directory.GetCurrentDirectory & "\bin\Debug\db\" & dbName
-    'Private connString As String = "Data Source=" & dbPath & ";Version=3"
 
     Private connString As String = "Data Source=(local)\SQLEXPRESS;Initial Catalog=ESPCS;Integrated Security=True"
     Private connection As New SqlConnection(connString)
@@ -15,10 +12,73 @@ Public Class Admin
         If user_id Then
             'MsgBox(Me.Name & " UserID:" & user_id)
             LoadAllTable()
+            LoadCounts()
         End If
         connection.Close()
     End Sub
+    Private Sub LoadCounts()
+        UserCount()
+        PoliceCount()
+        CRCount()
+    End Sub
 
+    Private Sub UserCount()
+        Try
+            connection.Open()
+            command = New SqlCommand("", connection)
+            command.CommandText = "SELECT COUNT(*) FROM [dbo].[user] WHERE deleted = 0"
+            Dim da As New SqlDataAdapter(command)
+            Dim dt As New DataTable()
+            da.Fill(dt)
+            'user_exists = dt.Rows(0)(0)
+            If dt.Rows.Count > 0 AndAlso dt.Rows(0)(0) IsNot DBNull.Value Then
+                lblUserCount.Text = Convert.ToInt32(dt.Rows(0)(0))
+            End If
+            connection.Close()
+            command = Nothing
+        Catch ex As Exception
+            connection.Close()
+            MsgBox("Loading User Count error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+        End Try
+    End Sub
+    Private Sub PoliceCount()
+        Try
+            connection.Open()
+            command = New SqlCommand("", connection)
+            command.CommandText = "SELECT COUNT(*) FROM [dbo].[police] WHERE deleted = 0"
+            Dim da As New SqlDataAdapter(command)
+            Dim dt As New DataTable()
+            da.Fill(dt)
+            'user_exists = dt.Rows(0)(0)
+            If dt.Rows.Count > 0 AndAlso dt.Rows(0)(0) IsNot DBNull.Value Then
+                lblPoliceCount.Text = Convert.ToInt32(dt.Rows(0)(0))
+            End If
+            connection.Close()
+            command = Nothing
+        Catch ex As Exception
+            connection.Close()
+            MsgBox("Loading Police Count error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+        End Try
+    End Sub
+    Private Sub CRCount()
+        Try
+            connection.Open()
+            command = New SqlCommand("", connection)
+            command.CommandText = "SELECT COUNT(*) FROM [dbo].[criminal_records] WHERE deleted = 0"
+            Dim da As New SqlDataAdapter(command)
+            Dim dt As New DataTable()
+            da.Fill(dt)
+            'user_exists = dt.Rows(0)(0)
+            If dt.Rows.Count > 0 AndAlso dt.Rows(0)(0) IsNot DBNull.Value Then
+                lblCRCount.Text = Convert.ToInt32(dt.Rows(0)(0))
+            End If
+            connection.Close()
+            command = Nothing
+        Catch ex As Exception
+            connection.Close()
+            MsgBox("Loading Criminal Records Count error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+        End Try
+    End Sub
     Private Sub LoadAllTable()
         LoadUserTable()
         LoadPoliceTable()
@@ -392,5 +452,20 @@ Public Class Admin
 
             e.PaintContent(e.CellBounds)
         End If
+    End Sub
+
+    Private Sub SettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SettingsToolStripMenuItem.Click
+        Dim adminSettingsForm As New AdminSettings
+        adminSettingsForm.user_id = user_id
+        adminSettingsForm.ShowDialog()
+    End Sub
+
+    Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
+        Me.Dispose()
+        Login.Show()
+    End Sub
+
+    Private Sub Admin_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        e.Cancel = True
     End Sub
 End Class

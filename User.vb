@@ -1,5 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar
+Imports System.Security.Cryptography
+Imports PoliceClearanceSystemES.SecurityHelper
 
 Public Class User
     Friend user_id As Integer
@@ -10,8 +12,6 @@ Public Class User
     Private connection As New SqlConnection(connString)
     Private command As New SqlCommand("", connection)
     Private user_exists As Integer
-
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         'If value of user_id is passed here, execute update data then
 
@@ -19,7 +19,8 @@ Public Class User
         If user_id Then
             Try
                 connection.Open()
-                command.CommandText = "SELECT COUNT(*) FROM [dbo].[user] WHERE username = @uname AND deleted = 0"
+                'command.CommandText = "SELECT COUNT(*) FROM [dbo].[user] WHERE username = @uname AND deleted = 0"
+                command.CommandText = "SELECT COUNT(*) AS 'count', user_id FROM [dbo].[user] WHERE username = @uname AND deleted = 0 GROUP BY user_id"
                 command.Parameters.Clear()
                 command.Parameters.AddWithValue("@uname", txtUname.Text.Trim)
                 Dim da As New SqlDataAdapter(command)
@@ -31,18 +32,19 @@ Public Class User
                 End If
                 'closing connection early, if 2 connections are opened at the same time or nested connections it will prompt SQLiteDB lock!
                 connection.Close()
-                If (user_exists > 0) Then
+                If (user_exists > 0 And user_id <> dt.Rows(0).Item("user_id")) Then
                     MessageBox.Show("Username Taken", "Update Error", MessageBoxButtons.OK)
-                Else
+                ElseIf (user_exists > 0 And user_id = dt.Rows(0).Item("user_id")) Then
                     Try
-                        SqlData("UPDATE [dbo].[user] SET username = @uname, password = @pword, fname = @fname, mname = @mname, lname = @lname, contact_no = @contactno, usertype_id = @utype_id WHERE user_id =" & user_id)
+                        SqlData("UPDATE [dbo].[user] SET username = @uname, password = @pword, salt = @salt, fname = @fname, mname = @mname, lname = @lname, contact_no = @contactno, usertype_id = @utype_id WHERE user_id =" & user_id)
                         Me.Dispose()
                     Catch ex As Exception
                         connection.Close()
                         MsgBox("Update User error" & vbCrLf & String.Format("Error: {0}", ex.Message))
                     End Try
+                Else
+
                 End If
-                connection.Close()
             Catch ex As Exception
                 connection.Close()
                 MsgBox("Username taken error(Update)" & vbCrLf & String.Format("Error: {0}", ex.Message))
@@ -66,7 +68,7 @@ Public Class User
                     MessageBox.Show("Username Taken", "Insert Error", MessageBoxButtons.OK)
                 Else
                     Try
-                        SqlData("INSERT INTO [dbo].[user](username,password,fname,mname,lname,contact_no,usertype_id,deleted) VALUES(@uname,@pword,@fname,@mname,@lname,@contactno,@utype_id,0)")
+                        SqlData("INSERT INTO [dbo].[user](username,password,salt,fname,mname,lname,contact_no,usertype_id,deleted) VALUES(@uname,@pword,@salt,@fname,@mname,@lname,@contactno,@utype_id,0)")
                         Me.Dispose()
                     Catch ex As Exception
                         connection.Close()
@@ -86,7 +88,10 @@ Public Class User
         command.CommandText = sqlCommand
         command.Parameters.Clear()
         command.Parameters.AddWithValue("@uname", txtUname.Text.Trim)
-        command.Parameters.AddWithValue("@pword", txtPassword.Text.Trim)
+        Dim salt As String = SecurityHelper.GenerateSalt
+        Dim hashedPassword As String = SecurityHelper.HashPassword(txtPassword.Text.Trim, salt)
+        command.Parameters.AddWithValue("@salt", salt)
+        command.Parameters.AddWithValue("@pword", hashedPassword)
         command.Parameters.AddWithValue("@fname", txtFname.Text.Trim)
         command.Parameters.AddWithValue("@mname", txtMname.Text.Trim)
         command.Parameters.AddWithValue("@lname", txtLname.Text.Trim)
@@ -109,7 +114,7 @@ Public Class User
             da.Fill(dt)
             If (dt.Rows.Count > 0) Then
                 txtUname.Text = dt.Rows(0).Item("username")
-                txtPassword.Text = dt.Rows(0).Item("password")
+                'txtPassword.Text = dt.Rows(0).Item("password
                 txtFname.Text = dt.Rows(0).Item("fname")
                 txtMname.Text = dt.Rows(0).Item("mname")
                 txtLname.Text = dt.Rows(0).Item("lname")

@@ -36,18 +36,20 @@ Partial Class User
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.cbUsertype = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'txtMname
         '
-        Me.txtMname.Location = New System.Drawing.Point(330, 25)
+        Me.txtMname.Location = New System.Drawing.Point(168, 27)
         Me.txtMname.Name = "txtMname"
         Me.txtMname.Size = New System.Drawing.Size(153, 23)
         Me.txtMname.TabIndex = 7
         '
         'txtFname
         '
-        Me.txtFname.Location = New System.Drawing.Point(171, 25)
+        Me.txtFname.Location = New System.Drawing.Point(9, 27)
         Me.txtFname.Name = "txtFname"
         Me.txtFname.Size = New System.Drawing.Size(153, 23)
         Me.txtFname.TabIndex = 6
@@ -55,22 +57,22 @@ Partial Class User
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 7)
+        Me.Label1.Location = New System.Drawing.Point(9, 53)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(262, 15)
+        Me.Label1.Size = New System.Drawing.Size(63, 15)
         Me.Label1.TabIndex = 5
-        Me.Label1.Text = "Full Name(Last name, First name, Middle Name)"
+        Me.Label1.Text = "Last Name"
         '
         'txtLname
         '
-        Me.txtLname.Location = New System.Drawing.Point(12, 25)
+        Me.txtLname.Location = New System.Drawing.Point(9, 71)
         Me.txtLname.Name = "txtLname"
         Me.txtLname.Size = New System.Drawing.Size(153, 23)
         Me.txtLname.TabIndex = 4
         '
         'txtContactNo
         '
-        Me.txtContactNo.Location = New System.Drawing.Point(12, 75)
+        Me.txtContactNo.Location = New System.Drawing.Point(168, 113)
         Me.txtContactNo.Name = "txtContactNo"
         Me.txtContactNo.Size = New System.Drawing.Size(153, 23)
         Me.txtContactNo.TabIndex = 32
@@ -78,7 +80,7 @@ Partial Class User
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(12, 59)
+        Me.Label13.Location = New System.Drawing.Point(168, 97)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(96, 15)
         Me.Label13.TabIndex = 31
@@ -86,7 +88,7 @@ Partial Class User
         '
         'txtUname
         '
-        Me.txtUname.Location = New System.Drawing.Point(12, 124)
+        Me.txtUname.Location = New System.Drawing.Point(9, 113)
         Me.txtUname.Name = "txtUname"
         Me.txtUname.Size = New System.Drawing.Size(153, 23)
         Me.txtUname.TabIndex = 34
@@ -94,7 +96,7 @@ Partial Class User
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 108)
+        Me.Label2.Location = New System.Drawing.Point(9, 97)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(60, 15)
         Me.Label2.TabIndex = 33
@@ -102,7 +104,7 @@ Partial Class User
         '
         'txtPassword
         '
-        Me.txtPassword.Location = New System.Drawing.Point(171, 124)
+        Me.txtPassword.Location = New System.Drawing.Point(9, 152)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(153, 23)
         Me.txtPassword.TabIndex = 36
@@ -110,7 +112,7 @@ Partial Class User
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(171, 108)
+        Me.Label3.Location = New System.Drawing.Point(9, 136)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(57, 15)
         Me.Label3.TabIndex = 35
@@ -118,7 +120,7 @@ Partial Class User
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(327, 167)
+        Me.Button1.Location = New System.Drawing.Point(87, 192)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 37
@@ -127,7 +129,7 @@ Partial Class User
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(408, 167)
+        Me.Button2.Location = New System.Drawing.Point(168, 192)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 38
@@ -137,7 +139,7 @@ Partial Class User
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(171, 59)
+        Me.Label4.Location = New System.Drawing.Point(168, 136)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(57, 15)
         Me.Label4.TabIndex = 39
@@ -146,16 +148,36 @@ Partial Class User
         'cbUsertype
         '
         Me.cbUsertype.FormattingEnabled = True
-        Me.cbUsertype.Location = New System.Drawing.Point(171, 75)
+        Me.cbUsertype.Location = New System.Drawing.Point(168, 152)
         Me.cbUsertype.Name = "cbUsertype"
         Me.cbUsertype.Size = New System.Drawing.Size(153, 23)
         Me.cbUsertype.TabIndex = 40
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(9, 9)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(64, 15)
+        Me.Label5.TabIndex = 41
+        Me.Label5.Text = "First Name"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(168, 9)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(79, 15)
+        Me.Label6.TabIndex = 42
+        Me.Label6.Text = "Middle Name"
         '
         'User
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(494, 199)
+        Me.ClientSize = New System.Drawing.Size(334, 226)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.cbUsertype)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button2)
@@ -191,4 +213,6 @@ Partial Class User
     Friend WithEvents Button2 As Button
     Friend WithEvents Label4 As Label
     Friend WithEvents cbUsertype As ComboBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
 End Class

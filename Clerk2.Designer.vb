@@ -74,10 +74,6 @@ Partial Class Clerk2
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.chkbValidated = New System.Windows.Forms.CheckBox()
-        Me.chkbPaid = New System.Windows.Forms.CheckBox()
-        Me.chkbPending = New System.Windows.Forms.CheckBox()
-        Me.chkbAll = New System.Windows.Forms.CheckBox()
         Me.btnApplicantPendingSearchCancel = New System.Windows.Forms.Button()
         Me.txtApplicantPendingSearch = New System.Windows.Forms.TextBox()
         Me.dataApplicantPending = New System.Windows.Forms.DataGridView()
@@ -553,10 +549,6 @@ Partial Class Clerk2
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.chkbValidated)
-        Me.TabPage1.Controls.Add(Me.chkbPaid)
-        Me.TabPage1.Controls.Add(Me.chkbPending)
-        Me.TabPage1.Controls.Add(Me.chkbAll)
         Me.TabPage1.Controls.Add(Me.btnApplicantPendingSearchCancel)
         Me.TabPage1.Controls.Add(Me.txtApplicantPendingSearch)
         Me.TabPage1.Controls.Add(Me.dataApplicantPending)
@@ -567,46 +559,6 @@ Partial Class Clerk2
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Pending"
         Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'chkbValidated
-        '
-        Me.chkbValidated.AutoSize = True
-        Me.chkbValidated.Location = New System.Drawing.Point(183, 9)
-        Me.chkbValidated.Name = "chkbValidated"
-        Me.chkbValidated.Size = New System.Drawing.Size(74, 19)
-        Me.chkbValidated.TabIndex = 148
-        Me.chkbValidated.Text = "Validated"
-        Me.chkbValidated.UseVisualStyleBackColor = True
-        '
-        'chkbPaid
-        '
-        Me.chkbPaid.AutoSize = True
-        Me.chkbPaid.Location = New System.Drawing.Point(128, 9)
-        Me.chkbPaid.Name = "chkbPaid"
-        Me.chkbPaid.Size = New System.Drawing.Size(49, 19)
-        Me.chkbPaid.TabIndex = 147
-        Me.chkbPaid.Text = "Paid"
-        Me.chkbPaid.UseVisualStyleBackColor = True
-        '
-        'chkbPending
-        '
-        Me.chkbPending.AutoSize = True
-        Me.chkbPending.Location = New System.Drawing.Point(52, 9)
-        Me.chkbPending.Name = "chkbPending"
-        Me.chkbPending.Size = New System.Drawing.Size(70, 19)
-        Me.chkbPending.TabIndex = 146
-        Me.chkbPending.Text = "Pending"
-        Me.chkbPending.UseVisualStyleBackColor = True
-        '
-        'chkbAll
-        '
-        Me.chkbAll.AutoSize = True
-        Me.chkbAll.Location = New System.Drawing.Point(6, 9)
-        Me.chkbAll.Name = "chkbAll"
-        Me.chkbAll.Size = New System.Drawing.Size(40, 19)
-        Me.chkbAll.TabIndex = 145
-        Me.chkbAll.Text = "All"
-        Me.chkbAll.UseVisualStyleBackColor = True
         '
         'btnApplicantPendingSearchCancel
         '
@@ -841,7 +793,7 @@ Partial Class Clerk2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1510, 679)
+        Me.ClientSize = New System.Drawing.Size(1510, 641)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
@@ -978,10 +930,6 @@ Partial Class Clerk2
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents dataApplicantCompleted As DataGridView
-    Friend WithEvents chkbAll As CheckBox
-    Friend WithEvents chkbPending As CheckBox
-    Friend WithEvents chkbPaid As CheckBox
-    Friend WithEvents chkbValidated As CheckBox
     Friend WithEvents dataPendingClearanceID As DataGridViewTextBoxColumn
     Friend WithEvents dataPendingClearanceNo As DataGridViewTextBoxColumn
     Friend WithEvents dataPendingClearanceFname As DataGridViewTextBoxColumn
