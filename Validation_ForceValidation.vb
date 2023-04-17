@@ -9,7 +9,8 @@ Public Class Validation_ForceValidation
 
     Public Property pcc_id As Integer
 
-    Private connString As String = "Data Source=(local)\SQLEXPRESS;Initial Catalog=ESPCS;Integrated Security=True"
+    Private conn = New Conn
+    Private connString As String = conn.ConnectionString
     Private connection As New SqlConnection(connString)
     'Private command As New SqlCommand("", connection)
     Private command
@@ -17,10 +18,8 @@ Public Class Validation_ForceValidation
         RichTextBox1.Text = findingsRemarksDefault
         Try
             connection.Open()
-            '[pcc].[fname] LIKE @searchString OR [pcc].[mname] LIKE @searchString OR [pcc].[lname] LIKE @searchString
             command = New SqlCommand("", connection)
             command.CommandText = "SELECT * FROM [dbo].[criminal_records] WHERE (fname LIKE @fname OR mname LIKE @mname OR lname LIKE @lname) AND deleted = 0"
-            'command.CommandText = "SELECT COUNT(name) FROM [dbo].[criminal_records] WHERE (name LIKE @fname OR name LIKE @mname OR name LIKE @lname)"
             command.Parameters.Clear()
             command.Parameters.AddWithValue("@fname", "%" & Fname & "%")
             command.Parameters.AddWithValue("@mname", "%" & Mname & "%")
@@ -69,7 +68,6 @@ Public Class Validation_ForceValidation
         Try
             connection.Open()
             command = New SqlCommand("", connection)
-            'command.CommandText = "UPDATE dbo.[pcc] SET [pcc].[status] = 'VALIDATED', [pcc].[findingsRemarks] = @findingsremarks WHERE [pcc].[pcc_id] = @pcc_id"
             command.CommandText = "UPDATE dbo.[pcc] SET [pcc].[status] = 'VALIDATED', [pcc].[cr_id] = @cr_id, [pcc].[findingsRemarks] = @findingsremarks WHERE [pcc].[pcc_id] =" & pcc_id
             command.Parameters.Clear()
             command.Parameters.AddWithValue("@cr_id", chosen_cr_id)
@@ -102,11 +100,7 @@ Public Class Validation_ForceValidation
         If chkCriminalRecord.CheckState = CheckState.Checked Then
             ' Do something when the CheckBox is checked.
             DataGridView1.Enabled = True
-            'DataGridView1.EnableHeadersVisualStyles = True
-            'For Each row As DataGridViewRow In DataGridView1.Rows
-            '    Dim checkBox As DataGridViewCheckBoxCell = CType(row.Cells("CrimeCheckBox"), DataGridViewCheckBoxCell)
-            '    checkBox.Value = False
-            'Next
+
             If DataGridView1.Rows.Count > 0 Then
                 Dim firstCheckBoxRow As DataGridViewCheckBoxCell = CType(DataGridView1.Rows(0).Cells("CrimeCheckBox"), DataGridViewCheckBoxCell)
                 firstCheckBoxRow.Value = True

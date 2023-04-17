@@ -8,7 +8,8 @@ Public Class Login
     'Private dbPath As String = "C:\Users\Predator\source\repos\PoliceClearanceSystemES" & "\" & dbName
     'Private connString As String = "Data Source=" & dbPath & ";Version=3"
 
-    Private connString As String = "Data Source=(local)\SQLEXPRESS;Initial Catalog=ESPCS;Integrated Security=True"
+    Private conn = New Conn
+    Private connString As String = conn.ConnectionString
     'Private connection As New SQLiteConnection(connString)
     Private connection As New SqlConnection(connString)
     Private command As New SqlCommand("", connection)
@@ -38,7 +39,7 @@ Public Class Login
                     If reader.HasRows Then
                         ' Read the first row of results
                         reader.Read()
-                        MsgBox("Logging In")
+                        'MsgBox("Logging In")
                         ' Retrieve the salt and hashed password values from the row
                         Dim saltIndex As Integer = reader.GetOrdinal("salt")
                         Dim salt As String = reader.GetString(saltIndex)

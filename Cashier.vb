@@ -6,7 +6,8 @@ Imports TableDependency.SqlClient
 Public Class Cashier
     Friend user_id As Integer
 
-    Private connString As String = "Data Source=(local)\SQLEXPRESS;Initial Catalog=ESPCS;Integrated Security=True"
+    Private conn = New Conn
+    Private connString As String = conn.ConnectionString
     Private connection As New SqlConnection(connString)
     Private command
 
@@ -86,14 +87,6 @@ Public Class Cashier
             'DataGridView1.Columns("ClearanceStatus").DataPropertyName = "status"
             DataGridView1.Columns("ClearanceID").Visible = False
 
-            'Dim headerCellLocation As Point = Me.DataGridView1.GetCellDisplayRectangle(0, -1, True).Location
-            'checkboxHeader.Location = New Point(headerCellLocation.X + 8, headerCellLocation.Y + 2)
-            'checkboxHeader.Size = New Size(18, 18)
-            'checkboxHeader.BackColor = Color.White
-            'DataGridView1.Controls.Add(checkboxHeader)
-
-
-
             DataGridView1.DataSource = dt
             connection.Close()
             command = Nothing
@@ -167,12 +160,7 @@ Public Class Cashier
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        'If e.ColumnIndex = 0 AndAlso TypeOf DataGridView1.Columns(e.ColumnIndex) Is DataGridViewCheckBoxColumn Then
-        '    Dim chkHeader As DataGridViewCheckBoxColumn = CType(DataGridView1.Columns(e.ColumnIndex), DataGridViewCheckBoxColumn)
-        '    For Each row As DataGridViewRow In DataGridView1.Rows
-        '        row.Cells(chkHeader.Index).Value = chkHeader.TrueValue
-        '    Next
-        'End If
+
     End Sub
 
     Private Sub chbAll_CheckedChanged(sender As Object, e As System.EventArgs) Handles chbAll.CheckedChanged

@@ -6,7 +6,8 @@ Public Class CriminalRecords
     Friend cr_id As Integer
 
 
-    Private connString As String = "Data Source=(local)\SQLEXPRESS;Initial Catalog=ESPCS;Integrated Security=True"
+    Private conn = New Conn
+    Private connString As String = conn.ConnectionString
 
     Private connection As New SqlConnection(connString)
     Private command As New SqlCommand("", connection)

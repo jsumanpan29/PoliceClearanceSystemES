@@ -7,7 +7,8 @@ Public Class User
     Friend user_id As Integer
 
 
-    Private connString As String = "Data Source=(local)\SQLEXPRESS;Initial Catalog=ESPCS;Integrated Security=True"
+    Private conn = New Conn
+    Private connString As String = conn.ConnectionString
 
     Private connection As New SqlConnection(connString)
     Private command As New SqlCommand("", connection)
@@ -19,7 +20,6 @@ Public Class User
         If user_id Then
             Try
                 connection.Open()
-                'command.CommandText = "SELECT COUNT(*) FROM [dbo].[user] WHERE username = @uname AND deleted = 0"
                 command.CommandText = "SELECT COUNT(*) AS 'count', user_id FROM [dbo].[user] WHERE username = @uname AND deleted = 0 GROUP BY user_id"
                 command.Parameters.Clear()
                 command.Parameters.AddWithValue("@uname", txtUname.Text.Trim)

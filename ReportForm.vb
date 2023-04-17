@@ -5,7 +5,8 @@ Imports PoliceClearanceSystemES.PoliceClearanceSystemES
 
 Public Class ReportForm
 
-    Private connString As String = "Data Source=(local)\SQLEXPRESS;Initial Catalog=ESPCS;Integrated Security=True"
+    Private conn = New Conn
+    Private connString As String = conn.ConnectionString
     Private connection As New SqlConnection(connString)
     'Private command As New SqlCommand("", connection)
     Private command
@@ -18,13 +19,10 @@ Public Class ReportForm
         Try
             ReportViewer2.LocalReport.ReportEmbeddedResource = "PoliceClearanceSystemES.GenerateReport.rdlc"
             ReportViewer2.LocalReport.DataSources.Clear()
-            'ReportViewer2.LocalReport.EnableExternalImages = True
             ReportViewer2.RefreshReport()
 
             connection.Open()
             command = New SqlCommand("", connection)
-            'command.CommandText = "SELECT [pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[pcc_issue_date] FROM [dbo].[pcc] WHERE @reportdate"
-            'command.Parameters.Clear()
             If ComboBox1.SelectedIndex = 0 Then
                 command.CommandText = "SELECT [pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[pcc_issue_date] FROM [dbo].[pcc] WHERE CAST([pcc].[pcc_issue_date] AS DATE) = CAST(GETDATE() AS DATE) AND [pcc].[status] = 'COMPLETED'"
             ElseIf ComboBox1.SelectedIndex = 1 Then
@@ -32,8 +30,6 @@ Public Class ReportForm
             ElseIf ComboBox1.SelectedIndex = 2 Then
                 command.CommandText = "SELECT [pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[pcc_issue_date] FROM [dbo].[pcc] WHERE DATEDIFF(mm, pcc_issue_date, GETDATE()) = 0 AND [pcc].[status] = 'COMPLETED'"
             End If
-            'command.Parameters.AddWithValue("@reportdate", reportDate)
-            'command.CommandText = "SELECT [pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[pcc_issue_date] FROM [dbo].[pcc] WHERE CAST([pcc].[pcc_issue_date] AS DATE) = CAST(GETDATE() AS DATE)"
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
             da.Fill(dt)
@@ -97,6 +93,10 @@ Public Class ReportForm
 
     Private Sub ReportForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ComboBox1.SelectedIndex = 0
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
     End Sub
 End Class

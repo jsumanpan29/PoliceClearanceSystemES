@@ -10,7 +10,8 @@ Imports System.Drawing.Imaging
 Public Class Clerk2
     Friend user_id As Integer
 
-    Private connString As String = "Data Source=(local)\SQLEXPRESS;Initial Catalog=ESPCS;Integrated Security=True"
+    Private conn = New Conn
+    Private connString As String = conn.ConnectionString
     Private connection As New SqlConnection(connString)
     'Private command As New SqlCommand("", connection)
     Private command
@@ -28,10 +29,6 @@ Public Class Clerk2
     Private status_validated As String = "VALIDATED"
     Private status_completed As String = "COMPLETED"
 
-    'Dim bitmap_applicant_default As Bitmap()
-    'Dim bitmap_fingerprint_default As Bitmap()
-    'Dim bitmap_signature_default As Bitmap()
-
     Dim findingsRemarksDefault As String = "No Criminal/Derogatory Record on file as of this Date!"
 
     Dim now As DateTime = DateTime.Now
@@ -45,7 +42,6 @@ Public Class Clerk2
     Dim applicantFileName As String = ""
     Dim fingerprintFileName As String = ""
 
-    'Private IsEditing As Boolean = False
     Private PccIDToEdit As Integer
     Dim pccDependencyPending As SqlTableDependency(Of PoliceClearanceCertificate)
     'Dim pccDependencyComplete As SqlTableDependency(Of PoliceClearanceCertificate)
@@ -510,9 +506,6 @@ Public Class Clerk2
         'MsgBox("Updated:" + e.ChangeType)
 
         If e.ChangeType <> TableDependency.SqlClient.Base.Enums.ChangeType.None Then
-            'Dim changedEntity = e.Entity
-            ''Console.WriteLine("DML operation: " & e.ChangeType.ToString())
-            ''Console.WriteLine("value: " & changedEntity.Fname)
             Dim reloadPccPendingData As UpdatePccDependencyPending = New UpdatePccDependencyPending(AddressOf LoadPCCPending)
             Me.Invoke(reloadPccPendingData, Nothing)
             Dim reloadPccCompleteData As UpdatePccDependencyComplete = New UpdatePccDependencyComplete(AddressOf LoadPCCCompleted)
@@ -723,7 +716,6 @@ Public Class Clerk2
                         '[pcc].[fname] LIKE @searchString OR [pcc].[mname] LIKE @searchString OR [pcc].[lname] LIKE @searchString
                         command = New SqlCommand("", connection)
                         command.CommandText = "SELECT COUNT(*) FROM [dbo].[criminal_records] WHERE (fname LIKE @fname OR mname LIKE @mname OR lname LIKE @lname) AND deleted = 0"
-                        'command.CommandText = "SELECT COUNT(name) FROM [dbo].[criminal_records] WHERE (name LIKE @fname OR name LIKE @mname OR name LIKE @lname)"
                         command.Parameters.Clear()
                         command.Parameters.AddWithValue("@fname", "%" & row.Cells("dataPendingClearanceFname").Value.ToString.Trim & "%")
                         command.Parameters.AddWithValue("@mname", "%" & row.Cells("dataPendingClearanceMname").Value.ToString.Trim & "%")
@@ -759,8 +751,6 @@ Public Class Clerk2
                             If NoHitForm.ShowDialog() = DialogResult.OK Then
                                 connection.Open()
                                 command = New SqlCommand("", connection)
-                                'command.CommandText = "UPDATE dbo.[pcc] SET [pcc].[status] = 'VALIDATED' WHERE [pcc].[pcc_id] = @pcc_id;" &
-                                '    "INSERT INTO dbo.[findings]([pcc_id], [specify]) VALUES(@pcc_id, 'No Criminal/Derogatory Record on file as of this Date!');"
                                 command.CommandText = "UPDATE dbo.[pcc] SET [pcc].[status] = 'VALIDATED', [pcc].[findingsRemarks] = @findingsremarks WHERE [pcc].[pcc_id] = @pcc_id"
                                 command.Parameters.Clear()
                                 command.Parameters.AddWithValue("@pcc_id", row.Cells("dataPendingClearanceID").Value)
