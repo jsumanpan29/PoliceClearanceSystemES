@@ -88,6 +88,7 @@ Public Class Admin
     Private Sub LoadUserTable(Optional searchString As String = "")
         Try
             connection.Open()
+            command = New SqlCommand("", connection)
             If searchString = "" Then
                 'command.CommandText = "SELECT user.user_id AS 'ID', user.username AS 'USERNAME', user.fname AS 'FIRST NAME', user.mname AS 'MIDDLE NAME', user.lname AS 'LAST NAME', user.contact_no AS 'CONTACT NUMBER', usertype.name AS 'USER ROLE' FROM user INNER JOIN usertype ON user.usertype_id = usertype.usertype_id WHERE user.usertype_id != 1 AND deleted=0"
                 command.CommandText = "SELECT [user].user_id AS 'ID',[user].username AS 'USERNAME', [user].fname AS 'FIRST NAME', [user].mname AS 'MIDDLE NAME', [user].lname AS 'LAST NAME', [user].contact_no AS 'CONTACT NUMBER', [usertype].name AS 'USER ROLE' FROM [dbo].[user] INNER JOIN [dbo].[usertype] ON [user].usertype_id = [usertype].usertype_id WHERE [user].usertype_id != 1 AND deleted=0"
@@ -112,6 +113,7 @@ Public Class Admin
             dataUser.Columns("dataUserUtype").DataPropertyName = "USER ROLE"
             dataUser.DataSource = dt
             connection.Close()
+            command = Nothing
         Catch ex As Exception
             connection.Close()
             MsgBox("Loading User error" & vbCrLf & String.Format("Error: {0}", ex.Message))
@@ -122,6 +124,7 @@ Public Class Admin
     Private Sub LoadPoliceTable(Optional searchString As String = "")
         Try
             connection.Open()
+            command = New SqlCommand("", connection)
             If searchString = "" Then
                 command.CommandText = "SELECT police.police_id AS 'ID', police.fname  AS 'FIRST NAME', police.mname AS 'MIDDLE NAME', police.lname AS 'LAST NAME', police.contact_no  AS 'CONTACT NUMBER', rank.name AS 'RANK', position.name AS 'POSITION' FROM [dbo].police INNER JOIN [dbo].rank ON rank.rank_id = police.rank_id INNER JOIN [dbo].position ON position.position_id = police.position_id WHERE deleted=0"
             Else
@@ -142,6 +145,7 @@ Public Class Admin
             dataPolice.Columns("dataPolicePosition").DataPropertyName = "POSITION"
             dataPolice.DataSource = dt
             connection.Close()
+            command = Nothing
         Catch ex As Exception
             connection.Close()
             MsgBox("Loading Police error" & vbCrLf & String.Format("Error: {0}", ex.Message))
@@ -152,6 +156,7 @@ Public Class Admin
     Private Sub LoadCRTable(Optional searchString As String = "")
         Try
             connection.Open()
+            command = New SqlCommand("", connection)
             If searchString = "" Then
                 command.CommandText = "SELECT cr_id AS 'ID', fname AS 'FNAME', mname AS 'MNAME', lname AS 'LNAME', crime_offense AS 'CRIME', ccno AS 'CC NO', isno AS 'IS NO', remarks AS 'REMARKS' FROM criminal_records WHERE deleted=0"
             Else
@@ -173,6 +178,7 @@ Public Class Admin
             dataCR.Columns("dataCriminalRecordsRemarks").DataPropertyName = "REMARKS"
             dataCR.DataSource = dt
             connection.Close()
+            command = Nothing
         Catch ex As Exception
             connection.Close()
             MsgBox("Loading Criminal Records error" & vbCrLf & String.Format("Error: {0}", ex.Message))
@@ -212,20 +218,26 @@ Public Class Admin
 
     Private Sub deleteCommand(deleteDataCommand As String)
         connection.Open()
+        command = New SqlCommand("", connection)
         command.CommandText = deleteDataCommand
         command.ExecuteNonQuery()
         connection.Close()
+        command = Nothing
     End Sub
     Private Sub btnUserAdd_Click(sender As Object, e As EventArgs) Handles btnUserAdd.Click
         Dim userForm As New User
         userForm.ShowDialog()
         LoadUserTable()
+        UserCount()
+
     End Sub
 
     Private Sub btnPoliceAdd_Click(sender As Object, e As EventArgs) Handles btnPoliceAdd.Click
         Dim policeForm As New Police
         policeForm.ShowDialog()
         LoadPoliceTable()
+        PoliceCount()
+
     End Sub
 
     Private Sub txtUserSearch_TextChanged(sender As Object, e As EventArgs) Handles txtUserSearch.TextChanged
@@ -369,6 +381,8 @@ Public Class Admin
         Dim criminalRecordsForm As New CriminalRecords
         criminalRecordsForm.ShowDialog()
         LoadCRTable()
+        CRCount()
+
     End Sub
 
     Private Sub dataCR_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataCR.CellContentClick

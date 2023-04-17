@@ -20,6 +20,7 @@ Public Class User
         If user_id Then
             Try
                 connection.Open()
+                command = New SqlCommand("", connection)
                 command.CommandText = "SELECT COUNT(*) AS 'count', user_id FROM [dbo].[user] WHERE username = @uname AND deleted = 0 GROUP BY user_id"
                 command.Parameters.Clear()
                 command.Parameters.AddWithValue("@uname", txtUname.Text.Trim)
@@ -32,6 +33,7 @@ Public Class User
                 End If
                 'closing connection early, if 2 connections are opened at the same time or nested connections it will prompt SQLiteDB lock!
                 connection.Close()
+                command = Nothing
                 If (user_exists > 0 And user_id <> dt.Rows(0).Item("user_id")) Then
                     MessageBox.Show("Username Taken", "Update Error", MessageBoxButtons.OK)
                 ElseIf (user_exists > 0 And user_id = dt.Rows(0).Item("user_id")) Then
@@ -54,6 +56,7 @@ Public Class User
             'If no user_id value then add new User to data table
             Try
                 connection.Open()
+                command = New SqlCommand("", connection)
                 command.CommandText = "SELECT COUNT(*) FROM [dbo].[user] WHERE username = @uname AND deleted = 0"
                 command.Parameters.Clear()
                 command.Parameters.AddWithValue("@uname", txtUname.Text.Trim)
@@ -64,6 +67,7 @@ Public Class User
                     user_exists = Convert.ToInt32(dt.Rows(0)(0))
                 End If
                 connection.Close()
+                command = Nothing
                 If (user_exists > 0) Then
                     MessageBox.Show("Username Taken", "Insert Error", MessageBoxButtons.OK)
                 Else
@@ -85,6 +89,7 @@ Public Class User
     End Sub
     Private Sub SqlData(sqlCommand As String)
         connection.Open()
+        command = New SqlCommand("", connection)
         command.CommandText = sqlCommand
         command.Parameters.Clear()
         command.Parameters.AddWithValue("@uname", txtUname.Text.Trim)
@@ -100,6 +105,7 @@ Public Class User
 
         command.ExecuteNonQuery()
         connection.Close()
+        command = Nothing
     End Sub
     Private Sub User_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Preload data
@@ -108,6 +114,7 @@ Public Class User
         If user_id Then
             'MsgBox(Me.Name & " UserID:" & user_id)
             connection.Open()
+            command = New SqlCommand("", connection)
             command.CommandText = "SELECT * FROM [user] WHERE deleted = 0 AND user_id = " & user_id
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
@@ -122,6 +129,7 @@ Public Class User
                 cbUsertype.SelectedValue = dt.Rows(0).Item("usertype_id")
             End If
             connection.Close()
+            command = Nothing
         Else
             'MsgBox("No user_ID")
         End If
@@ -133,6 +141,7 @@ Public Class User
     Private Sub PopulateCombobox()
         Try
             connection.Open()
+            command = New SqlCommand("", connection)
             command.CommandText = "SELECT usertype_id AS 'USERTYPE ID', name AS 'USERTYPE NAME' FROM usertype WHERE usertype_id != 1"
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
@@ -141,6 +150,7 @@ Public Class User
             cbUsertype.ValueMember = dt.Columns("USERTYPE ID").ToString
             cbUsertype.DataSource = dt
             connection.Close()
+            command = Nothing
         Catch ex As Exception
             MsgBox("Loading User error" & vbCrLf & String.Format("Error: {0}", ex.Message))
         End Try

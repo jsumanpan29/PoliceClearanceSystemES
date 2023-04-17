@@ -51,6 +51,7 @@ Public Class Police
     End Sub
     Private Sub SqlData(sqlCommand As String)
         connection.Open()
+        command = New SqlCommand("", connection)
         command.CommandText = sqlCommand
         command.Parameters.AddWithValue("@fname", txtFname.Text.Trim)
         command.Parameters.AddWithValue("@mname", txtMname.Text.Trim)
@@ -61,6 +62,7 @@ Public Class Police
         command.Parameters.AddWithValue("@positionid", cbPosition.SelectedValue.ToString)
         command.ExecuteNonQuery()
         connection.Close()
+        command = Nothing
     End Sub
     Private Sub PopulateCombobox()
         PopulateComboboxRank()
@@ -70,6 +72,7 @@ Public Class Police
     Private Sub PopulateComboboxRank()
         Try
             connection.Open()
+            command = New SqlCommand("", connection)
             command.CommandText = "SELECT rank_id AS 'RANK ID', name AS 'RANK NAME' FROM rank"
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
@@ -78,6 +81,7 @@ Public Class Police
             cbRank.ValueMember = dt.Columns("RANK ID").ToString
             cbRank.DataSource = dt
             connection.Close()
+            command = Nothing
         Catch ex As Exception
             MsgBox("Loading Rank error" & vbCrLf & String.Format("Error: {0}", ex.Message))
         End Try
@@ -85,6 +89,7 @@ Public Class Police
     Private Sub PopulateComboboxPosition()
         Try
             connection.Open()
+            command = New SqlCommand("", connection)
             command.CommandText = "SELECT position_id AS 'POSITION ID', name AS 'POSITION NAME' FROM position"
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
@@ -93,6 +98,7 @@ Public Class Police
             cbPosition.ValueMember = dt.Columns("POSITION ID").ToString
             cbPosition.DataSource = dt
             connection.Close()
+            command = Nothing
         Catch ex As Exception
             MsgBox("Loading Rank error" & vbCrLf & String.Format("Error: {0}", ex.Message))
         End Try
@@ -103,6 +109,7 @@ Public Class Police
         PopulateCombobox()
         If police_id Then
             connection.Open()
+            command = New SqlCommand("", connection)
             command.CommandText = "SELECT * FROM police WHERE deleted = 0 AND police_id = " & police_id
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
@@ -132,6 +139,7 @@ Public Class Police
                 cbPosition.SelectedValue = dt.Rows(0).Item("position_id")
             End If
             connection.Close()
+            command = Nothing
         Else
             'MsgBox("No police_ID")
         End If

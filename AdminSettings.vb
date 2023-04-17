@@ -22,6 +22,7 @@ Public Class AdminSettings
     End Sub
     Private Sub SqlData(sqlCommand As String)
         connection.Open()
+        command = New SqlCommand("", connection)
         command.CommandText = sqlCommand
         command.Parameters.Clear()
         'command.Parameters.AddWithValue("@uname", txtUname.Text.Trim)
@@ -36,11 +37,13 @@ Public Class AdminSettings
 
         command.ExecuteNonQuery()
         connection.Close()
+        command = Nothing
     End Sub
     Private Sub AdminSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If user_id Then
             'MsgBox(Me.Name & " UserID:" & user_id)
             connection.Open()
+            command = New SqlCommand("", connection)
             command.CommandText = "SELECT * FROM [user] WHERE deleted = 0 AND user_id = " & user_id
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()
@@ -53,6 +56,7 @@ Public Class AdminSettings
                 txtContactNo.Text = dt.Rows(0).Item("contact_no")
             End If
             connection.Close()
+            command = Nothing
         End If
         Connection.Close()
     End Sub

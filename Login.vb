@@ -5,8 +5,7 @@ Public Class Login
     'Private dbName As String = "ESPCS.db"
     'Private dbPath As String = Directory.GetCurrentDirectory & "\bin\Debug\db\" & dbName
     'Private dbPath As String = Application.StartupPath & "\" & dbName
-    'Private dbPath As String = "C:\Users\Predator\source\repos\PoliceClearanceSystemES" & "\" & dbName
-    'Private connString As String = "Data Source=" & dbPath & ";Version=3"
+
 
     Private configHelper = New ConfigHelper
     Private connString As String = configHelper.ConnectionString
@@ -31,6 +30,7 @@ Public Class Login
                 connection.Open()
                 If connection.State = ConnectionState.Open Then
                     'MsgBox("Logging In")
+                    command = New SqlCommand("", connection)
                     command.CommandText = "SELECT salt, password, usertype_id, user_id FROM [dbo].[user] WHERE username = @user AND deleted=0"
                     command.Parameters.Clear()
                     command.Parameters.AddWithValue("@user", txtUser.Text.Trim)
@@ -84,6 +84,7 @@ Public Class Login
                         connection.Close()
                     End If
                     reader.Close()
+                    command = Nothing
                 End If
                 connection.Close()
             Catch ex As Exception
