@@ -6,14 +6,12 @@ Public Class Police
 
     Friend police_id As Integer
 
-
-    Private configHelper = New ConfigHelper
-    Private connString As String = configHelper.ConnectionString
+    Private connString As String = (New ConfigHelper).ConnectionString
 
     Private connection As New SqlConnection(connString)
     Private command As New SqlCommand("", connection)
 
-    Private imgsPath_Police As String = Directory.GetCurrentDirectory & "\bin\Debug\img_policesig\"
+    Private imgsPath_Police As String = (New ConfigHelper).GetPoliceSignatureImgPath
     Private fileName As String
     Private imgFileToUpload As String = ""
     Private fileSavePath As String = ""

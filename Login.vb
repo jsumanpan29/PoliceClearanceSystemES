@@ -7,9 +7,7 @@ Public Class Login
     'Private dbPath As String = Application.StartupPath & "\" & dbName
 
 
-    Private configHelper = New ConfigHelper
-    Private connString As String = configHelper.ConnectionString
-    'Private connection As New SQLiteConnection(connString)
+    Private connString As String = (New ConfigHelper).ConnectionString
     Private connection As New SqlConnection(connString)
     Private command As New SqlCommand("", connection)
 

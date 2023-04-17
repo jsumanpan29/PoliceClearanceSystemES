@@ -10,14 +10,14 @@ Imports System.Drawing.Imaging
 Public Class Clerk2
     Friend user_id As Integer
 
-    Private configHelper = New ConfigHelper
-    Private connString As String = configHelper.ConnectionString
+
+    Private connString As String = (New ConfigHelper).ConnectionString
     Private connection As New SqlConnection(connString)
     'Private command As New SqlCommand("", connection)
     Private command
-    Private imgsPath_ApplicantPix As String = Directory.GetCurrentDirectory & "\bin\Debug\img_applicantpix\"
-    Private imgsPath_ApplicantFingerprint As String = Directory.GetCurrentDirectory & "\bin\Debug\img_applicantfingerprint\"
-    Private imgsPath_ApplicantSig As String = Directory.GetCurrentDirectory & "\bin\Debug\img_applicantsig\"
+    Private imgsPath_ApplicantPix As String = (New ConfigHelper).GetApplicantPictureImgPath
+    Private imgsPath_ApplicantFingerprint As String = (New ConfigHelper).GetApplicantFingerprintImgPath
+    Private imgsPath_ApplicantSig As String = (New ConfigHelper).GetApplicantSignatureImgPath
 
     'Values for Biological Sex
     Private male As Integer = 1

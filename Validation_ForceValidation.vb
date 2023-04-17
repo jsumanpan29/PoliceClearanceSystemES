@@ -9,8 +9,7 @@ Public Class Validation_ForceValidation
 
     Public Property pcc_id As Integer
 
-    Private configHelper = New ConfigHelper
-    Private connString As String = configHelper.ConnectionString
+    Private connString As String = (New ConfigHelper).ConnectionString
     Private connection As New SqlConnection(connString)
     'Private command As New SqlCommand("", connection)
     Private command
