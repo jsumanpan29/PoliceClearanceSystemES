@@ -5,8 +5,8 @@ Imports PoliceClearanceSystemES.PoliceClearanceSystemES
 
 Public Class ReportForm
 
-    Private conn = New Conn
-    Private connString As String = conn.ConnectionString
+    Private configHelper = New ConfigHelper
+    Private connString As String = configHelper.ConnectionString
     Private connection As New SqlConnection(connString)
     'Private command As New SqlCommand("", connection)
     Private command

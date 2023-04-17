@@ -6,8 +6,8 @@ Imports TableDependency.SqlClient
 Public Class Cashier
     Friend user_id As Integer
 
-    Private conn = New Conn
-    Private connString As String = conn.ConnectionString
+    Private configHelper = New ConfigHelper
+    Private connString As String = configHelper.ConnectionString
     Private connection As New SqlConnection(connString)
     Private command
 

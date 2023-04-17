@@ -1,6 +1,6 @@
 ﻿Imports Microsoft.Extensions.Configuration
 
-Public Class Conn
+Public Class ConfigHelper
     Public ReadOnly Property ConnectionString() As String
         Get
             Dim configuration = (New ConfigurationBuilder()).AddJsonFile("appsettings.json", True, True).Build()

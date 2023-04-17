@@ -8,8 +8,8 @@ Public Class Login
     'Private dbPath As String = "C:\Users\Predator\source\repos\PoliceClearanceSystemES" & "\" & dbName
     'Private connString As String = "Data Source=" & dbPath & ";Version=3"
 
-    Private conn = New Conn
-    Private connString As String = conn.ConnectionString
+    Private configHelper = New ConfigHelper
+    Private connString As String = configHelper.ConnectionString
     'Private connection As New SQLiteConnection(connString)
     Private connection As New SqlConnection(connString)
     Private command As New SqlCommand("", connection)

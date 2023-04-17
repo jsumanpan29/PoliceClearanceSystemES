@@ -13,8 +13,8 @@ Public Class PrintForm
     'Private imgsPath_ApplicantPix As String = Directory.GetCurrentDirectory & "\bin\Debug\img_applicantpix\"
     'Private imgsPath_ApplicantFingerprint As String = Directory.GetCurrentDirectory & "\bin\Debug\img_applicantfingerprint\"
 
-    Private conn = New Conn
-    Private connString As String = conn.ConnectionString
+    Private configHelper = New ConfigHelper
+    Private connString As String = configHelper.ConnectionString
     Private connection As New SqlConnection(connString)
     Private command
 
