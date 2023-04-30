@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Admin
-    Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin2Framework.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -22,588 +22,1086 @@ Partial Class Admin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TabPage7 = New System.Windows.Forms.TabPage()
-        Me.btnCRSearchRefresh = New System.Windows.Forms.Button()
-        Me.txtCRSearch = New System.Windows.Forms.TextBox()
-        Me.btnCRAdd = New System.Windows.Forms.Button()
-        Me.dataCR = New System.Windows.Forms.DataGridView()
-        Me.dataCriminalRecordsID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCriminalRecordsFName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCriminalRecordsMName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCriminalRecordsLName = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCriminalRecordsOffense = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCriminalRecordsCCNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCriminalRecordsISNO = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCriminalRecordsRemarks = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCriminalRecordsBtnEdit = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.dataCriminalRecordsBtnDelete = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.btnPoliceSearchRefresh = New System.Windows.Forms.Button()
-        Me.txtPoliceSearch = New System.Windows.Forms.TextBox()
-        Me.btnPoliceAdd = New System.Windows.Forms.Button()
-        Me.dataPolice = New System.Windows.Forms.DataGridView()
-        Me.dataPoliceID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPoliceFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPoliceMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPoliceLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPoliceContactNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPoliceRank = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPolicePosition = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPoliceBtnEdit = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.dataPoliceBtnDelete = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.btnUserSearchRefresh = New System.Windows.Forms.Button()
-        Me.txtUserSearch = New System.Windows.Forms.TextBox()
-        Me.btnUserAdd = New System.Windows.Forms.Button()
-        Me.dataUser = New System.Windows.Forms.DataGridView()
-        Me.dataUserID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataUserUname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataUserFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataUserMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataUserLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataUserContactNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataUserUtype = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataUserBtnEdit = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.dataUserBtnDelete = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.lblCRCount = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.lblPoliceCount = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lblUserCount = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.MenuStrip1.SuspendLayout()
-        Me.TabPage7.SuspendLayout()
-        CType(Me.dataCR, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage3.SuspendLayout()
-        CType(Me.dataPolice, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage2.SuspendLayout()
-        CType(Me.dataUser, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage1.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1065, 24)
-        Me.MenuStrip1.TabIndex = 1
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'FileToolStripMenuItem
-        '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem, Me.LogoutToolStripMenuItem})
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
-        '
-        'SettingsToolStripMenuItem
-        '
-        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
-        Me.SettingsToolStripMenuItem.Text = "Settings"
-        '
-        'LogoutToolStripMenuItem
-        '
-        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
-        Me.LogoutToolStripMenuItem.Text = "Logout"
-        '
-        'TabPage7
-        '
-        Me.TabPage7.Controls.Add(Me.btnCRSearchRefresh)
-        Me.TabPage7.Controls.Add(Me.txtCRSearch)
-        Me.TabPage7.Controls.Add(Me.btnCRAdd)
-        Me.TabPage7.Controls.Add(Me.dataCR)
-        Me.TabPage7.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage7.Name = "TabPage7"
-        Me.TabPage7.Size = New System.Drawing.Size(1038, 459)
-        Me.TabPage7.TabIndex = 6
-        Me.TabPage7.Text = "Criminal Records"
-        Me.TabPage7.UseVisualStyleBackColor = True
-        '
-        'btnCRSearchRefresh
-        '
-        Me.btnCRSearchRefresh.Location = New System.Drawing.Point(954, 4)
-        Me.btnCRSearchRefresh.Name = "btnCRSearchRefresh"
-        Me.btnCRSearchRefresh.Size = New System.Drawing.Size(75, 23)
-        Me.btnCRSearchRefresh.TabIndex = 7
-        Me.btnCRSearchRefresh.Text = "x"
-        Me.btnCRSearchRefresh.UseVisualStyleBackColor = True
-        '
-        'txtCRSearch
-        '
-        Me.txtCRSearch.Location = New System.Drawing.Point(722, 5)
-        Me.txtCRSearch.Name = "txtCRSearch"
-        Me.txtCRSearch.Size = New System.Drawing.Size(226, 23)
-        Me.txtCRSearch.TabIndex = 6
-        '
-        'btnCRAdd
-        '
-        Me.btnCRAdd.Location = New System.Drawing.Point(954, 427)
-        Me.btnCRAdd.Name = "btnCRAdd"
-        Me.btnCRAdd.Size = New System.Drawing.Size(75, 23)
-        Me.btnCRAdd.TabIndex = 5
-        Me.btnCRAdd.Text = "Add"
-        Me.btnCRAdd.UseVisualStyleBackColor = True
-        '
-        'dataCR
-        '
-        Me.dataCR.AllowUserToAddRows = False
-        Me.dataCR.AllowUserToDeleteRows = False
-        Me.dataCR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataCR.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataCriminalRecordsID, Me.dataCriminalRecordsFName, Me.dataCriminalRecordsMName, Me.dataCriminalRecordsLName, Me.dataCriminalRecordsOffense, Me.dataCriminalRecordsCCNo, Me.dataCriminalRecordsISNO, Me.dataCriminalRecordsRemarks, Me.dataCriminalRecordsBtnEdit, Me.dataCriminalRecordsBtnDelete})
-        Me.dataCR.Location = New System.Drawing.Point(3, 33)
-        Me.dataCR.Name = "dataCR"
-        Me.dataCR.ReadOnly = True
-        Me.dataCR.RowTemplate.Height = 25
-        Me.dataCR.Size = New System.Drawing.Size(1026, 388)
-        Me.dataCR.TabIndex = 4
-        '
-        'dataCriminalRecordsID
-        '
-        Me.dataCriminalRecordsID.HeaderText = "ID"
-        Me.dataCriminalRecordsID.Name = "dataCriminalRecordsID"
-        Me.dataCriminalRecordsID.ReadOnly = True
-        '
-        'dataCriminalRecordsFName
-        '
-        Me.dataCriminalRecordsFName.HeaderText = "FIRST NAME"
-        Me.dataCriminalRecordsFName.Name = "dataCriminalRecordsFName"
-        Me.dataCriminalRecordsFName.ReadOnly = True
-        '
-        'dataCriminalRecordsMName
-        '
-        Me.dataCriminalRecordsMName.HeaderText = "MIDDLE NAME"
-        Me.dataCriminalRecordsMName.Name = "dataCriminalRecordsMName"
-        Me.dataCriminalRecordsMName.ReadOnly = True
-        '
-        'dataCriminalRecordsLName
-        '
-        Me.dataCriminalRecordsLName.HeaderText = "LAST NAME"
-        Me.dataCriminalRecordsLName.Name = "dataCriminalRecordsLName"
-        Me.dataCriminalRecordsLName.ReadOnly = True
-        '
-        'dataCriminalRecordsOffense
-        '
-        Me.dataCriminalRecordsOffense.HeaderText = "CRIME/OFFENSE COMMITTED"
-        Me.dataCriminalRecordsOffense.Name = "dataCriminalRecordsOffense"
-        Me.dataCriminalRecordsOffense.ReadOnly = True
-        '
-        'dataCriminalRecordsCCNo
-        '
-        Me.dataCriminalRecordsCCNo.HeaderText = "CRIMINAL CASE NO."
-        Me.dataCriminalRecordsCCNo.Name = "dataCriminalRecordsCCNo"
-        Me.dataCriminalRecordsCCNo.ReadOnly = True
-        '
-        'dataCriminalRecordsISNO
-        '
-        Me.dataCriminalRecordsISNO.HeaderText = "I.S. NO."
-        Me.dataCriminalRecordsISNO.Name = "dataCriminalRecordsISNO"
-        Me.dataCriminalRecordsISNO.ReadOnly = True
-        '
-        'dataCriminalRecordsRemarks
-        '
-        Me.dataCriminalRecordsRemarks.HeaderText = "REMARKS"
-        Me.dataCriminalRecordsRemarks.Name = "dataCriminalRecordsRemarks"
-        Me.dataCriminalRecordsRemarks.ReadOnly = True
-        '
-        'dataCriminalRecordsBtnEdit
-        '
-        Me.dataCriminalRecordsBtnEdit.HeaderText = ""
-        Me.dataCriminalRecordsBtnEdit.Name = "dataCriminalRecordsBtnEdit"
-        Me.dataCriminalRecordsBtnEdit.ReadOnly = True
-        Me.dataCriminalRecordsBtnEdit.Text = "Edit"
-        Me.dataCriminalRecordsBtnEdit.UseColumnTextForButtonValue = True
-        '
-        'dataCriminalRecordsBtnDelete
-        '
-        Me.dataCriminalRecordsBtnDelete.HeaderText = ""
-        Me.dataCriminalRecordsBtnDelete.Name = "dataCriminalRecordsBtnDelete"
-        Me.dataCriminalRecordsBtnDelete.ReadOnly = True
-        Me.dataCriminalRecordsBtnDelete.Text = "Delete"
-        Me.dataCriminalRecordsBtnDelete.UseColumnTextForButtonValue = True
-        '
-        'TabPage3
-        '
-        Me.TabPage3.Controls.Add(Me.btnPoliceSearchRefresh)
-        Me.TabPage3.Controls.Add(Me.txtPoliceSearch)
-        Me.TabPage3.Controls.Add(Me.btnPoliceAdd)
-        Me.TabPage3.Controls.Add(Me.dataPolice)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(1038, 459)
-        Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "Police"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'btnPoliceSearchRefresh
-        '
-        Me.btnPoliceSearchRefresh.Location = New System.Drawing.Point(954, 6)
-        Me.btnPoliceSearchRefresh.Name = "btnPoliceSearchRefresh"
-        Me.btnPoliceSearchRefresh.Size = New System.Drawing.Size(75, 23)
-        Me.btnPoliceSearchRefresh.TabIndex = 7
-        Me.btnPoliceSearchRefresh.Text = "x"
-        Me.btnPoliceSearchRefresh.UseVisualStyleBackColor = True
-        '
-        'txtPoliceSearch
-        '
-        Me.txtPoliceSearch.Location = New System.Drawing.Point(722, 7)
-        Me.txtPoliceSearch.Name = "txtPoliceSearch"
-        Me.txtPoliceSearch.Size = New System.Drawing.Size(226, 23)
-        Me.txtPoliceSearch.TabIndex = 6
-        '
-        'btnPoliceAdd
-        '
-        Me.btnPoliceAdd.Location = New System.Drawing.Point(954, 429)
-        Me.btnPoliceAdd.Name = "btnPoliceAdd"
-        Me.btnPoliceAdd.Size = New System.Drawing.Size(75, 23)
-        Me.btnPoliceAdd.TabIndex = 5
-        Me.btnPoliceAdd.Text = "Add"
-        Me.btnPoliceAdd.UseVisualStyleBackColor = True
-        '
-        'dataPolice
-        '
-        Me.dataPolice.AllowUserToAddRows = False
-        Me.dataPolice.AllowUserToDeleteRows = False
-        Me.dataPolice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataPolice.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataPoliceID, Me.dataPoliceFname, Me.dataPoliceMname, Me.dataPoliceLname, Me.dataPoliceContactNo, Me.dataPoliceRank, Me.dataPolicePosition, Me.dataPoliceBtnEdit, Me.dataPoliceBtnDelete})
-        Me.dataPolice.Location = New System.Drawing.Point(3, 35)
-        Me.dataPolice.Name = "dataPolice"
-        Me.dataPolice.ReadOnly = True
-        Me.dataPolice.RowTemplate.Height = 25
-        Me.dataPolice.Size = New System.Drawing.Size(1026, 388)
-        Me.dataPolice.TabIndex = 4
-        '
-        'dataPoliceID
-        '
-        Me.dataPoliceID.HeaderText = "ID"
-        Me.dataPoliceID.Name = "dataPoliceID"
-        Me.dataPoliceID.ReadOnly = True
-        '
-        'dataPoliceFname
-        '
-        Me.dataPoliceFname.HeaderText = "FIRST NAME"
-        Me.dataPoliceFname.Name = "dataPoliceFname"
-        Me.dataPoliceFname.ReadOnly = True
-        '
-        'dataPoliceMname
-        '
-        Me.dataPoliceMname.HeaderText = "MIDDLE NAME"
-        Me.dataPoliceMname.Name = "dataPoliceMname"
-        Me.dataPoliceMname.ReadOnly = True
-        '
-        'dataPoliceLname
-        '
-        Me.dataPoliceLname.HeaderText = "LAST NAME"
-        Me.dataPoliceLname.Name = "dataPoliceLname"
-        Me.dataPoliceLname.ReadOnly = True
-        '
-        'dataPoliceContactNo
-        '
-        Me.dataPoliceContactNo.HeaderText = "CONTACT NUMBER"
-        Me.dataPoliceContactNo.Name = "dataPoliceContactNo"
-        Me.dataPoliceContactNo.ReadOnly = True
-        '
-        'dataPoliceRank
-        '
-        Me.dataPoliceRank.HeaderText = "RANK"
-        Me.dataPoliceRank.Name = "dataPoliceRank"
-        Me.dataPoliceRank.ReadOnly = True
-        '
-        'dataPolicePosition
-        '
-        Me.dataPolicePosition.HeaderText = "POSITION"
-        Me.dataPolicePosition.Name = "dataPolicePosition"
-        Me.dataPolicePosition.ReadOnly = True
-        '
-        'dataPoliceBtnEdit
-        '
-        Me.dataPoliceBtnEdit.HeaderText = ""
-        Me.dataPoliceBtnEdit.Name = "dataPoliceBtnEdit"
-        Me.dataPoliceBtnEdit.ReadOnly = True
-        Me.dataPoliceBtnEdit.Text = "Edit"
-        Me.dataPoliceBtnEdit.UseColumnTextForButtonValue = True
-        '
-        'dataPoliceBtnDelete
-        '
-        Me.dataPoliceBtnDelete.HeaderText = ""
-        Me.dataPoliceBtnDelete.Name = "dataPoliceBtnDelete"
-        Me.dataPoliceBtnDelete.ReadOnly = True
-        Me.dataPoliceBtnDelete.Text = "Delete"
-        Me.dataPoliceBtnDelete.UseColumnTextForButtonValue = True
-        '
-        'TabPage2
-        '
-        Me.TabPage2.Controls.Add(Me.btnUserSearchRefresh)
-        Me.TabPage2.Controls.Add(Me.txtUserSearch)
-        Me.TabPage2.Controls.Add(Me.btnUserAdd)
-        Me.TabPage2.Controls.Add(Me.dataUser)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1038, 459)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "User"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'btnUserSearchRefresh
-        '
-        Me.btnUserSearchRefresh.Location = New System.Drawing.Point(957, 7)
-        Me.btnUserSearchRefresh.Name = "btnUserSearchRefresh"
-        Me.btnUserSearchRefresh.Size = New System.Drawing.Size(75, 23)
-        Me.btnUserSearchRefresh.TabIndex = 3
-        Me.btnUserSearchRefresh.Text = "x"
-        Me.btnUserSearchRefresh.UseVisualStyleBackColor = True
-        '
-        'txtUserSearch
-        '
-        Me.txtUserSearch.Location = New System.Drawing.Point(725, 8)
-        Me.txtUserSearch.Name = "txtUserSearch"
-        Me.txtUserSearch.Size = New System.Drawing.Size(226, 23)
-        Me.txtUserSearch.TabIndex = 2
-        '
-        'btnUserAdd
-        '
-        Me.btnUserAdd.Location = New System.Drawing.Point(957, 430)
-        Me.btnUserAdd.Name = "btnUserAdd"
-        Me.btnUserAdd.Size = New System.Drawing.Size(75, 23)
-        Me.btnUserAdd.TabIndex = 1
-        Me.btnUserAdd.Text = "Add"
-        Me.btnUserAdd.UseVisualStyleBackColor = True
-        '
-        'dataUser
-        '
-        Me.dataUser.AllowUserToAddRows = False
-        Me.dataUser.AllowUserToDeleteRows = False
-        Me.dataUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataUser.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataUserID, Me.dataUserUname, Me.dataUserFname, Me.dataUserMname, Me.dataUserLname, Me.dataUserContactNo, Me.dataUserUtype, Me.dataUserBtnEdit, Me.dataUserBtnDelete})
-        Me.dataUser.Location = New System.Drawing.Point(6, 36)
-        Me.dataUser.Name = "dataUser"
-        Me.dataUser.ReadOnly = True
-        Me.dataUser.RowTemplate.Height = 25
-        Me.dataUser.Size = New System.Drawing.Size(1026, 388)
-        Me.dataUser.TabIndex = 0
-        '
-        'dataUserID
-        '
-        Me.dataUserID.HeaderText = "ID"
-        Me.dataUserID.Name = "dataUserID"
-        Me.dataUserID.ReadOnly = True
-        '
-        'dataUserUname
-        '
-        Me.dataUserUname.HeaderText = "USERNAME"
-        Me.dataUserUname.Name = "dataUserUname"
-        Me.dataUserUname.ReadOnly = True
-        '
-        'dataUserFname
-        '
-        Me.dataUserFname.HeaderText = "FIRST NAME"
-        Me.dataUserFname.Name = "dataUserFname"
-        Me.dataUserFname.ReadOnly = True
-        '
-        'dataUserMname
-        '
-        Me.dataUserMname.HeaderText = "MIDDLE NAME"
-        Me.dataUserMname.Name = "dataUserMname"
-        Me.dataUserMname.ReadOnly = True
-        '
-        'dataUserLname
-        '
-        Me.dataUserLname.HeaderText = "LAST NAME"
-        Me.dataUserLname.Name = "dataUserLname"
-        Me.dataUserLname.ReadOnly = True
-        '
-        'dataUserContactNo
-        '
-        Me.dataUserContactNo.HeaderText = "CONTACT NUMBER"
-        Me.dataUserContactNo.Name = "dataUserContactNo"
-        Me.dataUserContactNo.ReadOnly = True
-        '
-        'dataUserUtype
-        '
-        Me.dataUserUtype.HeaderText = "USER ROLE"
-        Me.dataUserUtype.Name = "dataUserUtype"
-        Me.dataUserUtype.ReadOnly = True
-        '
-        'dataUserBtnEdit
-        '
-        Me.dataUserBtnEdit.HeaderText = ""
-        Me.dataUserBtnEdit.Name = "dataUserBtnEdit"
-        Me.dataUserBtnEdit.ReadOnly = True
-        Me.dataUserBtnEdit.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dataUserBtnEdit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.dataUserBtnEdit.Text = "Edit"
-        Me.dataUserBtnEdit.UseColumnTextForButtonValue = True
-        '
-        'dataUserBtnDelete
-        '
-        Me.dataUserBtnDelete.HeaderText = ""
-        Me.dataUserBtnDelete.Name = "dataUserBtnDelete"
-        Me.dataUserBtnDelete.ReadOnly = True
-        Me.dataUserBtnDelete.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dataUserBtnDelete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic
-        Me.dataUserBtnDelete.Text = "Delete"
-        Me.dataUserBtnDelete.UseColumnTextForButtonValue = True
-        '
-        'TabPage1
-        '
-        Me.TabPage1.Controls.Add(Me.Panel3)
-        Me.TabPage1.Controls.Add(Me.Panel2)
-        Me.TabPage1.Controls.Add(Me.Panel1)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1038, 459)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Home"
-        Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'Panel3
-        '
-        Me.Panel3.Controls.Add(Me.lblCRCount)
-        Me.Panel3.Controls.Add(Me.Label5)
-        Me.Panel3.Location = New System.Drawing.Point(681, 39)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(276, 177)
-        Me.Panel3.TabIndex = 2
-        '
-        'lblCRCount
-        '
-        Me.lblCRCount.AutoSize = True
-        Me.lblCRCount.Font = New System.Drawing.Font("Segoe UI", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblCRCount.Location = New System.Drawing.Point(102, 54)
-        Me.lblCRCount.Name = "lblCRCount"
-        Me.lblCRCount.Size = New System.Drawing.Size(80, 65)
-        Me.lblCRCount.TabIndex = 5
-        Me.lblCRCount.Text = "00"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(46, 22)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(192, 32)
-        Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Criminal Records"
-        '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.lblPoliceCount)
-        Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Location = New System.Drawing.Point(378, 39)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(276, 177)
-        Me.Panel2.TabIndex = 1
-        '
-        'lblPoliceCount
-        '
-        Me.lblPoliceCount.AutoSize = True
-        Me.lblPoliceCount.Font = New System.Drawing.Font("Segoe UI", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblPoliceCount.Location = New System.Drawing.Point(98, 54)
-        Me.lblPoliceCount.Name = "lblPoliceCount"
-        Me.lblPoliceCount.Size = New System.Drawing.Size(80, 65)
-        Me.lblPoliceCount.TabIndex = 3
-        Me.lblPoliceCount.Text = "00"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(98, 22)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(76, 32)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Police"
-        '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.lblUserCount)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(70, 39)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(276, 177)
-        Me.Panel1.TabIndex = 0
-        '
-        'lblUserCount
-        '
-        Me.lblUserCount.AutoSize = True
-        Me.lblUserCount.Font = New System.Drawing.Font("Segoe UI", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.lblUserCount.Location = New System.Drawing.Point(90, 54)
-        Me.lblUserCount.Name = "lblUserCount"
-        Me.lblUserCount.Size = New System.Drawing.Size(80, 65)
-        Me.lblUserCount.TabIndex = 1
-        Me.lblUserCount.Text = "00"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(95, 22)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(71, 32)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Users"
-        '
-        'TabControl1
-        '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Controls.Add(Me.TabPage3)
-        Me.TabControl1.Controls.Add(Me.TabPage7)
-        Me.TabControl1.Location = New System.Drawing.Point(12, 27)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1046, 487)
-        Me.TabControl1.TabIndex = 0
-        '
-        'Admin
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1065, 518)
-        Me.Controls.Add(Me.TabControl1)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "Admin"
-        Me.Text = "Admin"
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
-        Me.TabPage7.ResumeLayout(False)
-        Me.TabPage7.PerformLayout()
-        CType(Me.dataCR, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout()
-        CType(Me.dataPolice, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        CType(Me.dataUser, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage1.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.TabControl1.ResumeLayout(False)
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Admin))
+        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        MenuStrip1 = New MenuStrip()
+        FileToolStripMenuItem = New ToolStripMenuItem()
+        SettingsToolStripMenuItem = New ToolStripMenuItem()
+        LogoutToolStripMenuItem = New ToolStripMenuItem()
+        TabPage7 = New TabPage()
+        btnCRsSearchRefresh = New MaterialSkin2Framework.Controls.MaterialButton()
+        btnCRAdd = New MaterialSkin2Framework.Controls.MaterialButton()
+        Panel10 = New Panel()
+        dataCR = New MaterialSkin2Framework.Controls.MaterialDataTable()
+        dataCriminalRecordsID = New DataGridViewTextBoxColumn()
+        dataCriminalRecordsFName = New DataGridViewTextBoxColumn()
+        dataCriminalRecordsMName = New DataGridViewTextBoxColumn()
+        dataCriminalRecordsLName = New DataGridViewTextBoxColumn()
+        dataCriminalRecordsOffense = New DataGridViewTextBoxColumn()
+        dataCriminalRecordsCCNo = New DataGridViewTextBoxColumn()
+        dataCriminalRecordsISNO = New DataGridViewTextBoxColumn()
+        dataCriminalRecordsRemarks = New DataGridViewTextBoxColumn()
+        dataCriminalRecordsBtnEdit = New DataGridViewButtonColumn()
+        dataCriminalRecordsBtnDelete = New DataGridViewButtonColumn()
+        txtCRSearch = New TextBox()
+        TabPage3 = New TabPage()
+        btnPoliceSearchRefresh = New MaterialSkin2Framework.Controls.MaterialButton()
+        btnPoliceAdd = New MaterialSkin2Framework.Controls.MaterialButton()
+        Panel7 = New Panel()
+        dataPolice = New MaterialSkin2Framework.Controls.MaterialDataTable()
+        dataPoliceID = New DataGridViewTextBoxColumn()
+        dataPoliceFname = New DataGridViewTextBoxColumn()
+        dataPoliceMname = New DataGridViewTextBoxColumn()
+        dataPoliceLname = New DataGridViewTextBoxColumn()
+        dataPoliceContactNo = New DataGridViewTextBoxColumn()
+        dataPoliceRank = New DataGridViewTextBoxColumn()
+        dataPolicePosition = New DataGridViewTextBoxColumn()
+        dataPoliceBtnEdit = New DataGridViewButtonColumn()
+        dataPoliceBtnDelete = New DataGridViewButtonColumn()
+        txtPoliceSearch = New TextBox()
+        TabPage2 = New TabPage()
+        btnUsersSearchRefresh = New MaterialSkin2Framework.Controls.MaterialButton()
+        btnUsersAdd = New MaterialSkin2Framework.Controls.MaterialButton()
+        MaterialCard1 = New MaterialSkin2Framework.Controls.MaterialCard()
+        dataUser = New MaterialSkin2Framework.Controls.MaterialDataTable()
+        dataUserID = New DataGridViewTextBoxColumn()
+        dataUserUname = New DataGridViewTextBoxColumn()
+        dataUserFname = New DataGridViewTextBoxColumn()
+        dataUserMname = New DataGridViewTextBoxColumn()
+        dataUserLname = New DataGridViewTextBoxColumn()
+        dataUserContactNo = New DataGridViewTextBoxColumn()
+        dataUserUtype = New DataGridViewTextBoxColumn()
+        dataUserBtnEdit = New DataGridViewButtonColumn()
+        dataUserBtnDelete = New DataGridViewButtonColumn()
+        txtUserSearch = New TextBox()
+        TabPage1 = New TabPage()
+        Panel1 = New Panel()
+        MaterialCard4 = New MaterialSkin2Framework.Controls.MaterialCard()
+        Panel6 = New Panel()
+        Label3 = New Label()
+        lblCRCount = New Label()
+        MaterialCard2 = New MaterialSkin2Framework.Controls.MaterialCard()
+        Panel4 = New Panel()
+        Label2 = New Label()
+        lblUserCount = New Label()
+        MaterialCard3 = New MaterialSkin2Framework.Controls.MaterialCard()
+        Panel5 = New Panel()
+        Label1 = New Label()
+        lblPoliceCount = New Label()
+        Panel9 = New Panel()
+        Panel8 = New Panel()
+        Label4 = New Label()
+        TabControl1 = New TabControl()
+        dataUserID2 = New DataGridViewTextBoxColumn()
+        dataUserUtype2 = New DataGridViewTextBoxColumn()
+        MenuStrip1.SuspendLayout()
+        TabPage7.SuspendLayout()
+        Panel10.SuspendLayout()
+        CType(dataCR, ComponentModel.ISupportInitialize).BeginInit()
+        TabPage3.SuspendLayout()
+        Panel7.SuspendLayout()
+        CType(dataPolice, ComponentModel.ISupportInitialize).BeginInit()
+        TabPage2.SuspendLayout()
+        MaterialCard1.SuspendLayout()
+        CType(dataUser, ComponentModel.ISupportInitialize).BeginInit()
+        TabPage1.SuspendLayout()
+        Panel1.SuspendLayout()
+        MaterialCard4.SuspendLayout()
+        MaterialCard2.SuspendLayout()
+        MaterialCard3.SuspendLayout()
+        TabControl1.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' MenuStrip1
+        ' 
+        MenuStrip1.Dock = DockStyle.None
+        MenuStrip1.Items.AddRange(New ToolStripItem() {FileToolStripMenuItem})
+        MenuStrip1.Location = New Point(3, 64)
+        MenuStrip1.Name = "MenuStrip1"
+        MenuStrip1.Size = New Size(48, 38)
+        MenuStrip1.TabIndex = 1
+        MenuStrip1.Text = "MenuStrip1"
+        ' 
+        ' FileToolStripMenuItem
+        ' 
+        FileToolStripMenuItem.BackgroundImageLayout = ImageLayout.Stretch
+        FileToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {SettingsToolStripMenuItem, LogoutToolStripMenuItem})
+        FileToolStripMenuItem.Image = CType(resources.GetObject("FileToolStripMenuItem.Image"), Image)
+        FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        FileToolStripMenuItem.Padding = New Padding(10, 7, 10, 7)
+        FileToolStripMenuItem.Size = New Size(40, 34)
+        ' 
+        ' SettingsToolStripMenuItem
+        ' 
+        SettingsToolStripMenuItem.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
+        SettingsToolStripMenuItem.Image = CType(resources.GetObject("SettingsToolStripMenuItem.Image"), Image)
+        SettingsToolStripMenuItem.ImageAlign = ContentAlignment.BottomCenter
+        SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
+        SettingsToolStripMenuItem.Size = New Size(180, 24)
+        SettingsToolStripMenuItem.Text = "Settings"
+        ' 
+        ' LogoutToolStripMenuItem
+        ' 
+        LogoutToolStripMenuItem.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
+        LogoutToolStripMenuItem.Image = CType(resources.GetObject("LogoutToolStripMenuItem.Image"), Image)
+        LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
+        LogoutToolStripMenuItem.Size = New Size(180, 24)
+        LogoutToolStripMenuItem.Text = "Logout"
+        ' 
+        ' TabPage7
+        ' 
+        TabPage7.AutoScroll = True
+        TabPage7.Controls.Add(btnCRsSearchRefresh)
+        TabPage7.Controls.Add(btnCRAdd)
+        TabPage7.Controls.Add(Panel10)
+        TabPage7.Controls.Add(txtCRSearch)
+        TabPage7.Location = New Point(4, 30)
+        TabPage7.Name = "TabPage7"
+        TabPage7.Size = New Size(1059, 475)
+        TabPage7.TabIndex = 6
+        TabPage7.Text = "Criminal Records"
+        TabPage7.UseVisualStyleBackColor = True
+        ' 
+        ' btnCRsSearchRefresh
+        ' 
+        btnCRsSearchRefresh.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        btnCRsSearchRefresh.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
+        btnCRsSearchRefresh.Depth = 0
+        btnCRsSearchRefresh.HighEmphasis = True
+        btnCRsSearchRefresh.Icon = Nothing
+        btnCRsSearchRefresh.Location = New Point(955, 5)
+        btnCRsSearchRefresh.Margin = New Padding(4, 6, 4, 6)
+        btnCRsSearchRefresh.MaximumSize = New Size(75, 30)
+        btnCRsSearchRefresh.MinimumSize = New Size(75, 30)
+        btnCRsSearchRefresh.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        btnCRsSearchRefresh.Name = "btnCRsSearchRefresh"
+        btnCRsSearchRefresh.NoAccentTextColor = Color.Empty
+        btnCRsSearchRefresh.Size = New Size(75, 30)
+        btnCRsSearchRefresh.TabIndex = 13
+        btnCRsSearchRefresh.Text = "X"
+        btnCRsSearchRefresh.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
+        btnCRsSearchRefresh.UseAccentColor = False
+        btnCRsSearchRefresh.UseVisualStyleBackColor = True
+        ' 
+        ' btnCRAdd
+        ' 
+        btnCRAdd.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        btnCRAdd.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
+        btnCRAdd.Depth = 0
+        btnCRAdd.HighEmphasis = True
+        btnCRAdd.Icon = Nothing
+        btnCRAdd.Location = New Point(966, 446)
+        btnCRAdd.Margin = New Padding(4, 6, 4, 6)
+        btnCRAdd.MaximumSize = New Size(64, 23)
+        btnCRAdd.MinimumSize = New Size(60, 20)
+        btnCRAdd.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        btnCRAdd.Name = "btnCRAdd"
+        btnCRAdd.NoAccentTextColor = Color.Empty
+        btnCRAdd.Size = New Size(64, 23)
+        btnCRAdd.TabIndex = 11
+        btnCRAdd.Text = "Add"
+        btnCRAdd.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
+        btnCRAdd.UseAccentColor = False
+        btnCRAdd.UseVisualStyleBackColor = True
+        ' 
+        ' Panel10
+        ' 
+        Panel10.Controls.Add(dataCR)
+        Panel10.Location = New Point(3, 40)
+        Panel10.Name = "Panel10"
+        Panel10.Size = New Size(1032, 405)
+        Panel10.TabIndex = 10
+        ' 
+        ' dataCR
+        ' 
+        dataCR.AllowUserToAddRows = False
+        dataCR.AllowUserToDeleteRows = False
+        dataCR.AllowUserToResizeRows = False
+        dataCR.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dataCR.BackgroundColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
+        dataCR.BorderStyle = BorderStyle.None
+        dataCR.CellBorderStyle = DataGridViewCellBorderStyle.SunkenHorizontal
+        dataCR.CellSelectionPrimaryColor = MaterialSkin2Framework.Primary.Grey800
+        dataCR.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
+        DataGridViewCellStyle1.Font = New Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel)
+        DataGridViewCellStyle1.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
+        dataCR.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        dataCR.ColumnHeadersHeight = 56
+        dataCR.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        dataCR.Columns.AddRange(New DataGridViewColumn() {dataCriminalRecordsID, dataCriminalRecordsFName, dataCriminalRecordsMName, dataCriminalRecordsLName, dataCriminalRecordsOffense, dataCriminalRecordsCCNo, dataCriminalRecordsISNO, dataCriminalRecordsRemarks, dataCriminalRecordsBtnEdit, dataCriminalRecordsBtnDelete})
+        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = SystemColors.Window
+        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
+        DataGridViewCellStyle2.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(66), CByte(66), CByte(66))
+        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
+        dataCR.DefaultCellStyle = DataGridViewCellStyle2
+        dataCR.Depth = 0
+        dataCR.Dock = DockStyle.Fill
+        dataCR.EnableHeadersVisualStyles = False
+        dataCR.Font = New Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
+        dataCR.GridColor = Color.White
+        dataCR.Location = New Point(0, 0)
+        dataCR.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        dataCR.Name = "dataCR"
+        dataCR.ReadOnly = True
+        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = SystemColors.Control
+        DataGridViewCellStyle3.Font = New Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
+        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        DataGridViewCellStyle3.SelectionForeColor = Color.Black
+        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
+        dataCR.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        dataCR.RowHeadersVisible = False
+        DataGridViewCellStyle4.BackColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        DataGridViewCellStyle4.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        dataCR.RowsDefaultCellStyle = DataGridViewCellStyle4
+        dataCR.RowTemplate.Height = 52
+        dataCR.ScrollBars = ScrollBars.None
+        dataCR.ShowVerticalScroll = False
+        dataCR.Size = New Size(1032, 405)
+        dataCR.TabIndex = 8
+        ' 
+        ' dataCriminalRecordsID
+        ' 
+        dataCriminalRecordsID.DividerWidth = 1
+        dataCriminalRecordsID.FillWeight = 30.3328857F
+        dataCriminalRecordsID.HeaderText = "    ID"
+        dataCriminalRecordsID.Name = "dataCriminalRecordsID"
+        dataCriminalRecordsID.ReadOnly = True
+        dataCriminalRecordsID.Resizable = DataGridViewTriState.True
+        ' 
+        ' dataCriminalRecordsFName
+        ' 
+        dataCriminalRecordsFName.DividerWidth = 1
+        dataCriminalRecordsFName.FillWeight = 60.66577F
+        dataCriminalRecordsFName.HeaderText = "   FIRST NAME"
+        dataCriminalRecordsFName.Name = "dataCriminalRecordsFName"
+        dataCriminalRecordsFName.ReadOnly = True
+        ' 
+        ' dataCriminalRecordsMName
+        ' 
+        dataCriminalRecordsMName.DividerWidth = 1
+        dataCriminalRecordsMName.FillWeight = 66.7323456F
+        dataCriminalRecordsMName.HeaderText = "   MIDDLE NAME"
+        dataCriminalRecordsMName.Name = "dataCriminalRecordsMName"
+        dataCriminalRecordsMName.ReadOnly = True
+        ' 
+        ' dataCriminalRecordsLName
+        ' 
+        dataCriminalRecordsLName.DividerWidth = 1
+        dataCriminalRecordsLName.FillWeight = 60.66577F
+        dataCriminalRecordsLName.HeaderText = "   LAST NAME"
+        dataCriminalRecordsLName.Name = "dataCriminalRecordsLName"
+        dataCriminalRecordsLName.ReadOnly = True
+        ' 
+        ' dataCriminalRecordsOffense
+        ' 
+        dataCriminalRecordsOffense.DividerWidth = 1
+        dataCriminalRecordsOffense.FillWeight = 50F
+        dataCriminalRecordsOffense.HeaderText = "CRIME/OFFENSE COMMITTED"
+        dataCriminalRecordsOffense.Name = "dataCriminalRecordsOffense"
+        dataCriminalRecordsOffense.ReadOnly = True
+        ' 
+        ' dataCriminalRecordsCCNo
+        ' 
+        dataCriminalRecordsCCNo.DividerWidth = 1
+        dataCriminalRecordsCCNo.FillWeight = 36.3994637F
+        dataCriminalRecordsCCNo.HeaderText = "CRIMINAL CASE NO."
+        dataCriminalRecordsCCNo.Name = "dataCriminalRecordsCCNo"
+        dataCriminalRecordsCCNo.ReadOnly = True
+        ' 
+        ' dataCriminalRecordsISNO
+        ' 
+        dataCriminalRecordsISNO.DividerWidth = 1
+        dataCriminalRecordsISNO.FillWeight = 40F
+        dataCriminalRecordsISNO.HeaderText = " I.S. NO."
+        dataCriminalRecordsISNO.Name = "dataCriminalRecordsISNO"
+        dataCriminalRecordsISNO.ReadOnly = True
+        ' 
+        ' dataCriminalRecordsRemarks
+        ' 
+        dataCriminalRecordsRemarks.DividerWidth = 1
+        dataCriminalRecordsRemarks.FillWeight = 50F
+        dataCriminalRecordsRemarks.HeaderText = "  REMARKS"
+        dataCriminalRecordsRemarks.Name = "dataCriminalRecordsRemarks"
+        dataCriminalRecordsRemarks.ReadOnly = True
+        ' 
+        ' dataCriminalRecordsBtnEdit
+        ' 
+        dataCriminalRecordsBtnEdit.DividerWidth = 1
+        dataCriminalRecordsBtnEdit.FillWeight = 30.3328857F
+        dataCriminalRecordsBtnEdit.HeaderText = ""
+        dataCriminalRecordsBtnEdit.Name = "dataCriminalRecordsBtnEdit"
+        dataCriminalRecordsBtnEdit.ReadOnly = True
+        dataCriminalRecordsBtnEdit.Resizable = DataGridViewTriState.True
+        dataCriminalRecordsBtnEdit.SortMode = DataGridViewColumnSortMode.Automatic
+        dataCriminalRecordsBtnEdit.Text = "Edit"
+        dataCriminalRecordsBtnEdit.ToolTipText = "Edit"
+        dataCriminalRecordsBtnEdit.UseColumnTextForButtonValue = True
+        ' 
+        ' dataCriminalRecordsBtnDelete
+        ' 
+        dataCriminalRecordsBtnDelete.DividerWidth = 1
+        dataCriminalRecordsBtnDelete.FillWeight = 30.3328857F
+        dataCriminalRecordsBtnDelete.HeaderText = ""
+        dataCriminalRecordsBtnDelete.Name = "dataCriminalRecordsBtnDelete"
+        dataCriminalRecordsBtnDelete.ReadOnly = True
+        dataCriminalRecordsBtnDelete.Resizable = DataGridViewTriState.True
+        dataCriminalRecordsBtnDelete.SortMode = DataGridViewColumnSortMode.Automatic
+        dataCriminalRecordsBtnDelete.Text = "Delete"
+        dataCriminalRecordsBtnDelete.ToolTipText = "Delete"
+        dataCriminalRecordsBtnDelete.UseColumnTextForButtonValue = True
+        ' 
+        ' txtCRSearch
+        ' 
+        txtCRSearch.Location = New Point(725, 8)
+        txtCRSearch.Name = "txtCRSearch"
+        txtCRSearch.PlaceholderText = "  Search..."
+        txtCRSearch.Size = New Size(226, 29)
+        txtCRSearch.TabIndex = 6
+        ' 
+        ' TabPage3
+        ' 
+        TabPage3.Controls.Add(btnPoliceSearchRefresh)
+        TabPage3.Controls.Add(btnPoliceAdd)
+        TabPage3.Controls.Add(Panel7)
+        TabPage3.Controls.Add(txtPoliceSearch)
+        TabPage3.Location = New Point(4, 30)
+        TabPage3.Name = "TabPage3"
+        TabPage3.Size = New Size(1059, 475)
+        TabPage3.TabIndex = 2
+        TabPage3.Text = "Police"
+        TabPage3.UseVisualStyleBackColor = True
+        ' 
+        ' btnPoliceSearchRefresh
+        ' 
+        btnPoliceSearchRefresh.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        btnPoliceSearchRefresh.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
+        btnPoliceSearchRefresh.Depth = 0
+        btnPoliceSearchRefresh.HighEmphasis = True
+        btnPoliceSearchRefresh.Icon = Nothing
+        btnPoliceSearchRefresh.Location = New Point(955, 5)
+        btnPoliceSearchRefresh.Margin = New Padding(4, 6, 4, 6)
+        btnPoliceSearchRefresh.MaximumSize = New Size(75, 30)
+        btnPoliceSearchRefresh.MinimumSize = New Size(75, 30)
+        btnPoliceSearchRefresh.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        btnPoliceSearchRefresh.Name = "btnPoliceSearchRefresh"
+        btnPoliceSearchRefresh.NoAccentTextColor = Color.Empty
+        btnPoliceSearchRefresh.Size = New Size(75, 30)
+        btnPoliceSearchRefresh.TabIndex = 11
+        btnPoliceSearchRefresh.Text = "X"
+        btnPoliceSearchRefresh.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
+        btnPoliceSearchRefresh.UseAccentColor = False
+        btnPoliceSearchRefresh.UseVisualStyleBackColor = True
+        ' 
+        ' btnPoliceAdd
+        ' 
+        btnPoliceAdd.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        btnPoliceAdd.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
+        btnPoliceAdd.Depth = 0
+        btnPoliceAdd.HighEmphasis = True
+        btnPoliceAdd.Icon = Nothing
+        btnPoliceAdd.Location = New Point(954, 434)
+        btnPoliceAdd.Margin = New Padding(4, 6, 4, 6)
+        btnPoliceAdd.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        btnPoliceAdd.Name = "btnPoliceAdd"
+        btnPoliceAdd.NoAccentTextColor = Color.Empty
+        btnPoliceAdd.Size = New Size(64, 36)
+        btnPoliceAdd.TabIndex = 10
+        btnPoliceAdd.Text = "Add"
+        btnPoliceAdd.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
+        btnPoliceAdd.UseAccentColor = False
+        btnPoliceAdd.UseVisualStyleBackColor = True
+        ' 
+        ' Panel7
+        ' 
+        Panel7.Controls.Add(dataPolice)
+        Panel7.Location = New Point(3, 42)
+        Panel7.Name = "Panel7"
+        Panel7.Size = New Size(1032, 292)
+        Panel7.TabIndex = 9
+        ' 
+        ' dataPolice
+        ' 
+        dataPolice.AllowUserToAddRows = False
+        dataPolice.AllowUserToDeleteRows = False
+        dataPolice.AllowUserToResizeRows = False
+        dataPolice.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dataPolice.BackgroundColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
+        dataPolice.BorderStyle = BorderStyle.None
+        dataPolice.CellBorderStyle = DataGridViewCellBorderStyle.SunkenHorizontal
+        dataPolice.CellSelectionPrimaryColor = MaterialSkin2Framework.Primary.Grey800
+        dataPolice.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle5.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
+        DataGridViewCellStyle5.Font = New Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel)
+        DataGridViewCellStyle5.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.True
+        dataPolice.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        dataPolice.ColumnHeadersHeight = 56
+        dataPolice.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        dataPolice.Columns.AddRange(New DataGridViewColumn() {dataPoliceID, dataPoliceFname, dataPoliceMname, dataPoliceLname, dataPoliceContactNo, dataPoliceRank, dataPolicePosition, dataPoliceBtnEdit, dataPoliceBtnDelete})
+        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = SystemColors.Window
+        DataGridViewCellStyle6.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
+        DataGridViewCellStyle6.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        DataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(CByte(66), CByte(66), CByte(66))
+        DataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.False
+        dataPolice.DefaultCellStyle = DataGridViewCellStyle6
+        dataPolice.Depth = 0
+        dataPolice.Dock = DockStyle.Fill
+        dataPolice.EnableHeadersVisualStyles = False
+        dataPolice.Font = New Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
+        dataPolice.GridColor = Color.White
+        dataPolice.Location = New Point(0, 0)
+        dataPolice.MaximumSize = New Size(1032, 390)
+        dataPolice.MinimumSize = New Size(1032, 390)
+        dataPolice.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        dataPolice.Name = "dataPolice"
+        dataPolice.ReadOnly = True
+        DataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = SystemColors.Control
+        DataGridViewCellStyle7.Font = New Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
+        DataGridViewCellStyle7.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        DataGridViewCellStyle7.SelectionForeColor = Color.Black
+        DataGridViewCellStyle7.WrapMode = DataGridViewTriState.True
+        dataPolice.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        dataPolice.RowHeadersVisible = False
+        DataGridViewCellStyle8.BackColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        DataGridViewCellStyle8.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        dataPolice.RowsDefaultCellStyle = DataGridViewCellStyle8
+        dataPolice.RowTemplate.Height = 52
+        dataPolice.ScrollBars = ScrollBars.None
+        dataPolice.ShowVerticalScroll = False
+        dataPolice.Size = New Size(1032, 390)
+        dataPolice.TabIndex = 8
+        ' 
+        ' dataPoliceID
+        ' 
+        dataPoliceID.DividerWidth = 1
+        dataPoliceID.FillWeight = 50F
+        dataPoliceID.HeaderText = "      ID"
+        dataPoliceID.Name = "dataPoliceID"
+        dataPoliceID.ReadOnly = True
+        dataPoliceID.Resizable = DataGridViewTriState.True
+        ' 
+        ' dataPoliceFname
+        ' 
+        dataPoliceFname.DividerWidth = 1
+        dataPoliceFname.HeaderText = "    FIRST NAME"
+        dataPoliceFname.Name = "dataPoliceFname"
+        dataPoliceFname.ReadOnly = True
+        ' 
+        ' dataPoliceMname
+        ' 
+        dataPoliceMname.DividerWidth = 1
+        dataPoliceMname.FillWeight = 110F
+        dataPoliceMname.HeaderText = "     MIDDLE NAME"
+        dataPoliceMname.Name = "dataPoliceMname"
+        dataPoliceMname.ReadOnly = True
+        ' 
+        ' dataPoliceLname
+        ' 
+        dataPoliceLname.DividerWidth = 1
+        dataPoliceLname.HeaderText = "     LAST NAME"
+        dataPoliceLname.Name = "dataPoliceLname"
+        dataPoliceLname.ReadOnly = True
+        ' 
+        ' dataPoliceContactNo
+        ' 
+        dataPoliceContactNo.DividerWidth = 1
+        dataPoliceContactNo.FillWeight = 80F
+        dataPoliceContactNo.HeaderText = "CONTACT NUMBER"
+        dataPoliceContactNo.Name = "dataPoliceContactNo"
+        dataPoliceContactNo.ReadOnly = True
+        ' 
+        ' dataPoliceRank
+        ' 
+        dataPoliceRank.DividerWidth = 1
+        dataPoliceRank.FillWeight = 60F
+        dataPoliceRank.HeaderText = "    RANK"
+        dataPoliceRank.Name = "dataPoliceRank"
+        dataPoliceRank.ReadOnly = True
+        ' 
+        ' dataPolicePosition
+        ' 
+        dataPolicePosition.DividerWidth = 1
+        dataPolicePosition.FillWeight = 80F
+        dataPolicePosition.HeaderText = "    POSITION"
+        dataPolicePosition.Name = "dataPolicePosition"
+        dataPolicePosition.ReadOnly = True
+        ' 
+        ' dataPoliceBtnEdit
+        ' 
+        dataPoliceBtnEdit.DividerWidth = 1
+        dataPoliceBtnEdit.FillWeight = 50F
+        dataPoliceBtnEdit.HeaderText = ""
+        dataPoliceBtnEdit.Name = "dataPoliceBtnEdit"
+        dataPoliceBtnEdit.ReadOnly = True
+        dataPoliceBtnEdit.Resizable = DataGridViewTriState.True
+        dataPoliceBtnEdit.SortMode = DataGridViewColumnSortMode.Automatic
+        dataPoliceBtnEdit.Text = "Edit"
+        dataPoliceBtnEdit.ToolTipText = "Edit"
+        dataPoliceBtnEdit.UseColumnTextForButtonValue = True
+        ' 
+        ' dataPoliceBtnDelete
+        ' 
+        dataPoliceBtnDelete.DividerWidth = 1
+        dataPoliceBtnDelete.FillWeight = 50F
+        dataPoliceBtnDelete.HeaderText = ""
+        dataPoliceBtnDelete.Name = "dataPoliceBtnDelete"
+        dataPoliceBtnDelete.ReadOnly = True
+        dataPoliceBtnDelete.Resizable = DataGridViewTriState.True
+        dataPoliceBtnDelete.SortMode = DataGridViewColumnSortMode.Automatic
+        dataPoliceBtnDelete.Text = "Delete"
+        dataPoliceBtnDelete.ToolTipText = "Delete"
+        dataPoliceBtnDelete.UseColumnTextForButtonValue = True
+        ' 
+        ' txtPoliceSearch
+        ' 
+        txtPoliceSearch.Location = New Point(725, 8)
+        txtPoliceSearch.Name = "txtPoliceSearch"
+        txtPoliceSearch.PlaceholderText = "  Search..."
+        txtPoliceSearch.Size = New Size(226, 29)
+        txtPoliceSearch.TabIndex = 6
+        ' 
+        ' TabPage2
+        ' 
+        TabPage2.Controls.Add(btnUsersSearchRefresh)
+        TabPage2.Controls.Add(btnUsersAdd)
+        TabPage2.Controls.Add(MaterialCard1)
+        TabPage2.Controls.Add(txtUserSearch)
+        TabPage2.Location = New Point(4, 30)
+        TabPage2.Name = "TabPage2"
+        TabPage2.Padding = New Padding(3)
+        TabPage2.Size = New Size(1059, 475)
+        TabPage2.TabIndex = 1
+        TabPage2.Text = "User"
+        TabPage2.UseVisualStyleBackColor = True
+        ' 
+        ' btnUsersSearchRefresh
+        ' 
+        btnUsersSearchRefresh.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        btnUsersSearchRefresh.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
+        btnUsersSearchRefresh.Depth = 0
+        btnUsersSearchRefresh.HighEmphasis = True
+        btnUsersSearchRefresh.Icon = Nothing
+        btnUsersSearchRefresh.Location = New Point(959, 6)
+        btnUsersSearchRefresh.Margin = New Padding(4, 6, 4, 6)
+        btnUsersSearchRefresh.MaximumSize = New Size(75, 30)
+        btnUsersSearchRefresh.MinimumSize = New Size(75, 30)
+        btnUsersSearchRefresh.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        btnUsersSearchRefresh.Name = "btnUsersSearchRefresh"
+        btnUsersSearchRefresh.NoAccentTextColor = Color.Empty
+        btnUsersSearchRefresh.Size = New Size(75, 30)
+        btnUsersSearchRefresh.TabIndex = 12
+        btnUsersSearchRefresh.Text = "X"
+        btnUsersSearchRefresh.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
+        btnUsersSearchRefresh.UseAccentColor = False
+        btnUsersSearchRefresh.UseVisualStyleBackColor = True
+        ' 
+        ' btnUsersAdd
+        ' 
+        btnUsersAdd.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        btnUsersAdd.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
+        btnUsersAdd.Depth = 0
+        btnUsersAdd.HighEmphasis = True
+        btnUsersAdd.Icon = Nothing
+        btnUsersAdd.Location = New Point(970, 419)
+        btnUsersAdd.Margin = New Padding(4, 6, 4, 6)
+        btnUsersAdd.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        btnUsersAdd.Name = "btnUsersAdd"
+        btnUsersAdd.NoAccentTextColor = Color.Empty
+        btnUsersAdd.Size = New Size(64, 36)
+        btnUsersAdd.TabIndex = 8
+        btnUsersAdd.Text = "Add"
+        btnUsersAdd.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
+        btnUsersAdd.UseAccentColor = False
+        btnUsersAdd.UseVisualStyleBackColor = True
+        ' 
+        ' MaterialCard1
+        ' 
+        MaterialCard1.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
+        MaterialCard1.Controls.Add(dataUser)
+        MaterialCard1.Depth = 0
+        MaterialCard1.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        MaterialCard1.Location = New Point(0, 39)
+        MaterialCard1.Margin = New Padding(14)
+        MaterialCard1.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        MaterialCard1.Name = "MaterialCard1"
+        MaterialCard1.Padding = New Padding(14)
+        MaterialCard1.Size = New Size(1038, 379)
+        MaterialCard1.TabIndex = 7
+        ' 
+        ' dataUser
+        ' 
+        dataUser.AllowUserToAddRows = False
+        dataUser.AllowUserToDeleteRows = False
+        dataUser.AllowUserToResizeRows = False
+        dataUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill
+        dataUser.BackgroundColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
+        dataUser.BorderStyle = BorderStyle.None
+        dataUser.CellBorderStyle = DataGridViewCellBorderStyle.SunkenHorizontal
+        dataUser.CellSelectionPrimaryColor = MaterialSkin2Framework.Primary.Grey800
+        dataUser.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
+        DataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle9.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
+        DataGridViewCellStyle9.Font = New Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel)
+        DataGridViewCellStyle9.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        DataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle9.WrapMode = DataGridViewTriState.True
+        dataUser.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        dataUser.ColumnHeadersHeight = 56
+        dataUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
+        dataUser.Columns.AddRange(New DataGridViewColumn() {dataUserID, dataUserUname, dataUserFname, dataUserMname, dataUserLname, dataUserContactNo, dataUserUtype, dataUserBtnEdit, dataUserBtnDelete})
+        DataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.BackColor = SystemColors.Window
+        DataGridViewCellStyle10.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
+        DataGridViewCellStyle10.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        DataGridViewCellStyle10.SelectionBackColor = Color.FromArgb(CByte(66), CByte(66), CByte(66))
+        DataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = DataGridViewTriState.False
+        dataUser.DefaultCellStyle = DataGridViewCellStyle10
+        dataUser.Depth = 0
+        dataUser.Dock = DockStyle.Fill
+        dataUser.EnableHeadersVisualStyles = False
+        dataUser.Font = New Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
+        dataUser.GridColor = Color.White
+        dataUser.Location = New Point(14, 14)
+        dataUser.MaximumSize = New Size(1010, 303)
+        dataUser.MinimumSize = New Size(1010, 360)
+        dataUser.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        dataUser.Name = "dataUser"
+        dataUser.ReadOnly = True
+        dataUser.RightToLeft = RightToLeft.No
+        DataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle11.BackColor = SystemColors.Control
+        DataGridViewCellStyle11.Font = New Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
+        DataGridViewCellStyle11.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        DataGridViewCellStyle11.SelectionForeColor = Color.Black
+        DataGridViewCellStyle11.WrapMode = DataGridViewTriState.True
+        dataUser.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
+        dataUser.RowHeadersVisible = False
+        DataGridViewCellStyle12.BackColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        DataGridViewCellStyle12.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        dataUser.RowsDefaultCellStyle = DataGridViewCellStyle12
+        dataUser.RowTemplate.Height = 52
+        dataUser.ScrollBars = ScrollBars.None
+        dataUser.ShowVerticalScroll = False
+        dataUser.Size = New Size(1010, 360)
+        dataUser.TabIndex = 6
+        ' 
+        ' dataUserID
+        ' 
+        dataUserID.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+        dataUserID.DividerWidth = 1
+        dataUserID.FillWeight = 57.72114F
+        dataUserID.Frozen = True
+        dataUserID.HeaderText = "           ID"
+        dataUserID.Name = "dataUserID"
+        dataUserID.ReadOnly = True
+        dataUserID.Resizable = DataGridViewTriState.True
+        dataUserID.Width = 109
+        ' 
+        ' dataUserUname
+        ' 
+        dataUserUname.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+        dataUserUname.DividerWidth = 1
+        dataUserUname.FillWeight = 65.18445F
+        dataUserUname.Frozen = True
+        dataUserUname.HeaderText = "  USERNAME"
+        dataUserUname.MinimumWidth = 100
+        dataUserUname.Name = "dataUserUname"
+        dataUserUname.ReadOnly = True
+        dataUserUname.Width = 122
+        ' 
+        ' dataUserFname
+        ' 
+        dataUserFname.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+        dataUserFname.DividerWidth = 1
+        dataUserFname.FillWeight = 71.70289F
+        dataUserFname.Frozen = True
+        dataUserFname.HeaderText = "   FIRST NAME"
+        dataUserFname.Name = "dataUserFname"
+        dataUserFname.ReadOnly = True
+        dataUserFname.Width = 135
+        ' 
+        ' dataUserMname
+        ' 
+        dataUserMname.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+        dataUserMname.DividerWidth = 1
+        dataUserMname.FillWeight = 80F
+        dataUserMname.Frozen = True
+        dataUserMname.HeaderText = "   MIDDLE NAME"
+        dataUserMname.MinimumWidth = 2
+        dataUserMname.Name = "dataUserMname"
+        dataUserMname.ReadOnly = True
+        dataUserMname.Width = 150
+        ' 
+        ' dataUserLname
+        ' 
+        dataUserLname.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+        dataUserLname.DividerWidth = 1
+        dataUserLname.FillWeight = 68F
+        dataUserLname.Frozen = True
+        dataUserLname.HeaderText = "  LAST NAME"
+        dataUserLname.Name = "dataUserLname"
+        dataUserLname.ReadOnly = True
+        dataUserLname.Width = 128
+        ' 
+        ' dataUserContactNo
+        ' 
+        dataUserContactNo.AutoSizeMode = DataGridViewAutoSizeColumnMode.None
+        dataUserContactNo.DividerWidth = 1
+        dataUserContactNo.FillWeight = 71.70289F
+        dataUserContactNo.HeaderText = "CONTACT NUMBER"
+        dataUserContactNo.Name = "dataUserContactNo"
+        dataUserContactNo.ReadOnly = True
+        dataUserContactNo.ToolTipText = "CONTACT NUMBER"
+        dataUserContactNo.Width = 135
+        ' 
+        ' dataUserUtype
+        ' 
+        dataUserUtype.DividerWidth = 1
+        dataUserUtype.FillWeight = 57.72114F
+        dataUserUtype.HeaderText = "USER ROLE"
+        dataUserUtype.Name = "dataUserUtype"
+        dataUserUtype.ReadOnly = True
+        dataUserUtype.ToolTipText = " "
+        ' 
+        ' dataUserBtnEdit
+        ' 
+        dataUserBtnEdit.DividerWidth = 1
+        dataUserBtnEdit.FillWeight = 32.5922241F
+        dataUserBtnEdit.HeaderText = ""
+        dataUserBtnEdit.Name = "dataUserBtnEdit"
+        dataUserBtnEdit.ReadOnly = True
+        dataUserBtnEdit.Resizable = DataGridViewTriState.True
+        dataUserBtnEdit.SortMode = DataGridViewColumnSortMode.Automatic
+        dataUserBtnEdit.Text = "Edit"
+        dataUserBtnEdit.ToolTipText = "Edit"
+        dataUserBtnEdit.UseColumnTextForButtonValue = True
+        ' 
+        ' dataUserBtnDelete
+        ' 
+        dataUserBtnDelete.DividerWidth = 1
+        dataUserBtnDelete.FillWeight = 32.5922241F
+        dataUserBtnDelete.HeaderText = ""
+        dataUserBtnDelete.Name = "dataUserBtnDelete"
+        dataUserBtnDelete.ReadOnly = True
+        dataUserBtnDelete.Resizable = DataGridViewTriState.True
+        dataUserBtnDelete.SortMode = DataGridViewColumnSortMode.Automatic
+        dataUserBtnDelete.Text = "Delete"
+        dataUserBtnDelete.ToolTipText = "Delete"
+        dataUserBtnDelete.UseColumnTextForButtonValue = True
+        ' 
+        ' txtUserSearch
+        ' 
+        txtUserSearch.Location = New Point(726, 7)
+        txtUserSearch.Name = "txtUserSearch"
+        txtUserSearch.PlaceholderText = "  Search..."
+        txtUserSearch.Size = New Size(226, 29)
+        txtUserSearch.TabIndex = 2
+        ' 
+        ' TabPage1
+        ' 
+        TabPage1.Controls.Add(Panel1)
+        TabPage1.Controls.Add(Panel9)
+        TabPage1.Controls.Add(Panel8)
+        TabPage1.Controls.Add(Label4)
+        TabPage1.Location = New Point(4, 30)
+        TabPage1.Name = "TabPage1"
+        TabPage1.Padding = New Padding(3)
+        TabPage1.Size = New Size(965, 475)
+        TabPage1.TabIndex = 0
+        TabPage1.Text = "Home"
+        TabPage1.UseVisualStyleBackColor = True
+        ' 
+        ' Panel1
+        ' 
+        Panel1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        Panel1.Controls.Add(MaterialCard4)
+        Panel1.Controls.Add(MaterialCard2)
+        Panel1.Controls.Add(MaterialCard3)
+        Panel1.Location = New Point(40, 131)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(889, 213)
+        Panel1.TabIndex = 13
+        ' 
+        ' MaterialCard4
+        ' 
+        MaterialCard4.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        MaterialCard4.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
+        MaterialCard4.BorderStyle = BorderStyle.FixedSingle
+        MaterialCard4.Controls.Add(Panel6)
+        MaterialCard4.Controls.Add(Label3)
+        MaterialCard4.Controls.Add(lblCRCount)
+        MaterialCard4.Depth = 0
+        MaterialCard4.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        MaterialCard4.Location = New Point(590, 11)
+        MaterialCard4.Margin = New Padding(14)
+        MaterialCard4.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        MaterialCard4.Name = "MaterialCard4"
+        MaterialCard4.Padding = New Padding(14)
+        MaterialCard4.Size = New Size(288, 177)
+        MaterialCard4.TabIndex = 12
+        ' 
+        ' Panel6
+        ' 
+        Panel6.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Panel6.BackgroundImage = CType(resources.GetObject("Panel6.BackgroundImage"), Image)
+        Panel6.BackgroundImageLayout = ImageLayout.Zoom
+        Panel6.Location = New Point(35, 36)
+        Panel6.Name = "Panel6"
+        Panel6.Size = New Size(42, 32)
+        Panel6.TabIndex = 8
+        ' 
+        ' Label3
+        ' 
+        Label3.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.Location = New Point(81, 36)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(178, 30)
+        Label3.TabIndex = 7
+        Label3.Text = "Criminal Records"
+        ' 
+        ' lblCRCount
+        ' 
+        lblCRCount.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        lblCRCount.AutoSize = True
+        lblCRCount.Font = New Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point)
+        lblCRCount.ForeColor = Color.FromArgb(CByte(192), CByte(64), CByte(0))
+        lblCRCount.Location = New Point(103, 71)
+        lblCRCount.Name = "lblCRCount"
+        lblCRCount.Size = New Size(80, 65)
+        lblCRCount.TabIndex = 5
+        lblCRCount.Text = "00"
+        ' 
+        ' MaterialCard2
+        ' 
+        MaterialCard2.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        MaterialCard2.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
+        MaterialCard2.BorderStyle = BorderStyle.FixedSingle
+        MaterialCard2.Controls.Add(Panel4)
+        MaterialCard2.Controls.Add(Label2)
+        MaterialCard2.Controls.Add(lblUserCount)
+        MaterialCard2.Depth = 0
+        MaterialCard2.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        MaterialCard2.Location = New Point(10, 11)
+        MaterialCard2.Margin = New Padding(14)
+        MaterialCard2.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        MaterialCard2.Name = "MaterialCard2"
+        MaterialCard2.Padding = New Padding(14)
+        MaterialCard2.Size = New Size(200, 177)
+        MaterialCard2.TabIndex = 10
+        ' 
+        ' Panel4
+        ' 
+        Panel4.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Panel4.BackgroundImage = CType(resources.GetObject("Panel4.BackgroundImage"), Image)
+        Panel4.BackgroundImageLayout = ImageLayout.Zoom
+        Panel4.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
+        Panel4.Location = New Point(-18, 33)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(30, 33)
+        Panel4.TabIndex = 6
+        ' 
+        ' Label2
+        ' 
+        Label2.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Label2.AutoSize = True
+        Label2.Font = New Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label2.Location = New Point(18, 28)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(79, 40)
+        Label2.TabIndex = 5
+        Label2.Text = "User"
+        ' 
+        ' lblUserCount
+        ' 
+        lblUserCount.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        lblUserCount.AutoSize = True
+        lblUserCount.Font = New Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point)
+        lblUserCount.ForeColor = Color.ForestGreen
+        lblUserCount.Location = New Point(18, 71)
+        lblUserCount.Name = "lblUserCount"
+        lblUserCount.Size = New Size(80, 65)
+        lblUserCount.TabIndex = 1
+        lblUserCount.Text = "00"
+        ' 
+        ' MaterialCard3
+        ' 
+        MaterialCard3.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        MaterialCard3.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
+        MaterialCard3.BorderStyle = BorderStyle.FixedSingle
+        MaterialCard3.Controls.Add(Panel5)
+        MaterialCard3.Controls.Add(Label1)
+        MaterialCard3.Controls.Add(lblPoliceCount)
+        MaterialCard3.Depth = 0
+        MaterialCard3.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        MaterialCard3.Location = New Point(281, 11)
+        MaterialCard3.Margin = New Padding(14)
+        MaterialCard3.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        MaterialCard3.Name = "MaterialCard3"
+        MaterialCard3.Padding = New Padding(14)
+        MaterialCard3.Size = New Size(274, 177)
+        MaterialCard3.TabIndex = 11
+        ' 
+        ' Panel5
+        ' 
+        Panel5.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Panel5.BackgroundImage = CType(resources.GetObject("Panel5.BackgroundImage"), Image)
+        Panel5.BackgroundImageLayout = ImageLayout.Zoom
+        Panel5.Location = New Point(53, 36)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(42, 32)
+        Panel5.TabIndex = 7
+        ' 
+        ' Label1
+        ' 
+        Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.Location = New Point(92, 30)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(98, 40)
+        Label1.TabIndex = 6
+        Label1.Text = "Police"
+        ' 
+        ' lblPoliceCount
+        ' 
+        lblPoliceCount.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        lblPoliceCount.AutoSize = True
+        lblPoliceCount.Font = New Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point)
+        lblPoliceCount.ForeColor = Color.FromArgb(CByte(255), CByte(128), CByte(0))
+        lblPoliceCount.Location = New Point(101, 71)
+        lblPoliceCount.Name = "lblPoliceCount"
+        lblPoliceCount.Size = New Size(80, 65)
+        lblPoliceCount.TabIndex = 3
+        lblPoliceCount.Text = "00"
+        ' 
+        ' Panel9
+        ' 
+        Panel9.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        Panel9.BackColor = Color.DimGray
+        Panel9.Location = New Point(40, 118)
+        Panel9.Name = "Panel9"
+        Panel9.Size = New Size(889, 4)
+        Panel9.TabIndex = 9
+        ' 
+        ' Panel8
+        ' 
+        Panel8.BackColor = Color.FromArgb(CByte(3), CByte(59), CByte(106))
+        Panel8.BackgroundImage = CType(resources.GetObject("Panel8.BackgroundImage"), Image)
+        Panel8.BackgroundImageLayout = ImageLayout.Zoom
+        Panel8.Location = New Point(51, 42)
+        Panel8.Name = "Panel8"
+        Panel8.Size = New Size(55, 47)
+        Panel8.TabIndex = 8
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.ForeColor = Color.FromArgb(CByte(3), CByte(59), CByte(106))
+        Label4.Location = New Point(102, 42)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(199, 47)
+        Label4.TabIndex = 7
+        Label4.Text = "Dashboard"
+        ' 
+        ' TabControl1
+        ' 
+        TabControl1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
+        TabControl1.Controls.Add(TabPage1)
+        TabControl1.Controls.Add(TabPage2)
+        TabControl1.Controls.Add(TabPage3)
+        TabControl1.Controls.Add(TabPage7)
+        TabControl1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
+        TabControl1.Location = New Point(13, 105)
+        TabControl1.Name = "TabControl1"
+        TabControl1.SelectedIndex = 0
+        TabControl1.Size = New Size(973, 509)
+        TabControl1.TabIndex = 0
+        ' 
+        ' dataUserID2
+        ' 
+        dataUserID2.HeaderText = "ID"
+        dataUserID2.Name = "dataUserID2"
+        dataUserID2.ReadOnly = True
+        dataUserID2.Width = 40
+        ' 
+        ' dataUserUtype2
+        ' 
+        dataUserUtype2.HeaderText = "User Role"
+        dataUserUtype2.Name = "dataUserUtype2"
+        dataUserUtype2.ReadOnly = True
+        ' 
+        ' Admin
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(998, 628)
+        Controls.Add(TabControl1)
+        Controls.Add(MenuStrip1)
+        MainMenuStrip = MenuStrip1
+        Name = "Admin"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Admin"
+        WindowState = FormWindowState.Maximized
+        MenuStrip1.ResumeLayout(False)
+        MenuStrip1.PerformLayout()
+        TabPage7.ResumeLayout(False)
+        TabPage7.PerformLayout()
+        Panel10.ResumeLayout(False)
+        CType(dataCR, ComponentModel.ISupportInitialize).EndInit()
+        TabPage3.ResumeLayout(False)
+        TabPage3.PerformLayout()
+        Panel7.ResumeLayout(False)
+        CType(dataPolice, ComponentModel.ISupportInitialize).EndInit()
+        TabPage2.ResumeLayout(False)
+        TabPage2.PerformLayout()
+        MaterialCard1.ResumeLayout(False)
+        CType(dataUser, ComponentModel.ISupportInitialize).EndInit()
+        TabPage1.ResumeLayout(False)
+        TabPage1.PerformLayout()
+        Panel1.ResumeLayout(False)
+        MaterialCard4.ResumeLayout(False)
+        MaterialCard4.PerformLayout()
+        MaterialCard2.ResumeLayout(False)
+        MaterialCard2.PerformLayout()
+        MaterialCard3.ResumeLayout(False)
+        MaterialCard3.PerformLayout()
+        TabControl1.ResumeLayout(False)
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
@@ -611,32 +1109,36 @@ Partial Class Admin
     Friend WithEvents TabPage7 As TabPage
     Friend WithEvents btnCRSearchRefresh As Button
     Friend WithEvents txtCRSearch As TextBox
-    Friend WithEvents btnCRAdd As Button
-    Friend WithEvents dataCR As DataGridView
     Friend WithEvents TabPage3 As TabPage
-    Friend WithEvents btnPoliceSearchRefresh As Button
     Friend WithEvents txtPoliceSearch As TextBox
-    Friend WithEvents btnPoliceAdd As Button
-    Friend WithEvents dataPolice As DataGridView
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents btnUserSearchRefresh As Button
     Friend WithEvents txtUserSearch As TextBox
     Friend WithEvents btnUserAdd As Button
-    Friend WithEvents dataUser As DataGridView
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents Panel1 As Panel
     Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents dataUserID As DataGridViewTextBoxColumn
-    Friend WithEvents dataUserUname As DataGridViewTextBoxColumn
-    Friend WithEvents dataUserFname As DataGridViewTextBoxColumn
-    Friend WithEvents dataUserMname As DataGridViewTextBoxColumn
-    Friend WithEvents dataUserLname As DataGridViewTextBoxColumn
-    Friend WithEvents dataUserContactNo As DataGridViewTextBoxColumn
-    Friend WithEvents dataUserUtype As DataGridViewTextBoxColumn
-    Friend WithEvents dataUserBtnEdit As DataGridViewButtonColumn
-    Friend WithEvents dataUserBtnDelete As DataGridViewButtonColumn
+    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lblCRCount As Label
+    Friend WithEvents lblPoliceCount As Label
+    Friend WithEvents lblUserCount As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents dataUserID2 As DataGridViewTextBoxColumn
+    Friend WithEvents dataUserUtype2 As DataGridViewTextBoxColumn
+    Friend WithEvents dataUser As MaterialSkin2Framework.Controls.MaterialDataTable
+    Friend WithEvents MaterialCard1 As MaterialSkin2Framework.Controls.MaterialCard
+    Friend WithEvents btnUsersAdd As MaterialSkin2Framework.Controls.MaterialButton
+    Friend WithEvents dataPolice As MaterialSkin2Framework.Controls.MaterialDataTable
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents btnPoliceAdd As MaterialSkin2Framework.Controls.MaterialButton
+    Friend WithEvents btnPoliceSearchRefresh As MaterialSkin2Framework.Controls.MaterialButton
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Panel9 As Panel
     Friend WithEvents dataPoliceID As DataGridViewTextBoxColumn
     Friend WithEvents dataPoliceFname As DataGridViewTextBoxColumn
     Friend WithEvents dataPoliceMname As DataGridViewTextBoxColumn
@@ -646,7 +1148,19 @@ Partial Class Admin
     Friend WithEvents dataPolicePosition As DataGridViewTextBoxColumn
     Friend WithEvents dataPoliceBtnEdit As DataGridViewButtonColumn
     Friend WithEvents dataPoliceBtnDelete As DataGridViewButtonColumn
-    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents dataUserID As DataGridViewTextBoxColumn
+    Friend WithEvents dataUserUname As DataGridViewTextBoxColumn
+    Friend WithEvents dataUserFname As DataGridViewTextBoxColumn
+    Friend WithEvents dataUserMname As DataGridViewTextBoxColumn
+    Friend WithEvents dataUserLname As DataGridViewTextBoxColumn
+    Friend WithEvents dataUserContactNo As DataGridViewTextBoxColumn
+    Friend WithEvents dataUserUtype As DataGridViewTextBoxColumn
+    Friend WithEvents dataUserBtnEdit As DataGridViewButtonColumn
+    Friend WithEvents dataUserBtnDelete As DataGridViewButtonColumn
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents dataCR As MaterialSkin2Framework.Controls.MaterialDataTable
+    Friend WithEvents btnCRAdd2 As MaterialSkin2Framework.Controls.MaterialButton
+    Friend WithEvents btnCRAdd As MaterialSkin2Framework.Controls.MaterialButton
     Friend WithEvents dataCriminalRecordsID As DataGridViewTextBoxColumn
     Friend WithEvents dataCriminalRecordsFName As DataGridViewTextBoxColumn
     Friend WithEvents dataCriminalRecordsMName As DataGridViewTextBoxColumn
@@ -657,10 +1171,11 @@ Partial Class Admin
     Friend WithEvents dataCriminalRecordsRemarks As DataGridViewTextBoxColumn
     Friend WithEvents dataCriminalRecordsBtnEdit As DataGridViewButtonColumn
     Friend WithEvents dataCriminalRecordsBtnDelete As DataGridViewButtonColumn
-    Friend WithEvents lblCRCount As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents lblPoliceCount As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents lblUserCount As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents btnUsersSearchRefresh As MaterialSkin2Framework.Controls.MaterialButton
+    Friend WithEvents btnCRsSearchRefresh As MaterialSkin2Framework.Controls.MaterialButton
+    Friend WithEvents MaterialCard2 As MaterialSkin2Framework.Controls.MaterialCard
+    Friend WithEvents MaterialCard4 As MaterialSkin2Framework.Controls.MaterialCard
+    Friend WithEvents MaterialCard3 As MaterialSkin2Framework.Controls.MaterialCard
+    Friend WithEvents Panel1 As Panel
 End Class
+

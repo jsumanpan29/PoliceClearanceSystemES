@@ -22,851 +22,850 @@ Partial Class Clerk2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btnClear_Cancel = New System.Windows.Forms.Button()
-        Me.btnAdd_Save = New System.Windows.Forms.Button()
-        Me.cbPoliceCertify = New System.Windows.Forms.ComboBox()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.cbPoliceVerify = New System.Windows.Forms.ComboBox()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.btnSignature = New System.Windows.Forms.Button()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.btnThumbmark = New System.Windows.Forms.Button()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.btnCamera = New System.Windows.Forms.Button()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.txtORAmount = New System.Windows.Forms.TextBox()
-        Me.txtORNo = New System.Windows.Forms.TextBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.dtClearanceDate = New System.Windows.Forms.DateTimePicker()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.txtContactNo = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.txtCTCIssueAt = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.dtCTCIssueDate = New System.Windows.Forms.DateTimePicker()
-        Me.txtCTCNo = New System.Windows.Forms.TextBox()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.cbPurpose = New System.Windows.Forms.ComboBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtNationality = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtHeight = New System.Windows.Forms.TextBox()
-        Me.rbFemale = New System.Windows.Forms.RadioButton()
-        Me.rbMale = New System.Windows.Forms.RadioButton()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.dtBirthDate = New System.Windows.Forms.DateTimePicker()
-        Me.txtBirthPlace = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.cbCivilStatus = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.cbBarangay = New System.Windows.Forms.ComboBox()
-        Me.cbZone = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtClearanceMname = New System.Windows.Forms.TextBox()
-        Me.txtClearanceFname = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.txtClearanceLname = New System.Windows.Forms.TextBox()
-        Me.txtClearanceNo = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.btnApplicantPendingSearchCancel = New System.Windows.Forms.Button()
-        Me.txtApplicantPendingSearch = New System.Windows.Forms.TextBox()
-        Me.dataApplicantPending = New System.Windows.Forms.DataGridView()
-        Me.dataPendingClearanceID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPendingClearanceNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPendingClearanceFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPendingClearanceMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPendingClearanceLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPendingClearanceStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPendingClearanceEdit = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.dataPendingClearanceSetBtn = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.dataPendingClearanceDelete = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.dataApplicantCompleted = New System.Windows.Forms.DataGridView()
-        Me.dataCompletedClearanceID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCompletedClearanceNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCompletedClearanceFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCompletedClearanceMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCompletedClearanceLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCompletedClearanceStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataCompletedClearancePrint = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.btnApplicantCompletedSearchCancel = New System.Windows.Forms.Button()
-        Me.txtApplicantCompletedSearch = New System.Windows.Forms.TextBox()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
-        CType(Me.dataApplicantPending, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage2.SuspendLayout()
-        CType(Me.dataApplicantCompleted, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.MenuStrip1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SuspendLayout()
-        '
-        'btnClear_Cancel
-        '
-        Me.btnClear_Cancel.Location = New System.Drawing.Point(159, 553)
-        Me.btnClear_Cancel.Name = "btnClear_Cancel"
-        Me.btnClear_Cancel.Size = New System.Drawing.Size(132, 23)
-        Me.btnClear_Cancel.TabIndex = 135
-        Me.btnClear_Cancel.Text = "Clear"
-        Me.btnClear_Cancel.UseVisualStyleBackColor = True
-        '
-        'btnAdd_Save
-        '
-        Me.btnAdd_Save.Location = New System.Drawing.Point(17, 553)
-        Me.btnAdd_Save.Name = "btnAdd_Save"
-        Me.btnAdd_Save.Size = New System.Drawing.Size(132, 23)
-        Me.btnAdd_Save.TabIndex = 134
-        Me.btnAdd_Save.Text = "Add"
-        Me.btnAdd_Save.UseVisualStyleBackColor = True
-        '
-        'cbPoliceCertify
-        '
-        Me.cbPoliceCertify.FormattingEnabled = True
-        Me.cbPoliceCertify.Location = New System.Drawing.Point(17, 514)
-        Me.cbPoliceCertify.Name = "cbPoliceCertify"
-        Me.cbPoliceCertify.Size = New System.Drawing.Size(471, 23)
-        Me.cbPoliceCertify.TabIndex = 139
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(17, 496)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(68, 15)
-        Me.Label22.TabIndex = 138
-        Me.Label22.Text = "Certified By"
-        '
-        'cbPoliceVerify
-        '
-        Me.cbPoliceVerify.FormattingEnabled = True
-        Me.cbPoliceVerify.Location = New System.Drawing.Point(17, 465)
-        Me.cbPoliceVerify.Name = "cbPoliceVerify"
-        Me.cbPoliceVerify.Size = New System.Drawing.Size(471, 23)
-        Me.cbPoliceVerify.TabIndex = 137
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(17, 449)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(62, 15)
-        Me.Label21.TabIndex = 136
-        Me.Label21.Text = "Verified By"
-        '
-        'btnSignature
-        '
-        Me.btnSignature.Location = New System.Drawing.Point(569, 612)
-        Me.btnSignature.Name = "btnSignature"
-        Me.btnSignature.Size = New System.Drawing.Size(75, 23)
-        Me.btnSignature.TabIndex = 133
-        Me.btnSignature.Text = "Upload"
-        Me.btnSignature.UseVisualStyleBackColor = True
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(576, 438)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(57, 15)
-        Me.Label20.TabIndex = 132
-        Me.Label20.Text = "Signature"
-        '
-        'btnThumbmark
-        '
-        Me.btnThumbmark.Location = New System.Drawing.Point(569, 405)
-        Me.btnThumbmark.Name = "btnThumbmark"
-        Me.btnThumbmark.Size = New System.Drawing.Size(75, 23)
-        Me.btnThumbmark.TabIndex = 130
-        Me.btnThumbmark.Text = "Upload"
-        Me.btnThumbmark.UseVisualStyleBackColor = True
-        '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(561, 231)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(85, 15)
-        Me.Label19.TabIndex = 129
-        Me.Label19.Text = "R. Thumbmark"
-        '
-        'btnCamera
-        '
-        Me.btnCamera.Location = New System.Drawing.Point(569, 201)
-        Me.btnCamera.Name = "btnCamera"
-        Me.btnCamera.Size = New System.Drawing.Size(75, 23)
-        Me.btnCamera.TabIndex = 127
-        Me.btnCamera.Text = "Upload"
-        Me.btnCamera.UseVisualStyleBackColor = True
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(581, 27)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(48, 15)
-        Me.Label18.TabIndex = 126
-        Me.Label18.Text = "Camera"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(258, 345)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(51, 15)
-        Me.Label16.TabIndex = 125
-        Me.Label16.Text = "Amount"
-        '
-        'txtORAmount
-        '
-        Me.txtORAmount.Location = New System.Drawing.Point(258, 363)
-        Me.txtORAmount.Name = "txtORAmount"
-        Me.txtORAmount.Size = New System.Drawing.Size(230, 23)
-        Me.txtORAmount.TabIndex = 124
-        '
-        'txtORNo
-        '
-        Me.txtORNo.Location = New System.Drawing.Point(258, 316)
-        Me.txtORNo.Name = "txtORNo"
-        Me.txtORNo.Size = New System.Drawing.Size(230, 23)
-        Me.txtORNo.TabIndex = 123
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(258, 298)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(70, 15)
-        Me.Label17.TabIndex = 122
-        Me.Label17.Text = "OR Number"
-        '
-        'dtClearanceDate
-        '
-        Me.dtClearanceDate.Enabled = False
-        Me.dtClearanceDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtClearanceDate.Location = New System.Drawing.Point(389, 30)
-        Me.dtClearanceDate.Name = "dtClearanceDate"
-        Me.dtClearanceDate.Size = New System.Drawing.Size(99, 23)
-        Me.dtClearanceDate.TabIndex = 121
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(349, 33)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(34, 15)
-        Me.Label15.TabIndex = 120
-        Me.Label15.Text = "Date:"
-        '
-        'txtContactNo
-        '
-        Me.txtContactNo.Location = New System.Drawing.Point(335, 219)
-        Me.txtContactNo.Name = "txtContactNo"
-        Me.txtContactNo.Size = New System.Drawing.Size(153, 23)
-        Me.txtContactNo.TabIndex = 118
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(335, 203)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(96, 15)
-        Me.Label13.TabIndex = 117
-        Me.Label13.Text = "Contact Number"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(17, 392)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(55, 15)
-        Me.Label12.TabIndex = 116
-        Me.Label12.Text = "Issued At"
-        '
-        'txtCTCIssueAt
-        '
-        Me.txtCTCIssueAt.Location = New System.Drawing.Point(17, 410)
-        Me.txtCTCIssueAt.Name = "txtCTCIssueAt"
-        Me.txtCTCIssueAt.Size = New System.Drawing.Size(230, 23)
-        Me.txtCTCIssueAt.TabIndex = 115
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(17, 345)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(59, 15)
-        Me.Label10.TabIndex = 114
-        Me.Label10.Text = "Issued On"
-        '
-        'dtCTCIssueDate
-        '
-        Me.dtCTCIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtCTCIssueDate.Location = New System.Drawing.Point(17, 363)
-        Me.dtCTCIssueDate.Name = "dtCTCIssueDate"
-        Me.dtCTCIssueDate.Size = New System.Drawing.Size(230, 23)
-        Me.dtCTCIssueDate.TabIndex = 113
-        '
-        'txtCTCNo
-        '
-        Me.txtCTCNo.Location = New System.Drawing.Point(17, 319)
-        Me.txtCTCNo.Name = "txtCTCNo"
-        Me.txtCTCNo.Size = New System.Drawing.Size(230, 23)
-        Me.txtCTCNo.TabIndex = 112
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(17, 301)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(75, 15)
-        Me.Label11.TabIndex = 111
-        Me.Label11.Text = "CTC Number"
-        '
-        'cbPurpose
-        '
-        Me.cbPurpose.FormattingEnabled = True
-        Me.cbPurpose.Location = New System.Drawing.Point(17, 269)
-        Me.cbPurpose.Name = "cbPurpose"
-        Me.cbPurpose.Size = New System.Drawing.Size(471, 23)
-        Me.cbPurpose.TabIndex = 110
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(17, 253)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(50, 15)
-        Me.Label9.TabIndex = 109
-        Me.Label9.Text = "Purpose"
-        '
-        'txtNationality
-        '
-        Me.txtNationality.Location = New System.Drawing.Point(224, 219)
-        Me.txtNationality.Name = "txtNationality"
-        Me.txtNationality.Size = New System.Drawing.Size(105, 23)
-        Me.txtNationality.TabIndex = 108
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(226, 203)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(65, 15)
-        Me.Label8.TabIndex = 107
-        Me.Label8.Text = "Nationality"
-        '
-        'txtHeight
-        '
-        Me.txtHeight.Location = New System.Drawing.Point(140, 219)
-        Me.txtHeight.Name = "txtHeight"
-        Me.txtHeight.Size = New System.Drawing.Size(78, 23)
-        Me.txtHeight.TabIndex = 106
-        '
-        'rbFemale
-        '
-        Me.rbFemale.AutoSize = True
-        Me.rbFemale.Location = New System.Drawing.Point(74, 221)
-        Me.rbFemale.Name = "rbFemale"
-        Me.rbFemale.Size = New System.Drawing.Size(63, 19)
-        Me.rbFemale.TabIndex = 105
-        Me.rbFemale.TabStop = True
-        Me.rbFemale.Text = "Female"
-        Me.rbFemale.UseVisualStyleBackColor = True
-        '
-        'rbMale
-        '
-        Me.rbMale.AutoSize = True
-        Me.rbMale.Location = New System.Drawing.Point(17, 221)
-        Me.rbMale.Name = "rbMale"
-        Me.rbMale.Size = New System.Drawing.Size(51, 19)
-        Me.rbMale.TabIndex = 104
-        Me.rbMale.TabStop = True
-        Me.rbMale.Text = "Male"
-        Me.rbMale.UseVisualStyleBackColor = True
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(140, 202)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(59, 15)
-        Me.Label7.TabIndex = 103
-        Me.Label7.Text = "Height(ft)"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(17, 203)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(25, 15)
-        Me.Label6.TabIndex = 102
-        Me.Label6.Text = "Sex"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(335, 159)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(73, 15)
-        Me.Label5.TabIndex = 101
-        Me.Label5.Text = "Date of Birth"
-        '
-        'dtBirthDate
-        '
-        Me.dtBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtBirthDate.Location = New System.Drawing.Point(335, 177)
-        Me.dtBirthDate.Name = "dtBirthDate"
-        Me.dtBirthDate.Size = New System.Drawing.Size(153, 23)
-        Me.dtBirthDate.TabIndex = 100
-        '
-        'txtBirthPlace
-        '
-        Me.txtBirthPlace.Location = New System.Drawing.Point(17, 177)
-        Me.txtBirthPlace.Name = "txtBirthPlace"
-        Me.txtBirthPlace.Size = New System.Drawing.Size(274, 23)
-        Me.txtBirthPlace.TabIndex = 99
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(17, 159)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(77, 15)
-        Me.Label4.TabIndex = 98
-        Me.Label4.Text = "Place of Birth"
-        '
-        'cbCivilStatus
-        '
-        Me.cbCivilStatus.FormattingEnabled = True
-        Me.cbCivilStatus.Location = New System.Drawing.Point(335, 133)
-        Me.cbCivilStatus.Name = "cbCivilStatus"
-        Me.cbCivilStatus.Size = New System.Drawing.Size(153, 23)
-        Me.cbCivilStatus.TabIndex = 97
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(335, 115)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(65, 15)
-        Me.Label3.TabIndex = 96
-        Me.Label3.Text = "Civil Status"
-        '
-        'cbBarangay
-        '
-        Me.cbBarangay.FormattingEnabled = True
-        Me.cbBarangay.Location = New System.Drawing.Point(88, 133)
-        Me.cbBarangay.Name = "cbBarangay"
-        Me.cbBarangay.Size = New System.Drawing.Size(203, 23)
-        Me.cbBarangay.TabIndex = 95
-        '
-        'cbZone
-        '
-        Me.cbZone.FormattingEnabled = True
-        Me.cbZone.Location = New System.Drawing.Point(17, 133)
-        Me.cbZone.Name = "cbZone"
-        Me.cbZone.Size = New System.Drawing.Size(68, 23)
-        Me.cbZone.TabIndex = 94
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(17, 115)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(139, 15)
-        Me.Label2.TabIndex = 93
-        Me.Label2.Text = "Address(Zone, Barangay)"
-        '
-        'txtClearanceMname
-        '
-        Me.txtClearanceMname.Location = New System.Drawing.Point(335, 84)
-        Me.txtClearanceMname.Name = "txtClearanceMname"
-        Me.txtClearanceMname.Size = New System.Drawing.Size(153, 23)
-        Me.txtClearanceMname.TabIndex = 92
-        '
-        'txtClearanceFname
-        '
-        Me.txtClearanceFname.Location = New System.Drawing.Point(176, 84)
-        Me.txtClearanceFname.Name = "txtClearanceFname"
-        Me.txtClearanceFname.Size = New System.Drawing.Size(153, 23)
-        Me.txtClearanceFname.TabIndex = 91
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(17, 66)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(262, 15)
-        Me.Label14.TabIndex = 90
-        Me.Label14.Text = "Full Name(Last name, First name, Middle Name)"
-        '
-        'txtClearanceLname
-        '
-        Me.txtClearanceLname.Location = New System.Drawing.Point(17, 84)
-        Me.txtClearanceLname.Name = "txtClearanceLname"
-        Me.txtClearanceLname.Size = New System.Drawing.Size(153, 23)
-        Me.txtClearanceLname.TabIndex = 89
-        '
-        'txtClearanceNo
-        '
-        Me.txtClearanceNo.Location = New System.Drawing.Point(104, 27)
-        Me.txtClearanceNo.Name = "txtClearanceNo"
-        Me.txtClearanceNo.Size = New System.Drawing.Size(77, 23)
-        Me.txtClearanceNo.TabIndex = 88
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(17, 33)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 15)
-        Me.Label1.TabIndex = 87
-        Me.Label1.Text = "Clearance No."
-        '
-        'TabControl1
-        '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(710, 27)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(788, 579)
-        Me.TabControl1.TabIndex = 140
-        '
-        'TabPage1
-        '
-        Me.TabPage1.Controls.Add(Me.btnApplicantPendingSearchCancel)
-        Me.TabPage1.Controls.Add(Me.txtApplicantPendingSearch)
-        Me.TabPage1.Controls.Add(Me.dataApplicantPending)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(780, 551)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Pending"
-        Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'btnApplicantPendingSearchCancel
-        '
-        Me.btnApplicantPendingSearchCancel.Location = New System.Drawing.Point(702, 6)
-        Me.btnApplicantPendingSearchCancel.Name = "btnApplicantPendingSearchCancel"
-        Me.btnApplicantPendingSearchCancel.Size = New System.Drawing.Size(75, 23)
-        Me.btnApplicantPendingSearchCancel.TabIndex = 144
-        Me.btnApplicantPendingSearchCancel.Text = "x"
-        Me.btnApplicantPendingSearchCancel.UseVisualStyleBackColor = True
-        '
-        'txtApplicantPendingSearch
-        '
-        Me.txtApplicantPendingSearch.Location = New System.Drawing.Point(447, 6)
-        Me.txtApplicantPendingSearch.Name = "txtApplicantPendingSearch"
-        Me.txtApplicantPendingSearch.Size = New System.Drawing.Size(249, 23)
-        Me.txtApplicantPendingSearch.TabIndex = 143
-        '
-        'dataApplicantPending
-        '
-        Me.dataApplicantPending.AllowUserToAddRows = False
-        Me.dataApplicantPending.AllowUserToDeleteRows = False
-        Me.dataApplicantPending.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataApplicantPending.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataPendingClearanceID, Me.dataPendingClearanceNo, Me.dataPendingClearanceFname, Me.dataPendingClearanceMname, Me.dataPendingClearanceLname, Me.dataPendingClearanceStatus, Me.dataPendingClearanceEdit, Me.dataPendingClearanceSetBtn, Me.dataPendingClearanceDelete})
-        Me.dataApplicantPending.Location = New System.Drawing.Point(4, 35)
-        Me.dataApplicantPending.Name = "dataApplicantPending"
-        Me.dataApplicantPending.ReadOnly = True
-        Me.dataApplicantPending.RowTemplate.Height = 25
-        Me.dataApplicantPending.Size = New System.Drawing.Size(773, 514)
-        Me.dataApplicantPending.TabIndex = 142
-        '
-        'dataPendingClearanceID
-        '
-        Me.dataPendingClearanceID.HeaderText = "ClearanceID"
-        Me.dataPendingClearanceID.Name = "dataPendingClearanceID"
-        Me.dataPendingClearanceID.ReadOnly = True
-        '
-        'dataPendingClearanceNo
-        '
-        Me.dataPendingClearanceNo.HeaderText = "Clearance Number"
-        Me.dataPendingClearanceNo.Name = "dataPendingClearanceNo"
-        Me.dataPendingClearanceNo.ReadOnly = True
-        '
-        'dataPendingClearanceFname
-        '
-        Me.dataPendingClearanceFname.HeaderText = "First Name"
-        Me.dataPendingClearanceFname.Name = "dataPendingClearanceFname"
-        Me.dataPendingClearanceFname.ReadOnly = True
-        '
-        'dataPendingClearanceMname
-        '
-        Me.dataPendingClearanceMname.HeaderText = "Middle Name"
-        Me.dataPendingClearanceMname.Name = "dataPendingClearanceMname"
-        Me.dataPendingClearanceMname.ReadOnly = True
-        '
-        'dataPendingClearanceLname
-        '
-        Me.dataPendingClearanceLname.HeaderText = "Last Name"
-        Me.dataPendingClearanceLname.Name = "dataPendingClearanceLname"
-        Me.dataPendingClearanceLname.ReadOnly = True
-        '
-        'dataPendingClearanceStatus
-        '
-        Me.dataPendingClearanceStatus.HeaderText = "Status"
-        Me.dataPendingClearanceStatus.Name = "dataPendingClearanceStatus"
-        Me.dataPendingClearanceStatus.ReadOnly = True
-        '
-        'dataPendingClearanceEdit
-        '
-        Me.dataPendingClearanceEdit.HeaderText = ""
-        Me.dataPendingClearanceEdit.Name = "dataPendingClearanceEdit"
-        Me.dataPendingClearanceEdit.ReadOnly = True
-        Me.dataPendingClearanceEdit.Text = "Edit"
-        Me.dataPendingClearanceEdit.UseColumnTextForButtonValue = True
-        '
-        'dataPendingClearanceSetBtn
-        '
-        Me.dataPendingClearanceSetBtn.HeaderText = ""
-        Me.dataPendingClearanceSetBtn.Name = "dataPendingClearanceSetBtn"
-        Me.dataPendingClearanceSetBtn.ReadOnly = True
-        Me.dataPendingClearanceSetBtn.Text = ""
-        '
-        'dataPendingClearanceDelete
-        '
-        Me.dataPendingClearanceDelete.HeaderText = ""
-        Me.dataPendingClearanceDelete.Name = "dataPendingClearanceDelete"
-        Me.dataPendingClearanceDelete.ReadOnly = True
-        Me.dataPendingClearanceDelete.Text = "Delete"
-        Me.dataPendingClearanceDelete.UseColumnTextForButtonValue = True
-        '
-        'TabPage2
-        '
-        Me.TabPage2.Controls.Add(Me.dataApplicantCompleted)
-        Me.TabPage2.Controls.Add(Me.btnApplicantCompletedSearchCancel)
-        Me.TabPage2.Controls.Add(Me.txtApplicantCompletedSearch)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 24)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(780, 551)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Completed"
-        Me.TabPage2.UseVisualStyleBackColor = True
-        '
-        'dataApplicantCompleted
-        '
-        Me.dataApplicantCompleted.AllowUserToAddRows = False
-        Me.dataApplicantCompleted.AllowUserToDeleteRows = False
-        Me.dataApplicantCompleted.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dataApplicantCompleted.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataCompletedClearanceID, Me.dataCompletedClearanceNo, Me.dataCompletedClearanceFname, Me.dataCompletedClearanceMname, Me.dataCompletedClearanceLname, Me.dataCompletedClearanceStatus, Me.dataCompletedClearancePrint})
-        Me.dataApplicantCompleted.Location = New System.Drawing.Point(4, 37)
-        Me.dataApplicantCompleted.Name = "dataApplicantCompleted"
-        Me.dataApplicantCompleted.ReadOnly = True
-        Me.dataApplicantCompleted.RowTemplate.Height = 25
-        Me.dataApplicantCompleted.Size = New System.Drawing.Size(773, 514)
-        Me.dataApplicantCompleted.TabIndex = 150
-        '
-        'dataCompletedClearanceID
-        '
-        Me.dataCompletedClearanceID.HeaderText = "ClearanceID"
-        Me.dataCompletedClearanceID.Name = "dataCompletedClearanceID"
-        Me.dataCompletedClearanceID.ReadOnly = True
-        '
-        'dataCompletedClearanceNo
-        '
-        Me.dataCompletedClearanceNo.HeaderText = "Clearance Number"
-        Me.dataCompletedClearanceNo.Name = "dataCompletedClearanceNo"
-        Me.dataCompletedClearanceNo.ReadOnly = True
-        '
-        'dataCompletedClearanceFname
-        '
-        Me.dataCompletedClearanceFname.HeaderText = "First Name"
-        Me.dataCompletedClearanceFname.Name = "dataCompletedClearanceFname"
-        Me.dataCompletedClearanceFname.ReadOnly = True
-        '
-        'dataCompletedClearanceMname
-        '
-        Me.dataCompletedClearanceMname.HeaderText = "Middle Name"
-        Me.dataCompletedClearanceMname.Name = "dataCompletedClearanceMname"
-        Me.dataCompletedClearanceMname.ReadOnly = True
-        '
-        'dataCompletedClearanceLname
-        '
-        Me.dataCompletedClearanceLname.HeaderText = "Last Name"
-        Me.dataCompletedClearanceLname.Name = "dataCompletedClearanceLname"
-        Me.dataCompletedClearanceLname.ReadOnly = True
-        '
-        'dataCompletedClearanceStatus
-        '
-        Me.dataCompletedClearanceStatus.HeaderText = "Status"
-        Me.dataCompletedClearanceStatus.Name = "dataCompletedClearanceStatus"
-        Me.dataCompletedClearanceStatus.ReadOnly = True
-        '
-        'dataCompletedClearancePrint
-        '
-        Me.dataCompletedClearancePrint.HeaderText = ""
-        Me.dataCompletedClearancePrint.Name = "dataCompletedClearancePrint"
-        Me.dataCompletedClearancePrint.ReadOnly = True
-        Me.dataCompletedClearancePrint.Text = "Print"
-        Me.dataCompletedClearancePrint.UseColumnTextForButtonValue = True
-        '
-        'btnApplicantCompletedSearchCancel
-        '
-        Me.btnApplicantCompletedSearchCancel.Location = New System.Drawing.Point(702, 5)
-        Me.btnApplicantCompletedSearchCancel.Name = "btnApplicantCompletedSearchCancel"
-        Me.btnApplicantCompletedSearchCancel.Size = New System.Drawing.Size(75, 23)
-        Me.btnApplicantCompletedSearchCancel.TabIndex = 147
-        Me.btnApplicantCompletedSearchCancel.Text = "x"
-        Me.btnApplicantCompletedSearchCancel.UseVisualStyleBackColor = True
-        '
-        'txtApplicantCompletedSearch
-        '
-        Me.txtApplicantCompletedSearch.Location = New System.Drawing.Point(447, 5)
-        Me.txtApplicantCompletedSearch.Name = "txtApplicantCompletedSearch"
-        Me.txtApplicantCompletedSearch.Size = New System.Drawing.Size(249, 23)
-        Me.txtApplicantCompletedSearch.TabIndex = 146
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1510, 24)
-        Me.MenuStrip1.TabIndex = 141
-        Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'FileToolStripMenuItem
-        '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportToolStripMenuItem, Me.LogoutToolStripMenuItem})
-        Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
-        Me.FileToolStripMenuItem.Text = "File"
-        '
-        'ReportToolStripMenuItem
-        '
-        Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
-        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.ReportToolStripMenuItem.Text = "Report"
-        '
-        'LogoutToolStripMenuItem
-        '
-        Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
-        Me.LogoutToolStripMenuItem.Text = "Logout"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Location = New System.Drawing.Point(530, 45)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(150, 150)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 142
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Location = New System.Drawing.Point(530, 249)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(150, 150)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 143
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Location = New System.Drawing.Point(530, 456)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(150, 150)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox3.TabIndex = 144
-        Me.PictureBox3.TabStop = False
-        '
-        'Clerk2
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1510, 641)
-        Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.TabControl1)
-        Me.Controls.Add(Me.btnClear_Cancel)
-        Me.Controls.Add(Me.btnAdd_Save)
-        Me.Controls.Add(Me.cbPoliceCertify)
-        Me.Controls.Add(Me.Label22)
-        Me.Controls.Add(Me.cbPoliceVerify)
-        Me.Controls.Add(Me.Label21)
-        Me.Controls.Add(Me.btnSignature)
-        Me.Controls.Add(Me.Label20)
-        Me.Controls.Add(Me.btnThumbmark)
-        Me.Controls.Add(Me.Label19)
-        Me.Controls.Add(Me.btnCamera)
-        Me.Controls.Add(Me.Label18)
-        Me.Controls.Add(Me.Label16)
-        Me.Controls.Add(Me.txtORAmount)
-        Me.Controls.Add(Me.txtORNo)
-        Me.Controls.Add(Me.Label17)
-        Me.Controls.Add(Me.dtClearanceDate)
-        Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.txtContactNo)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.Label12)
-        Me.Controls.Add(Me.txtCTCIssueAt)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.dtCTCIssueDate)
-        Me.Controls.Add(Me.txtCTCNo)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.cbPurpose)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.txtNationality)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.txtHeight)
-        Me.Controls.Add(Me.rbFemale)
-        Me.Controls.Add(Me.rbMale)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.dtBirthDate)
-        Me.Controls.Add(Me.txtBirthPlace)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.cbCivilStatus)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.cbBarangay)
-        Me.Controls.Add(Me.cbZone)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txtClearanceMname)
-        Me.Controls.Add(Me.txtClearanceFname)
-        Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.txtClearanceLname)
-        Me.Controls.Add(Me.txtClearanceNo)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.MenuStrip1)
-        Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "Clerk2"
-        Me.Text = "Clerk"
-        Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
-        Me.TabPage1.PerformLayout()
-        CType(Me.dataApplicantPending, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage2.ResumeLayout(False)
-        Me.TabPage2.PerformLayout()
-        CType(Me.dataApplicantCompleted, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        btnClear_Cancel = New Button()
+        btnAdd_Save = New Button()
+        cbPoliceCertify = New ComboBox()
+        Label22 = New Label()
+        cbPoliceVerify = New ComboBox()
+        Label21 = New Label()
+        btnSignature = New Button()
+        Label20 = New Label()
+        btnThumbmark = New Button()
+        Label19 = New Label()
+        btnCamera = New Button()
+        Label18 = New Label()
+        Label16 = New Label()
+        txtORAmount = New TextBox()
+        txtORNo = New TextBox()
+        Label17 = New Label()
+        dtClearanceDate = New DateTimePicker()
+        Label15 = New Label()
+        txtContactNo = New TextBox()
+        Label13 = New Label()
+        Label12 = New Label()
+        txtCTCIssueAt = New TextBox()
+        Label10 = New Label()
+        dtCTCIssueDate = New DateTimePicker()
+        txtCTCNo = New TextBox()
+        Label11 = New Label()
+        cbPurpose = New ComboBox()
+        Label9 = New Label()
+        txtNationality = New TextBox()
+        Label8 = New Label()
+        txtHeight = New TextBox()
+        rbFemale = New RadioButton()
+        rbMale = New RadioButton()
+        Label7 = New Label()
+        Label6 = New Label()
+        Label5 = New Label()
+        dtBirthDate = New DateTimePicker()
+        txtBirthPlace = New TextBox()
+        Label4 = New Label()
+        cbCivilStatus = New ComboBox()
+        Label3 = New Label()
+        cbBarangay = New ComboBox()
+        cbZone = New ComboBox()
+        Label2 = New Label()
+        txtClearanceMname = New TextBox()
+        txtClearanceFname = New TextBox()
+        Label14 = New Label()
+        txtClearanceLname = New TextBox()
+        txtClearanceNo = New TextBox()
+        Label1 = New Label()
+        TabControl1 = New TabControl()
+        TabPage1 = New TabPage()
+        btnApplicantPendingSearchCancel = New Button()
+        txtApplicantPendingSearch = New TextBox()
+        dataApplicantPending = New DataGridView()
+        dataPendingClearanceID = New DataGridViewTextBoxColumn()
+        dataPendingClearanceNo = New DataGridViewTextBoxColumn()
+        dataPendingClearanceFname = New DataGridViewTextBoxColumn()
+        dataPendingClearanceMname = New DataGridViewTextBoxColumn()
+        dataPendingClearanceLname = New DataGridViewTextBoxColumn()
+        dataPendingClearanceStatus = New DataGridViewTextBoxColumn()
+        dataPendingClearanceEdit = New DataGridViewButtonColumn()
+        dataPendingClearanceSetBtn = New DataGridViewButtonColumn()
+        dataPendingClearanceDelete = New DataGridViewButtonColumn()
+        TabPage2 = New TabPage()
+        dataApplicantCompleted = New DataGridView()
+        dataCompletedClearanceID = New DataGridViewTextBoxColumn()
+        dataCompletedClearanceNo = New DataGridViewTextBoxColumn()
+        dataCompletedClearanceFname = New DataGridViewTextBoxColumn()
+        dataCompletedClearanceMname = New DataGridViewTextBoxColumn()
+        dataCompletedClearanceLname = New DataGridViewTextBoxColumn()
+        dataCompletedClearanceStatus = New DataGridViewTextBoxColumn()
+        dataCompletedClearancePrint = New DataGridViewButtonColumn()
+        btnApplicantCompletedSearchCancel = New Button()
+        txtApplicantCompletedSearch = New TextBox()
+        MenuStrip1 = New MenuStrip()
+        FileToolStripMenuItem = New ToolStripMenuItem()
+        ReportToolStripMenuItem = New ToolStripMenuItem()
+        LogoutToolStripMenuItem = New ToolStripMenuItem()
+        PictureBox1 = New PictureBox()
+        PictureBox2 = New PictureBox()
+        PictureBox3 = New PictureBox()
+        TabControl1.SuspendLayout()
+        TabPage1.SuspendLayout()
+        CType(dataApplicantPending, ComponentModel.ISupportInitialize).BeginInit()
+        TabPage2.SuspendLayout()
+        CType(dataApplicantCompleted, ComponentModel.ISupportInitialize).BeginInit()
+        MenuStrip1.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        SuspendLayout()
+        ' 
+        ' btnClear_Cancel
+        ' 
+        btnClear_Cancel.Location = New Point(159, 553)
+        btnClear_Cancel.Name = "btnClear_Cancel"
+        btnClear_Cancel.Size = New Size(132, 23)
+        btnClear_Cancel.TabIndex = 135
+        btnClear_Cancel.Text = "Clear"
+        btnClear_Cancel.UseVisualStyleBackColor = True
+        ' 
+        ' btnAdd_Save
+        ' 
+        btnAdd_Save.Location = New Point(17, 553)
+        btnAdd_Save.Name = "btnAdd_Save"
+        btnAdd_Save.Size = New Size(132, 23)
+        btnAdd_Save.TabIndex = 134
+        btnAdd_Save.Text = "Add"
+        btnAdd_Save.UseVisualStyleBackColor = True
+        ' 
+        ' cbPoliceCertify
+        ' 
+        cbPoliceCertify.FormattingEnabled = True
+        cbPoliceCertify.Location = New Point(17, 514)
+        cbPoliceCertify.Name = "cbPoliceCertify"
+        cbPoliceCertify.Size = New Size(471, 23)
+        cbPoliceCertify.TabIndex = 139
+        ' 
+        ' Label22
+        ' 
+        Label22.AutoSize = True
+        Label22.Location = New Point(17, 496)
+        Label22.Name = "Label22"
+        Label22.Size = New Size(68, 15)
+        Label22.TabIndex = 138
+        Label22.Text = "Certified By"
+        ' 
+        ' cbPoliceVerify
+        ' 
+        cbPoliceVerify.FormattingEnabled = True
+        cbPoliceVerify.Location = New Point(17, 465)
+        cbPoliceVerify.Name = "cbPoliceVerify"
+        cbPoliceVerify.Size = New Size(471, 23)
+        cbPoliceVerify.TabIndex = 137
+        ' 
+        ' Label21
+        ' 
+        Label21.AutoSize = True
+        Label21.Location = New Point(17, 449)
+        Label21.Name = "Label21"
+        Label21.Size = New Size(62, 15)
+        Label21.TabIndex = 136
+        Label21.Text = "Verified By"
+        ' 
+        ' btnSignature
+        ' 
+        btnSignature.Location = New Point(569, 612)
+        btnSignature.Name = "btnSignature"
+        btnSignature.Size = New Size(75, 23)
+        btnSignature.TabIndex = 133
+        btnSignature.Text = "Upload"
+        btnSignature.UseVisualStyleBackColor = True
+        ' 
+        ' Label20
+        ' 
+        Label20.AutoSize = True
+        Label20.Location = New Point(576, 438)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(57, 15)
+        Label20.TabIndex = 132
+        Label20.Text = "Signature"
+        ' 
+        ' btnThumbmark
+        ' 
+        btnThumbmark.Location = New Point(569, 405)
+        btnThumbmark.Name = "btnThumbmark"
+        btnThumbmark.Size = New Size(75, 23)
+        btnThumbmark.TabIndex = 130
+        btnThumbmark.Text = "Upload"
+        btnThumbmark.UseVisualStyleBackColor = True
+        ' 
+        ' Label19
+        ' 
+        Label19.AutoSize = True
+        Label19.Location = New Point(561, 231)
+        Label19.Name = "Label19"
+        Label19.Size = New Size(85, 15)
+        Label19.TabIndex = 129
+        Label19.Text = "R. Thumbmark"
+        ' 
+        ' btnCamera
+        ' 
+        btnCamera.Location = New Point(569, 201)
+        btnCamera.Name = "btnCamera"
+        btnCamera.Size = New Size(75, 23)
+        btnCamera.TabIndex = 127
+        btnCamera.Text = "Upload"
+        btnCamera.UseVisualStyleBackColor = True
+        ' 
+        ' Label18
+        ' 
+        Label18.AutoSize = True
+        Label18.Location = New Point(581, 27)
+        Label18.Name = "Label18"
+        Label18.Size = New Size(48, 15)
+        Label18.TabIndex = 126
+        Label18.Text = "Camera"
+        ' 
+        ' Label16
+        ' 
+        Label16.AutoSize = True
+        Label16.Location = New Point(258, 345)
+        Label16.Name = "Label16"
+        Label16.Size = New Size(51, 15)
+        Label16.TabIndex = 125
+        Label16.Text = "Amount"
+        ' 
+        ' txtORAmount
+        ' 
+        txtORAmount.Location = New Point(258, 363)
+        txtORAmount.Name = "txtORAmount"
+        txtORAmount.Size = New Size(230, 23)
+        txtORAmount.TabIndex = 124
+        ' 
+        ' txtORNo
+        ' 
+        txtORNo.Location = New Point(258, 316)
+        txtORNo.Name = "txtORNo"
+        txtORNo.Size = New Size(230, 23)
+        txtORNo.TabIndex = 123
+        ' 
+        ' Label17
+        ' 
+        Label17.AutoSize = True
+        Label17.Location = New Point(258, 298)
+        Label17.Name = "Label17"
+        Label17.Size = New Size(70, 15)
+        Label17.TabIndex = 122
+        Label17.Text = "OR Number"
+        ' 
+        ' dtClearanceDate
+        ' 
+        dtClearanceDate.Enabled = False
+        dtClearanceDate.Format = DateTimePickerFormat.Short
+        dtClearanceDate.Location = New Point(389, 30)
+        dtClearanceDate.Name = "dtClearanceDate"
+        dtClearanceDate.Size = New Size(99, 23)
+        dtClearanceDate.TabIndex = 121
+        ' 
+        ' Label15
+        ' 
+        Label15.AutoSize = True
+        Label15.Location = New Point(349, 33)
+        Label15.Name = "Label15"
+        Label15.Size = New Size(34, 15)
+        Label15.TabIndex = 120
+        Label15.Text = "Date:"
+        ' 
+        ' txtContactNo
+        ' 
+        txtContactNo.Location = New Point(335, 219)
+        txtContactNo.Name = "txtContactNo"
+        txtContactNo.Size = New Size(153, 23)
+        txtContactNo.TabIndex = 118
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Location = New Point(335, 203)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(96, 15)
+        Label13.TabIndex = 117
+        Label13.Text = "Contact Number"
+        ' 
+        ' Label12
+        ' 
+        Label12.AutoSize = True
+        Label12.Location = New Point(17, 392)
+        Label12.Name = "Label12"
+        Label12.Size = New Size(55, 15)
+        Label12.TabIndex = 116
+        Label12.Text = "Issued At"
+        ' 
+        ' txtCTCIssueAt
+        ' 
+        txtCTCIssueAt.Location = New Point(17, 410)
+        txtCTCIssueAt.Name = "txtCTCIssueAt"
+        txtCTCIssueAt.Size = New Size(230, 23)
+        txtCTCIssueAt.TabIndex = 115
+        ' 
+        ' Label10
+        ' 
+        Label10.AutoSize = True
+        Label10.Location = New Point(17, 345)
+        Label10.Name = "Label10"
+        Label10.Size = New Size(59, 15)
+        Label10.TabIndex = 114
+        Label10.Text = "Issued On"
+        ' 
+        ' dtCTCIssueDate
+        ' 
+        dtCTCIssueDate.Format = DateTimePickerFormat.Short
+        dtCTCIssueDate.Location = New Point(17, 363)
+        dtCTCIssueDate.Name = "dtCTCIssueDate"
+        dtCTCIssueDate.Size = New Size(230, 23)
+        dtCTCIssueDate.TabIndex = 113
+        ' 
+        ' txtCTCNo
+        ' 
+        txtCTCNo.Location = New Point(17, 319)
+        txtCTCNo.Name = "txtCTCNo"
+        txtCTCNo.Size = New Size(230, 23)
+        txtCTCNo.TabIndex = 112
+        ' 
+        ' Label11
+        ' 
+        Label11.AutoSize = True
+        Label11.Location = New Point(17, 301)
+        Label11.Name = "Label11"
+        Label11.Size = New Size(75, 15)
+        Label11.TabIndex = 111
+        Label11.Text = "CTC Number"
+        ' 
+        ' cbPurpose
+        ' 
+        cbPurpose.FormattingEnabled = True
+        cbPurpose.Location = New Point(17, 269)
+        cbPurpose.Name = "cbPurpose"
+        cbPurpose.Size = New Size(471, 23)
+        cbPurpose.TabIndex = 110
+        ' 
+        ' Label9
+        ' 
+        Label9.AutoSize = True
+        Label9.Location = New Point(17, 253)
+        Label9.Name = "Label9"
+        Label9.Size = New Size(50, 15)
+        Label9.TabIndex = 109
+        Label9.Text = "Purpose"
+        ' 
+        ' txtNationality
+        ' 
+        txtNationality.Location = New Point(224, 219)
+        txtNationality.Name = "txtNationality"
+        txtNationality.Size = New Size(105, 23)
+        txtNationality.TabIndex = 108
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.Location = New Point(226, 203)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(65, 15)
+        Label8.TabIndex = 107
+        Label8.Text = "Nationality"
+        ' 
+        ' txtHeight
+        ' 
+        txtHeight.Location = New Point(140, 219)
+        txtHeight.Name = "txtHeight"
+        txtHeight.Size = New Size(78, 23)
+        txtHeight.TabIndex = 106
+        ' 
+        ' rbFemale
+        ' 
+        rbFemale.AutoSize = True
+        rbFemale.Location = New Point(74, 221)
+        rbFemale.Name = "rbFemale"
+        rbFemale.Size = New Size(63, 19)
+        rbFemale.TabIndex = 105
+        rbFemale.TabStop = True
+        rbFemale.Text = "Female"
+        rbFemale.UseVisualStyleBackColor = True
+        ' 
+        ' rbMale
+        ' 
+        rbMale.AutoSize = True
+        rbMale.Location = New Point(17, 221)
+        rbMale.Name = "rbMale"
+        rbMale.Size = New Size(51, 19)
+        rbMale.TabIndex = 104
+        rbMale.TabStop = True
+        rbMale.Text = "Male"
+        rbMale.UseVisualStyleBackColor = True
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Location = New Point(140, 202)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(59, 15)
+        Label7.TabIndex = 103
+        Label7.Text = "Height(ft)"
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Location = New Point(17, 203)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(25, 15)
+        Label6.TabIndex = 102
+        Label6.Text = "Sex"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Location = New Point(335, 159)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(73, 15)
+        Label5.TabIndex = 101
+        Label5.Text = "Date of Birth"
+        ' 
+        ' dtBirthDate
+        ' 
+        dtBirthDate.Format = DateTimePickerFormat.Short
+        dtBirthDate.Location = New Point(335, 177)
+        dtBirthDate.Name = "dtBirthDate"
+        dtBirthDate.Size = New Size(153, 23)
+        dtBirthDate.TabIndex = 100
+        ' 
+        ' txtBirthPlace
+        ' 
+        txtBirthPlace.Location = New Point(17, 177)
+        txtBirthPlace.Name = "txtBirthPlace"
+        txtBirthPlace.Size = New Size(274, 23)
+        txtBirthPlace.TabIndex = 99
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(17, 159)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(77, 15)
+        Label4.TabIndex = 98
+        Label4.Text = "Place of Birth"
+        ' 
+        ' cbCivilStatus
+        ' 
+        cbCivilStatus.FormattingEnabled = True
+        cbCivilStatus.Location = New Point(335, 133)
+        cbCivilStatus.Name = "cbCivilStatus"
+        cbCivilStatus.Size = New Size(153, 23)
+        cbCivilStatus.TabIndex = 97
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(335, 115)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(65, 15)
+        Label3.TabIndex = 96
+        Label3.Text = "Civil Status"
+        ' 
+        ' cbBarangay
+        ' 
+        cbBarangay.FormattingEnabled = True
+        cbBarangay.Location = New Point(88, 133)
+        cbBarangay.Name = "cbBarangay"
+        cbBarangay.Size = New Size(203, 23)
+        cbBarangay.TabIndex = 95
+        ' 
+        ' cbZone
+        ' 
+        cbZone.FormattingEnabled = True
+        cbZone.Location = New Point(17, 133)
+        cbZone.Name = "cbZone"
+        cbZone.Size = New Size(68, 23)
+        cbZone.TabIndex = 94
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(17, 115)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(139, 15)
+        Label2.TabIndex = 93
+        Label2.Text = "Address(Zone, Barangay)"
+        ' 
+        ' txtClearanceMname
+        ' 
+        txtClearanceMname.Location = New Point(335, 84)
+        txtClearanceMname.Name = "txtClearanceMname"
+        txtClearanceMname.Size = New Size(153, 23)
+        txtClearanceMname.TabIndex = 92
+        ' 
+        ' txtClearanceFname
+        ' 
+        txtClearanceFname.Location = New Point(176, 84)
+        txtClearanceFname.Name = "txtClearanceFname"
+        txtClearanceFname.Size = New Size(153, 23)
+        txtClearanceFname.TabIndex = 91
+        ' 
+        ' Label14
+        ' 
+        Label14.AutoSize = True
+        Label14.Location = New Point(17, 66)
+        Label14.Name = "Label14"
+        Label14.Size = New Size(262, 15)
+        Label14.TabIndex = 90
+        Label14.Text = "Full Name(Last name, First name, Middle Name)"
+        ' 
+        ' txtClearanceLname
+        ' 
+        txtClearanceLname.Location = New Point(17, 84)
+        txtClearanceLname.Name = "txtClearanceLname"
+        txtClearanceLname.Size = New Size(153, 23)
+        txtClearanceLname.TabIndex = 89
+        ' 
+        ' txtClearanceNo
+        ' 
+        txtClearanceNo.Location = New Point(104, 27)
+        txtClearanceNo.Name = "txtClearanceNo"
+        txtClearanceNo.Size = New Size(77, 23)
+        txtClearanceNo.TabIndex = 88
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(17, 33)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(81, 15)
+        Label1.TabIndex = 87
+        Label1.Text = "Clearance No."
+        ' 
+        ' TabControl1
+        ' 
+        TabControl1.Controls.Add(TabPage1)
+        TabControl1.Controls.Add(TabPage2)
+        TabControl1.Location = New Point(710, 27)
+        TabControl1.Name = "TabControl1"
+        TabControl1.SelectedIndex = 0
+        TabControl1.Size = New Size(788, 579)
+        TabControl1.TabIndex = 140
+        ' 
+        ' TabPage1
+        ' 
+        TabPage1.Controls.Add(btnApplicantPendingSearchCancel)
+        TabPage1.Controls.Add(txtApplicantPendingSearch)
+        TabPage1.Controls.Add(dataApplicantPending)
+        TabPage1.Location = New Point(4, 24)
+        TabPage1.Name = "TabPage1"
+        TabPage1.Padding = New Padding(3)
+        TabPage1.Size = New Size(780, 551)
+        TabPage1.TabIndex = 0
+        TabPage1.Text = "Pending"
+        TabPage1.UseVisualStyleBackColor = True
+        ' 
+        ' btnApplicantPendingSearchCancel
+        ' 
+        btnApplicantPendingSearchCancel.Location = New Point(702, 6)
+        btnApplicantPendingSearchCancel.Name = "btnApplicantPendingSearchCancel"
+        btnApplicantPendingSearchCancel.Size = New Size(75, 23)
+        btnApplicantPendingSearchCancel.TabIndex = 144
+        btnApplicantPendingSearchCancel.Text = "x"
+        btnApplicantPendingSearchCancel.UseVisualStyleBackColor = True
+        ' 
+        ' txtApplicantPendingSearch
+        ' 
+        txtApplicantPendingSearch.Location = New Point(447, 6)
+        txtApplicantPendingSearch.Name = "txtApplicantPendingSearch"
+        txtApplicantPendingSearch.Size = New Size(249, 23)
+        txtApplicantPendingSearch.TabIndex = 143
+        ' 
+        ' dataApplicantPending
+        ' 
+        dataApplicantPending.AllowUserToAddRows = False
+        dataApplicantPending.AllowUserToDeleteRows = False
+        dataApplicantPending.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dataApplicantPending.Columns.AddRange(New DataGridViewColumn() {dataPendingClearanceID, dataPendingClearanceNo, dataPendingClearanceFname, dataPendingClearanceMname, dataPendingClearanceLname, dataPendingClearanceStatus, dataPendingClearanceEdit, dataPendingClearanceSetBtn, dataPendingClearanceDelete})
+        dataApplicantPending.Location = New Point(4, 35)
+        dataApplicantPending.Name = "dataApplicantPending"
+        dataApplicantPending.ReadOnly = True
+        dataApplicantPending.RowTemplate.Height = 25
+        dataApplicantPending.Size = New Size(773, 514)
+        dataApplicantPending.TabIndex = 142
+        ' 
+        ' dataPendingClearanceID
+        ' 
+        dataPendingClearanceID.HeaderText = "ClearanceID"
+        dataPendingClearanceID.Name = "dataPendingClearanceID"
+        dataPendingClearanceID.ReadOnly = True
+        ' 
+        ' dataPendingClearanceNo
+        ' 
+        dataPendingClearanceNo.HeaderText = "Clearance Number"
+        dataPendingClearanceNo.Name = "dataPendingClearanceNo"
+        dataPendingClearanceNo.ReadOnly = True
+        ' 
+        ' dataPendingClearanceFname
+        ' 
+        dataPendingClearanceFname.HeaderText = "First Name"
+        dataPendingClearanceFname.Name = "dataPendingClearanceFname"
+        dataPendingClearanceFname.ReadOnly = True
+        ' 
+        ' dataPendingClearanceMname
+        ' 
+        dataPendingClearanceMname.HeaderText = "Middle Name"
+        dataPendingClearanceMname.Name = "dataPendingClearanceMname"
+        dataPendingClearanceMname.ReadOnly = True
+        ' 
+        ' dataPendingClearanceLname
+        ' 
+        dataPendingClearanceLname.HeaderText = "Last Name"
+        dataPendingClearanceLname.Name = "dataPendingClearanceLname"
+        dataPendingClearanceLname.ReadOnly = True
+        ' 
+        ' dataPendingClearanceStatus
+        ' 
+        dataPendingClearanceStatus.HeaderText = "Status"
+        dataPendingClearanceStatus.Name = "dataPendingClearanceStatus"
+        dataPendingClearanceStatus.ReadOnly = True
+        ' 
+        ' dataPendingClearanceEdit
+        ' 
+        dataPendingClearanceEdit.HeaderText = ""
+        dataPendingClearanceEdit.Name = "dataPendingClearanceEdit"
+        dataPendingClearanceEdit.ReadOnly = True
+        dataPendingClearanceEdit.Text = "Edit"
+        dataPendingClearanceEdit.UseColumnTextForButtonValue = True
+        ' 
+        ' dataPendingClearanceSetBtn
+        ' 
+        dataPendingClearanceSetBtn.HeaderText = ""
+        dataPendingClearanceSetBtn.Name = "dataPendingClearanceSetBtn"
+        dataPendingClearanceSetBtn.ReadOnly = True
+        dataPendingClearanceSetBtn.Text = ""
+        ' 
+        ' dataPendingClearanceDelete
+        ' 
+        dataPendingClearanceDelete.HeaderText = ""
+        dataPendingClearanceDelete.Name = "dataPendingClearanceDelete"
+        dataPendingClearanceDelete.ReadOnly = True
+        dataPendingClearanceDelete.Text = "Delete"
+        dataPendingClearanceDelete.UseColumnTextForButtonValue = True
+        ' 
+        ' TabPage2
+        ' 
+        TabPage2.Controls.Add(dataApplicantCompleted)
+        TabPage2.Controls.Add(btnApplicantCompletedSearchCancel)
+        TabPage2.Controls.Add(txtApplicantCompletedSearch)
+        TabPage2.Location = New Point(4, 24)
+        TabPage2.Name = "TabPage2"
+        TabPage2.Padding = New Padding(3)
+        TabPage2.Size = New Size(780, 551)
+        TabPage2.TabIndex = 1
+        TabPage2.Text = "Completed"
+        TabPage2.UseVisualStyleBackColor = True
+        ' 
+        ' dataApplicantCompleted
+        ' 
+        dataApplicantCompleted.AllowUserToAddRows = False
+        dataApplicantCompleted.AllowUserToDeleteRows = False
+        dataApplicantCompleted.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        dataApplicantCompleted.Columns.AddRange(New DataGridViewColumn() {dataCompletedClearanceID, dataCompletedClearanceNo, dataCompletedClearanceFname, dataCompletedClearanceMname, dataCompletedClearanceLname, dataCompletedClearanceStatus, dataCompletedClearancePrint})
+        dataApplicantCompleted.Location = New Point(4, 37)
+        dataApplicantCompleted.Name = "dataApplicantCompleted"
+        dataApplicantCompleted.ReadOnly = True
+        dataApplicantCompleted.RowTemplate.Height = 25
+        dataApplicantCompleted.Size = New Size(773, 514)
+        dataApplicantCompleted.TabIndex = 150
+        ' 
+        ' dataCompletedClearanceID
+        ' 
+        dataCompletedClearanceID.HeaderText = "ClearanceID"
+        dataCompletedClearanceID.Name = "dataCompletedClearanceID"
+        dataCompletedClearanceID.ReadOnly = True
+        ' 
+        ' dataCompletedClearanceNo
+        ' 
+        dataCompletedClearanceNo.HeaderText = "Clearance Number"
+        dataCompletedClearanceNo.Name = "dataCompletedClearanceNo"
+        dataCompletedClearanceNo.ReadOnly = True
+        ' 
+        ' dataCompletedClearanceFname
+        ' 
+        dataCompletedClearanceFname.HeaderText = "First Name"
+        dataCompletedClearanceFname.Name = "dataCompletedClearanceFname"
+        dataCompletedClearanceFname.ReadOnly = True
+        ' 
+        ' dataCompletedClearanceMname
+        ' 
+        dataCompletedClearanceMname.HeaderText = "Middle Name"
+        dataCompletedClearanceMname.Name = "dataCompletedClearanceMname"
+        dataCompletedClearanceMname.ReadOnly = True
+        ' 
+        ' dataCompletedClearanceLname
+        ' 
+        dataCompletedClearanceLname.HeaderText = "Last Name"
+        dataCompletedClearanceLname.Name = "dataCompletedClearanceLname"
+        dataCompletedClearanceLname.ReadOnly = True
+        ' 
+        ' dataCompletedClearanceStatus
+        ' 
+        dataCompletedClearanceStatus.HeaderText = "Status"
+        dataCompletedClearanceStatus.Name = "dataCompletedClearanceStatus"
+        dataCompletedClearanceStatus.ReadOnly = True
+        ' 
+        ' dataCompletedClearancePrint
+        ' 
+        dataCompletedClearancePrint.HeaderText = ""
+        dataCompletedClearancePrint.Name = "dataCompletedClearancePrint"
+        dataCompletedClearancePrint.ReadOnly = True
+        dataCompletedClearancePrint.Text = "Print"
+        dataCompletedClearancePrint.UseColumnTextForButtonValue = True
+        ' 
+        ' btnApplicantCompletedSearchCancel
+        ' 
+        btnApplicantCompletedSearchCancel.Location = New Point(702, 5)
+        btnApplicantCompletedSearchCancel.Name = "btnApplicantCompletedSearchCancel"
+        btnApplicantCompletedSearchCancel.Size = New Size(75, 23)
+        btnApplicantCompletedSearchCancel.TabIndex = 147
+        btnApplicantCompletedSearchCancel.Text = "x"
+        btnApplicantCompletedSearchCancel.UseVisualStyleBackColor = True
+        ' 
+        ' txtApplicantCompletedSearch
+        ' 
+        txtApplicantCompletedSearch.Location = New Point(447, 5)
+        txtApplicantCompletedSearch.Name = "txtApplicantCompletedSearch"
+        txtApplicantCompletedSearch.Size = New Size(249, 23)
+        txtApplicantCompletedSearch.TabIndex = 146
+        ' 
+        ' MenuStrip1
+        ' 
+        MenuStrip1.Items.AddRange(New ToolStripItem() {FileToolStripMenuItem})
+        MenuStrip1.Location = New Point(0, 0)
+        MenuStrip1.Name = "MenuStrip1"
+        MenuStrip1.Size = New Size(1370, 24)
+        MenuStrip1.TabIndex = 141
+        MenuStrip1.Text = "MenuStrip1"
+        ' 
+        ' FileToolStripMenuItem
+        ' 
+        FileToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ReportToolStripMenuItem, LogoutToolStripMenuItem})
+        FileToolStripMenuItem.Name = "FileToolStripMenuItem"
+        FileToolStripMenuItem.Size = New Size(37, 20)
+        FileToolStripMenuItem.Text = "File"
+        ' 
+        ' ReportToolStripMenuItem
+        ' 
+        ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
+        ReportToolStripMenuItem.Size = New Size(112, 22)
+        ReportToolStripMenuItem.Text = "Report"
+        ' 
+        ' LogoutToolStripMenuItem
+        ' 
+        LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
+        LogoutToolStripMenuItem.Size = New Size(112, 22)
+        LogoutToolStripMenuItem.Text = "Logout"
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Location = New Point(530, 45)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(150, 150)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 142
+        PictureBox1.TabStop = False
+        ' 
+        ' PictureBox2
+        ' 
+        PictureBox2.Location = New Point(530, 249)
+        PictureBox2.Name = "PictureBox2"
+        PictureBox2.Size = New Size(150, 150)
+        PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox2.TabIndex = 143
+        PictureBox2.TabStop = False
+        ' 
+        ' PictureBox3
+        ' 
+        PictureBox3.Location = New Point(530, 456)
+        PictureBox3.Name = "PictureBox3"
+        PictureBox3.Size = New Size(150, 150)
+        PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox3.TabIndex = 144
+        PictureBox3.TabStop = False
+        ' 
+        ' Clerk2
+        ' 
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(1370, 641)
+        Controls.Add(PictureBox3)
+        Controls.Add(PictureBox2)
+        Controls.Add(PictureBox1)
+        Controls.Add(TabControl1)
+        Controls.Add(btnClear_Cancel)
+        Controls.Add(btnAdd_Save)
+        Controls.Add(cbPoliceCertify)
+        Controls.Add(Label22)
+        Controls.Add(cbPoliceVerify)
+        Controls.Add(Label21)
+        Controls.Add(btnSignature)
+        Controls.Add(Label20)
+        Controls.Add(btnThumbmark)
+        Controls.Add(Label19)
+        Controls.Add(btnCamera)
+        Controls.Add(Label18)
+        Controls.Add(Label16)
+        Controls.Add(txtORAmount)
+        Controls.Add(txtORNo)
+        Controls.Add(Label17)
+        Controls.Add(dtClearanceDate)
+        Controls.Add(Label15)
+        Controls.Add(txtContactNo)
+        Controls.Add(Label13)
+        Controls.Add(Label12)
+        Controls.Add(txtCTCIssueAt)
+        Controls.Add(Label10)
+        Controls.Add(dtCTCIssueDate)
+        Controls.Add(txtCTCNo)
+        Controls.Add(Label11)
+        Controls.Add(cbPurpose)
+        Controls.Add(Label9)
+        Controls.Add(txtNationality)
+        Controls.Add(Label8)
+        Controls.Add(txtHeight)
+        Controls.Add(rbFemale)
+        Controls.Add(rbMale)
+        Controls.Add(Label7)
+        Controls.Add(Label6)
+        Controls.Add(Label5)
+        Controls.Add(dtBirthDate)
+        Controls.Add(txtBirthPlace)
+        Controls.Add(Label4)
+        Controls.Add(cbCivilStatus)
+        Controls.Add(Label3)
+        Controls.Add(cbBarangay)
+        Controls.Add(cbZone)
+        Controls.Add(Label2)
+        Controls.Add(txtClearanceMname)
+        Controls.Add(txtClearanceFname)
+        Controls.Add(Label14)
+        Controls.Add(txtClearanceLname)
+        Controls.Add(txtClearanceNo)
+        Controls.Add(Label1)
+        Controls.Add(MenuStrip1)
+        MainMenuStrip = MenuStrip1
+        Name = "Clerk2"
+        Text = "Clerk"
+        TabControl1.ResumeLayout(False)
+        TabPage1.ResumeLayout(False)
+        TabPage1.PerformLayout()
+        CType(dataApplicantPending, ComponentModel.ISupportInitialize).EndInit()
+        TabPage2.ResumeLayout(False)
+        TabPage2.PerformLayout()
+        CType(dataApplicantCompleted, ComponentModel.ISupportInitialize).EndInit()
+        MenuStrip1.ResumeLayout(False)
+        MenuStrip1.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
+        CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
     Friend WithEvents btnClear_Cancel As Button
     Friend WithEvents btnAdd_Save As Button

@@ -8,7 +8,8 @@ Public Class SignatureForm
     Private currentCurvePoints As List(Of Point)
     Private currentCurve As Integer = -1
     Public Property Singature As Bitmap
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+    Private Sub MaterialButton1_Click(sender As Object, e As EventArgs) Handles MaterialButton1.Click
         If currentCurve < 0 OrElse signatureObject(currentCurve).Count = 0 Then Return
 
         Dim imgSignature As Bitmap = New Bitmap(pBoxSignature.Width, pBoxSignature.Height, PixelFormat.Format32bppArgb)
@@ -48,10 +49,10 @@ Public Class SignatureForm
             End Using
         Next
     End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub MaterialButton2_Click(sender As Object, e As EventArgs) Handles MaterialButton2.Click
         Me.DialogResult = DialogResult.Cancel
         Me.Close()
         Me.Dispose()
     End Sub
+
 End Class

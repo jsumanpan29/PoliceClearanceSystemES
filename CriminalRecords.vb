@@ -5,13 +5,10 @@ Public Class CriminalRecords
 
     Friend cr_id As Integer
 
-
     Private connString As String = (New ConfigHelper).ConnectionString
-
     Private connection As New SqlConnection(connString)
     Private command As New SqlCommand("", connection)
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub MaterialButton1_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
         If cr_id Then
             Try
                 SqlData("UPDATE criminal_records SET fname = @fname, mname = @mname, lname = @lname, crime_offense = @crimeoffense, ccno = @ccno, isno = @isno, remarks = @remarks WHERE cr_id =" & cr_id)
@@ -31,6 +28,10 @@ Public Class CriminalRecords
         End If
         If connection.State = ConnectionState.Open Then connection.Close()
     End Sub
+    Private Sub CancelButton_Click(sender As Object, e As EventArgs)
+        If connection.State = ConnectionState.Open Then connection.Close()
+        Me.Dispose()
+    End Sub
     Private Sub SqlData(sqlCommand As String)
         connection.Open()
         command.CommandText = sqlCommand
@@ -45,7 +46,7 @@ Public Class CriminalRecords
         connection.Close()
     End Sub
 
-    Private Sub CriminalRecords_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub CriminalRecords_Load(sender As Object, e As EventArgs) Handles MyBase.Load, MaterialButton1.Click
         If cr_id Then
             connection.Open()
             command.CommandText = "SELECT * FROM criminal_records WHERE deleted = 0 AND cr_id = " & cr_id
@@ -65,13 +66,7 @@ Public Class CriminalRecords
         Else
             'MsgBox("No cr_id")
         End If
-
-
         If connection.State = ConnectionState.Open Then connection.Close()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        If connection.State = ConnectionState.Open Then connection.Close()
-        Me.Dispose()
-    End Sub
 End Class

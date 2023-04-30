@@ -185,36 +185,6 @@ Public Class Admin
 
     End Sub
 
-    Private Sub dataUser_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataUser.CellContentClick
-        Dim colname As String = dataUser.Columns(e.ColumnIndex).Name
-        If colname = "dataUserBtnEdit" Then
-            Try
-                Dim row As DataGridViewRow = dataUser.Rows(e.RowIndex)
-                Dim userForm As New User
-                userForm.user_id = row.Cells("dataUserID").Value
-                userForm.ShowDialog()
-                LoadUserTable()
-            Catch ex As Exception
-                MsgBox("User Table error" & vbCrLf & String.Format("Error: {0}", ex.Message))
-            End Try
-        ElseIf colname = "dataUserBtnDelete" Then
-            Try
-                Dim row As DataGridViewRow = dataUser.Rows(e.RowIndex)
-                Dim user_id_to_delete As Integer = row.Cells("dataUserID").Value
-                If (MessageBox.Show("Delete", "Are you sure you want to delete the data?", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
-                    deleteCommand("UPDATE [user] SET deleted = 1 WHERE user_id =" & user_id_to_delete)
-                End If
-                LoadUserTable()
-            Catch ex As Exception
-                MsgBox("User Table error" & vbCrLf & String.Format("Error: {0}", ex.Message))
-            End Try
-        Else
-            'MsgBox("Data User: Column name does not exist")
-            'Cellclick prompt
-        End If
-        connection.Close()
-    End Sub
-
     Private Sub deleteCommand(deleteDataCommand As String)
         connection.Open()
         command = New SqlCommand("", connection)
@@ -223,21 +193,8 @@ Public Class Admin
         connection.Close()
         command = Nothing
     End Sub
-    Private Sub btnUserAdd_Click(sender As Object, e As EventArgs) Handles btnUserAdd.Click
-        Dim userForm As New User
-        userForm.ShowDialog()
-        LoadUserTable()
-        UserCount()
 
-    End Sub
 
-    Private Sub btnPoliceAdd_Click(sender As Object, e As EventArgs) Handles btnPoliceAdd.Click
-        Dim policeForm As New Police
-        policeForm.ShowDialog()
-        LoadPoliceTable()
-        PoliceCount()
-
-    End Sub
 
     Private Sub txtUserSearch_TextChanged(sender As Object, e As EventArgs) Handles txtUserSearch.TextChanged
         LoadUserTable(txtUserSearch.Text.Trim)
@@ -287,52 +244,13 @@ Public Class Admin
         End If
     End Sub
 
-    Private Sub btnUserSearchRefresh_Click(sender As Object, e As EventArgs) Handles btnUserSearchRefresh.Click
-        LoadUserTable()
-        txtUserSearch.Text = ""
-
-    End Sub
 
     Private Sub txtPoliceSearch_TextChanged(sender As Object, e As EventArgs) Handles txtPoliceSearch.TextChanged
         LoadPoliceTable(txtPoliceSearch.Text.Trim)
     End Sub
 
-    Private Sub dataPolice_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataPolice.CellContentClick
-        Dim colname As String = dataPolice.Columns(e.ColumnIndex).Name
-        If colname = "dataPoliceBtnEdit" Then
-            Try
-                Dim row As DataGridViewRow = dataPolice.Rows(e.RowIndex)
-                Dim policeForm As New Police
-                policeForm.police_id = row.Cells("dataPoliceID").Value
-                policeForm.ShowDialog()
-                LoadPoliceTable()
-            Catch ex As Exception
-                MsgBox("Police Table error" & vbCrLf & String.Format("Error: {0}", ex.Message))
-            End Try
-        ElseIf colname = "dataPoliceBtnDelete" Then
-            Try
-                Dim row As DataGridViewRow = dataPolice.Rows(e.RowIndex)
-                Dim police_id_to_delete As Integer = row.Cells("dataPoliceID").Value
-                If (MessageBox.Show("Delete", "Are you sure you want to delete the data?", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
-                    deleteCommand("UPDATE police SET deleted = 1 WHERE police_id =" & police_id_to_delete)
-                End If
-                LoadPoliceTable()
-            Catch ex As Exception
-                MsgBox("Police Table error" & vbCrLf & String.Format("Error: {0}", ex.Message))
-            End Try
-        Else
-            'MsgBox("Data User: Column name does not exist")
-            'Cellclick prompt
-        End If
-        connection.Close()
-    End Sub
 
-    Private Sub btnPoliceSearchRefresh_Click(sender As Object, e As EventArgs) Handles btnPoliceSearchRefresh.Click
-        LoadPoliceTable()
-        txtPoliceSearch.Text = ""
-    End Sub
-
-    Private Sub dataPolice_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles dataPolice.CellPainting
+    Private Sub dataPolice_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs)
         If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
             e.Handled = True
             e.PaintBackground(e.CellBounds, True)
@@ -376,13 +294,6 @@ Public Class Admin
         End If
     End Sub
 
-    Private Sub btnCRAdd_Click(sender As Object, e As EventArgs) Handles btnCRAdd.Click
-        Dim criminalRecordsForm As New CriminalRecords
-        criminalRecordsForm.ShowDialog()
-        LoadCRTable()
-        CRCount()
-
-    End Sub
 
     Private Sub dataCR_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataCR.CellContentClick
         Dim colname As String = dataCR.Columns(e.ColumnIndex).Name
@@ -418,10 +329,6 @@ Public Class Admin
         LoadCRTable(txtCRSearch.Text.Trim)
     End Sub
 
-    Private Sub btnCRSearchRefresh_Click(sender As Object, e As EventArgs) Handles btnCRSearchRefresh.Click
-        LoadCRTable()
-        txtCRSearch.Text = ""
-    End Sub
 
     Private Sub dataCR_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles dataCR.CellPainting
         If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
@@ -481,4 +388,100 @@ Public Class Admin
     Private Sub Admin_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         e.Cancel = True
     End Sub
+
+    Private Sub MaterialDataTable1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataUser.CellContentClick
+        Dim colname As String = dataUser.Columns(e.ColumnIndex).Name
+        If colname = "dataUserBtnEdit" Then
+            Try
+                Dim row As DataGridViewRow = dataUser.Rows(e.RowIndex)
+                Dim userForm As New User
+                userForm.user_id = row.Cells("dataUserID").Value
+                userForm.ShowDialog()
+                LoadUserTable()
+            Catch ex As Exception
+                MsgBox("User Table error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+            End Try
+        ElseIf colname = "dataUserBtnDelete" Then
+            Try
+                Dim row As DataGridViewRow = dataUser.Rows(e.RowIndex)
+                Dim user_id_to_delete As Integer = row.Cells("dataUserID").Value
+                If (MessageBox.Show("Delete", "Are you sure you want to delete the data?", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
+                    deleteCommand("UPDATE [user] SET deleted = 1 WHERE user_id =" & user_id_to_delete)
+                End If
+                LoadUserTable()
+            Catch ex As Exception
+                MsgBox("User Table error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+            End Try
+        Else
+            'MsgBox("Data User: Column name does not exist")
+            'Cellclick prompt
+        End If
+        connection.Close()
+    End Sub
+
+    Private Sub dataPolice_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataPolice.CellContentClick
+        Dim colname As String = dataPolice.Columns(e.ColumnIndex).Name
+        If colname = "dataPoliceBtnEdit" Then
+            Try
+                Dim row As DataGridViewRow = dataPolice.Rows(e.RowIndex)
+                Dim policeForm As New Police
+                policeForm.police_id = row.Cells("dataPoliceID").Value
+                policeForm.ShowDialog()
+                LoadPoliceTable()
+            Catch ex As Exception
+                MsgBox("Police Table error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+            End Try
+        ElseIf colname = "dataPoliceBtnDelete" Then
+            Try
+                Dim row As DataGridViewRow = dataPolice.Rows(e.RowIndex)
+                Dim police_id_to_delete As Integer = row.Cells("dataPoliceID").Value
+                If (MessageBox.Show("Delete", "Are you sure you want to delete the data?", MessageBoxButtons.YesNo) = DialogResult.Yes) Then
+                    deleteCommand("UPDATE police SET deleted = 1 WHERE police_id =" & police_id_to_delete)
+                End If
+                LoadPoliceTable()
+            Catch ex As Exception
+                MsgBox("Police Table error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+            End Try
+        Else
+            'MsgBox("Data User: Column name does not exist")
+            'Cellclick prompt
+        End If
+        connection.Close()
+    End Sub
+
+    Private Sub btnPoliceAdd_Click(sender As Object, e As EventArgs) Handles btnPoliceAdd.Click
+        Dim policeForm As New Police
+        policeForm.ShowDialog()
+        LoadPoliceTable()
+        PoliceCount()
+    End Sub
+
+    Private Sub btnPoliceSearchRefresh_Click(sender As Object, e As EventArgs) Handles btnPoliceSearchRefresh.Click
+        LoadPoliceTable()
+        txtPoliceSearch.Text = ""
+    End Sub
+
+    Private Sub btnCRAdd_Click(sender As Object, e As EventArgs) Handles btnCRAdd.Click, btnCRAdd.Click
+        Dim criminalRecordsForm As New CriminalRecords
+        criminalRecordsForm.ShowDialog()
+        LoadCRTable()
+        CRCount()
+    End Sub
+    Private Sub btnUsersSearchRefresh_Click(sender As Object, e As EventArgs) Handles btnUsersSearchRefresh.Click
+        LoadUserTable()
+        txtUserSearch.Text = ""
+    End Sub
+
+    Private Sub btnCRsSearchRefresh_Click(sender As Object, e As EventArgs) Handles btnCRsSearchRefresh.Click
+        LoadCRTable()
+        txtCRSearch.Text = ""
+    End Sub
+
+    Private Sub btnUsersAdd_Click(sender As Object, e As EventArgs) Handles btnUsersAdd.Click
+        Dim userForm As New User
+        userForm.ShowDialog()
+        LoadUserTable()
+        UserCount()
+    End Sub
+
 End Class

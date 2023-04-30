@@ -60,6 +60,29 @@
   <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="LogoutToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
+        EwAACxMBAJqcGAAAA8hJREFUeF7tnbmqFEEUhsc1UWMVIxV3BFFEX0DENVSfQMUXcHkAA3MXEEzMRL1u
+        V8TE5RUUFzDQQDRx33f/P2g4FD8zfUdq7jnt+eAL5/Zfp+5U91R1V/eSJEmSJEmSJEmSJEmSZEgWwAPw
+        OnwIP8I/TvwEn8Eb8DBcAjvDPHgS/oCq8R79Ba/BlTA0W+BbqBoZwW/wCJwCw7EP/oSqYdE8A6fBMGyG
+        kYacNh6DIeCYH3nY6ec26J5TUIXvgk/gTOgWXmp2begp3Q3dwut8Fdp6D+6As6EX5sJd8AFUma2XoVvG
+        oQrdyOLPgV6ZBe9Alb3xHXTLY6hCN26H3lkE+w2jvMBwy3uoQjd6Gnb6MQZVfnoeukUFtkZhKXwBy/yv
+        oOt5ojJwaSQWwouQQw7H/QvQ/SSdKro1qYwqujWpjCq6NamMKro1qYwqujWpjCq6NTIhFmVU0a0RWQO5
+        VvwFcoXsKlwOXaKKbo0Gi/8Blu14AzdAd5RBS6PB/3zVDsofaO46QQW1RmIq5LCj2tHorhNUSGs0PkPV
+        DqurTlABrdHoNytqddMJKpw1GoshT7iqLaUuOkEFs0ZkLeQ0tGpPKTthI5w0VChrVMJ0ggpkjUyITlBh
+        rNFx3wkqiLULuO4EFcI6EVbBK5DLgepvRZGdMLKrIxXA2pbVUM3BRJWXslzor446uLUtN6H6fGTPweqo
+        A1vbwPvwv0P1+ci+hNVRB7a2oasd8BxWRx3Y2pYcgoZEHdjaljwJD4k6uHUi8AnFS7DtZJhXQ16GemYd
+        fA1V+0pHWnyiQlij47r4RAWxRsZ98YkKY41KiOITFcgakTDFJyqUNRrLYC5JTiLjULWj1EXxiQpnjQSn
+        RHgromqH1U3xiQpojcR0OOihc1fFJyqkNRq3oWoHdVd8ooJao7EeqtsTeWJ2V3xSBi2NCDvhFuRw9BVy
+        mdTt05Kq6NbI8KTMG3Zdo4puTSqjim5NKqOKbk0qo4puTSqjim5NKqOKbo0E9w06C7k2TfmwxkjWdf8F
+        VXRrFDgLyvt4yvzcwoa7qLhl0IZNnrcrs/R7NIlb2LjlEVShG7lZn3dCb1k2aP78PvT8LeCWanehyt7o
+        etO+NttWshN2Qk8dwd1+98BB32DqetvK/2HjVu4v6poTUAXvgvyGzICu4S600W8nVP6GW2EINsGuDUVH
+        YSj2wq68wOE0dL8WoOCLHCIPR1wBOwRDw3PCcRjpqRe+xIeXmytgZ5gP90O+nYjbxHt6AIOvsXoK+UPy
+        IOQmHUmSJEmSJEmSJEmSJEkyInq9v7lXyBmJknFdAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="ClearanceCheckBox.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -77,5 +100,8 @@
   </metadata>
   <metadata name="ClearanceLname.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>38</value>
   </metadata>
 </root>

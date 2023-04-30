@@ -1,6 +1,6 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Login
-    Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin2Framework.Controls.MaterialForm
     'Inherits MaterialSkin.Controls.MaterialForm
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -22,88 +22,384 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.txtUser = New System.Windows.Forms.TextBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnLogin = New System.Windows.Forms.Button()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel2.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'txtUser
-        '
-        Me.txtUser.Location = New System.Drawing.Point(39, 309)
-        Me.txtUser.Name = "txtUser"
-        Me.txtUser.Size = New System.Drawing.Size(143, 23)
-        Me.txtUser.TabIndex = 0
-        '
-        'Panel1
-        '
-        Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel1.Location = New System.Drawing.Point(3, 64)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(763, 562)
-        Me.Panel1.TabIndex = 1
-        '
-        'Panel2
-        '
-        Me.Panel2.Controls.Add(Me.btnLogin)
-        Me.Panel2.Controls.Add(Me.txtPassword)
-        Me.Panel2.Controls.Add(Me.Label1)
-        Me.Panel2.Controls.Add(Me.txtUser)
-        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel2.Location = New System.Drawing.Point(769, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(218, 626)
-        Me.Panel2.TabIndex = 2
-        '
-        'btnLogin
-        '
-        Me.btnLogin.Location = New System.Drawing.Point(73, 387)
-        Me.btnLogin.Name = "btnLogin"
-        Me.btnLogin.Size = New System.Drawing.Size(75, 23)
-        Me.btnLogin.TabIndex = 3
-        Me.btnLogin.Text = "Login"
-        Me.btnLogin.UseVisualStyleBackColor = True
-        '
-        'txtPassword
-        '
-        Me.txtPassword.Location = New System.Drawing.Point(39, 347)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(143, 23)
-        Me.txtPassword.TabIndex = 2
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(88, 282)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(42, 15)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "LOGIN"
-        '
-        'Login
-        '
-        Me.ClientSize = New System.Drawing.Size(987, 626)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Panel1)
-        Me.Name = "Login"
-        Me.Panel2.ResumeLayout(False)
-        Me.Panel2.PerformLayout()
-        Me.ResumeLayout(False)
-
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Login))
+        Panel1 = New Panel()
+        Panel8 = New Panel()
+        Label6 = New Label()
+        Label5 = New Label()
+        Home = New Label()
+        Label8 = New Label()
+        Panel5 = New Panel()
+        Label4 = New Label()
+        Panel6 = New Panel()
+        Panel7 = New Panel()
+        Label2 = New Label()
+        Panel2 = New Panel()
+        btnLogin = New MaterialSkin2Framework.Controls.MaterialButton()
+        Panel3 = New Panel()
+        txtPassword = New MaterialSkin2Framework.Controls.MaterialTextBox2()
+        Panel11 = New Panel()
+        txtUser = New MaterialSkin2Framework.Controls.MaterialTextBox2()
+        Panel13 = New Panel()
+        Label1 = New Label()
+        Panel10 = New Panel()
+        Panel4 = New Panel()
+        Panel9 = New Panel()
+        Panel1.SuspendLayout()
+        Panel8.SuspendLayout()
+        Panel5.SuspendLayout()
+        Panel6.SuspendLayout()
+        Panel2.SuspendLayout()
+        Panel3.SuspendLayout()
+        Panel11.SuspendLayout()
+        Panel13.SuspendLayout()
+        Panel4.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), Image)
+        Panel1.BackgroundImageLayout = ImageLayout.Stretch
+        Panel1.Controls.Add(Panel8)
+        Panel1.Controls.Add(Label8)
+        Panel1.Controls.Add(Panel5)
+        Panel1.Controls.Add(Label2)
+        Panel1.Dock = DockStyle.Fill
+        Panel1.Location = New Point(3, 64)
+        Panel1.Margin = New Padding(0)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(981, 559)
+        Panel1.TabIndex = 1
+        ' 
+        ' Panel8
+        ' 
+        Panel8.BackColor = Color.Transparent
+        Panel8.Controls.Add(Label6)
+        Panel8.Controls.Add(Label5)
+        Panel8.Controls.Add(Home)
+        Panel8.Location = New Point(38, 506)
+        Panel8.Name = "Panel8"
+        Panel8.Size = New Size(557, 39)
+        Panel8.TabIndex = 20
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.BackColor = Color.Transparent
+        Label6.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label6.ForeColor = SystemColors.Control
+        Label6.Location = New Point(410, 9)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(47, 21)
+        Label6.TabIndex = 13
+        Label6.Text = "Stuff"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.BackColor = Color.Transparent
+        Label5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Label5.ForeColor = SystemColors.Control
+        Label5.Location = New Point(197, 9)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(76, 21)
+        Label5.TabIndex = 12
+        Label5.Text = "Location"
+        ' 
+        ' Home
+        ' 
+        Home.AutoSize = True
+        Home.BackColor = Color.Transparent
+        Home.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
+        Home.ForeColor = SystemColors.Control
+        Home.Location = New Point(9, 9)
+        Home.Name = "Home"
+        Home.Size = New Size(56, 21)
+        Home.TabIndex = 11
+        Home.Text = "Home"
+        ' 
+        ' Label8
+        ' 
+        Label8.AutoSize = True
+        Label8.BackColor = Color.Transparent
+        Label8.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label8.ForeColor = SystemColors.Control
+        Label8.Location = New Point(47, 41)
+        Label8.Name = "Label8"
+        Label8.Size = New Size(165, 30)
+        Label8.TabIndex = 19
+        Label8.Text = "El Salvador City"
+        ' 
+        ' Panel5
+        ' 
+        Panel5.BackColor = Color.FromArgb(CByte(9), CByte(45), CByte(73))
+        Panel5.Controls.Add(Label4)
+        Panel5.Controls.Add(Panel6)
+        Panel5.Location = New Point(79, 248)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(287, 51)
+        Panel5.TabIndex = 18
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.BackColor = Color.Transparent
+        Label4.Font = New Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.ForeColor = Color.White
+        Label4.Location = New Point(64, 10)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(169, 32)
+        Label4.TabIndex = 11
+        Label4.Text = "Police Station"
+        Label4.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' Panel6
+        ' 
+        Panel6.BackColor = Color.FromArgb(CByte(3), CByte(59), CByte(106))
+        Panel6.Controls.Add(Panel7)
+        Panel6.Location = New Point(3, 3)
+        Panel6.Name = "Panel6"
+        Panel6.Size = New Size(47, 45)
+        Panel6.TabIndex = 8
+        ' 
+        ' Panel7
+        ' 
+        Panel7.BackColor = Color.Transparent
+        Panel7.BackgroundImage = CType(resources.GetObject("Panel7.BackgroundImage"), Image)
+        Panel7.BackgroundImageLayout = ImageLayout.Zoom
+        Panel7.Location = New Point(7, 7)
+        Panel7.Name = "Panel7"
+        Panel7.Size = New Size(32, 32)
+        Panel7.TabIndex = 9
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.BackColor = Color.Transparent
+        Label2.Font = New Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label2.ForeColor = SystemColors.Control
+        Label2.Location = New Point(26, 151)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(596, 50)
+        Label2.TabIndex = 17
+        Label2.Text = "Police Clearance Issuance System"
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        Panel2.Controls.Add(btnLogin)
+        Panel2.Controls.Add(Panel3)
+        Panel2.Controls.Add(Panel11)
+        Panel2.Controls.Add(Panel13)
+        Panel2.Controls.Add(Panel10)
+        Panel2.Controls.Add(Panel4)
+        Panel2.Dock = DockStyle.Right
+        Panel2.Location = New Point(657, 64)
+        Panel2.Margin = New Padding(0)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(327, 559)
+        Panel2.TabIndex = 2
+        ' 
+        ' btnLogin
+        ' 
+        btnLogin.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        btnLogin.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
+        btnLogin.Depth = 0
+        btnLogin.HighEmphasis = True
+        btnLogin.Icon = Nothing
+        btnLogin.Location = New Point(23, 357)
+        btnLogin.Margin = New Padding(10, 6, 4, 6)
+        btnLogin.MaximumSize = New Size(240, 50)
+        btnLogin.MinimumSize = New Size(286, 38)
+        btnLogin.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        btnLogin.Name = "btnLogin"
+        btnLogin.NoAccentTextColor = Color.Empty
+        btnLogin.Size = New Size(286, 38)
+        btnLogin.TabIndex = 16
+        btnLogin.Text = "Login"
+        btnLogin.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
+        btnLogin.UseAccentColor = False
+        btnLogin.UseVisualStyleBackColor = True
+        ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        Panel3.Controls.Add(txtPassword)
+        Panel3.Location = New Point(22, 283)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(287, 55)
+        Panel3.TabIndex = 15
+        ' 
+        ' txtPassword
+        ' 
+        txtPassword.AnimateReadOnly = False
+        txtPassword.AutoCompleteMode = AutoCompleteMode.None
+        txtPassword.AutoCompleteSource = AutoCompleteSource.None
+        txtPassword.BackgroundImageLayout = ImageLayout.None
+        txtPassword.CharacterCasing = CharacterCasing.Normal
+        txtPassword.Depth = 0
+        txtPassword.ErrorMessage = "Password not Match"
+        txtPassword.Font = New Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel)
+        txtPassword.HelperText = "Enter Your Password"
+        txtPassword.HideSelection = True
+        txtPassword.Hint = "Enter Password"
+        txtPassword.LeadingIcon = CType(resources.GetObject("txtPassword.LeadingIcon"), Image)
+        txtPassword.Location = New Point(6, 3)
+        txtPassword.MaxLength = 32767
+        txtPassword.MouseState = MaterialSkin2Framework.MouseState.OUT
+        txtPassword.Name = "txtPassword"
+        txtPassword.PasswordChar = "*"c
+        txtPassword.PrefixSuffixText = Nothing
+        txtPassword.ReadOnly = False
+        txtPassword.RightToLeft = RightToLeft.No
+        txtPassword.SelectedText = ""
+        txtPassword.SelectionLength = 0
+        txtPassword.SelectionStart = 0
+        txtPassword.ShortcutsEnabled = True
+        txtPassword.Size = New Size(278, 48)
+        txtPassword.TabIndex = 1
+        txtPassword.TabStop = False
+        txtPassword.TextAlign = HorizontalAlignment.Left
+        txtPassword.TrailingIcon = Nothing
+        txtPassword.UseAccent = False
+        txtPassword.UseSystemPasswordChar = False
+        ' 
+        ' Panel11
+        ' 
+        Panel11.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        Panel11.Controls.Add(txtUser)
+        Panel11.Location = New Point(22, 210)
+        Panel11.Name = "Panel11"
+        Panel11.Size = New Size(287, 55)
+        Panel11.TabIndex = 14
+        ' 
+        ' txtUser
+        ' 
+        txtUser.AnimateReadOnly = False
+        txtUser.AutoCompleteMode = AutoCompleteMode.None
+        txtUser.AutoCompleteSource = AutoCompleteSource.None
+        txtUser.BackgroundImageLayout = ImageLayout.None
+        txtUser.CharacterCasing = CharacterCasing.Normal
+        txtUser.Depth = 0
+        txtUser.ErrorMessage = "The User is Not Yet Exist"
+        txtUser.Font = New Font("Microsoft Sans Serif", 16F, FontStyle.Regular, GraphicsUnit.Pixel)
+        txtUser.HelperText = "Enter Your Username"
+        txtUser.HideSelection = True
+        txtUser.Hint = "Enter Username"
+        txtUser.LeadingIcon = CType(resources.GetObject("txtUser.LeadingIcon"), Image)
+        txtUser.Location = New Point(6, 3)
+        txtUser.MaxLength = 32767
+        txtUser.MouseState = MaterialSkin2Framework.MouseState.OUT
+        txtUser.Name = "txtUser"
+        txtUser.PasswordChar = ChrW(0)
+        txtUser.PrefixSuffixText = Nothing
+        txtUser.ReadOnly = False
+        txtUser.RightToLeft = RightToLeft.No
+        txtUser.SelectedText = ""
+        txtUser.SelectionLength = 0
+        txtUser.SelectionStart = 0
+        txtUser.ShortcutsEnabled = True
+        txtUser.Size = New Size(278, 48)
+        txtUser.TabIndex = 0
+        txtUser.TabStop = False
+        txtUser.TextAlign = HorizontalAlignment.Left
+        txtUser.TrailingIcon = Nothing
+        txtUser.UseAccent = False
+        txtUser.UseSystemPasswordChar = False
+        ' 
+        ' Panel13
+        ' 
+        Panel13.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        Panel13.Controls.Add(Label1)
+        Panel13.Location = New Point(102, 129)
+        Panel13.Name = "Panel13"
+        Panel13.Size = New Size(136, 45)
+        Panel13.TabIndex = 14
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.ForeColor = Color.FromArgb(CByte(3), CByte(59), CByte(106))
+        Label1.Location = New Point(14, 0)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(106, 40)
+        Label1.TabIndex = 1
+        Label1.Text = "LOGIN"
+        ' 
+        ' Panel10
+        ' 
+        Panel10.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        Panel10.BorderStyle = BorderStyle.Fixed3D
+        Panel10.Location = New Point(23, 135)
+        Panel10.Margin = New Padding(3, 3, 3, 2)
+        Panel10.Name = "Panel10"
+        Panel10.Size = New Size(287, 43)
+        Panel10.TabIndex = 13
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224), CByte(230))
+        Panel4.Controls.Add(Panel9)
+        Panel4.Location = New Point(281, 14)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(47, 45)
+        Panel4.TabIndex = 11
+        ' 
+        ' Panel9
+        ' 
+        Panel9.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        Panel9.BackgroundImage = CType(resources.GetObject("Panel9.BackgroundImage"), Image)
+        Panel9.BackgroundImageLayout = ImageLayout.Zoom
+        Panel9.Location = New Point(7, 7)
+        Panel9.Name = "Panel9"
+        Panel9.Size = New Size(32, 32)
+        Panel9.TabIndex = 9
+        ' 
+        ' Login
+        ' 
+        ClientSize = New Size(987, 626)
+        Controls.Add(Panel2)
+        Controls.Add(Panel1)
+        Name = "Login"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Police Clearance Issuance System"
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
+        Panel8.ResumeLayout(False)
+        Panel8.PerformLayout()
+        Panel5.ResumeLayout(False)
+        Panel5.PerformLayout()
+        Panel6.ResumeLayout(False)
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        Panel3.ResumeLayout(False)
+        Panel11.ResumeLayout(False)
+        Panel13.ResumeLayout(False)
+        Panel13.PerformLayout()
+        Panel4.ResumeLayout(False)
+        ResumeLayout(False)
     End Sub
-
-    Friend WithEvents txtUser As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnLogin As Button
-    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents Panel13 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents txtUser As MaterialSkin2Framework.Controls.MaterialTextBox2
+    Friend WithEvents txtPassword As MaterialSkin2Framework.Controls.MaterialTextBox2
+    Friend WithEvents btnLogin As MaterialSkin2Framework.Controls.MaterialButton
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Home As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Panel7 As Panel
 End Class

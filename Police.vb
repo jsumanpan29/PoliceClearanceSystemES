@@ -5,22 +5,15 @@ Imports System.IO
 Public Class Police
 
     Friend police_id As Integer
-
     Private connString As String = (New ConfigHelper).ConnectionString
-
     Private connection As New SqlConnection(connString)
     Private command As New SqlCommand("", connection)
-
     Private imgsPath_Police As String = (New ConfigHelper).GetPoliceSignatureImgPath
     Private fileName As String
     Private imgFileToUpload As String = ""
     Private fileSavePath As String = ""
     Private fileOldPath As String = ""
-
-
-
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub MaterialButton1_Click(sender As Object, e As EventArgs) Handles MaterialButton1.Click
         If Not Directory.Exists(imgsPath_Police) Then
             Directory.CreateDirectory(imgsPath_Police)
         End If
@@ -145,8 +138,7 @@ Public Class Police
 
         If connection.State = ConnectionState.Open Then connection.Close()
     End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub MaterialButton3_Click(sender As Object, e As EventArgs) Handles MaterialButton3.Click
         Dim opfDialog As New OpenFileDialog
         opfDialog.Filter = "Choose Image(*.jpg;*.png) | *.jpg; *.png"
 
@@ -159,9 +151,9 @@ Public Class Police
             End Using
         End If
     End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
         If connection.State = ConnectionState.Open Then connection.Close()
         Me.Dispose()
     End Sub
+
 End Class

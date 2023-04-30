@@ -46,8 +46,7 @@ Public Class Validation_ForceValidation
             MsgBox("Force Validation Error - Loading Error" & vbCrLf & String.Format("Error: {0}", ex.Message))
         End Try
     End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub MaterialButton2_Click(sender As Object, e As EventArgs) Handles MaterialButton2.Click
         Dim chosen_cr_id As Integer
         Dim findingsRemarks As String
         If chkCriminalRecord.Checked = True Then
@@ -150,7 +149,7 @@ Public Class Validation_ForceValidation
     End Sub
 
     Private Sub chkCriminalRecord_CheckedChanged(sender As Object, e As EventArgs) Handles chkCriminalRecord.CheckedChanged
-        If NOT chkCriminalRecord.Checked Then
+        If Not chkCriminalRecord.Checked Then
             Dim result As DialogResult = MessageBox.Show("Are you sure you don't want to set Criminal Record?, Unchecking this would result Applicant Findings to 'NULL'", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
 
             If result = DialogResult.Yes Then
@@ -161,8 +160,7 @@ Public Class Validation_ForceValidation
             End If
         End If
     End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub MaterialButton1_Click(sender As Object, e As EventArgs) Handles MaterialButton1.Click
         If RichTextBox1.Enabled = True Then
             RichTextBox1.Text = ""
         End If
@@ -183,4 +181,6 @@ Public Class Validation_ForceValidation
             'End If
         End If
     End Sub
+
+
 End Class

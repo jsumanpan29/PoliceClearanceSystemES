@@ -1,9 +1,10 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class AdminSettings
-    Inherits System.Windows.Forms.Form
+    '  Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin2Framework.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,163 +21,230 @@ Partial Class AdminSettings
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.txtUname = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtContactNo = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.txtMname = New System.Windows.Forms.TextBox()
-        Me.txtFname = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtLname = New System.Windows.Forms.TextBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.SuspendLayout()
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(171, 9)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(79, 15)
-        Me.Label6.TabIndex = 56
-        Me.Label6.Text = "Middle Name"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 9)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(64, 15)
-        Me.Label5.TabIndex = 55
-        Me.Label5.Text = "First Name"
-        '
-        'txtPassword
-        '
-        Me.txtPassword.Location = New System.Drawing.Point(12, 152)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(153, 23)
-        Me.txtPassword.TabIndex = 52
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 136)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(57, 15)
-        Me.Label3.TabIndex = 51
-        Me.Label3.Text = "Password"
-        '
-        'txtUname
-        '
-        Me.txtUname.Enabled = False
-        Me.txtUname.Location = New System.Drawing.Point(12, 113)
-        Me.txtUname.Name = "txtUname"
-        Me.txtUname.Size = New System.Drawing.Size(153, 23)
-        Me.txtUname.TabIndex = 50
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 97)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(60, 15)
-        Me.Label2.TabIndex = 49
-        Me.Label2.Text = "Username"
-        '
-        'txtContactNo
-        '
-        Me.txtContactNo.Location = New System.Drawing.Point(171, 113)
-        Me.txtContactNo.Name = "txtContactNo"
-        Me.txtContactNo.Size = New System.Drawing.Size(153, 23)
-        Me.txtContactNo.TabIndex = 48
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(171, 97)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(96, 15)
-        Me.Label13.TabIndex = 47
-        Me.Label13.Text = "Contact Number"
-        '
-        'txtMname
-        '
-        Me.txtMname.Location = New System.Drawing.Point(171, 27)
-        Me.txtMname.Name = "txtMname"
-        Me.txtMname.Size = New System.Drawing.Size(153, 23)
-        Me.txtMname.TabIndex = 46
-        '
-        'txtFname
-        '
-        Me.txtFname.Location = New System.Drawing.Point(12, 27)
-        Me.txtFname.Name = "txtFname"
-        Me.txtFname.Size = New System.Drawing.Size(153, 23)
-        Me.txtFname.TabIndex = 45
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 53)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 15)
-        Me.Label1.TabIndex = 44
-        Me.Label1.Text = "Last Name"
-        '
-        'txtLname
-        '
-        Me.txtLname.Location = New System.Drawing.Point(12, 71)
-        Me.txtLname.Name = "txtLname"
-        Me.txtLname.Size = New System.Drawing.Size(153, 23)
-        Me.txtLname.TabIndex = 43
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(171, 181)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 58
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(90, 181)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 57
-        Me.Button1.Text = "Save"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'AdminSettings
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(339, 209)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.txtPassword)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.txtUname)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txtContactNo)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.txtMname)
-        Me.Controls.Add(Me.txtFname)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtLname)
-        Me.Name = "AdminSettings"
-        Me.Text = "AdminSettings"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        Label6 = New Label()
+        Label5 = New Label()
+        txtPassword = New TextBox()
+        Label3 = New Label()
+        txtUname = New TextBox()
+        Label2 = New Label()
+        txtContactNo = New TextBox()
+        Label13 = New Label()
+        txtMname = New TextBox()
+        txtFname = New TextBox()
+        Label1 = New Label()
+        txtLname = New TextBox()
+        Panel2 = New Panel()
+        ConfirmButton = New MaterialSkin2Framework.Controls.MaterialButton()
+        Panel1 = New Panel()
+        CancelButton = New MaterialSkin2Framework.Controls.MaterialButton()
+        Panel2.SuspendLayout()
+        Panel1.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label6.Location = New Point(171, 73)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(88, 17)
+        Label6.TabIndex = 56
+        Label6.Text = "Middle Name"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label5.Location = New Point(12, 73)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(71, 17)
+        Label5.TabIndex = 55
+        Label5.Text = "First Name"
+        ' 
+        ' txtPassword
+        ' 
+        txtPassword.Location = New Point(12, 227)
+        txtPassword.Name = "txtPassword"
+        txtPassword.PlaceholderText = " Password"
+        txtPassword.Size = New Size(153, 23)
+        txtPassword.TabIndex = 52
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label3.Location = New Point(12, 207)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(64, 17)
+        Label3.TabIndex = 51
+        Label3.Text = "Password"
+        ' 
+        ' txtUname
+        ' 
+        txtUname.Enabled = False
+        txtUname.Location = New Point(12, 181)
+        txtUname.Name = "txtUname"
+        txtUname.PlaceholderText = " Username"
+        txtUname.Size = New Size(153, 23)
+        txtUname.TabIndex = 50
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label2.Location = New Point(12, 160)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(67, 17)
+        Label2.TabIndex = 49
+        Label2.Text = "Username"
+        ' 
+        ' txtContactNo
+        ' 
+        txtContactNo.Location = New Point(171, 181)
+        txtContactNo.Name = "txtContactNo"
+        txtContactNo.PlaceholderText = " Contact Number"
+        txtContactNo.Size = New Size(153, 23)
+        txtContactNo.TabIndex = 48
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label13.Location = New Point(171, 160)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(104, 17)
+        Label13.TabIndex = 47
+        Label13.Text = "Contact Number"
+        ' 
+        ' txtMname
+        ' 
+        txtMname.Location = New Point(171, 94)
+        txtMname.Name = "txtMname"
+        txtMname.PlaceholderText = " Middle Name"
+        txtMname.Size = New Size(153, 23)
+        txtMname.TabIndex = 46
+        ' 
+        ' txtFname
+        ' 
+        txtFname.Location = New Point(12, 94)
+        txtFname.Name = "txtFname"
+        txtFname.PlaceholderText = " First Name"
+        txtFname.Size = New Size(153, 23)
+        txtFname.TabIndex = 45
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        Label1.Location = New Point(12, 118)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(70, 17)
+        Label1.TabIndex = 44
+        Label1.Text = "Last Name"
+        ' 
+        ' txtLname
+        ' 
+        txtLname.Location = New Point(12, 137)
+        txtLname.Name = "txtLname"
+        txtLname.PlaceholderText = " Last Name"
+        txtLname.Size = New Size(153, 23)
+        txtLname.TabIndex = 43
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.Silver
+        Panel2.Controls.Add(ConfirmButton)
+        Panel2.Location = New Point(90, 264)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(75, 23)
+        Panel2.TabIndex = 60
+        ' 
+        ' ConfirmButton
+        ' 
+        ConfirmButton.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        ConfirmButton.CharacterCasing = MaterialSkin2Framework.Controls.MaterialButton.CharacterCasingEnum.Normal
+        ConfirmButton.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
+        ConfirmButton.Depth = 0
+        ConfirmButton.HighEmphasis = False
+        ConfirmButton.Icon = Nothing
+        ConfirmButton.Location = New Point(0, 0)
+        ConfirmButton.Margin = New Padding(4, 6, 4, 6)
+        ConfirmButton.MaximumSize = New Size(75, 23)
+        ConfirmButton.MinimumSize = New Size(75, 23)
+        ConfirmButton.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        ConfirmButton.Name = "ConfirmButton"
+        ConfirmButton.NoAccentTextColor = Color.Empty
+        ConfirmButton.Size = New Size(75, 23)
+        ConfirmButton.TabIndex = 7
+        ConfirmButton.Text = "Save"
+        ConfirmButton.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
+        ConfirmButton.UseAccentColor = False
+        ConfirmButton.UseVisualStyleBackColor = True
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = Color.FromArgb(CByte(244), CByte(67), CByte(54))
+        Panel1.Controls.Add(CancelButton)
+        Panel1.Location = New Point(172, 264)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(75, 23)
+        Panel1.TabIndex = 59
+        ' 
+        ' CancelButton
+        ' 
+        CancelButton.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        CancelButton.CharacterCasing = MaterialSkin2Framework.Controls.MaterialButton.CharacterCasingEnum.Normal
+        CancelButton.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
+        CancelButton.Depth = 0
+        CancelButton.HighEmphasis = False
+        CancelButton.Icon = Nothing
+        CancelButton.Location = New Point(0, 0)
+        CancelButton.Margin = New Padding(4, 6, 4, 6)
+        CancelButton.MaximumSize = New Size(75, 23)
+        CancelButton.MinimumSize = New Size(75, 23)
+        CancelButton.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        CancelButton.Name = "CancelButton"
+        CancelButton.NoAccentTextColor = Color.Empty
+        CancelButton.Size = New Size(75, 23)
+        CancelButton.TabIndex = 8
+        CancelButton.Text = "Cancel"
+        CancelButton.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
+        CancelButton.UseAccentColor = False
+        CancelButton.UseVisualStyleBackColor = True
+        ' 
+        ' AdminSettings
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(339, 298)
+        Controls.Add(Panel2)
+        Controls.Add(Panel1)
+        Controls.Add(Label6)
+        Controls.Add(Label5)
+        Controls.Add(txtPassword)
+        Controls.Add(Label3)
+        Controls.Add(txtUname)
+        Controls.Add(Label2)
+        Controls.Add(txtContactNo)
+        Controls.Add(Label13)
+        Controls.Add(txtMname)
+        Controls.Add(txtFname)
+        Controls.Add(Label1)
+        Controls.Add(txtLname)
+        MaximizeBox = False
+        MdiChildrenMinimizedAnchorBottom = False
+        MinimizeBox = False
+        Name = "AdminSettings"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "AdminSettings"
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents Label6 As Label
@@ -191,6 +259,8 @@ Partial Class AdminSettings
     Friend WithEvents txtFname As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents txtLname As TextBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents ConfirmButton As MaterialSkin2Framework.Controls.MaterialButton
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents CancelButton As MaterialSkin2Framework.Controls.MaterialButton
 End Class

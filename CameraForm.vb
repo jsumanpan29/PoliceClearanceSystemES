@@ -11,12 +11,7 @@ Public Class CameraForm
     Dim bmp As Bitmap
     Dim img As Image
     Public Property CameraImg As Bitmap
-
-
-
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+    Private Sub BtnStart_Click(sender As Object, e As EventArgs) Handles BtnStart.Click
         If CAM.IsRunning = False Then
             CAM.Start()
         End If
@@ -28,7 +23,11 @@ Public Class CameraForm
         PictureBox1.Image = DirectCast(eventArgs.Frame.Clone(), Bitmap)
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+
+
+    Private Sub BtnCapture_Click(sender As Object, e As EventArgs) Handles BtnCapture.Click
+
 
         PictureBox2.Image = PictureBox1.Image.Clone
         If PictureBox2.Image IsNot Nothing Then
@@ -38,11 +37,7 @@ Public Class CameraForm
 
 
     End Sub
-
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-
-
+    Private Sub ConfirmButton_Click(sender As Object, e As EventArgs) Handles ConfirmButton.Click
         Dim rect1 As Rectangle = New Rectangle(0, 0, img.Width, img.Height)
         Dim rect2 As Rectangle = New Rectangle(PictureBox2.Bounds.X, PictureBox2.Bounds.Y, PictureBox2.Bounds.Width, PictureBox2.Bounds.Height)
 
@@ -81,6 +76,7 @@ Public Class CameraForm
 
 
 
+
     Private Sub CameraStop()
         If CAM IsNot Nothing And CAM.IsRunning Then
             ' stop video device
@@ -97,11 +93,10 @@ Public Class CameraForm
     Private Sub CameraForm_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         CameraStop()
     End Sub
-
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
         Me.DialogResult = DialogResult.Cancel
         Me.Close()
         Me.Dispose()
     End Sub
+
 End Class

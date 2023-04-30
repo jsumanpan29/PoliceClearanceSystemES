@@ -12,9 +12,8 @@ Public Class User
     Private connection As New SqlConnection(connString)
     Private command As New SqlCommand("", connection)
     Private user_exists As Integer
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub MaterialButton1_Click(sender As Object, e As EventArgs) Handles MaterialButton1.Click
         'If value of user_id is passed here, execute update data then
-
 
         If user_id Then
             Try
@@ -154,10 +153,14 @@ Public Class User
             MsgBox("Loading User error" & vbCrLf & String.Format("Error: {0}", ex.Message))
         End Try
     End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub MaterialButton2_Click(sender As Object, e As EventArgs) Handles MaterialButton2.Click
         If connection.State = ConnectionState.Open Then connection.Close()
         Me.Dispose()
 
     End Sub
+    Private Sub MaterialDivider1_Click(sender As Object, e As EventArgs) Handles MaterialDivider1.Click
+
+    End Sub
+
+
 End Class

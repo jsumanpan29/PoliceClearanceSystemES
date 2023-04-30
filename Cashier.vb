@@ -31,7 +31,7 @@ Public Class Cashier
         pccDependency.Start()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As System.EventArgs) Handles Button1.Click
+    Private Sub MaterialButton2_Click(sender As Object, e As System.EventArgs) Handles MaterialButton2.Click
         For Each row As DataGridViewRow In DataGridView1.Rows
             If CBool(row.Cells("ClearanceCheckBox").Value) Then
                 ' Do something with the checked row
@@ -154,13 +154,7 @@ Public Class Cashier
         End If
     End Sub
 
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
-    End Sub
-
-    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-
-    End Sub
 
     Private Sub chbAll_CheckedChanged(sender As Object, e As System.EventArgs) Handles chbAll.CheckedChanged
         Dim chkHeader As CheckBox = CType(sender, CheckBox)
@@ -174,15 +168,15 @@ Public Class Cashier
             Next
         End If
     End Sub
+    Private Sub MaterialButton1_Click(sender As Object, e As System.EventArgs) Handles MaterialButton1.Click
+        LoadPCC()
+        TextBox1.Text = ""
+    End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As System.EventArgs) Handles TextBox1.TextChanged
         LoadPCC(TextBox1.Text.Trim)
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As System.EventArgs) Handles Button2.Click
-        LoadPCC()
-        TextBox1.Text = ""
-    End Sub
 
     Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As System.EventArgs) Handles LogoutToolStripMenuItem.Click
         pccDependency.Stop()
@@ -195,4 +189,5 @@ Public Class Cashier
         pccDependency.Stop()
         pccDependency.Dispose()
     End Sub
+
 End Class

@@ -8,7 +8,8 @@ Public Class AdminSettings
     Private connString As String = (New ConfigHelper).ConnectionString
     Private connection As New SqlConnection(connString)
     Private command As New SqlCommand("", connection)
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    'save
+    Private Sub ConfirmButton_Click(sender As Object, e As EventArgs) Handles ConfirmButton.Click
         If user_id Then
             Try
                 SqlData("UPDATE [dbo].[user] SET password = @pword, salt = @salt, fname = @fname, mname = @mname, lname = @lname, contact_no = @contactno, usertype_id = 1 WHERE user_id =" & user_id)
@@ -60,8 +61,9 @@ Public Class AdminSettings
         Connection.Close()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
         If connection.State = ConnectionState.Open Then connection.Close()
         Me.Dispose()
     End Sub
+
 End Class

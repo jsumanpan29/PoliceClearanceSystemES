@@ -15,7 +15,7 @@ Public Class Login
     Private usertype_clerk As Integer = 2
     Private usertype_cashier As Integer = 3
 
-    Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
+    Private Sub btnLogin_Click_1(sender As Object, e As EventArgs) Handles btnLogin.Click
 
         If (txtUser.Text.Trim = "" And txtPassword.Text.Trim = "") Then
             MsgBox("Username & Password Empty")
@@ -108,4 +108,5 @@ Public Class Login
 
 
     End Sub
+
 End Class

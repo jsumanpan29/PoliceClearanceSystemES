@@ -4,7 +4,7 @@ Public Class FingerprintForm
     Dim WithEvents ZkFprint As New AxZKFPEngX
     Dim Check As Boolean
     Public Property Fingerprint As Bitmap
-    Private Sub FingerprintForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FingerprintForm_Load(sender As Object, e As EventArgs)
         Controls.Add(ZkFprint)
         InitialAxZkfp()
 
@@ -47,22 +47,19 @@ Public Class FingerprintForm
         g.Dispose()
         fpicture.Image = bmp
     End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub ClearButton_Click(sender As Object, e As EventArgs)
         fpicture.Image = Nothing
     End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-
+    Private Sub CancelButton_Click(sender As Object, e As EventArgs)
         Me.DialogResult = DialogResult.Cancel
         Me.Close()
         Me.Dispose()
     End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub ConfirmButton_Click(sender As Object, e As EventArgs)
         Fingerprint = fpicture.Image
         Me.DialogResult = DialogResult.OK
         Me.Close()
         Me.Dispose()
     End Sub
+
 End Class
