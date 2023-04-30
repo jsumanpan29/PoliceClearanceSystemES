@@ -84,7 +84,7 @@ Partial Class ReportForm
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Name = "ReportForm"
-        Me.Text = "ReportForm"
+        Me.Text = "Report"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
