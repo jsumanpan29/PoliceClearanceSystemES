@@ -23,18 +23,18 @@ Partial Class Admin
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Admin))
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle8 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle9 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle10 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle11 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle12 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle17 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle18 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle19 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle20 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle21 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle22 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle23 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle24 As DataGridViewCellStyle = New DataGridViewCellStyle()
         MenuStrip1 = New MenuStrip()
         FileToolStripMenuItem = New ToolStripMenuItem()
         SettingsToolStripMenuItem = New ToolStripMenuItem()
@@ -105,6 +105,7 @@ Partial Class Admin
         TabControl1 = New TabControl()
         dataUserID2 = New DataGridViewTextBoxColumn()
         dataUserUtype2 = New DataGridViewTextBoxColumn()
+        Panel2 = New Panel()
         MenuStrip1.SuspendLayout()
         TabPage7.SuspendLayout()
         Panel10.SuspendLayout()
@@ -148,7 +149,7 @@ Partial Class Admin
         SettingsToolStripMenuItem.Image = CType(resources.GetObject("SettingsToolStripMenuItem.Image"), Image)
         SettingsToolStripMenuItem.ImageAlign = ContentAlignment.BottomCenter
         SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
-        SettingsToolStripMenuItem.Size = New Size(180, 24)
+        SettingsToolStripMenuItem.Size = New Size(129, 24)
         SettingsToolStripMenuItem.Text = "Settings"
         ' 
         ' LogoutToolStripMenuItem
@@ -156,7 +157,7 @@ Partial Class Admin
         LogoutToolStripMenuItem.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
         LogoutToolStripMenuItem.Image = CType(resources.GetObject("LogoutToolStripMenuItem.Image"), Image)
         LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        LogoutToolStripMenuItem.Size = New Size(180, 24)
+        LogoutToolStripMenuItem.Size = New Size(129, 24)
         LogoutToolStripMenuItem.Text = "Logout"
         ' 
         ' TabPage7
@@ -168,7 +169,7 @@ Partial Class Admin
         TabPage7.Controls.Add(txtCRSearch)
         TabPage7.Location = New Point(4, 30)
         TabPage7.Name = "TabPage7"
-        TabPage7.Size = New Size(1059, 475)
+        TabPage7.Size = New Size(971, 475)
         TabPage7.TabIndex = 6
         TabPage7.Text = "Criminal Records"
         TabPage7.UseVisualStyleBackColor = True
@@ -234,25 +235,25 @@ Partial Class Admin
         dataCR.CellBorderStyle = DataGridViewCellBorderStyle.SunkenHorizontal
         dataCR.CellSelectionPrimaryColor = MaterialSkin2Framework.Primary.Grey800
         dataCR.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
-        DataGridViewCellStyle1.Font = New Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel)
-        DataGridViewCellStyle1.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        dataCR.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle13.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
+        DataGridViewCellStyle13.Font = New Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel)
+        DataGridViewCellStyle13.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        DataGridViewCellStyle13.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle13.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle13.WrapMode = DataGridViewTriState.True
+        dataCR.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle13
         dataCR.ColumnHeadersHeight = 56
         dataCR.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         dataCR.Columns.AddRange(New DataGridViewColumn() {dataCriminalRecordsID, dataCriminalRecordsFName, dataCriminalRecordsMName, dataCriminalRecordsLName, dataCriminalRecordsOffense, dataCriminalRecordsCCNo, dataCriminalRecordsISNO, dataCriminalRecordsRemarks, dataCriminalRecordsBtnEdit, dataCriminalRecordsBtnDelete})
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = SystemColors.Window
-        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
-        DataGridViewCellStyle2.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(66), CByte(66), CByte(66))
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
-        dataCR.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle14.BackColor = SystemColors.Window
+        DataGridViewCellStyle14.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
+        DataGridViewCellStyle14.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        DataGridViewCellStyle14.SelectionBackColor = Color.FromArgb(CByte(66), CByte(66), CByte(66))
+        DataGridViewCellStyle14.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = DataGridViewTriState.False
+        dataCR.DefaultCellStyle = DataGridViewCellStyle14
         dataCR.Depth = 0
         dataCR.Dock = DockStyle.Fill
         dataCR.EnableHeadersVisualStyles = False
@@ -262,18 +263,18 @@ Partial Class Admin
         dataCR.MouseState = MaterialSkin2Framework.MouseState.HOVER
         dataCR.Name = "dataCR"
         dataCR.ReadOnly = True
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = SystemColors.Control
-        DataGridViewCellStyle3.Font = New Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
-        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
-        DataGridViewCellStyle3.SelectionForeColor = Color.Black
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
-        dataCR.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = SystemColors.Control
+        DataGridViewCellStyle15.Font = New Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
+        DataGridViewCellStyle15.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle15.SelectionBackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        DataGridViewCellStyle15.SelectionForeColor = Color.Black
+        DataGridViewCellStyle15.WrapMode = DataGridViewTriState.True
+        dataCR.RowHeadersDefaultCellStyle = DataGridViewCellStyle15
         dataCR.RowHeadersVisible = False
-        DataGridViewCellStyle4.BackColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
-        DataGridViewCellStyle4.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        dataCR.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle16.BackColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        DataGridViewCellStyle16.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        dataCR.RowsDefaultCellStyle = DataGridViewCellStyle16
         dataCR.RowTemplate.Height = 52
         dataCR.ScrollBars = ScrollBars.None
         dataCR.ShowVerticalScroll = False
@@ -387,7 +388,7 @@ Partial Class Admin
         TabPage3.Controls.Add(txtPoliceSearch)
         TabPage3.Location = New Point(4, 30)
         TabPage3.Name = "TabPage3"
-        TabPage3.Size = New Size(1059, 475)
+        TabPage3.Size = New Size(971, 475)
         TabPage3.TabIndex = 2
         TabPage3.Text = "Police"
         TabPage3.UseVisualStyleBackColor = True
@@ -451,25 +452,25 @@ Partial Class Admin
         dataPolice.CellBorderStyle = DataGridViewCellBorderStyle.SunkenHorizontal
         dataPolice.CellSelectionPrimaryColor = MaterialSkin2Framework.Primary.Grey800
         dataPolice.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle5.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
-        DataGridViewCellStyle5.Font = New Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel)
-        DataGridViewCellStyle5.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.True
-        dataPolice.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle17.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
+        DataGridViewCellStyle17.Font = New Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel)
+        DataGridViewCellStyle17.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        DataGridViewCellStyle17.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle17.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle17.WrapMode = DataGridViewTriState.True
+        dataPolice.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle17
         dataPolice.ColumnHeadersHeight = 56
         dataPolice.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         dataPolice.Columns.AddRange(New DataGridViewColumn() {dataPoliceID, dataPoliceFname, dataPoliceMname, dataPoliceLname, dataPoliceContactNo, dataPoliceRank, dataPolicePosition, dataPoliceBtnEdit, dataPoliceBtnDelete})
-        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle6.BackColor = SystemColors.Window
-        DataGridViewCellStyle6.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
-        DataGridViewCellStyle6.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        DataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(CByte(66), CByte(66), CByte(66))
-        DataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.False
-        dataPolice.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle18.BackColor = SystemColors.Window
+        DataGridViewCellStyle18.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
+        DataGridViewCellStyle18.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        DataGridViewCellStyle18.SelectionBackColor = Color.FromArgb(CByte(66), CByte(66), CByte(66))
+        DataGridViewCellStyle18.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle18.WrapMode = DataGridViewTriState.False
+        dataPolice.DefaultCellStyle = DataGridViewCellStyle18
         dataPolice.Depth = 0
         dataPolice.Dock = DockStyle.Fill
         dataPolice.EnableHeadersVisualStyles = False
@@ -481,18 +482,18 @@ Partial Class Admin
         dataPolice.MouseState = MaterialSkin2Framework.MouseState.HOVER
         dataPolice.Name = "dataPolice"
         dataPolice.ReadOnly = True
-        DataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle7.BackColor = SystemColors.Control
-        DataGridViewCellStyle7.Font = New Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
-        DataGridViewCellStyle7.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
-        DataGridViewCellStyle7.SelectionForeColor = Color.Black
-        DataGridViewCellStyle7.WrapMode = DataGridViewTriState.True
-        dataPolice.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
+        DataGridViewCellStyle19.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle19.BackColor = SystemColors.Control
+        DataGridViewCellStyle19.Font = New Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
+        DataGridViewCellStyle19.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle19.SelectionBackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        DataGridViewCellStyle19.SelectionForeColor = Color.Black
+        DataGridViewCellStyle19.WrapMode = DataGridViewTriState.True
+        dataPolice.RowHeadersDefaultCellStyle = DataGridViewCellStyle19
         dataPolice.RowHeadersVisible = False
-        DataGridViewCellStyle8.BackColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
-        DataGridViewCellStyle8.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        dataPolice.RowsDefaultCellStyle = DataGridViewCellStyle8
+        DataGridViewCellStyle20.BackColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        DataGridViewCellStyle20.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        dataPolice.RowsDefaultCellStyle = DataGridViewCellStyle20
         dataPolice.RowTemplate.Height = 52
         dataPolice.ScrollBars = ScrollBars.None
         dataPolice.ShowVerticalScroll = False
@@ -597,7 +598,7 @@ Partial Class Admin
         TabPage2.Location = New Point(4, 30)
         TabPage2.Name = "TabPage2"
         TabPage2.Padding = New Padding(3)
-        TabPage2.Size = New Size(1059, 475)
+        TabPage2.Size = New Size(971, 475)
         TabPage2.TabIndex = 1
         TabPage2.Text = "User"
         TabPage2.UseVisualStyleBackColor = True
@@ -667,25 +668,25 @@ Partial Class Admin
         dataUser.CellBorderStyle = DataGridViewCellBorderStyle.SunkenHorizontal
         dataUser.CellSelectionPrimaryColor = MaterialSkin2Framework.Primary.Grey800
         dataUser.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle9.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
-        DataGridViewCellStyle9.Font = New Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel)
-        DataGridViewCellStyle9.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        DataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle9.WrapMode = DataGridViewTriState.True
-        dataUser.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle9
+        DataGridViewCellStyle21.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle21.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
+        DataGridViewCellStyle21.Font = New Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel)
+        DataGridViewCellStyle21.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        DataGridViewCellStyle21.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle21.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle21.WrapMode = DataGridViewTriState.True
+        dataUser.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle21
         dataUser.ColumnHeadersHeight = 56
         dataUser.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         dataUser.Columns.AddRange(New DataGridViewColumn() {dataUserID, dataUserUname, dataUserFname, dataUserMname, dataUserLname, dataUserContactNo, dataUserUtype, dataUserBtnEdit, dataUserBtnDelete})
-        DataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle10.BackColor = SystemColors.Window
-        DataGridViewCellStyle10.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
-        DataGridViewCellStyle10.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        DataGridViewCellStyle10.SelectionBackColor = Color.FromArgb(CByte(66), CByte(66), CByte(66))
-        DataGridViewCellStyle10.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = DataGridViewTriState.False
-        dataUser.DefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle22.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle22.BackColor = SystemColors.Window
+        DataGridViewCellStyle22.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
+        DataGridViewCellStyle22.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        DataGridViewCellStyle22.SelectionBackColor = Color.FromArgb(CByte(66), CByte(66), CByte(66))
+        DataGridViewCellStyle22.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle22.WrapMode = DataGridViewTriState.False
+        dataUser.DefaultCellStyle = DataGridViewCellStyle22
         dataUser.Depth = 0
         dataUser.Dock = DockStyle.Fill
         dataUser.EnableHeadersVisualStyles = False
@@ -698,18 +699,18 @@ Partial Class Admin
         dataUser.Name = "dataUser"
         dataUser.ReadOnly = True
         dataUser.RightToLeft = RightToLeft.No
-        DataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle11.BackColor = SystemColors.Control
-        DataGridViewCellStyle11.Font = New Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
-        DataGridViewCellStyle11.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle11.SelectionBackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
-        DataGridViewCellStyle11.SelectionForeColor = Color.Black
-        DataGridViewCellStyle11.WrapMode = DataGridViewTriState.True
-        dataUser.RowHeadersDefaultCellStyle = DataGridViewCellStyle11
+        DataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle23.BackColor = SystemColors.Control
+        DataGridViewCellStyle23.Font = New Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
+        DataGridViewCellStyle23.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle23.SelectionBackColor = Color.FromArgb(CByte(128), CByte(255), CByte(255))
+        DataGridViewCellStyle23.SelectionForeColor = Color.Black
+        DataGridViewCellStyle23.WrapMode = DataGridViewTriState.True
+        dataUser.RowHeadersDefaultCellStyle = DataGridViewCellStyle23
         dataUser.RowHeadersVisible = False
-        DataGridViewCellStyle12.BackColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
-        DataGridViewCellStyle12.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        dataUser.RowsDefaultCellStyle = DataGridViewCellStyle12
+        DataGridViewCellStyle24.BackColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        DataGridViewCellStyle24.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        dataUser.RowsDefaultCellStyle = DataGridViewCellStyle24
         dataUser.RowTemplate.Height = 52
         dataUser.ScrollBars = ScrollBars.None
         dataUser.ShowVerticalScroll = False
@@ -830,6 +831,7 @@ Partial Class Admin
         ' 
         ' TabPage1
         ' 
+        TabPage1.Controls.Add(Panel2)
         TabPage1.Controls.Add(Panel1)
         TabPage1.Controls.Add(Panel9)
         TabPage1.Controls.Add(Panel8)
@@ -837,7 +839,7 @@ Partial Class Admin
         TabPage1.Location = New Point(4, 30)
         TabPage1.Name = "TabPage1"
         TabPage1.Padding = New Padding(3)
-        TabPage1.Size = New Size(965, 475)
+        TabPage1.Size = New Size(971, 475)
         TabPage1.TabIndex = 0
         TabPage1.Text = "Home"
         TabPage1.UseVisualStyleBackColor = True
@@ -848,14 +850,13 @@ Partial Class Admin
         Panel1.Controls.Add(MaterialCard4)
         Panel1.Controls.Add(MaterialCard2)
         Panel1.Controls.Add(MaterialCard3)
-        Panel1.Location = New Point(40, 131)
+        Panel1.Location = New Point(29, 131)
         Panel1.Name = "Panel1"
-        Panel1.Size = New Size(889, 213)
+        Panel1.Size = New Size(918, 213)
         Panel1.TabIndex = 13
         ' 
         ' MaterialCard4
         ' 
-        MaterialCard4.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         MaterialCard4.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
         MaterialCard4.BorderStyle = BorderStyle.FixedSingle
         MaterialCard4.Controls.Add(Panel6)
@@ -863,7 +864,7 @@ Partial Class Admin
         MaterialCard4.Controls.Add(lblCRCount)
         MaterialCard4.Depth = 0
         MaterialCard4.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        MaterialCard4.Location = New Point(590, 11)
+        MaterialCard4.Location = New Point(618, 11)
         MaterialCard4.Margin = New Padding(14)
         MaterialCard4.MouseState = MaterialSkin2Framework.MouseState.HOVER
         MaterialCard4.Name = "MaterialCard4"
@@ -906,7 +907,6 @@ Partial Class Admin
         ' 
         ' MaterialCard2
         ' 
-        MaterialCard2.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
         MaterialCard2.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
         MaterialCard2.BorderStyle = BorderStyle.FixedSingle
         MaterialCard2.Controls.Add(Panel4)
@@ -914,12 +914,12 @@ Partial Class Admin
         MaterialCard2.Controls.Add(lblUserCount)
         MaterialCard2.Depth = 0
         MaterialCard2.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        MaterialCard2.Location = New Point(10, 11)
+        MaterialCard2.Location = New Point(11, 11)
         MaterialCard2.Margin = New Padding(14)
         MaterialCard2.MouseState = MaterialSkin2Framework.MouseState.HOVER
         MaterialCard2.Name = "MaterialCard2"
         MaterialCard2.Padding = New Padding(14)
-        MaterialCard2.Size = New Size(200, 177)
+        MaterialCard2.Size = New Size(288, 177)
         MaterialCard2.TabIndex = 10
         ' 
         ' Panel4
@@ -928,7 +928,7 @@ Partial Class Admin
         Panel4.BackgroundImage = CType(resources.GetObject("Panel4.BackgroundImage"), Image)
         Panel4.BackgroundImageLayout = ImageLayout.Zoom
         Panel4.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
-        Panel4.Location = New Point(-18, 33)
+        Panel4.Location = New Point(70, 33)
         Panel4.Name = "Panel4"
         Panel4.Size = New Size(30, 33)
         Panel4.TabIndex = 6
@@ -938,7 +938,7 @@ Partial Class Admin
         Label2.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label2.Location = New Point(18, 28)
+        Label2.Location = New Point(106, 28)
         Label2.Name = "Label2"
         Label2.Size = New Size(79, 40)
         Label2.TabIndex = 5
@@ -950,7 +950,7 @@ Partial Class Admin
         lblUserCount.AutoSize = True
         lblUserCount.Font = New Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point)
         lblUserCount.ForeColor = Color.ForestGreen
-        lblUserCount.Location = New Point(18, 71)
+        lblUserCount.Location = New Point(106, 71)
         lblUserCount.Name = "lblUserCount"
         lblUserCount.Size = New Size(80, 65)
         lblUserCount.TabIndex = 1
@@ -958,7 +958,6 @@ Partial Class Admin
         ' 
         ' MaterialCard3
         ' 
-        MaterialCard3.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         MaterialCard3.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
         MaterialCard3.BorderStyle = BorderStyle.FixedSingle
         MaterialCard3.Controls.Add(Panel5)
@@ -966,12 +965,12 @@ Partial Class Admin
         MaterialCard3.Controls.Add(lblPoliceCount)
         MaterialCard3.Depth = 0
         MaterialCard3.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        MaterialCard3.Location = New Point(281, 11)
+        MaterialCard3.Location = New Point(317, 11)
         MaterialCard3.Margin = New Padding(14)
         MaterialCard3.MouseState = MaterialSkin2Framework.MouseState.HOVER
         MaterialCard3.Name = "MaterialCard3"
         MaterialCard3.Padding = New Padding(14)
-        MaterialCard3.Size = New Size(274, 177)
+        MaterialCard3.Size = New Size(288, 177)
         MaterialCard3.TabIndex = 11
         ' 
         ' Panel5
@@ -979,7 +978,7 @@ Partial Class Admin
         Panel5.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Panel5.BackgroundImage = CType(resources.GetObject("Panel5.BackgroundImage"), Image)
         Panel5.BackgroundImageLayout = ImageLayout.Zoom
-        Panel5.Location = New Point(53, 36)
+        Panel5.Location = New Point(58, 36)
         Panel5.Name = "Panel5"
         Panel5.Size = New Size(42, 32)
         Panel5.TabIndex = 7
@@ -989,7 +988,7 @@ Partial Class Admin
         Label1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
         Label1.AutoSize = True
         Label1.Font = New Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.Location = New Point(92, 30)
+        Label1.Location = New Point(97, 30)
         Label1.Name = "Label1"
         Label1.Size = New Size(98, 40)
         Label1.TabIndex = 6
@@ -1001,7 +1000,7 @@ Partial Class Admin
         lblPoliceCount.AutoSize = True
         lblPoliceCount.Font = New Font("Segoe UI", 36F, FontStyle.Regular, GraphicsUnit.Point)
         lblPoliceCount.ForeColor = Color.FromArgb(CByte(255), CByte(128), CByte(0))
-        lblPoliceCount.Location = New Point(101, 71)
+        lblPoliceCount.Location = New Point(106, 71)
         lblPoliceCount.Name = "lblPoliceCount"
         lblPoliceCount.Size = New Size(80, 65)
         lblPoliceCount.TabIndex = 3
@@ -1013,7 +1012,7 @@ Partial Class Admin
         Panel9.BackColor = Color.DimGray
         Panel9.Location = New Point(40, 118)
         Panel9.Name = "Panel9"
-        Panel9.Size = New Size(889, 4)
+        Panel9.Size = New Size(895, 4)
         Panel9.TabIndex = 9
         ' 
         ' Panel8
@@ -1039,7 +1038,6 @@ Partial Class Admin
         ' 
         ' TabControl1
         ' 
-        TabControl1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         TabControl1.Controls.Add(TabPage1)
         TabControl1.Controls.Add(TabPage2)
         TabControl1.Controls.Add(TabPage3)
@@ -1048,7 +1046,7 @@ Partial Class Admin
         TabControl1.Location = New Point(13, 105)
         TabControl1.Name = "TabControl1"
         TabControl1.SelectedIndex = 0
-        TabControl1.Size = New Size(973, 509)
+        TabControl1.Size = New Size(979, 509)
         TabControl1.TabIndex = 0
         ' 
         ' dataUserID2
@@ -1064,18 +1062,26 @@ Partial Class Admin
         dataUserUtype2.Name = "dataUserUtype2"
         dataUserUtype2.ReadOnly = True
         ' 
+        ' Panel2
+        ' 
+        Panel2.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        Panel2.BackColor = Color.DimGray
+        Panel2.Location = New Point(40, 339)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(895, 4)
+        Panel2.TabIndex = 10
+        ' 
         ' Admin
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(998, 628)
+        ClientSize = New Size(1009, 628)
         Controls.Add(TabControl1)
         Controls.Add(MenuStrip1)
         MainMenuStrip = MenuStrip1
         Name = "Admin"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Admin"
-        WindowState = FormWindowState.Maximized
         MenuStrip1.ResumeLayout(False)
         MenuStrip1.PerformLayout()
         TabPage7.ResumeLayout(False)
@@ -1177,5 +1183,6 @@ Partial Class Admin
     Friend WithEvents MaterialCard4 As MaterialSkin2Framework.Controls.MaterialCard
     Friend WithEvents MaterialCard3 As MaterialSkin2Framework.Controls.MaterialCard
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents Panel2 As Panel
 End Class
 
