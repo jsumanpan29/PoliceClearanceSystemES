@@ -764,6 +764,8 @@ Partial Class Clerk2
         ' 
         ' PictureBox1
         ' 
+        PictureBox1.BackgroundImage = PoliceClearanceSystemES.Resources.default_applicant
+        PictureBox1.BackgroundImageLayout = ImageLayout.Zoom
         PictureBox1.Location = New Point(530, 45)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(150, 150)
@@ -773,6 +775,8 @@ Partial Class Clerk2
         ' 
         ' PictureBox2
         ' 
+        PictureBox2.BackgroundImage = PoliceClearanceSystemES.Resources.default_fingerprint
+        PictureBox2.BackgroundImageLayout = ImageLayout.Zoom
         PictureBox2.Location = New Point(530, 249)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(150, 150)
@@ -782,6 +786,8 @@ Partial Class Clerk2
         ' 
         ' PictureBox3
         ' 
+        PictureBox3.BackgroundImage = PoliceClearanceSystemES.Resources.default_signature
+        PictureBox3.BackgroundImageLayout = ImageLayout.Zoom
         PictureBox3.Location = New Point(530, 456)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(150, 150)
@@ -791,7 +797,7 @@ Partial Class Clerk2
         ' 
         ' Clerk2
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1370, 641)
         Controls.Add(PictureBox3)

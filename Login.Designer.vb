@@ -24,10 +24,6 @@ Partial Class Login
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Login))
         Panel1 = New Panel()
-        Panel8 = New Panel()
-        Label6 = New Label()
-        Label5 = New Label()
-        Home = New Label()
         Label8 = New Label()
         Panel5 = New Panel()
         Label4 = New Label()
@@ -46,7 +42,6 @@ Partial Class Login
         Panel4 = New Panel()
         Panel9 = New Panel()
         Panel1.SuspendLayout()
-        Panel8.SuspendLayout()
         Panel5.SuspendLayout()
         Panel6.SuspendLayout()
         Panel2.SuspendLayout()
@@ -60,7 +55,6 @@ Partial Class Login
         ' 
         Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), Image)
         Panel1.BackgroundImageLayout = ImageLayout.Stretch
-        Panel1.Controls.Add(Panel8)
         Panel1.Controls.Add(Label8)
         Panel1.Controls.Add(Panel5)
         Panel1.Controls.Add(Label2)
@@ -70,53 +64,6 @@ Partial Class Login
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(981, 559)
         Panel1.TabIndex = 1
-        ' 
-        ' Panel8
-        ' 
-        Panel8.BackColor = Color.Transparent
-        Panel8.Controls.Add(Label6)
-        Panel8.Controls.Add(Label5)
-        Panel8.Controls.Add(Home)
-        Panel8.Location = New Point(38, 506)
-        Panel8.Name = "Panel8"
-        Panel8.Size = New Size(557, 39)
-        Panel8.TabIndex = 20
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.BackColor = Color.Transparent
-        Label6.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label6.ForeColor = SystemColors.Control
-        Label6.Location = New Point(410, 9)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(47, 21)
-        Label6.TabIndex = 13
-        Label6.Text = "Stuff"
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.BackColor = Color.Transparent
-        Label5.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Label5.ForeColor = SystemColors.Control
-        Label5.Location = New Point(197, 9)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(76, 21)
-        Label5.TabIndex = 12
-        Label5.Text = "Location"
-        ' 
-        ' Home
-        ' 
-        Home.AutoSize = True
-        Home.BackColor = Color.Transparent
-        Home.Font = New Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point)
-        Home.ForeColor = SystemColors.Control
-        Home.Location = New Point(9, 9)
-        Home.Name = "Home"
-        Home.Size = New Size(56, 21)
-        Home.TabIndex = 11
-        Home.Text = "Home"
         ' 
         ' Label8
         ' 
@@ -366,8 +313,6 @@ Partial Class Login
         Text = "Police Clearance Issuance System"
         Panel1.ResumeLayout(False)
         Panel1.PerformLayout()
-        Panel8.ResumeLayout(False)
-        Panel8.PerformLayout()
         Panel5.ResumeLayout(False)
         Panel5.PerformLayout()
         Panel6.ResumeLayout(False)
@@ -392,10 +337,6 @@ Partial Class Login
     Friend WithEvents txtUser As MaterialSkin2Framework.Controls.MaterialTextBox2
     Friend WithEvents txtPassword As MaterialSkin2Framework.Controls.MaterialTextBox2
     Friend WithEvents btnLogin As MaterialSkin2Framework.Controls.MaterialButton
-    Friend WithEvents Panel8 As Panel
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Home As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Label4 As Label
