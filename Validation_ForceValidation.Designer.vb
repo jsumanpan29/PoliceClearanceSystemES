@@ -133,7 +133,7 @@ Partial Class Validation_ForceValidation
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.BackColor = Color.FromArgb(CByte(63), CByte(83), CByte(181))
+        Label1.BackColor = Color.FromArgb(CByte(25), CByte(118), CByte(210))
         Label1.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label1.ForeColor = Color.White
         Label1.Location = New Point(274, 28)
@@ -258,6 +258,9 @@ Partial Class Validation_ForceValidation
         Controls.Add(Label1)
         Controls.Add(DataGridView1)
         Name = "Validation_ForceValidation"
+        PrimaryColor = MaterialSkin2Framework.Primary.Blue700
+        PrimaryDarkColor = MaterialSkin2Framework.Primary.Blue900
+        PrimaryLightColor = MaterialSkin2Framework.Primary.Blue300
         StartPosition = FormStartPosition.CenterScreen
         CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
