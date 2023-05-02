@@ -113,7 +113,6 @@ Partial Class Clerk2
         MaterialButton2 = New MaterialButton()
         Panel5 = New Panel()
         MaterialButton3 = New MaterialButton()
-        MaterialCheckbox1 = New MaterialCheckbox()
         TabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
         CType(dataApplicantPending, ComponentModel.ISupportInitialize).BeginInit()
@@ -955,29 +954,11 @@ Partial Class Clerk2
         MaterialButton3.UseAccentColor = False
         MaterialButton3.UseVisualStyleBackColor = False
         ' 
-        ' MaterialCheckbox1
-        ' 
-        MaterialCheckbox1.AutoSize = True
-        MaterialCheckbox1.Depth = 0
-        MaterialCheckbox1.Font = New Font("Arial", 8.0F, FontStyle.Bold, GraphicsUnit.Point)
-        MaterialCheckbox1.Location = New Point(284, 15)
-        MaterialCheckbox1.Margin = New Padding(0)
-        MaterialCheckbox1.MouseLocation = New Point(-1, -1)
-        MaterialCheckbox1.MouseState = MaterialSkin2Framework.MouseState.HOVER
-        MaterialCheckbox1.Name = "MaterialCheckbox1"
-        MaterialCheckbox1.ReadOnly = False
-        MaterialCheckbox1.Ripple = True
-        MaterialCheckbox1.Size = New Size(171, 37)
-        MaterialCheckbox1.TabIndex = 149
-        MaterialCheckbox1.Text = "MaterialCheckbox1"
-        MaterialCheckbox1.UseVisualStyleBackColor = True
-        ' 
         ' Clerk2
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1370, 734)
-        Controls.Add(MaterialCheckbox1)
         Controls.Add(Panel5)
         Controls.Add(Panel4)
         Controls.Add(Panel2)
@@ -1151,5 +1132,4 @@ Partial Class Clerk2
     Friend WithEvents MaterialButton2 As MaterialSkin2Framework.Controls.MaterialButton
     Friend WithEvents Panel5 As Panel
     Friend WithEvents MaterialButton3 As MaterialSkin2Framework.Controls.MaterialButton
-    Friend WithEvents MaterialCheckbox1 As MaterialSkin2Framework.Controls.MaterialCheckbox
 End Class
