@@ -1,6 +1,7 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class ReportForm
-    Inherits System.Windows.Forms.Form
+    'Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin2Framework.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()> _
@@ -22,77 +23,132 @@ Partial Class ReportForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ReportViewer2 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.SuspendLayout()
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Daily", "Weekly", "Monthly"})
-        Me.ComboBox1.Location = New System.Drawing.Point(60, 12)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox1.TabIndex = 0
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 15)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(45, 15)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Report:"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(187, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Generate"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'ReportViewer2
-        '
-        Me.ReportViewer2.Location = New System.Drawing.Point(12, 41)
-        Me.ReportViewer2.Name = "ReportViewer"
-        Me.ReportViewer2.ServerReport.BearerToken = Nothing
-        Me.ReportViewer2.Size = New System.Drawing.Size(780, 500)
-        Me.ReportViewer2.TabIndex = 0
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(360, 556)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Confirm"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'ReportForm
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 591)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.ReportViewer2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Name = "ReportForm"
-        Me.Text = "Report"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        ComboBox1 = New ComboBox()
+        Label1 = New Label()
+        ReportViewer2 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Panel1 = New Panel()
+        MaterialButton1 = New MaterialSkin2Framework.Controls.MaterialButton()
+        Panel2 = New Panel()
+        MaterialButton3 = New MaterialSkin2Framework.Controls.MaterialButton()
+        Panel1.SuspendLayout()
+        Panel2.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' ComboBox1
+        ' 
+        ComboBox1.FormattingEnabled = True
+        ComboBox1.Items.AddRange(New Object() {"Daily", "Weekly", "Monthly"})
+        ComboBox1.Location = New Point(60, 79)
+        ComboBox1.Name = "ComboBox1"
+        ComboBox1.Size = New Size(121, 23)
+        ComboBox1.TabIndex = 0
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(12, 82)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(45, 15)
+        Label1.TabIndex = 1
+        Label1.Text = "Report:"
+        ' 
+        ' ReportViewer2
+        ' 
+        ReportViewer2.Location = New Point(12, 112)
+        ReportViewer2.Name = "ReportViewer"
+        ReportViewer2.ServerReport.BearerToken = Nothing
+        ReportViewer2.Size = New Size(780, 500)
+        ReportViewer2.TabIndex = 0
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = Color.Gainsboro
+        Panel1.Controls.Add(MaterialButton1)
+        Panel1.Location = New Point(197, 79)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(75, 23)
+        Panel1.TabIndex = 12
+        ' 
+        ' MaterialButton1
+        ' 
+        MaterialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        MaterialButton1.CharacterCasing = MaterialSkin2Framework.Controls.MaterialButton.CharacterCasingEnum.Normal
+        MaterialButton1.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
+        MaterialButton1.Depth = 0
+        MaterialButton1.HighEmphasis = False
+        MaterialButton1.Icon = Nothing
+        MaterialButton1.Location = New Point(0, 0)
+        MaterialButton1.Margin = New Padding(4, 6, 4, 6)
+        MaterialButton1.MaximumSize = New Size(75, 23)
+        MaterialButton1.MinimumSize = New Size(75, 23)
+        MaterialButton1.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        MaterialButton1.Name = "MaterialButton1"
+        MaterialButton1.NoAccentTextColor = Color.Empty
+        MaterialButton1.Size = New Size(75, 23)
+        MaterialButton1.TabIndex = 7
+        MaterialButton1.Text = "Generate"
+        MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
+        MaterialButton1.UseAccentColor = False
+        MaterialButton1.UseVisualStyleBackColor = True
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.Gainsboro
+        Panel2.Controls.Add(MaterialButton3)
+        Panel2.Location = New Point(360, 626)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(75, 23)
+        Panel2.TabIndex = 13
+        ' 
+        ' MaterialButton3
+        ' 
+        MaterialButton3.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        MaterialButton3.CharacterCasing = MaterialSkin2Framework.Controls.MaterialButton.CharacterCasingEnum.Normal
+        MaterialButton3.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
+        MaterialButton3.Depth = 0
+        MaterialButton3.HighEmphasis = False
+        MaterialButton3.Icon = Nothing
+        MaterialButton3.Location = New Point(0, 0)
+        MaterialButton3.Margin = New Padding(4, 6, 4, 6)
+        MaterialButton3.MaximumSize = New Size(75, 23)
+        MaterialButton3.MinimumSize = New Size(75, 23)
+        MaterialButton3.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        MaterialButton3.Name = "MaterialButton3"
+        MaterialButton3.NoAccentTextColor = Color.Empty
+        MaterialButton3.Size = New Size(75, 23)
+        MaterialButton3.TabIndex = 7
+        MaterialButton3.Text = "Clear"
+        MaterialButton3.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
+        MaterialButton3.UseAccentColor = False
+        MaterialButton3.UseVisualStyleBackColor = True
+        ' 
+        ' ReportForm
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(800, 663)
+        Controls.Add(Panel2)
+        Controls.Add(Panel1)
+        Controls.Add(ReportViewer2)
+        Controls.Add(Label1)
+        Controls.Add(ComboBox1)
+        Name = "ReportForm"
+        Text = "Report"
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
     Friend WithEvents ReportViewer2 As Microsoft.Reporting.WinForms.ReportViewer
     Friend WithEvents Button2 As Button
+    Friend WithEvents Button_2 As MaterialSkin2Framework.Controls.MaterialButton
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents MaterialButton1 As MaterialSkin2Framework.Controls.MaterialButton
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents MaterialButton3 As MaterialSkin2Framework.Controls.MaterialButton
 End Class

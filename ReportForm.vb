@@ -14,7 +14,7 @@ Public Class ReportForm
 
     Dim now As DateTime = DateTime.Now.Date
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub MaterialButton1_Click(sender As Object, e As EventArgs) Handles MaterialButton1.Click
         Try
             ReportViewer2.LocalReport.ReportEmbeddedResource = "PoliceClearanceSystemES.GenerateReport.rdlc"
             ReportViewer2.LocalReport.DataSources.Clear()
@@ -95,7 +95,5 @@ Public Class ReportForm
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 
-    End Sub
 End Class

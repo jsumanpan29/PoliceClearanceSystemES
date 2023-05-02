@@ -191,7 +191,7 @@ Partial Class Admin
         btnCRsSearchRefresh.NoAccentTextColor = Color.Empty
         btnCRsSearchRefresh.Size = New Size(90, 30)
         btnCRsSearchRefresh.TabIndex = 3
-        btnCRsSearchRefresh.Text = "Search"
+        btnCRsSearchRefresh.Text = "Clear"
         btnCRsSearchRefresh.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
         btnCRsSearchRefresh.UseAccentColor = False
         btnCRsSearchRefresh.UseVisualStyleBackColor = True
@@ -411,7 +411,7 @@ Partial Class Admin
         btnPoliceSearchRefresh.NoAccentTextColor = Color.Empty
         btnPoliceSearchRefresh.Size = New Size(90, 30)
         btnPoliceSearchRefresh.TabIndex = 2
-        btnPoliceSearchRefresh.Text = "Search"
+        btnPoliceSearchRefresh.Text = "Clear"
         btnPoliceSearchRefresh.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
         btnPoliceSearchRefresh.UseAccentColor = False
         btnPoliceSearchRefresh.UseVisualStyleBackColor = True
@@ -610,7 +610,7 @@ Partial Class Admin
         btnUsersSearchRefresh.AutoSizeMode = AutoSizeMode.GrowAndShrink
         btnUsersSearchRefresh.BackgroundImageLayout = ImageLayout.Zoom
         btnUsersSearchRefresh.CharacterCasing = MaterialSkin2Framework.Controls.MaterialButton.CharacterCasingEnum.Normal
-        btnUsersSearchRefresh.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Dense
+        btnUsersSearchRefresh.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
         btnUsersSearchRefresh.Depth = 0
         btnUsersSearchRefresh.FlatStyle = FlatStyle.Flat
         btnUsersSearchRefresh.Font = New Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
@@ -626,8 +626,7 @@ Partial Class Admin
         btnUsersSearchRefresh.NoAccentTextColor = Color.Empty
         btnUsersSearchRefresh.Size = New Size(90, 30)
         btnUsersSearchRefresh.TabIndex = 2
-        btnUsersSearchRefresh.Text = "Search"
-        btnUsersSearchRefresh.TextAlign = ContentAlignment.MiddleRight
+        btnUsersSearchRefresh.Text = "Clear"
         btnUsersSearchRefresh.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
         btnUsersSearchRefresh.UseAccentColor = False
         btnUsersSearchRefresh.UseVisualStyleBackColor = True

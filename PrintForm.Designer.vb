@@ -1,6 +1,7 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class PrintForm
-    Inherits System.Windows.Forms.Form
+    '  Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin2Framework.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -22,31 +23,30 @@ Partial Class PrintForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
-        Me.SuspendLayout()
-        '
-        'ReportViewer1
-        '
-        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ReportViewer1.KeepSessionAlive = False
-        Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
-        Me.ReportViewer1.Name = "ReportViewer"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.ShowRefreshButton = False
-        Me.ReportViewer1.Size = New System.Drawing.Size(792, 462)
-        Me.ReportViewer1.TabIndex = 0
-        '
-        'PrintForm
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(792, 462)
-        Me.Controls.Add(Me.ReportViewer1)
-        Me.Name = "PrintForm"
-        Me.Text = "Print"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.ResumeLayout(False)
-
+        ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        SuspendLayout()
+        ' 
+        ' ReportViewer1
+        ' 
+        ReportViewer1.Dock = DockStyle.Fill
+        ReportViewer1.KeepSessionAlive = False
+        ReportViewer1.Location = New Point(3, 64)
+        ReportViewer1.Name = "ReportViewer"
+        ReportViewer1.ServerReport.BearerToken = Nothing
+        ReportViewer1.ShowRefreshButton = False
+        ReportViewer1.Size = New Size(786, 445)
+        ReportViewer1.TabIndex = 0
+        ' 
+        ' PrintForm
+        ' 
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(792, 512)
+        Controls.Add(ReportViewer1)
+        Name = "PrintForm"
+        Text = "Print"
+        WindowState = FormWindowState.Maximized
+        ResumeLayout(False)
     End Sub
 
     Friend WithEvents ReportViewer1 As Microsoft.Reporting.WinForms.ReportViewer

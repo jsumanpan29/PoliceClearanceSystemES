@@ -206,7 +206,7 @@ Partial Class Cashier
         MaterialButton1.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
         MaterialButton1.Depth = 0
         MaterialButton1.HighEmphasis = True
-        MaterialButton1.Icon = Nothing
+        MaterialButton1.Icon = CType(resources.GetObject("MaterialButton1.Icon"), Image)
         MaterialButton1.Location = New Point(964, 94)
         MaterialButton1.Margin = New Padding(4, 6, 4, 6)
         MaterialButton1.MaximumSize = New Size(64, 28)
@@ -216,7 +216,7 @@ Partial Class Cashier
         MaterialButton1.NoAccentTextColor = Color.Empty
         MaterialButton1.Size = New Size(64, 28)
         MaterialButton1.TabIndex = 147
-        MaterialButton1.Text = "x"
+        MaterialButton1.Text = "Clear"
         MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
         MaterialButton1.UseAccentColor = False
         MaterialButton1.UseVisualStyleBackColor = True
