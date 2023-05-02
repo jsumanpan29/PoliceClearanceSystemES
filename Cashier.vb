@@ -1,5 +1,6 @@
 ﻿Imports System.Collections.ObjectModel
 Imports System.Data.SqlClient
+Imports MaterialSkin2Framework.Controls
 Imports PoliceClearanceSystemES.Clerk2
 Imports TableDependency.SqlClient
 
@@ -37,9 +38,9 @@ Public Class Cashier
                 ' Do something with the checked row
                 ' For example:
                 Dim pcc_id As String = CStr(row.Cells("ClearanceID").Value)
-                Dim result As DialogResult = MessageBox.Show("Confirm Applicant on Payment?",
+                Dim result As DialogResult = MaterialMessageBox.Show("Confirm Applicant on Payment?",
                               "Confirm Applicant",
-                              MessageBoxButtons.YesNo)
+                              MessageBoxButtons.YesNo, FlexibleMaterialForm.ButtonsPosition.Center)
                 If result = DialogResult.Yes Then
                     connection.Open()
                     command = New SqlCommand("", connection)

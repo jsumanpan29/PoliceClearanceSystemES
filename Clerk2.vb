@@ -6,6 +6,7 @@ Imports TableDependency.SqlClient
 Imports System.Net
 Imports System.Reflection
 Imports System.Drawing.Imaging
+Imports MaterialSkin2Framework.Controls
 
 Public Class Clerk2
     Friend user_id As Integer
@@ -46,7 +47,7 @@ Public Class Clerk2
     Dim pccDependencyPending As SqlTableDependency(Of PoliceClearanceCertificate)
     'Dim pccDependencyComplete As SqlTableDependency(Of PoliceClearanceCertificate)
 
-    Private Sub btnAdd_Save_Click(sender As Object, e As System.EventArgs) Handles btnAdd_Save.Click
+    Private Sub AddButton_Click(sender As Object, e As System.EventArgs) Handles btnAdd_Saved.Click, btnAdd_Saved.Click
         If PccIDToEdit <> Nothing Then
 
             'Insert UPDATE data codes Here
@@ -110,7 +111,7 @@ Public Class Clerk2
             End Try
 
             PccIDToEdit = Nothing
-            btnAdd_Save.Text = "Add"
+            btnAdd_Saved.Text = "Add"
             btnClear_Cancel.Text = "Clear"
             Clear()
         Else
@@ -180,8 +181,8 @@ Public Class Clerk2
             End Try
             Clear()
         End If
-
     End Sub
+
     Private Sub PopulateCombobox()
         PopulateComboboxZone()
         PopulateComboboxBarangay()
@@ -514,7 +515,8 @@ Public Class Clerk2
             txtApplicantCompletedSearch.Text = ""
         End If
     End Sub
-    Private Sub btnCamera_Click(sender As Object, e As System.EventArgs) Handles btnCamera.Click
+    'Camera
+    Private Sub MaterialButton1_Click(sender As Object, e As System.EventArgs) Handles MaterialButton1.Click
         Dim cameraForm As New CameraForm
         If cameraForm.ShowDialog() = DialogResult.OK Then
             ' the OK button was clicked
@@ -528,7 +530,8 @@ Public Class Clerk2
 
     End Sub
 
-    Private Sub btnThumbmark_Click(sender As Object, e As System.EventArgs) Handles btnThumbmark.Click
+    'Fingerprint
+    Private Sub MaterialButton2_Click(sender As Object, e As System.EventArgs) Handles MaterialButton2.Click
         Dim fingerprintForm As New FingerprintForm
         If fingerprintForm.ShowDialog() = DialogResult.OK Then
             PictureBox2.Image = fingerprintForm.Fingerprint
@@ -536,8 +539,8 @@ Public Class Clerk2
             fingerprintFileName = imgsPath_ApplicantFingerprint + PictureBox2.Image.Tag
         End If
     End Sub
-
-    Private Sub btnSignature_Click(sender As Object, e As System.EventArgs) Handles btnSignature.Click
+    'Signature
+    Private Sub MaterialButton3_Click(sender As Object, e As System.EventArgs) Handles MaterialButton3.Click
         Dim signatureForm As New SignatureForm
         If signatureForm.ShowDialog() = DialogResult.OK Then
             PictureBox3.Image = signatureForm.Singature
@@ -569,13 +572,12 @@ Public Class Clerk2
             Try
                 Dim row As DataGridViewRow = dataApplicantPending.Rows(e.RowIndex)
                 Dim pcc_id As Integer = row.Cells("dataPendingClearanceID").Value
-                Dim result As DialogResult = MessageBox.Show("Confirm Edit?",
-                              "Edit Applicant",
-                              MessageBoxButtons.YesNo)
+                Dim result As DialogResult = MaterialMessageBox.Show("Confirm Edit?", "Edit Applicant",
+                                                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If (result = DialogResult.Yes) Then
                     PccIDToEdit = pcc_id
                     If PccIDToEdit <> Nothing Then
-                        btnAdd_Save.Text = "Save"
+                        btnAdd_Saved.Text = "Save"
                         btnClear_Cancel.Text = "Cancel"
                     End If
                     connection.Open()
@@ -693,9 +695,9 @@ Public Class Clerk2
             Try
                 Dim row As DataGridViewRow = dataApplicantPending.Rows(e.RowIndex)
                 Dim pcc_to_delete As Integer = row.Cells("dataPendingClearanceID").Value
-                Dim result As DialogResult = MessageBox.Show("Confirm Delete?",
-                              "Delete Applicant",
-                              MessageBoxButtons.YesNo)
+                Dim result As DialogResult = MaterialMessageBox.Show("Confirm Delete?",
+                                                                     "Delete Applicant",
+                              MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 If result = DialogResult.Yes Then
                     quickSqlCommand("DELETE FROM dbo.[pcc] WHERE [pcc_id] =" & pcc_to_delete)
                 End If
@@ -708,7 +710,7 @@ Public Class Clerk2
                 Dim row As DataGridViewRow = dataApplicantPending.Rows(e.RowIndex)
                 Dim status As String = row.Cells("dataPendingClearanceStatus").Value.ToString.Trim.ToUpper
                 If status = status_pending Then
-                    MessageBox.Show("Can't Validate Applicant Until Applicant's Payment is Confirmed By the Cashier!", "Validate Applicant", MessageBoxButtons.OK)
+                    MaterialMessageBox.Show("Can't Validate Applicant Until Applicant's Payment is Confirmed By the Cashier!", "Validate Applicant", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
                 ElseIf status = status_paid Then
                     'Search for Hit in Criminal Records Here
                     Try
@@ -766,9 +768,9 @@ Public Class Clerk2
                     End Try
                 ElseIf status = status_validated Then
                     'Print Function Here
-                    Dim result As DialogResult = MessageBox.Show("Confirm Print?",
+                    Dim result As DialogResult = MaterialMessageBox.Show("Confirm Print?",
                               "Print Certificate",
-                              MessageBoxButtons.YesNo)
+                              MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                     If result = DialogResult.Yes Then
                         Try
                             connection.Open()
@@ -804,19 +806,16 @@ Public Class Clerk2
         command = Nothing
         connection.Close()
     End Sub
-    Private Sub btnClear_Cancel_Click(sender As Object, e As System.EventArgs) Handles btnClear_Cancel.Click
+    Private Sub ClearButton_Click(sender As Object, e As System.EventArgs) Handles btnClear_Cancel.Click
         If PccIDToEdit <> Nothing Then
             Clear()
             PccIDToEdit = Nothing
-            btnAdd_Save.Text = "Add"
+            btnAdd_Saved.Text = "Add"
             btnClear_Cancel.Text = "Clear"
         Else
             Clear()
         End If
-
-
     End Sub
-
     Private Sub Clerk2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         e.Cancel = True
     End Sub
@@ -835,9 +834,9 @@ Public Class Clerk2
         Dim colname As String = dataApplicantCompleted.Columns(e.ColumnIndex).Name
         If colname = "dataCompletedClearancePrint" Then
             Dim row As DataGridViewRow = dataApplicantCompleted.Rows(e.RowIndex)
-            Dim result As DialogResult = MessageBox.Show("Confirm Print?",
+            Dim result As DialogResult = MaterialMessageBox.Show("Confirm Print?",
                            "Print Certificate",
-                           MessageBoxButtons.YesNo)
+                           MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If result = DialogResult.Yes Then
                 Try
                     Dim printForm As New PrintForm
@@ -960,4 +959,5 @@ Public Class Clerk2
         Me.Dispose()
         Login.Show()
     End Sub
+
 End Class

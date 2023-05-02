@@ -218,7 +218,7 @@ Partial Class User
         Label7.BackColor = Color.FromArgb(CByte(3), CByte(59), CByte(106))
         Label7.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
         Label7.ForeColor = Color.White
-        Label7.Location = New Point(110, 7)
+        Label7.Location = New Point(117, 7)
         Label7.Name = "Label7"
         Label7.Size = New Size(103, 30)
         Label7.TabIndex = 46

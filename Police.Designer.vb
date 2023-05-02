@@ -22,435 +22,429 @@ Partial Class Police
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Police))
-        Me.txtMname = New System.Windows.Forms.TextBox()
-        Me.txtFname = New System.Windows.Forms.TextBox()
-        Me.txtLname = New System.Windows.Forms.TextBox()
-        Me.cbRank = New System.Windows.Forms.ComboBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtContactNo = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.cbPosition = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.MaterialButton1 = New MaterialSkin2Framework.Controls.MaterialButton()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.CancelButton = New MaterialSkin2Framework.Controls.MaterialButton()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.MaterialButton3 = New MaterialSkin2Framework.Controls.MaterialButton()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.MaterialDivider1 = New MaterialSkin2Framework.Controls.MaterialDivider()
-        Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.MaterialDivider2 = New MaterialSkin2Framework.Controls.MaterialDivider()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.Panel6.SuspendLayout()
-        Me.SuspendLayout()
-        '
-        'txtMname
-        '
-        Me.txtMname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtMname.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtMname.Location = New System.Drawing.Point(245, 144)
-        Me.txtMname.MaximumSize = New System.Drawing.Size(197, 25)
-        Me.txtMname.MinimumSize = New System.Drawing.Size(197, 25)
-        Me.txtMname.Multiline = True
-        Me.txtMname.Name = "txtMname"
-        Me.txtMname.PlaceholderText = " Middle Name*"
-        Me.txtMname.Size = New System.Drawing.Size(197, 25)
-        Me.txtMname.TabIndex = 11
-        '
-        'txtFname
-        '
-        Me.txtFname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtFname.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtFname.Location = New System.Drawing.Point(245, 89)
-        Me.txtFname.Margin = New System.Windows.Forms.Padding(10)
-        Me.txtFname.MaximumSize = New System.Drawing.Size(197, 25)
-        Me.txtFname.MinimumSize = New System.Drawing.Size(197, 25)
-        Me.txtFname.Multiline = True
-        Me.txtFname.Name = "txtFname"
-        Me.txtFname.PlaceholderText = " First Name*"
-        Me.txtFname.Size = New System.Drawing.Size(197, 25)
-        Me.txtFname.TabIndex = 10
-        '
-        'txtLname
-        '
-        Me.txtLname.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtLname.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtLname.Location = New System.Drawing.Point(245, 194)
-        Me.txtLname.MaximumSize = New System.Drawing.Size(197, 25)
-        Me.txtLname.MinimumSize = New System.Drawing.Size(197, 25)
-        Me.txtLname.Multiline = True
-        Me.txtLname.Name = "txtLname"
-        Me.txtLname.PlaceholderText = " Last Name*"
-        Me.txtLname.Size = New System.Drawing.Size(197, 25)
-        Me.txtLname.TabIndex = 8
-        '
-        'cbRank
-        '
-        Me.cbRank.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cbRank.FormattingEnabled = True
-        Me.cbRank.Location = New System.Drawing.Point(245, 294)
-        Me.cbRank.MaximumSize = New System.Drawing.Size(197, 0)
-        Me.cbRank.MinimumSize = New System.Drawing.Size(197, 0)
-        Me.cbRank.Name = "cbRank"
-        Me.cbRank.Size = New System.Drawing.Size(197, 23)
-        Me.cbRank.TabIndex = 44
-        Me.cbRank.Tag = ""
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(245, 274)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(38, 17)
-        Me.Label4.TabIndex = 43
-        Me.Label4.Text = "Rank"
-        '
-        'txtContactNo
-        '
-        Me.txtContactNo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtContactNo.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.txtContactNo.Location = New System.Drawing.Point(245, 245)
-        Me.txtContactNo.MaximumSize = New System.Drawing.Size(197, 25)
-        Me.txtContactNo.MinimumSize = New System.Drawing.Size(197, 25)
-        Me.txtContactNo.Multiline = True
-        Me.txtContactNo.Name = "txtContactNo"
-        Me.txtContactNo.PlaceholderText = " Contact #"
-        Me.txtContactNo.Size = New System.Drawing.Size(197, 25)
-        Me.txtContactNo.TabIndex = 42
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label13.Location = New System.Drawing.Point(245, 225)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(109, 17)
-        Me.Label13.TabIndex = 41
-        Me.Label13.Text = "Contact Number"
-        '
-        'cbPosition
-        '
-        Me.cbPosition.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cbPosition.FormattingEnabled = True
-        Me.cbPosition.Location = New System.Drawing.Point(245, 340)
-        Me.cbPosition.MaximumSize = New System.Drawing.Size(197, 0)
-        Me.cbPosition.MinimumSize = New System.Drawing.Size(197, 0)
-        Me.cbPosition.Name = "cbPosition"
-        Me.cbPosition.Size = New System.Drawing.Size(197, 23)
-        Me.cbPosition.TabIndex = 46
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(245, 320)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(59, 17)
-        Me.Label2.TabIndex = 45
-        Me.Label2.Text = "Position"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.PictureBox1.Location = New System.Drawing.Point(20, 82)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(190, 172)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 49
-        Me.PictureBox1.TabStop = False
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(37, 8)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(121, 20)
-        Me.Label3.TabIndex = 50
-        Me.Label3.Text = "Police Signature"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(245, 122)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(91, 17)
-        Me.Label5.TabIndex = 52
-        Me.Label5.Text = "Middle Name"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(245, 174)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(73, 17)
-        Me.Label6.TabIndex = 53
-        Me.Label6.Text = "Last Name"
-        '
-        'Panel2
-        '
-        Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.AutoSize = True
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.Panel2.Location = New System.Drawing.Point(-1, 0)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(466, 14)
-        Me.Panel2.TabIndex = 54
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.SystemColors.Control
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(43, 21)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(118, 30)
-        Me.Label7.TabIndex = 46
-        Me.Label7.Text = "Add Police"
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.Silver
-        Me.Panel1.Controls.Add(Me.MaterialButton1)
-        Me.Panel1.ForeColor = System.Drawing.Color.White
-        Me.Panel1.Location = New System.Drawing.Point(135, 398)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(75, 33)
-        Me.Panel1.TabIndex = 55
-        '
-        'MaterialButton1
-        '
-        Me.MaterialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(86, Byte), Integer), CType(CType(147, Byte), Integer))
-        Me.MaterialButton1.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.[Default]
-        Me.MaterialButton1.Depth = 0
-        Me.MaterialButton1.DrawShadows = False
-        Me.MaterialButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(86, Byte), Integer), CType(CType(147, Byte), Integer))
-        Me.MaterialButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
-        Me.MaterialButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.MaterialButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.MaterialButton1.ForeColor = System.Drawing.Color.White
-        Me.MaterialButton1.HighEmphasis = False
-        Me.MaterialButton1.Icon = Nothing
-        Me.MaterialButton1.Location = New System.Drawing.Point(0, 0)
-        Me.MaterialButton1.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.MaterialButton1.MaximumSize = New System.Drawing.Size(75, 33)
-        Me.MaterialButton1.MinimumSize = New System.Drawing.Size(75, 33)
-        Me.MaterialButton1.MouseState = MaterialSkin2Framework.MouseState.HOVER
-        Me.MaterialButton1.Name = "MaterialButton1"
-        Me.MaterialButton1.NoAccentTextColor = System.Drawing.Color.Empty
-        Me.MaterialButton1.Size = New System.Drawing.Size(75, 33)
-        Me.MaterialButton1.TabIndex = 53
-        Me.MaterialButton1.Text = "Save"
-        Me.MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
-        Me.MaterialButton1.UseAccentColor = False
-        Me.MaterialButton1.UseVisualStyleBackColor = False
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(54, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.CancelButton)
-        Me.Panel3.ForeColor = System.Drawing.Color.White
-        Me.Panel3.Location = New System.Drawing.Point(261, 398)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(75, 33)
-        Me.Panel3.TabIndex = 56
-        '
-        'CancelButton
-        '
-        Me.CancelButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.CancelButton.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.[Default]
-        Me.CancelButton.Depth = 0
-        Me.CancelButton.HighEmphasis = False
-        Me.CancelButton.Icon = Nothing
-        Me.CancelButton.Location = New System.Drawing.Point(0, 0)
-        Me.CancelButton.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.CancelButton.MaximumSize = New System.Drawing.Size(75, 33)
-        Me.CancelButton.MinimumSize = New System.Drawing.Size(75, 33)
-        Me.CancelButton.MouseState = MaterialSkin2Framework.MouseState.HOVER
-        Me.CancelButton.Name = "CancelButton"
-        Me.CancelButton.NoAccentTextColor = System.Drawing.Color.Empty
-        Me.CancelButton.Size = New System.Drawing.Size(75, 33)
-        Me.CancelButton.TabIndex = 55
-        Me.CancelButton.Text = "Cancel"
-        Me.CancelButton.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
-        Me.CancelButton.UseAccentColor = False
-        Me.CancelButton.UseVisualStyleBackColor = True
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.Panel4.Controls.Add(Me.MaterialButton3)
-        Me.Panel4.Location = New System.Drawing.Point(80, 303)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(73, 24)
-        Me.Panel4.TabIndex = 58
-        '
-        'MaterialButton3
-        '
-        Me.MaterialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(86, Byte), Integer), CType(CType(147, Byte), Integer))
-        Me.MaterialButton3.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.[Default]
-        Me.MaterialButton3.Depth = 0
-        Me.MaterialButton3.DrawShadows = False
-        Me.MaterialButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(86, Byte), Integer), CType(CType(147, Byte), Integer))
-        Me.MaterialButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
-        Me.MaterialButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
-        Me.MaterialButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.MaterialButton3.ForeColor = System.Drawing.Color.White
-        Me.MaterialButton3.HighEmphasis = False
-        Me.MaterialButton3.Icon = Nothing
-        Me.MaterialButton3.Location = New System.Drawing.Point(0, 0)
-        Me.MaterialButton3.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.MaterialButton3.MaximumSize = New System.Drawing.Size(73, 24)
-        Me.MaterialButton3.MinimumSize = New System.Drawing.Size(73, 24)
-        Me.MaterialButton3.MouseState = MaterialSkin2Framework.MouseState.HOVER
-        Me.MaterialButton3.Name = "MaterialButton3"
-        Me.MaterialButton3.NoAccentTextColor = System.Drawing.Color.Empty
-        Me.MaterialButton3.Size = New System.Drawing.Size(73, 24)
-        Me.MaterialButton3.TabIndex = 54
-        Me.MaterialButton3.Text = "Upload"
-        Me.MaterialButton3.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
-        Me.MaterialButton3.UseAccentColor = False
-        Me.MaterialButton3.UseVisualStyleBackColor = False
-        '
-        'Panel6
-        '
-        Me.Panel6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel6.AutoSize = True
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.Panel6.Controls.Add(Me.Label3)
-        Me.Panel6.Location = New System.Drawing.Point(20, 253)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(190, 38)
-        Me.Panel6.TabIndex = 56
-        '
-        'MaterialDivider1
-        '
-        Me.MaterialDivider1.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialDivider1.Depth = 0
-        Me.MaterialDivider1.Location = New System.Drawing.Point(-1, 386)
-        Me.MaterialDivider1.MouseState = MaterialSkin2Framework.MouseState.HOVER
-        Me.MaterialDivider1.Name = "MaterialDivider1"
-        Me.MaterialDivider1.Size = New System.Drawing.Size(463, 3)
-        Me.MaterialDivider1.TabIndex = 59
-        Me.MaterialDivider1.Text = "MaterialDivider1"
-        '
-        'Panel8
-        '
-        Me.Panel8.BackColor = System.Drawing.SystemColors.Control
-        Me.Panel8.BackgroundImage = CType(resources.GetObject("Panel8.BackgroundImage"), System.Drawing.Image)
-        Me.Panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Panel8.ForeColor = System.Drawing.Color.White
-        Me.Panel8.Location = New System.Drawing.Point(6, 21)
-        Me.Panel8.Name = "Panel8"
-        Me.Panel8.Size = New System.Drawing.Size(44, 30)
-        Me.Panel8.TabIndex = 60
-        '
-        'MaterialDivider2
-        '
-        Me.MaterialDivider2.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialDivider2.Depth = 0
-        Me.MaterialDivider2.Location = New System.Drawing.Point(16, 54)
-        Me.MaterialDivider2.MouseState = MaterialSkin2Framework.MouseState.HOVER
-        Me.MaterialDivider2.Name = "MaterialDivider2"
-        Me.MaterialDivider2.Size = New System.Drawing.Size(426, 3)
-        Me.MaterialDivider2.TabIndex = 61
-        Me.MaterialDivider2.Text = "MaterialDivider2"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(245, 70)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(75, 17)
-        Me.Label1.TabIndex = 9
-        Me.Label1.Text = "First Name"
-        '
-        'Panel5
-        '
-        Me.Panel5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel5.AutoSize = True
-        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(106, Byte), Integer))
-        Me.Panel5.Location = New System.Drawing.Point(-1, 442)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(466, 10)
-        Me.Panel5.TabIndex = 55
-        '
-        'Police
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(460, 448)
-        Me.ControlBox = False
-        Me.Controls.Add(Me.Panel5)
-        Me.Controls.Add(Me.MaterialDivider2)
-        Me.Controls.Add(Me.Panel8)
-        Me.Controls.Add(Me.MaterialDivider1)
-        Me.Controls.Add(Me.Panel6)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Panel4)
-        Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.cbPosition)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.cbRank)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.txtContactNo)
-        Me.Controls.Add(Me.Label13)
-        Me.Controls.Add(Me.txtMname)
-        Me.Controls.Add(Me.txtFname)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtLname)
-        Me.Name = "Police"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Police"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
-        Me.Panel3.ResumeLayout(False)
-        Me.Panel3.PerformLayout()
-        Me.Panel4.ResumeLayout(False)
-        Me.Panel4.PerformLayout()
-        Me.Panel6.ResumeLayout(False)
-        Me.Panel6.PerformLayout()
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
-
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Police))
+        txtMname = New TextBox()
+        txtFname = New TextBox()
+        txtLname = New TextBox()
+        cbRank = New ComboBox()
+        Label4 = New Label()
+        txtContactNo = New TextBox()
+        Label13 = New Label()
+        cbPosition = New ComboBox()
+        Label2 = New Label()
+        PictureBox1 = New PictureBox()
+        Label3 = New Label()
+        Label5 = New Label()
+        Label6 = New Label()
+        Panel2 = New Panel()
+        Label7 = New Label()
+        Panel8 = New Panel()
+        Panel1 = New Panel()
+        MaterialButton1 = New MaterialSkin2Framework.Controls.MaterialButton()
+        Panel3 = New Panel()
+        CancelButton = New MaterialSkin2Framework.Controls.MaterialButton()
+        Panel4 = New Panel()
+        MaterialButton3 = New MaterialSkin2Framework.Controls.MaterialButton()
+        Panel6 = New Panel()
+        MaterialDivider1 = New MaterialSkin2Framework.Controls.MaterialDivider()
+        MaterialDivider2 = New MaterialSkin2Framework.Controls.MaterialDivider()
+        Label1 = New Label()
+        Panel5 = New Panel()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
+        Panel2.SuspendLayout()
+        Panel1.SuspendLayout()
+        Panel3.SuspendLayout()
+        Panel4.SuspendLayout()
+        Panel6.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' txtMname
+        ' 
+        txtMname.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        txtMname.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txtMname.Location = New Point(245, 144)
+        txtMname.MaximumSize = New Size(197, 25)
+        txtMname.MinimumSize = New Size(197, 25)
+        txtMname.Multiline = True
+        txtMname.Name = "txtMname"
+        txtMname.PlaceholderText = " Middle Name*"
+        txtMname.Size = New Size(197, 25)
+        txtMname.TabIndex = 11
+        ' 
+        ' txtFname
+        ' 
+        txtFname.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        txtFname.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txtFname.Location = New Point(245, 89)
+        txtFname.Margin = New Padding(10)
+        txtFname.MaximumSize = New Size(197, 25)
+        txtFname.MinimumSize = New Size(197, 25)
+        txtFname.Multiline = True
+        txtFname.Name = "txtFname"
+        txtFname.PlaceholderText = " First Name*"
+        txtFname.Size = New Size(197, 25)
+        txtFname.TabIndex = 10
+        ' 
+        ' txtLname
+        ' 
+        txtLname.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        txtLname.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txtLname.Location = New Point(245, 194)
+        txtLname.MaximumSize = New Size(197, 25)
+        txtLname.MinimumSize = New Size(197, 25)
+        txtLname.Multiline = True
+        txtLname.Name = "txtLname"
+        txtLname.PlaceholderText = " Last Name*"
+        txtLname.Size = New Size(197, 25)
+        txtLname.TabIndex = 8
+        ' 
+        ' cbRank
+        ' 
+        cbRank.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        cbRank.FormattingEnabled = True
+        cbRank.Location = New Point(245, 294)
+        cbRank.MaximumSize = New Size(197, 0)
+        cbRank.MinimumSize = New Size(197, 0)
+        cbRank.Name = "cbRank"
+        cbRank.Size = New Size(197, 23)
+        cbRank.TabIndex = 44
+        cbRank.Tag = ""
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label4.Location = New Point(245, 274)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(38, 17)
+        Label4.TabIndex = 43
+        Label4.Text = "Rank"
+        ' 
+        ' txtContactNo
+        ' 
+        txtContactNo.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        txtContactNo.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
+        txtContactNo.Location = New Point(245, 245)
+        txtContactNo.MaximumSize = New Size(197, 25)
+        txtContactNo.MinimumSize = New Size(197, 25)
+        txtContactNo.Multiline = True
+        txtContactNo.Name = "txtContactNo"
+        txtContactNo.PlaceholderText = " Contact #"
+        txtContactNo.Size = New Size(197, 25)
+        txtContactNo.TabIndex = 42
+        ' 
+        ' Label13
+        ' 
+        Label13.AutoSize = True
+        Label13.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label13.Location = New Point(245, 225)
+        Label13.Name = "Label13"
+        Label13.Size = New Size(109, 17)
+        Label13.TabIndex = 41
+        Label13.Text = "Contact Number"
+        ' 
+        ' cbPosition
+        ' 
+        cbPosition.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        cbPosition.FormattingEnabled = True
+        cbPosition.Location = New Point(245, 340)
+        cbPosition.MaximumSize = New Size(197, 0)
+        cbPosition.MinimumSize = New Size(197, 0)
+        cbPosition.Name = "cbPosition"
+        cbPosition.Size = New Size(197, 23)
+        cbPosition.TabIndex = 46
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label2.Location = New Point(245, 320)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(59, 17)
+        Label2.TabIndex = 45
+        Label2.Text = "Position"
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Anchor = AnchorStyles.Top Or AnchorStyles.Right
+        PictureBox1.Location = New Point(20, 82)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(190, 172)
+        PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
+        PictureBox1.TabIndex = 49
+        PictureBox1.TabStop = False
+        ' 
+        ' Label3
+        ' 
+        Label3.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Right
+        Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label3.ForeColor = Color.White
+        Label3.Location = New Point(37, 8)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(121, 20)
+        Label3.TabIndex = 50
+        Label3.Text = "Police Signature"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label5.Location = New Point(245, 122)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(91, 17)
+        Label5.TabIndex = 52
+        Label5.Text = "Middle Name"
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label6.Location = New Point(245, 174)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(73, 17)
+        Label6.TabIndex = 53
+        Label6.Text = "Last Name"
+        ' 
+        ' Panel2
+        ' 
+        Panel2.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        Panel2.AutoSize = True
+        Panel2.BackColor = Color.FromArgb(CByte(3), CByte(59), CByte(106))
+        Panel2.Controls.Add(Label7)
+        Panel2.Controls.Add(Panel8)
+        Panel2.Location = New Point(-1, 0)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(463, 51)
+        Panel2.TabIndex = 54
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.BackColor = Color.FromArgb(CByte(3), CByte(59), CByte(106))
+        Label7.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label7.ForeColor = Color.White
+        Label7.Location = New Point(173, 11)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(118, 30)
+        Label7.TabIndex = 46
+        Label7.Text = "Add Police"
+        ' 
+        ' Panel8
+        ' 
+        Panel8.BackColor = Color.FromArgb(CByte(3), CByte(59), CByte(106))
+        Panel8.BackgroundImage = CType(resources.GetObject("Panel8.BackgroundImage"), Image)
+        Panel8.BackgroundImageLayout = ImageLayout.Zoom
+        Panel8.ForeColor = Color.White
+        Panel8.Location = New Point(18, 8)
+        Panel8.Name = "Panel8"
+        Panel8.Size = New Size(50, 40)
+        Panel8.TabIndex = 60
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = Color.Silver
+        Panel1.Controls.Add(MaterialButton1)
+        Panel1.ForeColor = Color.White
+        Panel1.Location = New Point(135, 398)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(75, 33)
+        Panel1.TabIndex = 55
+        ' 
+        ' MaterialButton1
+        ' 
+        MaterialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        MaterialButton1.BackColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        MaterialButton1.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
+        MaterialButton1.Depth = 0
+        MaterialButton1.DrawShadows = False
+        MaterialButton1.FlatAppearance.BorderColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        MaterialButton1.FlatAppearance.MouseDownBackColor = Color.Silver
+        MaterialButton1.FlatAppearance.MouseOverBackColor = Color.Silver
+        MaterialButton1.FlatStyle = FlatStyle.Flat
+        MaterialButton1.ForeColor = Color.White
+        MaterialButton1.HighEmphasis = False
+        MaterialButton1.Icon = Nothing
+        MaterialButton1.Location = New Point(0, 0)
+        MaterialButton1.Margin = New Padding(4, 6, 4, 6)
+        MaterialButton1.MaximumSize = New Size(75, 33)
+        MaterialButton1.MinimumSize = New Size(75, 33)
+        MaterialButton1.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        MaterialButton1.Name = "MaterialButton1"
+        MaterialButton1.NoAccentTextColor = Color.Empty
+        MaterialButton1.Size = New Size(75, 33)
+        MaterialButton1.TabIndex = 53
+        MaterialButton1.Text = "Save"
+        MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
+        MaterialButton1.UseAccentColor = False
+        MaterialButton1.UseVisualStyleBackColor = False
+        ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.FromArgb(CByte(244), CByte(67), CByte(54))
+        Panel3.Controls.Add(CancelButton)
+        Panel3.ForeColor = Color.White
+        Panel3.Location = New Point(261, 398)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(75, 33)
+        Panel3.TabIndex = 56
+        ' 
+        ' CancelButton
+        ' 
+        CancelButton.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        CancelButton.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
+        CancelButton.Depth = 0
+        CancelButton.HighEmphasis = False
+        CancelButton.Icon = Nothing
+        CancelButton.Location = New Point(0, 0)
+        CancelButton.Margin = New Padding(4, 6, 4, 6)
+        CancelButton.MaximumSize = New Size(75, 33)
+        CancelButton.MinimumSize = New Size(75, 33)
+        CancelButton.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        CancelButton.Name = "CancelButton"
+        CancelButton.NoAccentTextColor = Color.Empty
+        CancelButton.Size = New Size(75, 33)
+        CancelButton.TabIndex = 55
+        CancelButton.Text = "Cancel"
+        CancelButton.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
+        CancelButton.UseAccentColor = False
+        CancelButton.UseVisualStyleBackColor = True
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        Panel4.Controls.Add(MaterialButton3)
+        Panel4.Location = New Point(80, 303)
+        Panel4.MaximumSize = New Size(73, 26)
+        Panel4.MinimumSize = New Size(73, 26)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(73, 26)
+        Panel4.TabIndex = 58
+        ' 
+        ' MaterialButton3
+        ' 
+        MaterialButton3.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        MaterialButton3.BackColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        MaterialButton3.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
+        MaterialButton3.Depth = 0
+        MaterialButton3.DrawShadows = False
+        MaterialButton3.FlatAppearance.BorderColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        MaterialButton3.FlatAppearance.MouseDownBackColor = Color.Silver
+        MaterialButton3.FlatAppearance.MouseOverBackColor = Color.Silver
+        MaterialButton3.FlatStyle = FlatStyle.Flat
+        MaterialButton3.ForeColor = Color.White
+        MaterialButton3.HighEmphasis = False
+        MaterialButton3.Icon = Nothing
+        MaterialButton3.Location = New Point(0, 0)
+        MaterialButton3.Margin = New Padding(4, 6, 4, 6)
+        MaterialButton3.MaximumSize = New Size(73, 26)
+        MaterialButton3.MinimumSize = New Size(73, 26)
+        MaterialButton3.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        MaterialButton3.Name = "MaterialButton3"
+        MaterialButton3.NoAccentTextColor = Color.Empty
+        MaterialButton3.Size = New Size(73, 26)
+        MaterialButton3.TabIndex = 54
+        MaterialButton3.Text = "Upload"
+        MaterialButton3.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
+        MaterialButton3.UseAccentColor = False
+        MaterialButton3.UseVisualStyleBackColor = False
+        ' 
+        ' Panel6
+        ' 
+        Panel6.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        Panel6.AutoSize = True
+        Panel6.BackColor = Color.FromArgb(CByte(3), CByte(59), CByte(106))
+        Panel6.Controls.Add(Label3)
+        Panel6.Location = New Point(20, 253)
+        Panel6.Name = "Panel6"
+        Panel6.Size = New Size(190, 38)
+        Panel6.TabIndex = 56
+        ' 
+        ' MaterialDivider1
+        ' 
+        MaterialDivider1.BackColor = Color.FromArgb(CByte(30), CByte(0), CByte(0), CByte(0))
+        MaterialDivider1.Depth = 0
+        MaterialDivider1.Location = New Point(-1, 386)
+        MaterialDivider1.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        MaterialDivider1.Name = "MaterialDivider1"
+        MaterialDivider1.Size = New Size(463, 3)
+        MaterialDivider1.TabIndex = 59
+        MaterialDivider1.Text = "MaterialDivider1"
+        ' 
+        ' MaterialDivider2
+        ' 
+        MaterialDivider2.BackColor = Color.FromArgb(CByte(30), CByte(0), CByte(0), CByte(0))
+        MaterialDivider2.Depth = 0
+        MaterialDivider2.Location = New Point(17, 62)
+        MaterialDivider2.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        MaterialDivider2.Name = "MaterialDivider2"
+        MaterialDivider2.Size = New Size(426, 3)
+        MaterialDivider2.TabIndex = 61
+        MaterialDivider2.Text = "MaterialDivider2"
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        Label1.Location = New Point(245, 70)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(75, 17)
+        Label1.TabIndex = 9
+        Label1.Text = "First Name"
+        ' 
+        ' Panel5
+        ' 
+        Panel5.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
+        Panel5.AutoSize = True
+        Panel5.BackColor = Color.FromArgb(CByte(3), CByte(59), CByte(106))
+        Panel5.Location = New Point(-1, 442)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(466, 10)
+        Panel5.TabIndex = 55
+        ' 
+        ' Police
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(460, 448)
+        ControlBox = False
+        Controls.Add(Panel5)
+        Controls.Add(MaterialDivider2)
+        Controls.Add(MaterialDivider1)
+        Controls.Add(Panel6)
+        Controls.Add(Panel4)
+        Controls.Add(Panel3)
+        Controls.Add(Panel1)
+        Controls.Add(PictureBox1)
+        Controls.Add(Panel2)
+        Controls.Add(Label6)
+        Controls.Add(Label5)
+        Controls.Add(cbPosition)
+        Controls.Add(Label2)
+        Controls.Add(cbRank)
+        Controls.Add(Label4)
+        Controls.Add(txtContactNo)
+        Controls.Add(Label13)
+        Controls.Add(txtMname)
+        Controls.Add(txtFname)
+        Controls.Add(Label1)
+        Controls.Add(txtLname)
+        Name = "Police"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "Police"
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
+        Panel3.ResumeLayout(False)
+        Panel3.PerformLayout()
+        Panel4.ResumeLayout(False)
+        Panel4.PerformLayout()
+        Panel6.ResumeLayout(False)
+        Panel6.PerformLayout()
+        ResumeLayout(False)
+        PerformLayout()
     End Sub
 
     Friend WithEvents txtMname As TextBox

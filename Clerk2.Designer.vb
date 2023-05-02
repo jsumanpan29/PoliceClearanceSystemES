@@ -1,6 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿Imports MaterialSkin2Framework.Controls
+
+<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Clerk2
-    Inherits System.Windows.Forms.Form
+    'Inherits System.Windows.Forms.Form
+    Inherits MaterialSkin2Framework.Controls.MaterialForm
 
     'Form overrides dispose to clean up the component list.
     <System.Diagnostics.DebuggerNonUserCode()>
@@ -22,17 +25,13 @@ Partial Class Clerk2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        btnClear_Cancel = New Button()
-        btnAdd_Save = New Button()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Clerk2))
         cbPoliceCertify = New ComboBox()
         Label22 = New Label()
         cbPoliceVerify = New ComboBox()
         Label21 = New Label()
-        btnSignature = New Button()
         Label20 = New Label()
-        btnThumbmark = New Button()
         Label19 = New Label()
-        btnCamera = New Button()
         Label18 = New Label()
         Label16 = New Label()
         txtORAmount = New TextBox()
@@ -104,6 +103,17 @@ Partial Class Clerk2
         PictureBox1 = New PictureBox()
         PictureBox2 = New PictureBox()
         PictureBox3 = New PictureBox()
+        Panel3 = New Panel()
+        btnClear_Cancel = New MaterialButton()
+        Panel1 = New Panel()
+        btnAdd_Saved = New MaterialButton()
+        Panel2 = New Panel()
+        MaterialButton1 = New MaterialButton()
+        Panel4 = New Panel()
+        MaterialButton2 = New MaterialButton()
+        Panel5 = New Panel()
+        MaterialButton3 = New MaterialButton()
+        MaterialCheckbox1 = New MaterialCheckbox()
         TabControl1.SuspendLayout()
         TabPage1.SuspendLayout()
         CType(dataApplicantPending, ComponentModel.ISupportInitialize).BeginInit()
@@ -113,38 +123,25 @@ Partial Class Clerk2
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
+        Panel3.SuspendLayout()
+        Panel1.SuspendLayout()
+        Panel2.SuspendLayout()
+        Panel4.SuspendLayout()
+        Panel5.SuspendLayout()
         SuspendLayout()
-        ' 
-        ' btnClear_Cancel
-        ' 
-        btnClear_Cancel.Location = New Point(159, 553)
-        btnClear_Cancel.Name = "btnClear_Cancel"
-        btnClear_Cancel.Size = New Size(132, 23)
-        btnClear_Cancel.TabIndex = 135
-        btnClear_Cancel.Text = "Clear"
-        btnClear_Cancel.UseVisualStyleBackColor = True
-        ' 
-        ' btnAdd_Save
-        ' 
-        btnAdd_Save.Location = New Point(17, 553)
-        btnAdd_Save.Name = "btnAdd_Save"
-        btnAdd_Save.Size = New Size(132, 23)
-        btnAdd_Save.TabIndex = 134
-        btnAdd_Save.Text = "Add"
-        btnAdd_Save.UseVisualStyleBackColor = True
         ' 
         ' cbPoliceCertify
         ' 
         cbPoliceCertify.FormattingEnabled = True
-        cbPoliceCertify.Location = New Point(17, 514)
+        cbPoliceCertify.Location = New Point(15, 580)
         cbPoliceCertify.Name = "cbPoliceCertify"
         cbPoliceCertify.Size = New Size(471, 23)
-        cbPoliceCertify.TabIndex = 139
+        cbPoliceCertify.TabIndex = 22
         ' 
         ' Label22
         ' 
         Label22.AutoSize = True
-        Label22.Location = New Point(17, 496)
+        Label22.Location = New Point(15, 562)
         Label22.Name = "Label22"
         Label22.Size = New Size(68, 15)
         Label22.TabIndex = 138
@@ -153,78 +150,54 @@ Partial Class Clerk2
         ' cbPoliceVerify
         ' 
         cbPoliceVerify.FormattingEnabled = True
-        cbPoliceVerify.Location = New Point(17, 465)
+        cbPoliceVerify.Location = New Point(15, 531)
         cbPoliceVerify.Name = "cbPoliceVerify"
         cbPoliceVerify.Size = New Size(471, 23)
-        cbPoliceVerify.TabIndex = 137
+        cbPoliceVerify.TabIndex = 21
         ' 
         ' Label21
         ' 
         Label21.AutoSize = True
-        Label21.Location = New Point(17, 449)
+        Label21.Location = New Point(15, 515)
         Label21.Name = "Label21"
         Label21.Size = New Size(62, 15)
         Label21.TabIndex = 136
         Label21.Text = "Verified By"
         ' 
-        ' btnSignature
-        ' 
-        btnSignature.Location = New Point(569, 612)
-        btnSignature.Name = "btnSignature"
-        btnSignature.Size = New Size(75, 23)
-        btnSignature.TabIndex = 133
-        btnSignature.Text = "Upload"
-        btnSignature.UseVisualStyleBackColor = True
-        ' 
         ' Label20
         ' 
         Label20.AutoSize = True
-        Label20.Location = New Point(576, 438)
+        Label20.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label20.Location = New Point(566, 511)
         Label20.Name = "Label20"
-        Label20.Size = New Size(57, 15)
+        Label20.Size = New Size(76, 20)
         Label20.TabIndex = 132
         Label20.Text = "Signature"
-        ' 
-        ' btnThumbmark
-        ' 
-        btnThumbmark.Location = New Point(569, 405)
-        btnThumbmark.Name = "btnThumbmark"
-        btnThumbmark.Size = New Size(75, 23)
-        btnThumbmark.TabIndex = 130
-        btnThumbmark.Text = "Upload"
-        btnThumbmark.UseVisualStyleBackColor = True
         ' 
         ' Label19
         ' 
         Label19.AutoSize = True
-        Label19.Location = New Point(561, 231)
+        Label19.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label19.Location = New Point(548, 303)
         Label19.Name = "Label19"
-        Label19.Size = New Size(85, 15)
+        Label19.Size = New Size(113, 20)
         Label19.TabIndex = 129
         Label19.Text = "R. Thumbmark"
-        ' 
-        ' btnCamera
-        ' 
-        btnCamera.Location = New Point(569, 201)
-        btnCamera.Name = "btnCamera"
-        btnCamera.Size = New Size(75, 23)
-        btnCamera.TabIndex = 127
-        btnCamera.Text = "Upload"
-        btnCamera.UseVisualStyleBackColor = True
         ' 
         ' Label18
         ' 
         Label18.AutoSize = True
-        Label18.Location = New Point(581, 27)
+        Label18.Font = New Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point)
+        Label18.Location = New Point(574, 94)
         Label18.Name = "Label18"
-        Label18.Size = New Size(48, 15)
+        Label18.Size = New Size(62, 20)
         Label18.TabIndex = 126
         Label18.Text = "Camera"
         ' 
         ' Label16
         ' 
         Label16.AutoSize = True
-        Label16.Location = New Point(258, 345)
+        Label16.Location = New Point(256, 411)
         Label16.Name = "Label16"
         Label16.Size = New Size(51, 15)
         Label16.TabIndex = 125
@@ -232,22 +205,22 @@ Partial Class Clerk2
         ' 
         ' txtORAmount
         ' 
-        txtORAmount.Location = New Point(258, 363)
+        txtORAmount.Location = New Point(256, 429)
         txtORAmount.Name = "txtORAmount"
         txtORAmount.Size = New Size(230, 23)
-        txtORAmount.TabIndex = 124
+        txtORAmount.TabIndex = 19
         ' 
         ' txtORNo
         ' 
-        txtORNo.Location = New Point(258, 316)
+        txtORNo.Location = New Point(256, 382)
         txtORNo.Name = "txtORNo"
         txtORNo.Size = New Size(230, 23)
-        txtORNo.TabIndex = 123
+        txtORNo.TabIndex = 17
         ' 
         ' Label17
         ' 
         Label17.AutoSize = True
-        Label17.Location = New Point(258, 298)
+        Label17.Location = New Point(256, 364)
         Label17.Name = "Label17"
         Label17.Size = New Size(70, 15)
         Label17.TabIndex = 122
@@ -257,7 +230,7 @@ Partial Class Clerk2
         ' 
         dtClearanceDate.Enabled = False
         dtClearanceDate.Format = DateTimePickerFormat.Short
-        dtClearanceDate.Location = New Point(389, 30)
+        dtClearanceDate.Location = New Point(387, 96)
         dtClearanceDate.Name = "dtClearanceDate"
         dtClearanceDate.Size = New Size(99, 23)
         dtClearanceDate.TabIndex = 121
@@ -265,7 +238,7 @@ Partial Class Clerk2
         ' Label15
         ' 
         Label15.AutoSize = True
-        Label15.Location = New Point(349, 33)
+        Label15.Location = New Point(347, 99)
         Label15.Name = "Label15"
         Label15.Size = New Size(34, 15)
         Label15.TabIndex = 120
@@ -273,15 +246,15 @@ Partial Class Clerk2
         ' 
         ' txtContactNo
         ' 
-        txtContactNo.Location = New Point(335, 219)
+        txtContactNo.Location = New Point(333, 285)
         txtContactNo.Name = "txtContactNo"
         txtContactNo.Size = New Size(153, 23)
-        txtContactNo.TabIndex = 118
+        txtContactNo.TabIndex = 14
         ' 
         ' Label13
         ' 
         Label13.AutoSize = True
-        Label13.Location = New Point(335, 203)
+        Label13.Location = New Point(333, 269)
         Label13.Name = "Label13"
         Label13.Size = New Size(96, 15)
         Label13.TabIndex = 117
@@ -290,7 +263,7 @@ Partial Class Clerk2
         ' Label12
         ' 
         Label12.AutoSize = True
-        Label12.Location = New Point(17, 392)
+        Label12.Location = New Point(15, 458)
         Label12.Name = "Label12"
         Label12.Size = New Size(55, 15)
         Label12.TabIndex = 116
@@ -298,15 +271,15 @@ Partial Class Clerk2
         ' 
         ' txtCTCIssueAt
         ' 
-        txtCTCIssueAt.Location = New Point(17, 410)
+        txtCTCIssueAt.Location = New Point(15, 476)
         txtCTCIssueAt.Name = "txtCTCIssueAt"
         txtCTCIssueAt.Size = New Size(230, 23)
-        txtCTCIssueAt.TabIndex = 115
+        txtCTCIssueAt.TabIndex = 20
         ' 
         ' Label10
         ' 
         Label10.AutoSize = True
-        Label10.Location = New Point(17, 345)
+        Label10.Location = New Point(15, 411)
         Label10.Name = "Label10"
         Label10.Size = New Size(59, 15)
         Label10.TabIndex = 114
@@ -315,22 +288,22 @@ Partial Class Clerk2
         ' dtCTCIssueDate
         ' 
         dtCTCIssueDate.Format = DateTimePickerFormat.Short
-        dtCTCIssueDate.Location = New Point(17, 363)
+        dtCTCIssueDate.Location = New Point(15, 429)
         dtCTCIssueDate.Name = "dtCTCIssueDate"
         dtCTCIssueDate.Size = New Size(230, 23)
-        dtCTCIssueDate.TabIndex = 113
+        dtCTCIssueDate.TabIndex = 18
         ' 
         ' txtCTCNo
         ' 
-        txtCTCNo.Location = New Point(17, 319)
+        txtCTCNo.Location = New Point(15, 385)
         txtCTCNo.Name = "txtCTCNo"
         txtCTCNo.Size = New Size(230, 23)
-        txtCTCNo.TabIndex = 112
+        txtCTCNo.TabIndex = 16
         ' 
         ' Label11
         ' 
         Label11.AutoSize = True
-        Label11.Location = New Point(17, 301)
+        Label11.Location = New Point(15, 367)
         Label11.Name = "Label11"
         Label11.Size = New Size(75, 15)
         Label11.TabIndex = 111
@@ -339,15 +312,15 @@ Partial Class Clerk2
         ' cbPurpose
         ' 
         cbPurpose.FormattingEnabled = True
-        cbPurpose.Location = New Point(17, 269)
+        cbPurpose.Location = New Point(15, 335)
         cbPurpose.Name = "cbPurpose"
         cbPurpose.Size = New Size(471, 23)
-        cbPurpose.TabIndex = 110
+        cbPurpose.TabIndex = 15
         ' 
         ' Label9
         ' 
         Label9.AutoSize = True
-        Label9.Location = New Point(17, 253)
+        Label9.Location = New Point(15, 319)
         Label9.Name = "Label9"
         Label9.Size = New Size(50, 15)
         Label9.TabIndex = 109
@@ -355,15 +328,15 @@ Partial Class Clerk2
         ' 
         ' txtNationality
         ' 
-        txtNationality.Location = New Point(224, 219)
+        txtNationality.Location = New Point(222, 285)
         txtNationality.Name = "txtNationality"
         txtNationality.Size = New Size(105, 23)
-        txtNationality.TabIndex = 108
+        txtNationality.TabIndex = 13
         ' 
         ' Label8
         ' 
         Label8.AutoSize = True
-        Label8.Location = New Point(226, 203)
+        Label8.Location = New Point(224, 269)
         Label8.Name = "Label8"
         Label8.Size = New Size(65, 15)
         Label8.TabIndex = 107
@@ -371,18 +344,18 @@ Partial Class Clerk2
         ' 
         ' txtHeight
         ' 
-        txtHeight.Location = New Point(140, 219)
+        txtHeight.Location = New Point(138, 285)
         txtHeight.Name = "txtHeight"
         txtHeight.Size = New Size(78, 23)
-        txtHeight.TabIndex = 106
+        txtHeight.TabIndex = 12
         ' 
         ' rbFemale
         ' 
         rbFemale.AutoSize = True
-        rbFemale.Location = New Point(74, 221)
+        rbFemale.Location = New Point(72, 287)
         rbFemale.Name = "rbFemale"
         rbFemale.Size = New Size(63, 19)
-        rbFemale.TabIndex = 105
+        rbFemale.TabIndex = 11
         rbFemale.TabStop = True
         rbFemale.Text = "Female"
         rbFemale.UseVisualStyleBackColor = True
@@ -390,10 +363,10 @@ Partial Class Clerk2
         ' rbMale
         ' 
         rbMale.AutoSize = True
-        rbMale.Location = New Point(17, 221)
+        rbMale.Location = New Point(15, 287)
         rbMale.Name = "rbMale"
         rbMale.Size = New Size(51, 19)
-        rbMale.TabIndex = 104
+        rbMale.TabIndex = 10
         rbMale.TabStop = True
         rbMale.Text = "Male"
         rbMale.UseVisualStyleBackColor = True
@@ -401,7 +374,7 @@ Partial Class Clerk2
         ' Label7
         ' 
         Label7.AutoSize = True
-        Label7.Location = New Point(140, 202)
+        Label7.Location = New Point(138, 268)
         Label7.Name = "Label7"
         Label7.Size = New Size(59, 15)
         Label7.TabIndex = 103
@@ -410,7 +383,7 @@ Partial Class Clerk2
         ' Label6
         ' 
         Label6.AutoSize = True
-        Label6.Location = New Point(17, 203)
+        Label6.Location = New Point(15, 269)
         Label6.Name = "Label6"
         Label6.Size = New Size(25, 15)
         Label6.TabIndex = 102
@@ -419,7 +392,7 @@ Partial Class Clerk2
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(335, 159)
+        Label5.Location = New Point(333, 225)
         Label5.Name = "Label5"
         Label5.Size = New Size(73, 15)
         Label5.TabIndex = 101
@@ -428,22 +401,22 @@ Partial Class Clerk2
         ' dtBirthDate
         ' 
         dtBirthDate.Format = DateTimePickerFormat.Short
-        dtBirthDate.Location = New Point(335, 177)
+        dtBirthDate.Location = New Point(333, 243)
         dtBirthDate.Name = "dtBirthDate"
         dtBirthDate.Size = New Size(153, 23)
-        dtBirthDate.TabIndex = 100
+        dtBirthDate.TabIndex = 9
         ' 
         ' txtBirthPlace
         ' 
-        txtBirthPlace.Location = New Point(17, 177)
+        txtBirthPlace.Location = New Point(15, 243)
         txtBirthPlace.Name = "txtBirthPlace"
         txtBirthPlace.Size = New Size(274, 23)
-        txtBirthPlace.TabIndex = 99
+        txtBirthPlace.TabIndex = 8
         ' 
         ' Label4
         ' 
         Label4.AutoSize = True
-        Label4.Location = New Point(17, 159)
+        Label4.Location = New Point(15, 225)
         Label4.Name = "Label4"
         Label4.Size = New Size(77, 15)
         Label4.TabIndex = 98
@@ -452,15 +425,15 @@ Partial Class Clerk2
         ' cbCivilStatus
         ' 
         cbCivilStatus.FormattingEnabled = True
-        cbCivilStatus.Location = New Point(335, 133)
+        cbCivilStatus.Location = New Point(333, 199)
         cbCivilStatus.Name = "cbCivilStatus"
         cbCivilStatus.Size = New Size(153, 23)
-        cbCivilStatus.TabIndex = 97
+        cbCivilStatus.TabIndex = 7
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(335, 115)
+        Label3.Location = New Point(333, 181)
         Label3.Name = "Label3"
         Label3.Size = New Size(65, 15)
         Label3.TabIndex = 96
@@ -469,23 +442,23 @@ Partial Class Clerk2
         ' cbBarangay
         ' 
         cbBarangay.FormattingEnabled = True
-        cbBarangay.Location = New Point(88, 133)
+        cbBarangay.Location = New Point(86, 199)
         cbBarangay.Name = "cbBarangay"
         cbBarangay.Size = New Size(203, 23)
-        cbBarangay.TabIndex = 95
+        cbBarangay.TabIndex = 6
         ' 
         ' cbZone
         ' 
         cbZone.FormattingEnabled = True
-        cbZone.Location = New Point(17, 133)
+        cbZone.Location = New Point(15, 199)
         cbZone.Name = "cbZone"
         cbZone.Size = New Size(68, 23)
-        cbZone.TabIndex = 94
+        cbZone.TabIndex = 5
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(17, 115)
+        Label2.Location = New Point(15, 181)
         Label2.Name = "Label2"
         Label2.Size = New Size(139, 15)
         Label2.TabIndex = 93
@@ -493,22 +466,22 @@ Partial Class Clerk2
         ' 
         ' txtClearanceMname
         ' 
-        txtClearanceMname.Location = New Point(335, 84)
+        txtClearanceMname.Location = New Point(333, 150)
         txtClearanceMname.Name = "txtClearanceMname"
         txtClearanceMname.Size = New Size(153, 23)
-        txtClearanceMname.TabIndex = 92
+        txtClearanceMname.TabIndex = 4
         ' 
         ' txtClearanceFname
         ' 
-        txtClearanceFname.Location = New Point(176, 84)
+        txtClearanceFname.Location = New Point(174, 150)
         txtClearanceFname.Name = "txtClearanceFname"
         txtClearanceFname.Size = New Size(153, 23)
-        txtClearanceFname.TabIndex = 91
+        txtClearanceFname.TabIndex = 3
         ' 
         ' Label14
         ' 
         Label14.AutoSize = True
-        Label14.Location = New Point(17, 66)
+        Label14.Location = New Point(15, 132)
         Label14.Name = "Label14"
         Label14.Size = New Size(262, 15)
         Label14.TabIndex = 90
@@ -516,22 +489,22 @@ Partial Class Clerk2
         ' 
         ' txtClearanceLname
         ' 
-        txtClearanceLname.Location = New Point(17, 84)
+        txtClearanceLname.Location = New Point(15, 150)
         txtClearanceLname.Name = "txtClearanceLname"
         txtClearanceLname.Size = New Size(153, 23)
-        txtClearanceLname.TabIndex = 89
+        txtClearanceLname.TabIndex = 2
         ' 
         ' txtClearanceNo
         ' 
-        txtClearanceNo.Location = New Point(104, 27)
+        txtClearanceNo.Location = New Point(102, 95)
         txtClearanceNo.Name = "txtClearanceNo"
-        txtClearanceNo.Size = New Size(77, 23)
-        txtClearanceNo.TabIndex = 88
+        txtClearanceNo.Size = New Size(95, 23)
+        txtClearanceNo.TabIndex = 1
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(17, 33)
+        Label1.Location = New Point(15, 101)
         Label1.Name = "Label1"
         Label1.Size = New Size(81, 15)
         Label1.TabIndex = 87
@@ -541,11 +514,11 @@ Partial Class Clerk2
         ' 
         TabControl1.Controls.Add(TabPage1)
         TabControl1.Controls.Add(TabPage2)
-        TabControl1.Location = New Point(710, 27)
+        TabControl1.Location = New Point(708, 93)
         TabControl1.Name = "TabControl1"
         TabControl1.SelectedIndex = 0
         TabControl1.Size = New Size(788, 579)
-        TabControl1.TabIndex = 140
+        TabControl1.TabIndex = 1
         ' 
         ' TabPage1
         ' 
@@ -562,7 +535,7 @@ Partial Class Clerk2
         ' 
         ' btnApplicantPendingSearchCancel
         ' 
-        btnApplicantPendingSearchCancel.Location = New Point(702, 6)
+        btnApplicantPendingSearchCancel.Location = New Point(702, 18)
         btnApplicantPendingSearchCancel.Name = "btnApplicantPendingSearchCancel"
         btnApplicantPendingSearchCancel.Size = New Size(75, 23)
         btnApplicantPendingSearchCancel.TabIndex = 144
@@ -571,10 +544,10 @@ Partial Class Clerk2
         ' 
         ' txtApplicantPendingSearch
         ' 
-        txtApplicantPendingSearch.Location = New Point(447, 6)
+        txtApplicantPendingSearch.Location = New Point(447, 18)
         txtApplicantPendingSearch.Name = "txtApplicantPendingSearch"
         txtApplicantPendingSearch.Size = New Size(249, 23)
-        txtApplicantPendingSearch.TabIndex = 143
+        txtApplicantPendingSearch.TabIndex = 2
         ' 
         ' dataApplicantPending
         ' 
@@ -582,11 +555,11 @@ Partial Class Clerk2
         dataApplicantPending.AllowUserToDeleteRows = False
         dataApplicantPending.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dataApplicantPending.Columns.AddRange(New DataGridViewColumn() {dataPendingClearanceID, dataPendingClearanceNo, dataPendingClearanceFname, dataPendingClearanceMname, dataPendingClearanceLname, dataPendingClearanceStatus, dataPendingClearanceEdit, dataPendingClearanceSetBtn, dataPendingClearanceDelete})
-        dataApplicantPending.Location = New Point(4, 35)
+        dataApplicantPending.Location = New Point(4, 49)
         dataApplicantPending.Name = "dataApplicantPending"
         dataApplicantPending.ReadOnly = True
         dataApplicantPending.RowTemplate.Height = 25
-        dataApplicantPending.Size = New Size(773, 514)
+        dataApplicantPending.Size = New Size(773, 501)
         dataApplicantPending.TabIndex = 142
         ' 
         ' dataPendingClearanceID
@@ -667,7 +640,7 @@ Partial Class Clerk2
         dataApplicantCompleted.AllowUserToDeleteRows = False
         dataApplicantCompleted.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
         dataApplicantCompleted.Columns.AddRange(New DataGridViewColumn() {dataCompletedClearanceID, dataCompletedClearanceNo, dataCompletedClearanceFname, dataCompletedClearanceMname, dataCompletedClearanceLname, dataCompletedClearanceStatus, dataCompletedClearancePrint})
-        dataApplicantCompleted.Location = New Point(4, 37)
+        dataApplicantCompleted.Location = New Point(4, 49)
         dataApplicantCompleted.Name = "dataApplicantCompleted"
         dataApplicantCompleted.ReadOnly = True
         dataApplicantCompleted.RowTemplate.Height = 25
@@ -720,7 +693,7 @@ Partial Class Clerk2
         ' 
         ' btnApplicantCompletedSearchCancel
         ' 
-        btnApplicantCompletedSearchCancel.Location = New Point(702, 5)
+        btnApplicantCompletedSearchCancel.Location = New Point(702, 17)
         btnApplicantCompletedSearchCancel.Name = "btnApplicantCompletedSearchCancel"
         btnApplicantCompletedSearchCancel.Size = New Size(75, 23)
         btnApplicantCompletedSearchCancel.TabIndex = 147
@@ -729,7 +702,7 @@ Partial Class Clerk2
         ' 
         ' txtApplicantCompletedSearch
         ' 
-        txtApplicantCompletedSearch.Location = New Point(447, 5)
+        txtApplicantCompletedSearch.Location = New Point(447, 18)
         txtApplicantCompletedSearch.Name = "txtApplicantCompletedSearch"
         txtApplicantCompletedSearch.Size = New Size(249, 23)
         txtApplicantCompletedSearch.TabIndex = 146
@@ -737,36 +710,39 @@ Partial Class Clerk2
         ' MenuStrip1
         ' 
         MenuStrip1.Items.AddRange(New ToolStripItem() {FileToolStripMenuItem})
-        MenuStrip1.Location = New Point(0, 0)
+        MenuStrip1.Location = New Point(3, 64)
         MenuStrip1.Name = "MenuStrip1"
-        MenuStrip1.Size = New Size(1370, 24)
+        MenuStrip1.Size = New Size(1364, 28)
         MenuStrip1.TabIndex = 141
         MenuStrip1.Text = "MenuStrip1"
         ' 
         ' FileToolStripMenuItem
         ' 
         FileToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ReportToolStripMenuItem, LogoutToolStripMenuItem})
+        FileToolStripMenuItem.Font = New Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point)
         FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        FileToolStripMenuItem.Size = New Size(37, 20)
+        FileToolStripMenuItem.Size = New Size(44, 24)
         FileToolStripMenuItem.Text = "File"
         ' 
         ' ReportToolStripMenuItem
         ' 
+        ReportToolStripMenuItem.Image = CType(resources.GetObject("ReportToolStripMenuItem.Image"), Image)
         ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
-        ReportToolStripMenuItem.Size = New Size(112, 22)
+        ReportToolStripMenuItem.Size = New Size(125, 24)
         ReportToolStripMenuItem.Text = "Report"
         ' 
         ' LogoutToolStripMenuItem
         ' 
+        LogoutToolStripMenuItem.Image = CType(resources.GetObject("LogoutToolStripMenuItem.Image"), Image)
         LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        LogoutToolStripMenuItem.Size = New Size(112, 22)
+        LogoutToolStripMenuItem.Size = New Size(125, 24)
         LogoutToolStripMenuItem.Text = "Logout"
         ' 
         ' PictureBox1
         ' 
-        PictureBox1.BackgroundImage = PoliceClearanceSystemES.Resources.default_applicant
         PictureBox1.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox1.Location = New Point(530, 45)
+        PictureBox1.InitialImage = Nothing
+        PictureBox1.Location = New Point(528, 118)
         PictureBox1.Name = "PictureBox1"
         PictureBox1.Size = New Size(150, 150)
         PictureBox1.SizeMode = PictureBoxSizeMode.StretchImage
@@ -775,9 +751,8 @@ Partial Class Clerk2
         ' 
         ' PictureBox2
         ' 
-        PictureBox2.BackgroundImage = PoliceClearanceSystemES.Resources.default_fingerprint
         PictureBox2.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox2.Location = New Point(530, 249)
+        PictureBox2.Location = New Point(528, 326)
         PictureBox2.Name = "PictureBox2"
         PictureBox2.Size = New Size(150, 150)
         PictureBox2.SizeMode = PictureBoxSizeMode.StretchImage
@@ -786,35 +761,238 @@ Partial Class Clerk2
         ' 
         ' PictureBox3
         ' 
-        PictureBox3.BackgroundImage = PoliceClearanceSystemES.Resources.default_signature
         PictureBox3.BackgroundImageLayout = ImageLayout.Zoom
-        PictureBox3.Location = New Point(530, 456)
+        PictureBox3.Location = New Point(528, 533)
         PictureBox3.Name = "PictureBox3"
         PictureBox3.Size = New Size(150, 150)
         PictureBox3.SizeMode = PictureBoxSizeMode.StretchImage
         PictureBox3.TabIndex = 144
         PictureBox3.TabStop = False
         ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.FromArgb(CByte(244), CByte(67), CByte(54))
+        Panel3.Controls.Add(btnClear_Cancel)
+        Panel3.ForeColor = Color.White
+        Panel3.Location = New Point(246, 622)
+        Panel3.Name = "Panel3"
+        Panel3.Size = New Size(132, 25)
+        Panel3.TabIndex = 146
+        ' 
+        ' btnClear_Cancel
+        ' 
+        btnClear_Cancel.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        btnClear_Cancel.Density = MaterialButton.MaterialButtonDensity.Default
+        btnClear_Cancel.Depth = 0
+        btnClear_Cancel.HighEmphasis = False
+        btnClear_Cancel.Icon = Nothing
+        btnClear_Cancel.Location = New Point(0, 0)
+        btnClear_Cancel.Margin = New Padding(4, 6, 4, 6)
+        btnClear_Cancel.MaximumSize = New Size(132, 25)
+        btnClear_Cancel.MinimumSize = New Size(132, 25)
+        btnClear_Cancel.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        btnClear_Cancel.Name = "btnClear_Cancel"
+        btnClear_Cancel.NoAccentTextColor = Color.Empty
+        btnClear_Cancel.Size = New Size(132, 25)
+        btnClear_Cancel.TabIndex = 55
+        btnClear_Cancel.Text = "Clear"
+        btnClear_Cancel.Type = MaterialButton.MaterialButtonType.Text
+        btnClear_Cancel.UseAccentColor = False
+        btnClear_Cancel.UseVisualStyleBackColor = True
+        ' 
+        ' Panel1
+        ' 
+        Panel1.BackColor = Color.Silver
+        Panel1.Controls.Add(btnAdd_Saved)
+        Panel1.ForeColor = Color.White
+        Panel1.Location = New Point(84, 622)
+        Panel1.Name = "Panel1"
+        Panel1.Size = New Size(132, 25)
+        Panel1.TabIndex = 145
+        ' 
+        ' btnAdd_Saved
+        ' 
+        btnAdd_Saved.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        btnAdd_Saved.BackColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        btnAdd_Saved.Density = MaterialButton.MaterialButtonDensity.Default
+        btnAdd_Saved.Depth = 0
+        btnAdd_Saved.DrawShadows = False
+        btnAdd_Saved.FlatAppearance.BorderColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        btnAdd_Saved.FlatAppearance.MouseDownBackColor = Color.Silver
+        btnAdd_Saved.FlatAppearance.MouseOverBackColor = Color.Silver
+        btnAdd_Saved.FlatStyle = FlatStyle.Flat
+        btnAdd_Saved.ForeColor = Color.White
+        btnAdd_Saved.HighEmphasis = False
+        btnAdd_Saved.Icon = Nothing
+        btnAdd_Saved.Location = New Point(0, 0)
+        btnAdd_Saved.Margin = New Padding(4, 6, 4, 6)
+        btnAdd_Saved.MaximumSize = New Size(132, 25)
+        btnAdd_Saved.MinimumSize = New Size(132, 25)
+        btnAdd_Saved.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        btnAdd_Saved.Name = "btnAdd_Saved"
+        btnAdd_Saved.NoAccentTextColor = Color.Empty
+        btnAdd_Saved.Size = New Size(132, 25)
+        btnAdd_Saved.TabIndex = 53
+        btnAdd_Saved.Text = "Add"
+        btnAdd_Saved.Type = MaterialButton.MaterialButtonType.Outlined
+        btnAdd_Saved.UseAccentColor = False
+        btnAdd_Saved.UseVisualStyleBackColor = False
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackColor = Color.WhiteSmoke
+        Panel2.Controls.Add(MaterialButton1)
+        Panel2.ForeColor = Color.White
+        Panel2.Location = New Point(567, 275)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(75, 23)
+        Panel2.TabIndex = 146
+        ' 
+        ' MaterialButton1
+        ' 
+        MaterialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        MaterialButton1.BackColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        MaterialButton1.CharacterCasing = MaterialButton.CharacterCasingEnum.Normal
+        MaterialButton1.Density = MaterialButton.MaterialButtonDensity.Default
+        MaterialButton1.Depth = 0
+        MaterialButton1.DrawShadows = False
+        MaterialButton1.FlatAppearance.BorderColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        MaterialButton1.FlatAppearance.MouseDownBackColor = Color.Silver
+        MaterialButton1.FlatAppearance.MouseOverBackColor = Color.Silver
+        MaterialButton1.FlatStyle = FlatStyle.Flat
+        MaterialButton1.ForeColor = Color.White
+        MaterialButton1.HighEmphasis = False
+        MaterialButton1.Icon = Nothing
+        MaterialButton1.Location = New Point(0, 0)
+        MaterialButton1.Margin = New Padding(4, 6, 4, 6)
+        MaterialButton1.MaximumSize = New Size(75, 23)
+        MaterialButton1.MinimumSize = New Size(75, 23)
+        MaterialButton1.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        MaterialButton1.Name = "MaterialButton1"
+        MaterialButton1.NoAccentTextColor = Color.Empty
+        MaterialButton1.Size = New Size(75, 23)
+        MaterialButton1.TabIndex = 53
+        MaterialButton1.Text = "Upload"
+        MaterialButton1.Type = MaterialButton.MaterialButtonType.Outlined
+        MaterialButton1.UseAccentColor = False
+        MaterialButton1.UseVisualStyleBackColor = False
+        ' 
+        ' Panel4
+        ' 
+        Panel4.BackColor = Color.WhiteSmoke
+        Panel4.Controls.Add(MaterialButton2)
+        Panel4.ForeColor = Color.White
+        Panel4.Location = New Point(567, 482)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(75, 23)
+        Panel4.TabIndex = 147
+        ' 
+        ' MaterialButton2
+        ' 
+        MaterialButton2.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        MaterialButton2.BackColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        MaterialButton2.CharacterCasing = MaterialButton.CharacterCasingEnum.Normal
+        MaterialButton2.Density = MaterialButton.MaterialButtonDensity.Default
+        MaterialButton2.Depth = 0
+        MaterialButton2.DrawShadows = False
+        MaterialButton2.FlatAppearance.BorderColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        MaterialButton2.FlatAppearance.MouseDownBackColor = Color.Silver
+        MaterialButton2.FlatAppearance.MouseOverBackColor = Color.Silver
+        MaterialButton2.FlatStyle = FlatStyle.Flat
+        MaterialButton2.ForeColor = Color.White
+        MaterialButton2.HighEmphasis = False
+        MaterialButton2.Icon = Nothing
+        MaterialButton2.Location = New Point(0, 0)
+        MaterialButton2.Margin = New Padding(4, 6, 4, 6)
+        MaterialButton2.MaximumSize = New Size(75, 23)
+        MaterialButton2.MinimumSize = New Size(75, 23)
+        MaterialButton2.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        MaterialButton2.Name = "MaterialButton2"
+        MaterialButton2.NoAccentTextColor = Color.Empty
+        MaterialButton2.Size = New Size(75, 23)
+        MaterialButton2.TabIndex = 53
+        MaterialButton2.Text = "Upload"
+        MaterialButton2.Type = MaterialButton.MaterialButtonType.Outlined
+        MaterialButton2.UseAccentColor = False
+        MaterialButton2.UseVisualStyleBackColor = False
+        ' 
+        ' Panel5
+        ' 
+        Panel5.BackColor = Color.WhiteSmoke
+        Panel5.Controls.Add(MaterialButton3)
+        Panel5.ForeColor = Color.White
+        Panel5.Location = New Point(567, 691)
+        Panel5.Name = "Panel5"
+        Panel5.Size = New Size(75, 23)
+        Panel5.TabIndex = 148
+        ' 
+        ' MaterialButton3
+        ' 
+        MaterialButton3.AutoSizeMode = AutoSizeMode.GrowAndShrink
+        MaterialButton3.BackColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        MaterialButton3.CharacterCasing = MaterialButton.CharacterCasingEnum.Normal
+        MaterialButton3.Density = MaterialButton.MaterialButtonDensity.Default
+        MaterialButton3.Depth = 0
+        MaterialButton3.DrawShadows = False
+        MaterialButton3.FlatAppearance.BorderColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        MaterialButton3.FlatAppearance.MouseDownBackColor = Color.Silver
+        MaterialButton3.FlatAppearance.MouseOverBackColor = Color.Silver
+        MaterialButton3.FlatStyle = FlatStyle.Flat
+        MaterialButton3.ForeColor = Color.White
+        MaterialButton3.HighEmphasis = False
+        MaterialButton3.Icon = Nothing
+        MaterialButton3.Location = New Point(0, 0)
+        MaterialButton3.Margin = New Padding(4, 6, 4, 6)
+        MaterialButton3.MaximumSize = New Size(75, 23)
+        MaterialButton3.MinimumSize = New Size(75, 23)
+        MaterialButton3.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        MaterialButton3.Name = "MaterialButton3"
+        MaterialButton3.NoAccentTextColor = Color.Empty
+        MaterialButton3.Size = New Size(75, 23)
+        MaterialButton3.TabIndex = 149
+        MaterialButton3.Text = "Upload"
+        MaterialButton3.Type = MaterialButton.MaterialButtonType.Outlined
+        MaterialButton3.UseAccentColor = False
+        MaterialButton3.UseVisualStyleBackColor = False
+        ' 
+        ' MaterialCheckbox1
+        ' 
+        MaterialCheckbox1.AutoSize = True
+        MaterialCheckbox1.Depth = 0
+        MaterialCheckbox1.Font = New Font("Arial", 8.0F, FontStyle.Bold, GraphicsUnit.Point)
+        MaterialCheckbox1.Location = New Point(284, 15)
+        MaterialCheckbox1.Margin = New Padding(0)
+        MaterialCheckbox1.MouseLocation = New Point(-1, -1)
+        MaterialCheckbox1.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        MaterialCheckbox1.Name = "MaterialCheckbox1"
+        MaterialCheckbox1.ReadOnly = False
+        MaterialCheckbox1.Ripple = True
+        MaterialCheckbox1.Size = New Size(171, 37)
+        MaterialCheckbox1.TabIndex = 149
+        MaterialCheckbox1.Text = "MaterialCheckbox1"
+        MaterialCheckbox1.UseVisualStyleBackColor = True
+        ' 
         ' Clerk2
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1370, 641)
+        ClientSize = New Size(1370, 734)
+        Controls.Add(MaterialCheckbox1)
+        Controls.Add(Panel5)
+        Controls.Add(Panel4)
+        Controls.Add(Panel2)
+        Controls.Add(Panel3)
+        Controls.Add(Panel1)
         Controls.Add(PictureBox3)
         Controls.Add(PictureBox2)
         Controls.Add(PictureBox1)
         Controls.Add(TabControl1)
-        Controls.Add(btnClear_Cancel)
-        Controls.Add(btnAdd_Save)
         Controls.Add(cbPoliceCertify)
         Controls.Add(Label22)
         Controls.Add(cbPoliceVerify)
         Controls.Add(Label21)
-        Controls.Add(btnSignature)
         Controls.Add(Label20)
-        Controls.Add(btnThumbmark)
         Controls.Add(Label19)
-        Controls.Add(btnCamera)
         Controls.Add(Label18)
         Controls.Add(Label16)
         Controls.Add(txtORAmount)
@@ -857,6 +1035,9 @@ Partial Class Clerk2
         Controls.Add(MenuStrip1)
         MainMenuStrip = MenuStrip1
         Name = "Clerk2"
+        PrimaryColor = MaterialSkin2Framework.Primary.Blue700
+        PrimaryDarkColor = MaterialSkin2Framework.Primary.Blue900
+        PrimaryLightColor = MaterialSkin2Framework.Primary.Blue300
         Text = "Clerk"
         TabControl1.ResumeLayout(False)
         TabPage1.ResumeLayout(False)
@@ -870,20 +1051,25 @@ Partial Class Clerk2
         CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox2, ComponentModel.ISupportInitialize).EndInit()
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
+        Panel3.ResumeLayout(False)
+        Panel3.PerformLayout()
+        Panel1.ResumeLayout(False)
+        Panel1.PerformLayout()
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        Panel4.ResumeLayout(False)
+        Panel4.PerformLayout()
+        Panel5.ResumeLayout(False)
+        Panel5.PerformLayout()
         ResumeLayout(False)
         PerformLayout()
     End Sub
-    Friend WithEvents btnClear_Cancel As Button
-    Friend WithEvents btnAdd_Save As Button
     Friend WithEvents cbPoliceCertify As ComboBox
     Friend WithEvents Label22 As Label
     Friend WithEvents cbPoliceVerify As ComboBox
     Friend WithEvents Label21 As Label
-    Friend WithEvents btnSignature As Button
     Friend WithEvents Label20 As Label
-    Friend WithEvents btnThumbmark As Button
     Friend WithEvents Label19 As Label
-    Friend WithEvents btnCamera As Button
     Friend WithEvents Label18 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents txtORAmount As TextBox
@@ -955,4 +1141,15 @@ Partial Class Clerk2
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents ReportToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents btnClear_Cancel As MaterialSkin2Framework.Controls.MaterialButton
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents btnAdd_Saved As MaterialSkin2Framework.Controls.MaterialButton
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents MaterialButton1 As MaterialSkin2Framework.Controls.MaterialButton
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents MaterialButton2 As MaterialSkin2Framework.Controls.MaterialButton
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents MaterialButton3 As MaterialSkin2Framework.Controls.MaterialButton
+    Friend WithEvents MaterialCheckbox1 As MaterialSkin2Framework.Controls.MaterialCheckbox
 End Class

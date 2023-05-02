@@ -58,7 +58,7 @@ Public Class AdminSettings
             connection.Close()
             command = Nothing
         End If
-        Connection.Close()
+        connection.Close()
     End Sub
 
     Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click

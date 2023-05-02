@@ -55,4 +55,7 @@ Public Class SignatureForm
         Me.Dispose()
     End Sub
 
+    Private Sub pBoxSignature_Click(sender As Object, e As EventArgs) Handles pBoxSignature.Click
+
+    End Sub
 End Class

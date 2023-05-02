@@ -237,6 +237,9 @@ Partial Class AdminSettings
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False
         Name = "AdminSettings"
+        PrimaryColor = MaterialSkin2Framework.Primary.Blue700
+        PrimaryDarkColor = MaterialSkin2Framework.Primary.Blue900
+        PrimaryLightColor = MaterialSkin2Framework.Primary.Blue300
         StartPosition = FormStartPosition.CenterScreen
         Text = "AdminSettings"
         Panel2.ResumeLayout(False)

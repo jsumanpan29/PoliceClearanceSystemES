@@ -467,6 +467,7 @@ Public Class Admin
         LoadCRTable()
         CRCount()
     End Sub
+
     Private Sub btnUsersSearchRefresh_Click(sender As Object, e As EventArgs) Handles btnUsersSearchRefresh.Click
         LoadUserTable()
         txtUserSearch.Text = ""
@@ -476,6 +477,7 @@ Public Class Admin
         LoadCRTable()
         txtCRSearch.Text = ""
     End Sub
+
 
     Private Sub btnUsersAdd_Click(sender As Object, e As EventArgs) Handles btnUsersAdd.Click
         Dim userForm As New User
