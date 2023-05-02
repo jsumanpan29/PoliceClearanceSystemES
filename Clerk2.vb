@@ -573,7 +573,7 @@ Public Class Clerk2
                 Dim row As DataGridViewRow = dataApplicantPending.Rows(e.RowIndex)
                 Dim pcc_id As Integer = row.Cells("dataPendingClearanceID").Value
                 Dim result As DialogResult = MaterialMessageBox.Show("Confirm Edit?", "Edit Applicant",
-                                                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                                                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question, False)
                 If (result = DialogResult.Yes) Then
                     PccIDToEdit = pcc_id
                     If PccIDToEdit <> Nothing Then
@@ -697,7 +697,7 @@ Public Class Clerk2
                 Dim pcc_to_delete As Integer = row.Cells("dataPendingClearanceID").Value
                 Dim result As DialogResult = MaterialMessageBox.Show("Confirm Delete?",
                                                                      "Delete Applicant",
-                              MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                              MessageBoxButtons.YesNo, MessageBoxIcon.Question, False)
                 If result = DialogResult.Yes Then
                     quickSqlCommand("DELETE FROM dbo.[pcc] WHERE [pcc_id] =" & pcc_to_delete)
                 End If
@@ -710,7 +710,7 @@ Public Class Clerk2
                 Dim row As DataGridViewRow = dataApplicantPending.Rows(e.RowIndex)
                 Dim status As String = row.Cells("dataPendingClearanceStatus").Value.ToString.Trim.ToUpper
                 If status = status_pending Then
-                    MaterialMessageBox.Show("Can't Validate Applicant Until Applicant's Payment is Confirmed By the Cashier!", "Validate Applicant", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
+                    MaterialMessageBox.Show("Can't Validate Applicant Until Applicant's Payment is Confirmed By the Cashier!", "Validate Applicant", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, False)
                 ElseIf status = status_paid Then
                     'Search for Hit in Criminal Records Here
                     Try
@@ -770,7 +770,7 @@ Public Class Clerk2
                     'Print Function Here
                     Dim result As DialogResult = MaterialMessageBox.Show("Confirm Print?",
                               "Print Certificate",
-                              MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                              MessageBoxButtons.YesNo, MessageBoxIcon.Question, False)
                     If result = DialogResult.Yes Then
                         Try
                             connection.Open()
@@ -836,7 +836,7 @@ Public Class Clerk2
             Dim row As DataGridViewRow = dataApplicantCompleted.Rows(e.RowIndex)
             Dim result As DialogResult = MaterialMessageBox.Show("Confirm Print?",
                            "Print Certificate",
-                           MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                           MessageBoxButtons.YesNo, MessageBoxIcon.Question, False)
             If result = DialogResult.Yes Then
                 Try
                     Dim printForm As New PrintForm

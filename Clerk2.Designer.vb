@@ -770,7 +770,7 @@ Partial Class Clerk2
         ' 
         ' Panel3
         ' 
-        Panel3.BackColor = Color.FromArgb(CByte(244), CByte(67), CByte(54))
+        Panel3.BackColor = Color.FromArgb(244, 67, 54)
         Panel3.Controls.Add(btnClear_Cancel)
         Panel3.ForeColor = Color.White
         Panel3.Location = New Point(246, 622)
@@ -812,11 +812,11 @@ Partial Class Clerk2
         ' btnAdd_Saved
         ' 
         btnAdd_Saved.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        btnAdd_Saved.BackColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        btnAdd_Saved.BackColor = Color.FromArgb(13, 86, 147)
         btnAdd_Saved.Density = MaterialButton.MaterialButtonDensity.Default
         btnAdd_Saved.Depth = 0
         btnAdd_Saved.DrawShadows = False
-        btnAdd_Saved.FlatAppearance.BorderColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        btnAdd_Saved.FlatAppearance.BorderColor = Color.FromArgb(13, 86, 147)
         btnAdd_Saved.FlatAppearance.MouseDownBackColor = Color.Silver
         btnAdd_Saved.FlatAppearance.MouseOverBackColor = Color.Silver
         btnAdd_Saved.FlatStyle = FlatStyle.Flat
@@ -850,12 +850,12 @@ Partial Class Clerk2
         ' MaterialButton1
         ' 
         MaterialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        MaterialButton1.BackColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        MaterialButton1.BackColor = Color.FromArgb(13, 86, 147)
         MaterialButton1.CharacterCasing = MaterialButton.CharacterCasingEnum.Normal
         MaterialButton1.Density = MaterialButton.MaterialButtonDensity.Default
         MaterialButton1.Depth = 0
         MaterialButton1.DrawShadows = False
-        MaterialButton1.FlatAppearance.BorderColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        MaterialButton1.FlatAppearance.BorderColor = Color.FromArgb(13, 86, 147)
         MaterialButton1.FlatAppearance.MouseDownBackColor = Color.Silver
         MaterialButton1.FlatAppearance.MouseOverBackColor = Color.Silver
         MaterialButton1.FlatStyle = FlatStyle.Flat
@@ -889,12 +889,12 @@ Partial Class Clerk2
         ' MaterialButton2
         ' 
         MaterialButton2.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        MaterialButton2.BackColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        MaterialButton2.BackColor = Color.FromArgb(13, 86, 147)
         MaterialButton2.CharacterCasing = MaterialButton.CharacterCasingEnum.Normal
         MaterialButton2.Density = MaterialButton.MaterialButtonDensity.Default
         MaterialButton2.Depth = 0
         MaterialButton2.DrawShadows = False
-        MaterialButton2.FlatAppearance.BorderColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        MaterialButton2.FlatAppearance.BorderColor = Color.FromArgb(13, 86, 147)
         MaterialButton2.FlatAppearance.MouseDownBackColor = Color.Silver
         MaterialButton2.FlatAppearance.MouseOverBackColor = Color.Silver
         MaterialButton2.FlatStyle = FlatStyle.Flat
@@ -928,12 +928,12 @@ Partial Class Clerk2
         ' MaterialButton3
         ' 
         MaterialButton3.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        MaterialButton3.BackColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        MaterialButton3.BackColor = Color.FromArgb(13, 86, 147)
         MaterialButton3.CharacterCasing = MaterialButton.CharacterCasingEnum.Normal
         MaterialButton3.Density = MaterialButton.MaterialButtonDensity.Default
         MaterialButton3.Depth = 0
         MaterialButton3.DrawShadows = False
-        MaterialButton3.FlatAppearance.BorderColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
+        MaterialButton3.FlatAppearance.BorderColor = Color.FromArgb(13, 86, 147)
         MaterialButton3.FlatAppearance.MouseDownBackColor = Color.Silver
         MaterialButton3.FlatAppearance.MouseOverBackColor = Color.Silver
         MaterialButton3.FlatStyle = FlatStyle.Flat

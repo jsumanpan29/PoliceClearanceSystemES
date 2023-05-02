@@ -151,7 +151,7 @@ Public Class Validation_ForceValidation
 
     Private Sub chkCriminalRecord_CheckedChanged(sender As Object, e As EventArgs) Handles chkCriminalRecord.CheckedChanged
         If Not chkCriminalRecord.Checked Then
-            Dim result As DialogResult = MaterialMessageBox.Show("Are you sure you don't want to set Criminal Record?, Unchecking this would result Applicant Findings to 'NULL'", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+            Dim result As DialogResult = MaterialMessageBox.Show("Are you sure you don't want to set Criminal Record?, Unchecking this would result Applicant Findings to 'NULL'", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, False)
 
             If result = DialogResult.Yes Then
                 ' Do something if the user wants to proceed with unchecking the CheckBox.
@@ -171,7 +171,7 @@ Public Class Validation_ForceValidation
         If Not chkRemarks.Checked Then
 
             If chkCriminalRecord.Checked = False Then
-                Dim result As DialogResult = MaterialMessageBox.Show("Cannot uncheck Remarks unless you set A Criminal Record to display for Findings in Police Clearance Certificate", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Error)
+                Dim result As DialogResult = MaterialMessageBox.Show("Cannot uncheck Remarks unless you set A Criminal Record to display for Findings in Police Clearance Certificate", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Error, False)
                 chkRemarks.Checked = True
             End If
             'If result = DialogResult.Yes Then

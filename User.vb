@@ -2,6 +2,7 @@
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar
 Imports System.Security.Cryptography
 Imports PoliceClearanceSystemES.SecurityHelper
+Imports MaterialSkin2Framework.Controls
 
 Public Class User
     Friend user_id As Integer
@@ -33,7 +34,7 @@ Public Class User
                 connection.Close()
                 command = Nothing
                 If (user_exists > 0 And user_id <> dt.Rows(0).Item("user_id")) Then
-                    MessageBox.Show("Username Taken", "Update Error", MessageBoxButtons.OK)
+                    MaterialMessageBox.Show("Username Taken", "Update Error", MessageBoxButtons.OK, False)
                 ElseIf (user_exists > 0 And user_id = dt.Rows(0).Item("user_id")) Then
                     Try
                         SqlData("UPDATE [dbo].[user] SET username = @uname, password = @pword, salt = @salt, fname = @fname, mname = @mname, lname = @lname, contact_no = @contactno, usertype_id = @utype_id WHERE user_id =" & user_id)
@@ -67,7 +68,7 @@ Public Class User
                 connection.Close()
                 command = Nothing
                 If (user_exists > 0) Then
-                    MessageBox.Show("Username Taken", "Insert Error", MessageBoxButtons.OK)
+                    MaterialMessageBox.Show("Username Taken", "Insert Error", MessageBoxButtons.OK, False)
                 Else
                     Try
                         SqlData("INSERT INTO [dbo].[user](username,password,salt,fname,mname,lname,contact_no,usertype_id,deleted) VALUES(@uname,@pword,@salt,@fname,@mname,@lname,@contactno,@utype_id,0)")
