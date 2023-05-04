@@ -173,6 +173,7 @@ Partial Class FingerprintForm
         PrimaryColor = MaterialSkin2Framework.Primary.Blue700
         PrimaryDarkColor = MaterialSkin2Framework.Primary.Blue900
         PrimaryLightColor = MaterialSkin2Framework.Primary.Blue300
+        StartPosition = FormStartPosition.CenterScreen
         Text = "Fingerprint"
         CType(fpicture, ComponentModel.ISupportInitialize).EndInit()
         Panel1.ResumeLayout(False)

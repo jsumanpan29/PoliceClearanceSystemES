@@ -23,10 +23,10 @@ Partial Class Cashier
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Cashier))
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As DataGridViewCellStyle = New DataGridViewCellStyle()
         MenuStrip1 = New MenuStrip()
         FileToolStripMenuItem = New ToolStripMenuItem()
         LogoutToolStripMenuItem = New ToolStripMenuItem()
@@ -52,7 +52,7 @@ Partial Class Cashier
         MenuStrip1.Items.AddRange(New ToolStripItem() {FileToolStripMenuItem})
         MenuStrip1.Location = New Point(3, 64)
         MenuStrip1.Name = "MenuStrip1"
-        MenuStrip1.Size = New Size(1039, 28)
+        MenuStrip1.Size = New Size(1050, 28)
         MenuStrip1.TabIndex = 0
         MenuStrip1.Text = "MenuStrip1"
         ' 
@@ -75,7 +75,7 @@ Partial Class Cashier
         ' TextBox1
         ' 
         TextBox1.Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point)
-        TextBox1.Location = New Point(678, 94)
+        TextBox1.Location = New Point(671, 99)
         TextBox1.Multiline = True
         TextBox1.Name = "TextBox1"
         TextBox1.PlaceholderText = "  Search..."
@@ -86,7 +86,7 @@ Partial Class Cashier
         ' 
         chbAll.AutoSize = True
         chbAll.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        chbAll.Location = New Point(15, 98)
+        chbAll.Location = New Point(15, 106)
         chbAll.Name = "chbAll"
         chbAll.Size = New Size(79, 21)
         chbAll.TabIndex = 145
@@ -99,7 +99,7 @@ Partial Class Cashier
         MaterialCard1.Controls.Add(DataGridView1)
         MaterialCard1.Depth = 0
         MaterialCard1.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        MaterialCard1.Location = New Point(15, 125)
+        MaterialCard1.Location = New Point(15, 133)
         MaterialCard1.Margin = New Padding(14)
         MaterialCard1.MouseState = MaterialSkin2Framework.MouseState.HOVER
         MaterialCard1.Name = "MaterialCard1"
@@ -117,25 +117,25 @@ Partial Class Cashier
         DataGridView1.BorderStyle = BorderStyle.None
         DataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SunkenHorizontal
         DataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
-        DataGridViewCellStyle1.Font = New Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel)
-        DataGridViewCellStyle1.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
+        DataGridViewCellStyle5.Font = New Font("Roboto Medium", 14F, FontStyle.Bold, GraphicsUnit.Pixel)
+        DataGridViewCellStyle5.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        DataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = DataGridViewTriState.True
+        DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
         DataGridView1.ColumnHeadersHeight = 56
         DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing
         DataGridView1.Columns.AddRange(New DataGridViewColumn() {ClearanceCheckBox, ClearanceID, ClearanceNo, ClearanceFname, ClearanceMname, ClearanceLname})
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = SystemColors.Window
-        DataGridViewCellStyle2.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
-        DataGridViewCellStyle2.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        DataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(CByte(25), CByte(118), CByte(210))
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
-        DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = SystemColors.Window
+        DataGridViewCellStyle6.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
+        DataGridViewCellStyle6.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        DataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(CByte(25), CByte(118), CByte(210))
+        DataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = DataGridViewTriState.False
+        DataGridView1.DefaultCellStyle = DataGridViewCellStyle6
         DataGridView1.Depth = 0
         DataGridView1.Dock = DockStyle.Fill
         DataGridView1.EnableHeadersVisualStyles = False
@@ -144,18 +144,18 @@ Partial Class Cashier
         DataGridView1.Location = New Point(14, 14)
         DataGridView1.MouseState = MaterialSkin2Framework.MouseState.HOVER
         DataGridView1.Name = "DataGridView1"
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = SystemColors.Control
-        DataGridViewCellStyle3.Font = New Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
-        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
-        DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle7.BackColor = SystemColors.Control
+        DataGridViewCellStyle7.Font = New Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
+        DataGridViewCellStyle7.ForeColor = SystemColors.WindowText
+        DataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight
+        DataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText
+        DataGridViewCellStyle7.WrapMode = DataGridViewTriState.True
+        DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle7
         DataGridView1.RowHeadersVisible = False
-        DataGridViewCellStyle4.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
-        DataGridViewCellStyle4.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle8.BackColor = Color.FromArgb(CByte(255), CByte(255), CByte(255))
+        DataGridViewCellStyle8.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        DataGridView1.RowsDefaultCellStyle = DataGridViewCellStyle8
         DataGridView1.RowTemplate.Height = 52
         DataGridView1.ScrollBars = ScrollBars.None
         DataGridView1.ShowVerticalScroll = False
@@ -207,14 +207,14 @@ Partial Class Cashier
         MaterialButton1.Depth = 0
         MaterialButton1.HighEmphasis = True
         MaterialButton1.Icon = CType(resources.GetObject("MaterialButton1.Icon"), Image)
-        MaterialButton1.Location = New Point(964, 94)
+        MaterialButton1.Location = New Point(957, 99)
         MaterialButton1.Margin = New Padding(4, 6, 4, 6)
-        MaterialButton1.MaximumSize = New Size(64, 28)
-        MaterialButton1.MinimumSize = New Size(64, 28)
+        MaterialButton1.MaximumSize = New Size(85, 28)
+        MaterialButton1.MinimumSize = New Size(85, 28)
         MaterialButton1.MouseState = MaterialSkin2Framework.MouseState.HOVER
         MaterialButton1.Name = "MaterialButton1"
         MaterialButton1.NoAccentTextColor = Color.Empty
-        MaterialButton1.Size = New Size(64, 28)
+        MaterialButton1.Size = New Size(85, 28)
         MaterialButton1.TabIndex = 147
         MaterialButton1.Text = "Clear"
         MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
@@ -228,7 +228,7 @@ Partial Class Cashier
         MaterialButton2.Depth = 0
         MaterialButton2.HighEmphasis = True
         MaterialButton2.Icon = Nothing
-        MaterialButton2.Location = New Point(947, 454)
+        MaterialButton2.Location = New Point(961, 458)
         MaterialButton2.Margin = New Padding(4, 6, 4, 6)
         MaterialButton2.MaximumSize = New Size(81, 30)
         MaterialButton2.MinimumSize = New Size(81, 33)
@@ -246,7 +246,7 @@ Partial Class Cashier
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1045, 496)
+        ClientSize = New Size(1056, 496)
         Controls.Add(MaterialButton2)
         Controls.Add(MaterialButton1)
         Controls.Add(MaterialCard1)

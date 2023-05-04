@@ -40,7 +40,7 @@ Public Class Cashier
                 Dim pcc_id As String = CStr(row.Cells("ClearanceID").Value)
                 Dim result As DialogResult = MaterialMessageBox.Show("Confirm Applicant on Payment?",
                               "Confirm Applicant",
-                              MessageBoxButtons.YesNo, FlexibleMaterialForm.ButtonsPosition.Center)
+                              MessageBoxButtons.YesNo, False)
                 If result = DialogResult.Yes Then
                     connection.Open()
                     command = New SqlCommand("", connection)

@@ -47,20 +47,22 @@ Public Class FingerprintForm
         g.Dispose()
         fpicture.Image = bmp
     End Sub
-    Private Sub ClearButton_Click(sender As Object, e As EventArgs)
-        fpicture.Image = Nothing
-    End Sub
-    Private Sub CancelButton_Click(sender As Object, e As EventArgs)
+
+    Private Sub CancelButton_Click_1(sender As Object, e As EventArgs) Handles CancelButton.Click
         Me.DialogResult = DialogResult.Cancel
         Me.Close()
         Me.Dispose()
     End Sub
-    Private Sub ConfirmButton_Click(sender As Object, e As EventArgs)
+
+    Private Sub ConfirmButton_Click_1(sender As Object, e As EventArgs) Handles ConfirmButton.Click
         Fingerprint = fpicture.Image
         Me.DialogResult = DialogResult.OK
         Me.Close()
         Me.Dispose()
     End Sub
 
+    Private Sub ClearButton_Click_1(sender As Object, e As EventArgs) Handles ClearButton.Click
+        fpicture.Image = Nothing
+    End Sub
 
 End Class
