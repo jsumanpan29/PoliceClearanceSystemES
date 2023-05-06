@@ -23,6 +23,7 @@ Partial Class AdminSettings
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(AdminSettings))
         Label6 = New Label()
         Label5 = New Label()
         txtPassword = New TextBox()
@@ -233,6 +234,7 @@ Partial Class AdminSettings
         Controls.Add(txtFname)
         Controls.Add(Label1)
         Controls.Add(txtLname)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False

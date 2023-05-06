@@ -22,6 +22,7 @@ Partial Class FingerprintForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(FingerprintForm))
         deviceSerial = New Label()
         prompt = New Label()
         fpicture = New PictureBox()
@@ -169,6 +170,7 @@ Partial Class FingerprintForm
         Controls.Add(fpicture)
         Controls.Add(prompt)
         Controls.Add(deviceSerial)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "FingerprintForm"
         PrimaryColor = MaterialSkin2Framework.Primary.Blue700
         PrimaryDarkColor = MaterialSkin2Framework.Primary.Blue900

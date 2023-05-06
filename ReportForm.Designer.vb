@@ -23,6 +23,7 @@ Partial Class ReportForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(ReportForm))
         ComboBox1 = New ComboBox()
         Label1 = New Label()
         ReportViewer2 = New Microsoft.Reporting.WinForms.ReportViewer()
@@ -132,6 +133,7 @@ Partial Class ReportForm
         Controls.Add(ReportViewer2)
         Controls.Add(Label1)
         Controls.Add(ComboBox1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "ReportForm"
         Text = "Report"
         Panel1.ResumeLayout(False)

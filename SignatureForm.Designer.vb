@@ -211,6 +211,7 @@ Partial Class SignatureForm
         Controls.Add(Panel2)
         Controls.Add(Label7)
         Controls.Add(pBoxSignature)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "SignatureForm"
         StartPosition = FormStartPosition.CenterScreen
         Text = "SignatureForm"

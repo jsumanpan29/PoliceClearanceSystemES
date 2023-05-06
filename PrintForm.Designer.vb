@@ -23,6 +23,7 @@ Partial Class PrintForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(PrintForm))
         ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         SuspendLayout()
         ' 
@@ -39,10 +40,11 @@ Partial Class PrintForm
         ' 
         ' PrintForm
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(792, 512)
         Controls.Add(ReportViewer1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "PrintForm"
         Text = "Print"
         WindowState = FormWindowState.Maximized

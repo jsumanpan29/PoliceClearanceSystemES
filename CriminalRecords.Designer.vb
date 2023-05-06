@@ -293,6 +293,7 @@ Partial Class CriminalRecords
         Controls.Add(txtCrime)
         Controls.Add(Label1)
         Controls.Add(txtFName)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "CriminalRecords"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Criminal Records"

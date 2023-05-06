@@ -23,6 +23,7 @@ Partial Class CameraForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(CameraForm))
         PictureBox2 = New PictureBox()
         Label1 = New Label()
         Label2 = New Label()
@@ -288,6 +289,7 @@ Partial Class CameraForm
         Controls.Add(PictureBox1)
         Controls.Add(ComboboxSources)
         Controls.Add(PictureBox2)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         MdiChildrenMinimizedAnchorBottom = False
         MinimizeBox = False

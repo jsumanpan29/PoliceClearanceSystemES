@@ -364,6 +364,7 @@ Partial Class User
         Controls.Add(Label1)
         Controls.Add(txtLname)
         ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MaximizeBox = False
         MinimizeBox = False
         Name = "User"

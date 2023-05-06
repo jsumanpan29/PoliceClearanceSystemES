@@ -158,6 +158,7 @@ Partial Class Validation_Hit
         Controls.Add(Panel3)
         Controls.Add(Label2)
         Controls.Add(Label1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "Validation_Hit"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Validation_Hit"

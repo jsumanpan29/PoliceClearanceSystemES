@@ -206,6 +206,7 @@ Partial Class Clerk2
         ' 
         txtORAmount.Location = New Point(256, 429)
         txtORAmount.Name = "txtORAmount"
+        txtORAmount.PlaceholderText = " Amount*"
         txtORAmount.Size = New Size(230, 23)
         txtORAmount.TabIndex = 19
         ' 
@@ -215,6 +216,7 @@ Partial Class Clerk2
         txtORNo.Name = "txtORNo"
         txtORNo.Size = New Size(230, 23)
         txtORNo.TabIndex = 17
+        txtORNo.Text = " OR Number*"
         ' 
         ' Label17
         ' 
@@ -247,6 +249,7 @@ Partial Class Clerk2
         ' 
         txtContactNo.Location = New Point(333, 285)
         txtContactNo.Name = "txtContactNo"
+        txtContactNo.PlaceholderText = " Contact Number*"
         txtContactNo.Size = New Size(153, 23)
         txtContactNo.TabIndex = 14
         ' 
@@ -272,6 +275,7 @@ Partial Class Clerk2
         ' 
         txtCTCIssueAt.Location = New Point(15, 476)
         txtCTCIssueAt.Name = "txtCTCIssueAt"
+        txtCTCIssueAt.PlaceholderText = " Issued At*"
         txtCTCIssueAt.Size = New Size(230, 23)
         txtCTCIssueAt.TabIndex = 20
         ' 
@@ -298,6 +302,7 @@ Partial Class Clerk2
         txtCTCNo.Name = "txtCTCNo"
         txtCTCNo.Size = New Size(230, 23)
         txtCTCNo.TabIndex = 16
+        txtCTCNo.Text = " CTC Number*"
         ' 
         ' Label11
         ' 
@@ -329,6 +334,7 @@ Partial Class Clerk2
         ' 
         txtNationality.Location = New Point(222, 285)
         txtNationality.Name = "txtNationality"
+        txtNationality.PlaceholderText = " Nationality*"
         txtNationality.Size = New Size(105, 23)
         txtNationality.TabIndex = 13
         ' 
@@ -345,6 +351,7 @@ Partial Class Clerk2
         ' 
         txtHeight.Location = New Point(138, 285)
         txtHeight.Name = "txtHeight"
+        txtHeight.PlaceholderText = " Height*"
         txtHeight.Size = New Size(78, 23)
         txtHeight.TabIndex = 12
         ' 
@@ -409,6 +416,7 @@ Partial Class Clerk2
         ' 
         txtBirthPlace.Location = New Point(15, 243)
         txtBirthPlace.Name = "txtBirthPlace"
+        txtBirthPlace.PlaceholderText = " Place of Birth*"
         txtBirthPlace.Size = New Size(274, 23)
         txtBirthPlace.TabIndex = 8
         ' 
@@ -467,6 +475,7 @@ Partial Class Clerk2
         ' 
         txtClearanceMname.Location = New Point(333, 150)
         txtClearanceMname.Name = "txtClearanceMname"
+        txtClearanceMname.PlaceholderText = " Middle Name*"
         txtClearanceMname.Size = New Size(153, 23)
         txtClearanceMname.TabIndex = 4
         ' 
@@ -474,6 +483,7 @@ Partial Class Clerk2
         ' 
         txtClearanceFname.Location = New Point(174, 150)
         txtClearanceFname.Name = "txtClearanceFname"
+        txtClearanceFname.PlaceholderText = " First Name*"
         txtClearanceFname.Size = New Size(153, 23)
         txtClearanceFname.TabIndex = 3
         ' 
@@ -490,6 +500,7 @@ Partial Class Clerk2
         ' 
         txtClearanceLname.Location = New Point(15, 150)
         txtClearanceLname.Name = "txtClearanceLname"
+        txtClearanceLname.PlaceholderText = " Last Name*"
         txtClearanceLname.Size = New Size(153, 23)
         txtClearanceLname.TabIndex = 2
         ' 
@@ -497,6 +508,7 @@ Partial Class Clerk2
         ' 
         txtClearanceNo.Location = New Point(102, 95)
         txtClearanceNo.Name = "txtClearanceNo"
+        txtClearanceNo.PlaceholderText = "Clearance No. "
         txtClearanceNo.Size = New Size(95, 23)
         txtClearanceNo.TabIndex = 1
         ' 
@@ -1014,6 +1026,7 @@ Partial Class Clerk2
         Controls.Add(txtClearanceNo)
         Controls.Add(Label1)
         Controls.Add(MenuStrip1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MainMenuStrip = MenuStrip1
         Name = "Clerk2"
         PrimaryColor = MaterialSkin2Framework.Primary.Blue700

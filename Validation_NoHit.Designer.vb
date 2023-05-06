@@ -22,6 +22,7 @@ Partial Class Validation_NoHit
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Validation_NoHit))
         Label1 = New Label()
         Panel2 = New Panel()
         Label7 = New Label()
@@ -172,6 +173,7 @@ Partial Class Validation_NoHit
         Controls.Add(Panel1)
         Controls.Add(Panel2)
         Controls.Add(Label1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "Validation_NoHit"
         Text = "Validation_NoHit"
         Panel2.ResumeLayout(False)

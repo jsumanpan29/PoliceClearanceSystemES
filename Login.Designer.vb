@@ -262,6 +262,7 @@ Partial Class Login
         ClientSize = New Size(987, 626)
         Controls.Add(Panel2)
         Controls.Add(Panel1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "Login"
         PrimaryColor = MaterialSkin2Framework.Primary.Blue700
         PrimaryDarkColor = MaterialSkin2Framework.Primary.Blue900

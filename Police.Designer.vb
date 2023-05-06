@@ -429,6 +429,7 @@ Partial Class Police
         Controls.Add(txtFname)
         Controls.Add(Label1)
         Controls.Add(txtLname)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "Police"
         StartPosition = FormStartPosition.CenterScreen
         Text = "Police"

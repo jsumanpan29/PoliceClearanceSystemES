@@ -25,6 +25,7 @@ Partial Class Validation_ForceValidation
         Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
+        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Validation_ForceValidation))
         DataGridView1 = New DataGridView()
         CrimeID = New DataGridViewTextBoxColumn()
         CrimeCheckBox = New DataGridViewCheckBoxColumn()
@@ -257,6 +258,7 @@ Partial Class Validation_ForceValidation
         Controls.Add(Label3)
         Controls.Add(Label1)
         Controls.Add(DataGridView1)
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         Name = "Validation_ForceValidation"
         PrimaryColor = MaterialSkin2Framework.Primary.Blue700
         PrimaryDarkColor = MaterialSkin2Framework.Primary.Blue900
