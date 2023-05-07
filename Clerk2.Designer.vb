@@ -993,7 +993,7 @@ Partial Class Clerk2
         Me.dataPendingClearanceNo.HeaderText = "Clearance Number"
         Me.dataPendingClearanceNo.Name = "dataPendingClearanceNo"
         Me.dataPendingClearanceNo.ReadOnly = True
-        Me.dataPendingClearanceNo.Width = 140
+        Me.dataPendingClearanceNo.Width = 130
         '
         'dataPendingClearanceFname
         '
@@ -1006,7 +1006,7 @@ Partial Class Clerk2
         Me.dataPendingClearanceMname.HeaderText = "      Middle Name"
         Me.dataPendingClearanceMname.Name = "dataPendingClearanceMname"
         Me.dataPendingClearanceMname.ReadOnly = True
-        Me.dataPendingClearanceMname.Width = 130
+        Me.dataPendingClearanceMname.Width = 120
         '
         'dataPendingClearanceLname
         '

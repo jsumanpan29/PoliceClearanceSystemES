@@ -48,139 +48,145 @@ Public Class Clerk2
     'Dim pccDependencyComplete As SqlTableDependency(Of PoliceClearanceCertificate)
 
     Private Sub AddButton_Click(sender As Object, e As System.EventArgs) Handles btnAdd_Saved.Click
-        If PccIDToEdit <> Nothing Then
-
-            'Insert UPDATE data codes Here
-            Try
-                connection.Open()
-                'UPDATE police SET fname = @fname, mname = @mname, lname = @lname, contact_no = @contactno, police_sig = @policesig, rank_id = @rankid, position_id = @positionid WHERE police_id =" & police_id
-                command = New SqlCommand("", connection)
-                command.CommandText = "UPDATE dbo.[pcc] SET [fname] = @fname, [mname] = @mname, [lname] = @lname, [zone_id] = @zone_id,[barangay_id] = @barangay_id,[cs_id] = @cs_id,[place_of_birth] = @place_of_birth,[date_of_birth] = @date_of_birth,[sex] = @sex,[height] = @height,[nationality] = @nationality,[contact_no] = @contact_no,[purpose_id] = @purpose_id,[ctc_number] = @ctc_number,[ctc_issued_on] = @ctc_issued_on,[ctc_issued_at] = @ctc_issued_at,[signature] = @signature,[img] = @img,[thumb] = @thumb,[pcc_number] = @pcc_number,[pcc_issue_date] = @pcc_issue_date,[police_id_verify] = @police_id_verify,[police_id_certify] = @police_id_certify,[payment_or_number] = @payment_or_number,[payment_amount] = @payment_amount WHERE [pcc_id] = " & PccIDToEdit
-                command.Parameters.Clear()
-                command.Parameters.AddWithValue("@pcc_number", txtClearanceNo.Text.Trim)
-                command.Parameters.AddWithValue("@pcc_issue_date", dtClearanceDate.Value.Date)
-                command.Parameters.AddWithValue("@fname", txtClearanceFname.Text.Trim)
-                command.Parameters.AddWithValue("@mname", txtClearanceMname.Text.Trim)
-                command.Parameters.AddWithValue("@lname", txtClearanceLname.Text.Trim)
-                command.Parameters.AddWithValue("@barangay_id", cbBarangay.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@zone_id", cbZone.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@cs_id", cbCivilStatus.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@place_of_birth", txtBirthPlace.Text.Trim)
-                command.Parameters.AddWithValue("@date_of_birth", dtBirthDate.Value.Date)
-                If rbMale.Checked = True Then
-                    bSex = male
-                ElseIf rbFemale.Checked = True Then
-                    bSex = female
-                Else
-                    bSex = 0
-                End If
-                command.Parameters.AddWithValue("@sex", bSex)
-                command.Parameters.AddWithValue("@height", txtHeight.Text.Trim)
-                command.Parameters.AddWithValue("@nationality", txtNationality.Text.Trim)
-                command.Parameters.AddWithValue("@contact_no", txtContactNo.Text.Trim)
-                command.Parameters.AddWithValue("@purpose_id", cbPurpose.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@ctc_number", txtCTCNo.Text.Trim)
-                command.Parameters.AddWithValue("@ctc_issued_on", dtCTCIssueDate.Value.Date)
-                command.Parameters.AddWithValue("@ctc_issued_at", txtCTCIssueAt.Text.Trim)
-
-                If signatureFileName <> "" Then
-                    PictureBox3.Image.Save(signatureFileName, ImageFormat.Png)
-                End If
-                If applicantFileName <> "" Then
-                    PictureBox1.Image.Save(applicantFileName, ImageFormat.Png)
-                End If
-                If fingerprintFileName <> "" Then
-                    PictureBox2.Image.Save(fingerprintFileName, ImageFormat.Png)
-                End If
-                command.Parameters.AddWithValue("@signature", signatureFileName)
-                command.Parameters.AddWithValue("@img", applicantFileName)
-                command.Parameters.AddWithValue("@thumb", fingerprintFileName)
-
-                command.Parameters.AddWithValue("@police_id_verify", cbPoliceVerify.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@police_id_certify", cbPoliceCertify.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@payment_or_number", txtORNo.Text.Trim)
-                command.Parameters.AddWithValue("@payment_amount", txtORAmount.Text.Trim)
-
-                command.Parameters.AddWithValue("@user_id", user_id)
-                command.ExecuteNonQuery()
-                connection.Close()
-                command = Nothing
-            Catch ex As Exception
-                connection.Close()
-                MsgBox("Update Police Clearance error" & vbCrLf & String.Format("Error: {0}", ex.Message))
-            End Try
-
-            PccIDToEdit = Nothing
-            btnAdd_Saved.Text = "Add"
-            btnClear_Cancel.Text = "Clear"
-            Clear()
+        If txtClearanceNo.Text = "" Then
+            'MsgBox("Insert/Update Police Clearance error: Fill Clearance Number to Insert/Update Police Clearance")
+            MaterialMessageBox.Show("Fill Clearance Number to Insert/Update Applicant", "Insert/Update Applicant", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, False)
         Else
-            Try
-                'SqlData()
-                connection.Open()
-                command = New SqlCommand("", connection)
-                'command.CommandText = "INSERT INTO dbo.[police_clearance_certificate]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[purpose_id],[ctc_number],[ctc_issued_on],[ctc_issued_at],[signature],[img],[thumb],[pcc_number],[pcc_issue_date],[police_id_verify],[police_id_certify],[payment_OR_number], [payment_amount],[user_id],[qrcode],[payment_confirmed_user],[payment_confirmed_date]) VALUES(@fname,@mname,@lname,@zone_id,@barangay_id,@cs_id,@place_of_birth,@date_of_birth,@sex,@height,@nationality,@contact_no,@purpose_id,@ctc_number,@ctc_issued_on,@ctc_issued_at,'signature','img','thumb',@pcc_number,@pcc_issue_date,@police_id_verify,@police_id_certify,@payment_OR_number, @payment_amount, " & user_id & ",'qrcode',1," & DateTime.Now.ToString("yyyy/MM/dd") & ")"
-                command.CommandText = "INSERT INTO dbo.[pcc]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[purpose_id],[ctc_number],[ctc_issued_on],[ctc_issued_at],[signature],[img],[thumb],[pcc_number],[pcc_issue_date],[police_id_verify],[police_id_certify],[payment_or_number],[payment_amount],[user_id]) VALUES(@fname,@mname,@lname,@zone_id,@barangay_id,@cs_id,@place_of_birth,@date_of_birth,@sex,@height,@nationality,@contact_no,@purpose_id,@ctc_number,@ctc_issued_on,@ctc_issued_at,@signature,@img,@thumb,@pcc_number,@pcc_issue_date,@police_id_verify,@police_id_certify,@payment_or_number, @payment_amount,@user_id)"
-                'command.CommandText = "INSERT INTO dbo.[pcc]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[purpose_id],[ctc_number],[ctc_issued_on],[ctc_issued_at],[pcc_number],[pcc_issue_date],[police_id_verify],[police_id_certify],[payment_or_number],[payment_amount],[user_id]) VALUES(@fname,@mname,@lname,@zone_id,@barangay_id,@cs_id,@place_of_birth,@date_of_birth,@sex,@height,@nationality,@contact_no,@purpose_id,@ctc_number,@ctc_issued_on,@ctc_issued_at,@pcc_number,@pcc_issue_date,@police_id_verify,@police_id_certify,@payment_or_number,@payment_amount,@user_id)"
-                'command.CommandText = "INSERT INTO dbo.[pcc]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[purpose_id],[ctc_number],[ctc_issued_on],[ctc_issued_at],[signature],[img],[thumb],[pcc_number],[pcc_issue_date],[police_id_verify],[police_id_certify],[payment_or_number],[payment_amount],[user_id]) VALUES('Wow','Wow','Wow',1,1,1,'Wow','2023-04-04',1,'123','123','123',1,'123','2023-04-04','123','','','','123','2023-04-04',1,1,'123', 123,1)"
-                command.Parameters.Clear()
-                command.Parameters.AddWithValue("@pcc_number", txtClearanceNo.Text.Trim)
-                command.Parameters.AddWithValue("@pcc_issue_date", dtClearanceDate.Value.Date)
-                command.Parameters.AddWithValue("@fname", txtClearanceFname.Text.Trim)
-                command.Parameters.AddWithValue("@mname", txtClearanceMname.Text.Trim)
-                command.Parameters.AddWithValue("@lname", txtClearanceLname.Text.Trim)
-                command.Parameters.AddWithValue("@barangay_id", cbBarangay.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@zone_id", cbZone.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@cs_id", cbCivilStatus.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@place_of_birth", txtBirthPlace.Text.Trim)
-                command.Parameters.AddWithValue("@date_of_birth", dtBirthDate.Value.Date)
-                If rbMale.Checked = True Then
-                    bSex = male
-                ElseIf rbFemale.Checked = True Then
-                    bSex = female
-                Else
-                    bSex = 0
-                End If
-                command.Parameters.AddWithValue("@sex", bSex)
-                command.Parameters.AddWithValue("@height", txtHeight.Text.Trim)
-                command.Parameters.AddWithValue("@nationality", txtNationality.Text.Trim)
-                command.Parameters.AddWithValue("@contact_no", txtContactNo.Text.Trim)
-                command.Parameters.AddWithValue("@purpose_id", cbPurpose.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@ctc_number", txtCTCNo.Text.Trim)
-                command.Parameters.AddWithValue("@ctc_issued_on", dtCTCIssueDate.Value.Date)
-                command.Parameters.AddWithValue("@ctc_issued_at", txtCTCIssueAt.Text.Trim)
+            If PccIDToEdit <> Nothing Then
+
+                'Insert UPDATE data codes Here
+                Try
+                    connection.Open()
+                    'UPDATE police SET fname = @fname, mname = @mname, lname = @lname, contact_no = @contactno, police_sig = @policesig, rank_id = @rankid, position_id = @positionid WHERE police_id =" & police_id
+                    command = New SqlCommand("", connection)
+                    command.CommandText = "UPDATE dbo.[pcc] SET [fname] = @fname, [mname] = @mname, [lname] = @lname, [zone_id] = @zone_id,[barangay_id] = @barangay_id,[cs_id] = @cs_id,[place_of_birth] = @place_of_birth,[date_of_birth] = @date_of_birth,[sex] = @sex,[height] = @height,[nationality] = @nationality,[contact_no] = @contact_no,[purpose_id] = @purpose_id,[ctc_number] = @ctc_number,[ctc_issued_on] = @ctc_issued_on,[ctc_issued_at] = @ctc_issued_at,[signature] = @signature,[img] = @img,[thumb] = @thumb,[pcc_number] = @pcc_number,[pcc_issue_date] = @pcc_issue_date,[police_id_verify] = @police_id_verify,[police_id_certify] = @police_id_certify,[payment_or_number] = @payment_or_number,[payment_amount] = @payment_amount WHERE [pcc_id] = " & PccIDToEdit
+                    command.Parameters.Clear()
+                    command.Parameters.AddWithValue("@pcc_number", txtClearanceNo.Text.Trim)
+                    command.Parameters.AddWithValue("@pcc_issue_date", dtClearanceDate.Value.Date)
+                    command.Parameters.AddWithValue("@fname", txtClearanceFname.Text.Trim)
+                    command.Parameters.AddWithValue("@mname", txtClearanceMname.Text.Trim)
+                    command.Parameters.AddWithValue("@lname", txtClearanceLname.Text.Trim)
+                    command.Parameters.AddWithValue("@barangay_id", cbBarangay.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@zone_id", cbZone.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@cs_id", cbCivilStatus.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@place_of_birth", txtBirthPlace.Text.Trim)
+                    command.Parameters.AddWithValue("@date_of_birth", dtBirthDate.Value.Date)
+                    If rbMale.Checked = True Then
+                        bSex = male
+                    ElseIf rbFemale.Checked = True Then
+                        bSex = female
+                    Else
+                        bSex = 0
+                    End If
+                    command.Parameters.AddWithValue("@sex", bSex)
+                    command.Parameters.AddWithValue("@height", txtHeight.Text.Trim)
+                    command.Parameters.AddWithValue("@nationality", txtNationality.Text.Trim)
+                    command.Parameters.AddWithValue("@contact_no", txtContactNo.Text.Trim)
+                    command.Parameters.AddWithValue("@purpose_id", cbPurpose.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@ctc_number", txtCTCNo.Text.Trim)
+                    command.Parameters.AddWithValue("@ctc_issued_on", dtCTCIssueDate.Value.Date)
+                    command.Parameters.AddWithValue("@ctc_issued_at", txtCTCIssueAt.Text.Trim)
+
+                    If signatureFileName <> "" Then
+                        PictureBox3.Image.Save(signatureFileName, ImageFormat.Png)
+                    End If
+                    If applicantFileName <> "" Then
+                        PictureBox1.Image.Save(applicantFileName, ImageFormat.Png)
+                    End If
+                    If fingerprintFileName <> "" Then
+                        PictureBox2.Image.Save(fingerprintFileName, ImageFormat.Png)
+                    End If
+                    command.Parameters.AddWithValue("@signature", signatureFileName)
+                    command.Parameters.AddWithValue("@img", applicantFileName)
+                    command.Parameters.AddWithValue("@thumb", fingerprintFileName)
+
+                    command.Parameters.AddWithValue("@police_id_verify", cbPoliceVerify.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@police_id_certify", cbPoliceCertify.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@payment_or_number", txtORNo.Text.Trim)
+                    command.Parameters.AddWithValue("@payment_amount", txtORAmount.Text.Trim)
+
+                    command.Parameters.AddWithValue("@user_id", user_id)
+                    command.ExecuteNonQuery()
+                    connection.Close()
+                    command = Nothing
+                Catch ex As Exception
+                    connection.Close()
+                    MsgBox("Update Police Clearance error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+                End Try
+
+                PccIDToEdit = Nothing
+                btnAdd_Saved.Text = "Add"
+                btnClear_Cancel.Text = "Clear"
+                Clear()
+            Else
+                Try
+                    'SqlData()
+                    connection.Open()
+                    command = New SqlCommand("", connection)
+                    'command.CommandText = "INSERT INTO dbo.[police_clearance_certificate]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[purpose_id],[ctc_number],[ctc_issued_on],[ctc_issued_at],[signature],[img],[thumb],[pcc_number],[pcc_issue_date],[police_id_verify],[police_id_certify],[payment_OR_number], [payment_amount],[user_id],[qrcode],[payment_confirmed_user],[payment_confirmed_date]) VALUES(@fname,@mname,@lname,@zone_id,@barangay_id,@cs_id,@place_of_birth,@date_of_birth,@sex,@height,@nationality,@contact_no,@purpose_id,@ctc_number,@ctc_issued_on,@ctc_issued_at,'signature','img','thumb',@pcc_number,@pcc_issue_date,@police_id_verify,@police_id_certify,@payment_OR_number, @payment_amount, " & user_id & ",'qrcode',1," & DateTime.Now.ToString("yyyy/MM/dd") & ")"
+                    command.CommandText = "INSERT INTO dbo.[pcc]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[purpose_id],[ctc_number],[ctc_issued_on],[ctc_issued_at],[signature],[img],[thumb],[pcc_number],[pcc_issue_date],[police_id_verify],[police_id_certify],[payment_or_number],[payment_amount],[user_id]) VALUES(@fname,@mname,@lname,@zone_id,@barangay_id,@cs_id,@place_of_birth,@date_of_birth,@sex,@height,@nationality,@contact_no,@purpose_id,@ctc_number,@ctc_issued_on,@ctc_issued_at,@signature,@img,@thumb,@pcc_number,@pcc_issue_date,@police_id_verify,@police_id_certify,@payment_or_number, @payment_amount,@user_id)"
+                    'command.CommandText = "INSERT INTO dbo.[pcc]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[purpose_id],[ctc_number],[ctc_issued_on],[ctc_issued_at],[pcc_number],[pcc_issue_date],[police_id_verify],[police_id_certify],[payment_or_number],[payment_amount],[user_id]) VALUES(@fname,@mname,@lname,@zone_id,@barangay_id,@cs_id,@place_of_birth,@date_of_birth,@sex,@height,@nationality,@contact_no,@purpose_id,@ctc_number,@ctc_issued_on,@ctc_issued_at,@pcc_number,@pcc_issue_date,@police_id_verify,@police_id_certify,@payment_or_number,@payment_amount,@user_id)"
+                    'command.CommandText = "INSERT INTO dbo.[pcc]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[purpose_id],[ctc_number],[ctc_issued_on],[ctc_issued_at],[signature],[img],[thumb],[pcc_number],[pcc_issue_date],[police_id_verify],[police_id_certify],[payment_or_number],[payment_amount],[user_id]) VALUES('Wow','Wow','Wow',1,1,1,'Wow','2023-04-04',1,'123','123','123',1,'123','2023-04-04','123','','','','123','2023-04-04',1,1,'123', 123,1)"
+                    command.Parameters.Clear()
+                    command.Parameters.AddWithValue("@pcc_number", txtClearanceNo.Text.Trim)
+                    command.Parameters.AddWithValue("@pcc_issue_date", dtClearanceDate.Value.Date)
+                    command.Parameters.AddWithValue("@fname", txtClearanceFname.Text.Trim)
+                    command.Parameters.AddWithValue("@mname", txtClearanceMname.Text.Trim)
+                    command.Parameters.AddWithValue("@lname", txtClearanceLname.Text.Trim)
+                    command.Parameters.AddWithValue("@barangay_id", cbBarangay.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@zone_id", cbZone.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@cs_id", cbCivilStatus.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@place_of_birth", txtBirthPlace.Text.Trim)
+                    command.Parameters.AddWithValue("@date_of_birth", dtBirthDate.Value.Date)
+                    If rbMale.Checked = True Then
+                        bSex = male
+                    ElseIf rbFemale.Checked = True Then
+                        bSex = female
+                    Else
+                        bSex = 0
+                    End If
+                    command.Parameters.AddWithValue("@sex", bSex)
+                    command.Parameters.AddWithValue("@height", txtHeight.Text.Trim)
+                    command.Parameters.AddWithValue("@nationality", txtNationality.Text.Trim)
+                    command.Parameters.AddWithValue("@contact_no", txtContactNo.Text.Trim)
+                    command.Parameters.AddWithValue("@purpose_id", cbPurpose.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@ctc_number", txtCTCNo.Text.Trim)
+                    command.Parameters.AddWithValue("@ctc_issued_on", dtCTCIssueDate.Value.Date)
+                    command.Parameters.AddWithValue("@ctc_issued_at", txtCTCIssueAt.Text.Trim)
 
 
-                If signatureFileName <> "" Then
-                    PictureBox3.Image.Save(signatureFileName, ImageFormat.Png)
-                End If
-                If applicantFileName <> "" Then
-                    PictureBox1.Image.Save(applicantFileName, ImageFormat.Png)
-                End If
-                If fingerprintFileName <> "" Then
-                    PictureBox2.Image.Save(fingerprintFileName, ImageFormat.Png)
-                End If
-                command.Parameters.AddWithValue("@signature", signatureFileName)
-                command.Parameters.AddWithValue("@img", applicantFileName)
-                command.Parameters.AddWithValue("@thumb", fingerprintFileName)
+                    If signatureFileName <> "" Then
+                        PictureBox3.Image.Save(signatureFileName, ImageFormat.Png)
+                    End If
+                    If applicantFileName <> "" Then
+                        PictureBox1.Image.Save(applicantFileName, ImageFormat.Png)
+                    End If
+                    If fingerprintFileName <> "" Then
+                        PictureBox2.Image.Save(fingerprintFileName, ImageFormat.Png)
+                    End If
+                    command.Parameters.AddWithValue("@signature", signatureFileName)
+                    command.Parameters.AddWithValue("@img", applicantFileName)
+                    command.Parameters.AddWithValue("@thumb", fingerprintFileName)
 
-                command.Parameters.AddWithValue("@police_id_verify", cbPoliceVerify.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@police_id_certify", cbPoliceCertify.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@payment_or_number", txtORNo.Text.Trim)
-                command.Parameters.AddWithValue("@payment_amount", txtORAmount.Text.Trim)
+                    command.Parameters.AddWithValue("@police_id_verify", cbPoliceVerify.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@police_id_certify", cbPoliceCertify.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@payment_or_number", txtORNo.Text.Trim)
+                    command.Parameters.AddWithValue("@payment_amount", txtORAmount.Text.Trim)
 
-                command.Parameters.AddWithValue("@user_id", user_id)
-                command.ExecuteNonQuery()
-                connection.Close()
-                command = Nothing
-                'File.Copy(imgFileToUpload, fileSavePath, True)
+                    command.Parameters.AddWithValue("@user_id", user_id)
+                    command.ExecuteNonQuery()
+                    connection.Close()
+                    command = Nothing
+                    'File.Copy(imgFileToUpload, fileSavePath, True)
 
-            Catch ex As Exception
-                connection.Close()
-                MsgBox("Insert Police Clearance error" & vbCrLf & String.Format("Error: {0}", ex.Message))
-            End Try
-            Clear()
+                Catch ex As Exception
+                    connection.Close()
+                    MsgBox("Insert Police Clearance error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+                End Try
+                Clear()
+            End If
         End If
+
     End Sub
 
     Private Sub PopulateCombobox()
