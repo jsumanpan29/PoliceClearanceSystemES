@@ -47,7 +47,7 @@ Public Class Clerk2
     Dim pccDependencyPending As SqlTableDependency(Of PoliceClearanceCertificate)
     'Dim pccDependencyComplete As SqlTableDependency(Of PoliceClearanceCertificate)
 
-    Private Sub AddButton_Click(sender As Object, e As System.EventArgs) Handles btnAdd_Saved.Click, btnAdd_Saved.Click
+    Private Sub AddButton_Click(sender As Object, e As System.EventArgs) Handles btnAdd_Saved.Click
         If PccIDToEdit <> Nothing Then
 
             'Insert UPDATE data codes Here
