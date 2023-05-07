@@ -215,9 +215,9 @@ Partial Class Clerk2
         '
         Me.txtORNo.Location = New System.Drawing.Point(256, 385)
         Me.txtORNo.Name = "txtORNo"
+        Me.txtORNo.PlaceholderText = " OR Number*"
         Me.txtORNo.Size = New System.Drawing.Size(230, 23)
         Me.txtORNo.TabIndex = 17
-        Me.txtORNo.Text = " OR Number*"
         '
         'Label17
         '
@@ -248,10 +248,10 @@ Partial Class Clerk2
         '
         'txtContactNo
         '
-        Me.txtContactNo.Location = New System.Drawing.Point(333, 285)
+        Me.txtContactNo.Location = New System.Drawing.Point(336, 285)
         Me.txtContactNo.Name = "txtContactNo"
         Me.txtContactNo.PlaceholderText = " Contact Number*"
-        Me.txtContactNo.Size = New System.Drawing.Size(153, 23)
+        Me.txtContactNo.Size = New System.Drawing.Size(150, 23)
         Me.txtContactNo.TabIndex = 14
         '
         'Label13
@@ -301,9 +301,9 @@ Partial Class Clerk2
         '
         Me.txtCTCNo.Location = New System.Drawing.Point(15, 385)
         Me.txtCTCNo.Name = "txtCTCNo"
+        Me.txtCTCNo.PlaceholderText = " CTC Number*"
         Me.txtCTCNo.Size = New System.Drawing.Size(230, 23)
         Me.txtCTCNo.TabIndex = 16
-        Me.txtCTCNo.Text = " CTC Number*"
         '
         'Label11
         '
@@ -333,7 +333,7 @@ Partial Class Clerk2
         '
         'txtNationality
         '
-        Me.txtNationality.Location = New System.Drawing.Point(222, 285)
+        Me.txtNationality.Location = New System.Drawing.Point(225, 285)
         Me.txtNationality.Name = "txtNationality"
         Me.txtNationality.PlaceholderText = " Nationality*"
         Me.txtNationality.Size = New System.Drawing.Size(105, 23)
@@ -342,7 +342,7 @@ Partial Class Clerk2
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(224, 269)
+        Me.Label8.Location = New System.Drawing.Point(227, 269)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(65, 15)
         Me.Label8.TabIndex = 107
@@ -350,7 +350,7 @@ Partial Class Clerk2
         '
         'txtHeight
         '
-        Me.txtHeight.Location = New System.Drawing.Point(138, 285)
+        Me.txtHeight.Location = New System.Drawing.Point(141, 285)
         Me.txtHeight.Name = "txtHeight"
         Me.txtHeight.PlaceholderText = " Height*"
         Me.txtHeight.Size = New System.Drawing.Size(78, 23)
@@ -381,7 +381,7 @@ Partial Class Clerk2
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(138, 268)
+        Me.Label7.Location = New System.Drawing.Point(141, 268)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(59, 15)
         Me.Label7.TabIndex = 103
@@ -390,6 +390,7 @@ Partial Class Clerk2
         'Label6
         '
         Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point)
         Me.Label6.Location = New System.Drawing.Point(15, 269)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(25, 15)
@@ -408,9 +409,9 @@ Partial Class Clerk2
         'dtBirthDate
         '
         Me.dtBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtBirthDate.Location = New System.Drawing.Point(333, 243)
+        Me.dtBirthDate.Location = New System.Drawing.Point(336, 243)
         Me.dtBirthDate.Name = "dtBirthDate"
-        Me.dtBirthDate.Size = New System.Drawing.Size(153, 23)
+        Me.dtBirthDate.Size = New System.Drawing.Size(150, 23)
         Me.dtBirthDate.TabIndex = 9
         '
         'txtBirthPlace
@@ -433,9 +434,9 @@ Partial Class Clerk2
         'cbCivilStatus
         '
         Me.cbCivilStatus.FormattingEnabled = True
-        Me.cbCivilStatus.Location = New System.Drawing.Point(333, 199)
+        Me.cbCivilStatus.Location = New System.Drawing.Point(336, 199)
         Me.cbCivilStatus.Name = "cbCivilStatus"
-        Me.cbCivilStatus.Size = New System.Drawing.Size(153, 23)
+        Me.cbCivilStatus.Size = New System.Drawing.Size(150, 23)
         Me.cbCivilStatus.TabIndex = 7
         '
         'Label3
@@ -561,6 +562,7 @@ Partial Class Clerk2
         '
         Me.txtApplicantPendingSearch.Location = New System.Drawing.Point(447, 18)
         Me.txtApplicantPendingSearch.Name = "txtApplicantPendingSearch"
+        Me.txtApplicantPendingSearch.PlaceholderText = "Search..."
         Me.txtApplicantPendingSearch.Size = New System.Drawing.Size(249, 23)
         Me.txtApplicantPendingSearch.TabIndex = 2
         '
@@ -577,7 +579,7 @@ Partial Class Clerk2
         Me.dataApplicantPending.Name = "dataApplicantPending"
         Me.dataApplicantPending.ReadOnly = True
         Me.dataApplicantPending.RowTemplate.Height = 25
-        Me.dataApplicantPending.Size = New System.Drawing.Size(773, 501)
+        Me.dataApplicantPending.Size = New System.Drawing.Size(773, 499)
         Me.dataApplicantPending.TabIndex = 142
         '
         'dataPendingClearanceID
@@ -665,7 +667,7 @@ Partial Class Clerk2
         Me.dataApplicantCompleted.Name = "dataApplicantCompleted"
         Me.dataApplicantCompleted.ReadOnly = True
         Me.dataApplicantCompleted.RowTemplate.Height = 25
-        Me.dataApplicantCompleted.Size = New System.Drawing.Size(773, 514)
+        Me.dataApplicantCompleted.Size = New System.Drawing.Size(773, 499)
         Me.dataApplicantCompleted.TabIndex = 150
         '
         'dataCompletedClearanceID
@@ -725,6 +727,7 @@ Partial Class Clerk2
         '
         Me.txtApplicantCompletedSearch.Location = New System.Drawing.Point(447, 18)
         Me.txtApplicantCompletedSearch.Name = "txtApplicantCompletedSearch"
+        Me.txtApplicantCompletedSearch.PlaceholderText = "Search..."
         Me.txtApplicantCompletedSearch.Size = New System.Drawing.Size(249, 23)
         Me.txtApplicantCompletedSearch.TabIndex = 146
         '
