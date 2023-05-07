@@ -22,363 +22,365 @@ Partial Class User
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(User))
-        txtMname = New TextBox()
-        txtFname = New TextBox()
-        Label1 = New Label()
-        txtLname = New TextBox()
-        txtContactNo = New TextBox()
-        Label13 = New Label()
-        txtUname = New TextBox()
-        Label2 = New Label()
-        txtPassword = New TextBox()
-        Label3 = New Label()
-        Label4 = New Label()
-        cbUsertype = New ComboBox()
-        Label5 = New Label()
-        Label6 = New Label()
-        Label7 = New Label()
-        Panel8 = New Panel()
-        Panel2 = New Panel()
-        MaterialDivider1 = New MaterialSkin2Framework.Controls.MaterialDivider()
-        MaterialDivider2 = New MaterialSkin2Framework.Controls.MaterialDivider()
-        Panel3 = New Panel()
-        MaterialButton2 = New MaterialSkin2Framework.Controls.MaterialButton()
-        Panel1 = New Panel()
-        MaterialButton1 = New MaterialSkin2Framework.Controls.MaterialButton()
-        Panel2.SuspendLayout()
-        Panel3.SuspendLayout()
-        Panel1.SuspendLayout()
-        SuspendLayout()
-        ' 
-        ' txtMname
-        ' 
-        txtMname.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
-        txtMname.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
-        txtMname.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        txtMname.Location = New Point(11, 137)
-        txtMname.Name = "txtMname"
-        txtMname.PlaceholderText = " Middle Name"
-        txtMname.Size = New Size(309, 23)
-        txtMname.TabIndex = 7
-        ' 
-        ' txtFname
-        ' 
-        txtFname.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
-        txtFname.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
-        txtFname.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        txtFname.Location = New Point(11, 87)
-        txtFname.Name = "txtFname"
-        txtFname.PlaceholderText = " First Name"
-        txtFname.Size = New Size(309, 23)
-        txtFname.TabIndex = 6
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
-        Label1.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        Label1.Location = New Point(10, 165)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(81, 16)
-        Label1.TabIndex = 5
-        Label1.Text = "Last Name"
-        ' 
-        ' txtLname
-        ' 
-        txtLname.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
-        txtLname.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
-        txtLname.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        txtLname.Location = New Point(11, 186)
-        txtLname.Name = "txtLname"
-        txtLname.PlaceholderText = " Last Name"
-        txtLname.Size = New Size(309, 23)
-        txtLname.TabIndex = 4
-        ' 
-        ' txtContactNo
-        ' 
-        txtContactNo.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
-        txtContactNo.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
-        txtContactNo.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        txtContactNo.Location = New Point(11, 331)
-        txtContactNo.Name = "txtContactNo"
-        txtContactNo.PlaceholderText = " Contact #"
-        txtContactNo.Size = New Size(309, 23)
-        txtContactNo.TabIndex = 32
-        ' 
-        ' Label13
-        ' 
-        Label13.AutoSize = True
-        Label13.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
-        Label13.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label13.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        Label13.Location = New Point(10, 312)
-        Label13.Name = "Label13"
-        Label13.Size = New Size(117, 16)
-        Label13.TabIndex = 31
-        Label13.Text = "Contact Number"
-        ' 
-        ' txtUname
-        ' 
-        txtUname.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
-        txtUname.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
-        txtUname.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        txtUname.Location = New Point(11, 235)
-        txtUname.Name = "txtUname"
-        txtUname.PlaceholderText = " Username"
-        txtUname.Size = New Size(309, 23)
-        txtUname.TabIndex = 34
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
-        Label2.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label2.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        Label2.Location = New Point(10, 214)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(78, 16)
-        Label2.TabIndex = 33
-        Label2.Text = "Username"
-        ' 
-        ' txtPassword
-        ' 
-        txtPassword.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
-        txtPassword.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
-        txtPassword.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        txtPassword.Location = New Point(11, 284)
-        txtPassword.Name = "txtPassword"
-        txtPassword.PlaceholderText = " Password"
-        txtPassword.Size = New Size(309, 23)
-        txtPassword.TabIndex = 36
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
-        Label3.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label3.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        Label3.Location = New Point(10, 263)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(75, 16)
-        Label3.TabIndex = 35
-        Label3.Text = "Password"
-        ' 
-        ' Label4
-        ' 
-        Label4.AutoSize = True
-        Label4.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
-        Label4.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label4.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        Label4.Location = New Point(10, 359)
-        Label4.Name = "Label4"
-        Label4.Size = New Size(80, 16)
-        Label4.TabIndex = 39
-        Label4.Text = "User Type"
-        ' 
-        ' cbUsertype
-        ' 
-        cbUsertype.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
-        cbUsertype.Font = New Font("Microsoft Sans Serif", 14F, FontStyle.Regular, GraphicsUnit.Pixel)
-        cbUsertype.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        cbUsertype.FormattingEnabled = True
-        cbUsertype.Location = New Point(11, 380)
-        cbUsertype.Name = "cbUsertype"
-        cbUsertype.Size = New Size(309, 25)
-        cbUsertype.TabIndex = 40
-        ' 
-        ' Label5
-        ' 
-        Label5.AutoSize = True
-        Label5.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
-        Label5.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label5.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        Label5.Location = New Point(10, 67)
-        Label5.Name = "Label5"
-        Label5.Size = New Size(82, 16)
-        Label5.TabIndex = 41
-        Label5.Text = "First Name"
-        ' 
-        ' Label6
-        ' 
-        Label6.AutoSize = True
-        Label6.BackColor = Color.FromArgb(CByte(242), CByte(242), CByte(242))
-        Label6.Font = New Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label6.ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        Label6.Location = New Point(10, 116)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(99, 16)
-        Label6.TabIndex = 42
-        Label6.Text = "Middle Name"
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.BackColor = Color.FromArgb(CByte(3), CByte(59), CByte(106))
-        Label7.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label7.ForeColor = Color.White
-        Label7.Location = New Point(117, 7)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(103, 30)
-        Label7.TabIndex = 46
-        Label7.Text = "Add User"
-        ' 
-        ' Panel8
-        ' 
-        Panel8.BackColor = Color.FromArgb(CByte(3), CByte(59), CByte(106))
-        Panel8.BackgroundImage = CType(resources.GetObject("Panel8.BackgroundImage"), Image)
-        Panel8.BackgroundImageLayout = ImageLayout.Zoom
-        Panel8.ForeColor = Color.White
-        Panel8.Location = New Point(12, 7)
-        Panel8.Name = "Panel8"
-        Panel8.Size = New Size(27, 31)
-        Panel8.TabIndex = 47
-        ' 
-        ' Panel2
-        ' 
-        Panel2.BackColor = Color.FromArgb(CByte(3), CByte(59), CByte(106))
-        Panel2.Controls.Add(Panel8)
-        Panel2.Controls.Add(Label7)
-        Panel2.Location = New Point(-1, 0)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(339, 44)
-        Panel2.TabIndex = 49
-        ' 
-        ' MaterialDivider1
-        ' 
-        MaterialDivider1.BackColor = Color.FromArgb(CByte(3), CByte(59), CByte(106))
-        MaterialDivider1.Depth = 0
-        MaterialDivider1.Location = New Point(6, 54)
-        MaterialDivider1.MouseState = MaterialSkin2Framework.MouseState.HOVER
-        MaterialDivider1.Name = "MaterialDivider1"
-        MaterialDivider1.Size = New Size(314, 2)
-        MaterialDivider1.TabIndex = 44
-        MaterialDivider1.Text = "MaterialDivider1"
-        ' 
-        ' MaterialDivider2
-        ' 
-        MaterialDivider2.BackColor = Color.FromArgb(CByte(3), CByte(59), CByte(106))
-        MaterialDivider2.Depth = 0
-        MaterialDivider2.Location = New Point(6, 418)
-        MaterialDivider2.MouseState = MaterialSkin2Framework.MouseState.HOVER
-        MaterialDivider2.Name = "MaterialDivider2"
-        MaterialDivider2.Size = New Size(314, 2)
-        MaterialDivider2.TabIndex = 50
-        MaterialDivider2.Text = "MaterialDivider2"
-        ' 
-        ' Panel3
-        ' 
-        Panel3.BackColor = Color.FromArgb(CByte(244), CByte(67), CByte(54))
-        Panel3.Controls.Add(MaterialButton2)
-        Panel3.ForeColor = Color.White
-        Panel3.Location = New Point(184, 430)
-        Panel3.Name = "Panel3"
-        Panel3.Size = New Size(75, 33)
-        Panel3.TabIndex = 55
-        ' 
-        ' MaterialButton2
-        ' 
-        MaterialButton2.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        MaterialButton2.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
-        MaterialButton2.Depth = 0
-        MaterialButton2.Font = New Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        MaterialButton2.HighEmphasis = False
-        MaterialButton2.Icon = Nothing
-        MaterialButton2.Location = New Point(0, 0)
-        MaterialButton2.Margin = New Padding(4, 6, 4, 6)
-        MaterialButton2.MaximumSize = New Size(75, 33)
-        MaterialButton2.MinimumSize = New Size(75, 33)
-        MaterialButton2.MouseState = MaterialSkin2Framework.MouseState.HOVER
-        MaterialButton2.Name = "MaterialButton2"
-        MaterialButton2.NoAccentTextColor = Color.Empty
-        MaterialButton2.Size = New Size(75, 33)
-        MaterialButton2.TabIndex = 55
-        MaterialButton2.Text = "Cancel"
-        MaterialButton2.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
-        MaterialButton2.UseAccentColor = False
-        MaterialButton2.UseVisualStyleBackColor = True
-        ' 
-        ' Panel1
-        ' 
-        Panel1.BackColor = Color.Silver
-        Panel1.Controls.Add(MaterialButton1)
-        Panel1.ForeColor = Color.White
-        Panel1.Location = New Point(70, 430)
-        Panel1.Name = "Panel1"
-        Panel1.Size = New Size(75, 33)
-        Panel1.TabIndex = 56
-        ' 
-        ' MaterialButton1
-        ' 
-        MaterialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        MaterialButton1.BackColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
-        MaterialButton1.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
-        MaterialButton1.Depth = 0
-        MaterialButton1.DrawShadows = False
-        MaterialButton1.FlatAppearance.BorderColor = Color.FromArgb(CByte(13), CByte(86), CByte(147))
-        MaterialButton1.FlatAppearance.MouseDownBackColor = Color.Silver
-        MaterialButton1.FlatAppearance.MouseOverBackColor = Color.Silver
-        MaterialButton1.FlatStyle = FlatStyle.Flat
-        MaterialButton1.ForeColor = Color.White
-        MaterialButton1.HighEmphasis = False
-        MaterialButton1.Icon = Nothing
-        MaterialButton1.Location = New Point(0, 0)
-        MaterialButton1.Margin = New Padding(4, 6, 4, 6)
-        MaterialButton1.MaximumSize = New Size(75, 33)
-        MaterialButton1.MinimumSize = New Size(75, 33)
-        MaterialButton1.MouseState = MaterialSkin2Framework.MouseState.HOVER
-        MaterialButton1.Name = "MaterialButton1"
-        MaterialButton1.NoAccentTextColor = Color.Empty
-        MaterialButton1.Size = New Size(75, 33)
-        MaterialButton1.TabIndex = 53
-        MaterialButton1.Text = "Save"
-        MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
-        MaterialButton1.UseAccentColor = False
-        MaterialButton1.UseVisualStyleBackColor = False
-        ' 
-        ' User
-        ' 
-        AccentColor = MaterialSkin2Framework.Accent.Blue700
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(335, 473)
-        ControlBox = False
-        Controls.Add(Panel1)
-        Controls.Add(Panel3)
-        Controls.Add(MaterialDivider2)
-        Controls.Add(Panel2)
-        Controls.Add(MaterialDivider1)
-        Controls.Add(Label6)
-        Controls.Add(Label5)
-        Controls.Add(cbUsertype)
-        Controls.Add(Label4)
-        Controls.Add(txtPassword)
-        Controls.Add(Label3)
-        Controls.Add(txtUname)
-        Controls.Add(Label2)
-        Controls.Add(txtContactNo)
-        Controls.Add(Label13)
-        Controls.Add(txtMname)
-        Controls.Add(txtFname)
-        Controls.Add(Label1)
-        Controls.Add(txtLname)
-        ForeColor = Color.FromArgb(CByte(222), CByte(0), CByte(0), CByte(0))
-        Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        MaximizeBox = False
-        MinimizeBox = False
-        Name = "User"
-        PrimaryColor = MaterialSkin2Framework.Primary.Indigo700
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "User"
-        Panel2.ResumeLayout(False)
-        Panel2.PerformLayout()
-        Panel3.ResumeLayout(False)
-        Panel3.PerformLayout()
-        Panel1.ResumeLayout(False)
-        Panel1.PerformLayout()
-        ResumeLayout(False)
-        PerformLayout()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(User))
+        Me.txtMname = New System.Windows.Forms.TextBox()
+        Me.txtFname = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtLname = New System.Windows.Forms.TextBox()
+        Me.txtContactNo = New System.Windows.Forms.TextBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.txtUname = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.cbUsertype = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.MaterialDivider1 = New MaterialSkin2Framework.Controls.MaterialDivider()
+        Me.MaterialDivider2 = New MaterialSkin2Framework.Controls.MaterialDivider()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.MaterialButton2 = New MaterialSkin2Framework.Controls.MaterialButton()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.MaterialButton1 = New MaterialSkin2Framework.Controls.MaterialButton()
+        Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'txtMname
+        '
+        Me.txtMname.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.txtMname.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtMname.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.txtMname.Location = New System.Drawing.Point(11, 137)
+        Me.txtMname.Name = "txtMname"
+        Me.txtMname.PlaceholderText = " Middle Name"
+        Me.txtMname.Size = New System.Drawing.Size(309, 23)
+        Me.txtMname.TabIndex = 7
+        '
+        'txtFname
+        '
+        Me.txtFname.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.txtFname.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtFname.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.txtFname.Location = New System.Drawing.Point(11, 87)
+        Me.txtFname.Name = "txtFname"
+        Me.txtFname.PlaceholderText = " First Name"
+        Me.txtFname.Size = New System.Drawing.Size(309, 23)
+        Me.txtFname.TabIndex = 6
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(10, 165)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(81, 16)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Last Name"
+        '
+        'txtLname
+        '
+        Me.txtLname.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.txtLname.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtLname.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.txtLname.Location = New System.Drawing.Point(11, 186)
+        Me.txtLname.Name = "txtLname"
+        Me.txtLname.PlaceholderText = " Last Name"
+        Me.txtLname.Size = New System.Drawing.Size(309, 23)
+        Me.txtLname.TabIndex = 4
+        '
+        'txtContactNo
+        '
+        Me.txtContactNo.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.txtContactNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtContactNo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.txtContactNo.Location = New System.Drawing.Point(11, 331)
+        Me.txtContactNo.Name = "txtContactNo"
+        Me.txtContactNo.PlaceholderText = " Contact #"
+        Me.txtContactNo.Size = New System.Drawing.Size(309, 23)
+        Me.txtContactNo.TabIndex = 32
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label13.Location = New System.Drawing.Point(10, 312)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(117, 16)
+        Me.Label13.TabIndex = 31
+        Me.Label13.Text = "Contact Number"
+        '
+        'txtUname
+        '
+        Me.txtUname.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.txtUname.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtUname.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.txtUname.Location = New System.Drawing.Point(11, 235)
+        Me.txtUname.Name = "txtUname"
+        Me.txtUname.PlaceholderText = " Username"
+        Me.txtUname.Size = New System.Drawing.Size(309, 23)
+        Me.txtUname.TabIndex = 34
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(10, 214)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(78, 16)
+        Me.Label2.TabIndex = 33
+        Me.Label2.Text = "Username"
+        '
+        'txtPassword
+        '
+        Me.txtPassword.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.txtPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.txtPassword.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.txtPassword.Location = New System.Drawing.Point(11, 284)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PlaceholderText = " Password"
+        Me.txtPassword.Size = New System.Drawing.Size(309, 23)
+        Me.txtPassword.TabIndex = 36
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(10, 263)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(75, 16)
+        Me.Label3.TabIndex = 35
+        Me.Label3.Text = "Password"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label4.Location = New System.Drawing.Point(10, 359)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(80, 16)
+        Me.Label4.TabIndex = 39
+        Me.Label4.Text = "User Type"
+        '
+        'cbUsertype
+        '
+        Me.cbUsertype.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.cbUsertype.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
+        Me.cbUsertype.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.cbUsertype.FormattingEnabled = True
+        Me.cbUsertype.Location = New System.Drawing.Point(11, 380)
+        Me.cbUsertype.Name = "cbUsertype"
+        Me.cbUsertype.Size = New System.Drawing.Size(309, 25)
+        Me.cbUsertype.TabIndex = 40
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label5.Location = New System.Drawing.Point(10, 67)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(82, 16)
+        Me.Label5.TabIndex = 41
+        Me.Label5.Text = "First Name"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer), CType(CType(242, Byte), Integer))
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(10, 116)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(99, 16)
+        Me.Label6.TabIndex = 42
+        Me.Label6.Text = "Middle Name"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(117, 7)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(103, 30)
+        Me.Label7.TabIndex = 46
+        Me.Label7.Text = "Add User"
+        '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.Panel8.BackgroundImage = CType(resources.GetObject("Panel8.BackgroundImage"), System.Drawing.Image)
+        Me.Panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Panel8.ForeColor = System.Drawing.Color.White
+        Me.Panel8.Location = New System.Drawing.Point(12, 7)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(27, 31)
+        Me.Panel8.TabIndex = 47
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Panel8)
+        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Location = New System.Drawing.Point(-1, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(339, 44)
+        Me.Panel2.TabIndex = 49
+        '
+        'MaterialDivider1
+        '
+        Me.MaterialDivider1.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.MaterialDivider1.Depth = 0
+        Me.MaterialDivider1.Location = New System.Drawing.Point(6, 54)
+        Me.MaterialDivider1.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        Me.MaterialDivider1.Name = "MaterialDivider1"
+        Me.MaterialDivider1.Size = New System.Drawing.Size(314, 2)
+        Me.MaterialDivider1.TabIndex = 44
+        Me.MaterialDivider1.Text = "MaterialDivider1"
+        '
+        'MaterialDivider2
+        '
+        Me.MaterialDivider2.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.MaterialDivider2.Depth = 0
+        Me.MaterialDivider2.Location = New System.Drawing.Point(6, 418)
+        Me.MaterialDivider2.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        Me.MaterialDivider2.Name = "MaterialDivider2"
+        Me.MaterialDivider2.Size = New System.Drawing.Size(314, 2)
+        Me.MaterialDivider2.TabIndex = 50
+        Me.MaterialDivider2.Text = "MaterialDivider2"
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(54, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.MaterialButton2)
+        Me.Panel3.ForeColor = System.Drawing.Color.White
+        Me.Panel3.Location = New System.Drawing.Point(184, 430)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(75, 33)
+        Me.Panel3.TabIndex = 55
+        '
+        'MaterialButton2
+        '
+        Me.MaterialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialButton2.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.MaterialButton2.Depth = 0
+        Me.MaterialButton2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.MaterialButton2.HighEmphasis = False
+        Me.MaterialButton2.Icon = Nothing
+        Me.MaterialButton2.Location = New System.Drawing.Point(0, 0)
+        Me.MaterialButton2.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.MaterialButton2.MaximumSize = New System.Drawing.Size(75, 33)
+        Me.MaterialButton2.MinimumSize = New System.Drawing.Size(75, 33)
+        Me.MaterialButton2.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        Me.MaterialButton2.Name = "MaterialButton2"
+        Me.MaterialButton2.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.MaterialButton2.Size = New System.Drawing.Size(75, 33)
+        Me.MaterialButton2.TabIndex = 55
+        Me.MaterialButton2.Text = "Cancel"
+        Me.MaterialButton2.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
+        Me.MaterialButton2.UseAccentColor = False
+        Me.MaterialButton2.UseVisualStyleBackColor = True
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.Silver
+        Me.Panel1.Controls.Add(Me.MaterialButton1)
+        Me.Panel1.ForeColor = System.Drawing.Color.White
+        Me.Panel1.Location = New System.Drawing.Point(70, 430)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(75, 33)
+        Me.Panel1.TabIndex = 56
+        '
+        'MaterialButton1
+        '
+        Me.MaterialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialButton1.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(86, Byte), Integer), CType(CType(147, Byte), Integer))
+        Me.MaterialButton1.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.MaterialButton1.Depth = 0
+        Me.MaterialButton1.DrawShadows = False
+        Me.MaterialButton1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(86, Byte), Integer), CType(CType(147, Byte), Integer))
+        Me.MaterialButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
+        Me.MaterialButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.MaterialButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.MaterialButton1.ForeColor = System.Drawing.Color.White
+        Me.MaterialButton1.HighEmphasis = False
+        Me.MaterialButton1.Icon = Nothing
+        Me.MaterialButton1.Location = New System.Drawing.Point(0, 0)
+        Me.MaterialButton1.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.MaterialButton1.MaximumSize = New System.Drawing.Size(75, 33)
+        Me.MaterialButton1.MinimumSize = New System.Drawing.Size(75, 33)
+        Me.MaterialButton1.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        Me.MaterialButton1.Name = "MaterialButton1"
+        Me.MaterialButton1.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.MaterialButton1.Size = New System.Drawing.Size(75, 33)
+        Me.MaterialButton1.TabIndex = 53
+        Me.MaterialButton1.Text = "Save"
+        Me.MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
+        Me.MaterialButton1.UseAccentColor = False
+        Me.MaterialButton1.UseVisualStyleBackColor = False
+        '
+        'User
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(335, 473)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.MaterialDivider2)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.MaterialDivider1)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.cbUsertype)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.txtPassword)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.txtUname)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.txtContactNo)
+        Me.Controls.Add(Me.Label13)
+        Me.Controls.Add(Me.txtMname)
+        Me.Controls.Add(Me.txtFname)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.txtLname)
+        Me.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
+        Me.Name = "User"
+        Me.PrimaryColor = MaterialSkin2Framework.Primary.Blue700
+        Me.PrimaryDarkColor = MaterialSkin2Framework.Primary.Blue900
+        Me.PrimaryLightColor = MaterialSkin2Framework.Primary.Blue300
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "User"
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents txtMname As TextBox

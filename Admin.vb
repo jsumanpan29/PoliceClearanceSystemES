@@ -419,7 +419,7 @@ Public Class Admin
         connection.Close()
     End Sub
 
-    Private Sub dataPolice_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataPolice.CellContentClick
+    Private Sub dataPolice_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
         Dim colname As String = dataPolice.Columns(e.ColumnIndex).Name
         If colname = "dataPoliceBtnEdit" Then
             Try

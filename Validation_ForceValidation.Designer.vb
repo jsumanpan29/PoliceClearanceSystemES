@@ -22,251 +22,252 @@ Partial Class Validation_ForceValidation
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As DataGridViewCellStyle = New DataGridViewCellStyle()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Validation_ForceValidation))
-        DataGridView1 = New DataGridView()
-        CrimeID = New DataGridViewTextBoxColumn()
-        CrimeCheckBox = New DataGridViewCheckBoxColumn()
-        CrimeFname = New DataGridViewTextBoxColumn()
-        CrimeMname = New DataGridViewTextBoxColumn()
-        CrimeLname = New DataGridViewTextBoxColumn()
-        CrimeOffense = New DataGridViewTextBoxColumn()
-        CrimeCCNO = New DataGridViewTextBoxColumn()
-        CrimeISNO = New DataGridViewTextBoxColumn()
-        CrimeRemarks = New DataGridViewTextBoxColumn()
-        Label1 = New Label()
-        Label3 = New Label()
-        lblNumberRecords = New Label()
-        chkRemarks = New CheckBox()
-        RichTextBox1 = New RichTextBox()
-        chkCriminalRecord = New CheckBox()
-        MaterialButton1 = New MaterialSkin2Framework.Controls.MaterialButton()
-        MaterialButton2 = New MaterialSkin2Framework.Controls.MaterialButton()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
-        SuspendLayout()
-        ' 
-        ' DataGridView1
-        ' 
-        DataGridView1.AllowUserToAddRows = False
-        DataGridView1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle1.BackColor = SystemColors.Control
-        DataGridViewCellStyle1.Font = New Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point)
-        DataGridViewCellStyle1.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = DataGridViewTriState.True
-        DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        DataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridView1.Columns.AddRange(New DataGridViewColumn() {CrimeID, CrimeCheckBox, CrimeFname, CrimeMname, CrimeLname, CrimeOffense, CrimeCCNO, CrimeISNO, CrimeRemarks})
-        DataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle2.BackColor = SystemColors.Window
-        DataGridViewCellStyle2.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle2.ForeColor = SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = DataGridViewTriState.False
-        DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
-        DataGridView1.Location = New Point(10, 116)
-        DataGridView1.Name = "DataGridView1"
-        DataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle3.BackColor = SystemColors.Control
-        DataGridViewCellStyle3.Font = New Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point)
-        DataGridViewCellStyle3.ForeColor = SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = DataGridViewTriState.True
-        DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
-        DataGridView1.RowTemplate.Height = 25
-        DataGridView1.Size = New Size(789, 213)
-        DataGridView1.TabIndex = 0
-        ' 
-        ' CrimeID
-        ' 
-        CrimeID.HeaderText = "Column1"
-        CrimeID.Name = "CrimeID"
-        CrimeID.Visible = False
-        ' 
-        ' CrimeCheckBox
-        ' 
-        CrimeCheckBox.HeaderText = ""
-        CrimeCheckBox.Name = "CrimeCheckBox"
-        CrimeCheckBox.Width = 30
-        ' 
-        ' CrimeFname
-        ' 
-        CrimeFname.HeaderText = "  First Name"
-        CrimeFname.Name = "CrimeFname"
-        ' 
-        ' CrimeMname
-        ' 
-        CrimeMname.HeaderText = "Middle Name"
-        CrimeMname.Name = "CrimeMname"
-        ' 
-        ' CrimeLname
-        ' 
-        CrimeLname.HeaderText = "   Last Name"
-        CrimeLname.Name = "CrimeLname"
-        ' 
-        ' CrimeOffense
-        ' 
-        CrimeOffense.HeaderText = " Crime Offense"
-        CrimeOffense.Name = "CrimeOffense"
-        ' 
-        ' CrimeCCNO
-        ' 
-        CrimeCCNO.HeaderText = "  CC NO."
-        CrimeCCNO.Name = "CrimeCCNO"
-        ' 
-        ' CrimeISNO
-        ' 
-        CrimeISNO.HeaderText = "  IS NO."
-        CrimeISNO.Name = "CrimeISNO"
-        ' 
-        ' CrimeRemarks
-        ' 
-        CrimeRemarks.HeaderText = "  Remarks"
-        CrimeRemarks.Name = "CrimeRemarks"
-        CrimeRemarks.Width = 116
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.BackColor = Color.FromArgb(CByte(25), CByte(118), CByte(210))
-        Label1.Font = New Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point)
-        Label1.ForeColor = Color.White
-        Label1.Location = New Point(274, 28)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(270, 30)
-        Label1.TabIndex = 52
-        Label1.Text = "Record Found in Database"
-        ' 
-        ' Label3
-        ' 
-        Label3.AutoSize = True
-        Label3.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        Label3.Location = New Point(7, 96)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(114, 17)
-        Label3.TabIndex = 58
-        Label3.Text = "Records Matched:"
-        ' 
-        ' lblNumberRecords
-        ' 
-        lblNumberRecords.AutoSize = True
-        lblNumberRecords.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        lblNumberRecords.Location = New Point(118, 96)
-        lblNumberRecords.Name = "lblNumberRecords"
-        lblNumberRecords.Size = New Size(15, 17)
-        lblNumberRecords.TabIndex = 59
-        lblNumberRecords.Text = "0"
-        ' 
-        ' chkRemarks
-        ' 
-        chkRemarks.AutoSize = True
-        chkRemarks.Checked = True
-        chkRemarks.CheckState = CheckState.Checked
-        chkRemarks.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        chkRemarks.Location = New Point(10, 332)
-        chkRemarks.Name = "chkRemarks"
-        chkRemarks.Size = New Size(105, 21)
-        chkRemarks.TabIndex = 60
-        chkRemarks.Text = "Add Remarks"
-        chkRemarks.UseVisualStyleBackColor = True
-        ' 
-        ' RichTextBox1
-        ' 
-        RichTextBox1.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
-        RichTextBox1.Location = New Point(12, 356)
-        RichTextBox1.Name = "RichTextBox1"
-        RichTextBox1.Size = New Size(729, 48)
-        RichTextBox1.TabIndex = 61
-        RichTextBox1.Text = ""
-        ' 
-        ' chkCriminalRecord
-        ' 
-        chkCriminalRecord.AutoSize = True
-        chkCriminalRecord.Checked = True
-        chkCriminalRecord.CheckState = CheckState.Checked
-        chkCriminalRecord.Font = New Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
-        chkCriminalRecord.Location = New Point(12, 72)
-        chkCriminalRecord.Name = "chkCriminalRecord"
-        chkCriminalRecord.Size = New Size(142, 21)
-        chkCriminalRecord.TabIndex = 62
-        chkCriminalRecord.Text = "Set Criminal Record"
-        chkCriminalRecord.UseVisualStyleBackColor = True
-        ' 
-        ' MaterialButton1
-        ' 
-        MaterialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        MaterialButton1.CharacterCasing = MaterialSkin2Framework.Controls.MaterialButton.CharacterCasingEnum.Normal
-        MaterialButton1.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
-        MaterialButton1.Depth = 0
-        MaterialButton1.Font = New Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point)
-        MaterialButton1.ForeColor = SystemColors.ControlText
-        MaterialButton1.HighEmphasis = True
-        MaterialButton1.Icon = Nothing
-        MaterialButton1.Location = New Point(747, 356)
-        MaterialButton1.Margin = New Padding(4, 6, 4, 6)
-        MaterialButton1.MaximumSize = New Size(54, 48)
-        MaterialButton1.MinimumSize = New Size(54, 48)
-        MaterialButton1.MouseState = MaterialSkin2Framework.MouseState.HOVER
-        MaterialButton1.Name = "MaterialButton1"
-        MaterialButton1.NoAccentTextColor = Color.Empty
-        MaterialButton1.Size = New Size(54, 48)
-        MaterialButton1.TabIndex = 64
-        MaterialButton1.Text = "Clear"
-        MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
-        MaterialButton1.UseAccentColor = False
-        MaterialButton1.UseVisualStyleBackColor = True
-        ' 
-        ' MaterialButton2
-        ' 
-        MaterialButton2.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        MaterialButton2.CharacterCasing = MaterialSkin2Framework.Controls.MaterialButton.CharacterCasingEnum.Normal
-        MaterialButton2.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
-        MaterialButton2.Depth = 0
-        MaterialButton2.HighEmphasis = True
-        MaterialButton2.Icon = Nothing
-        MaterialButton2.Location = New Point(382, 412)
-        MaterialButton2.Margin = New Padding(4, 6, 4, 6)
-        MaterialButton2.MaximumSize = New Size(75, 26)
-        MaterialButton2.MinimumSize = New Size(75, 26)
-        MaterialButton2.MouseState = MaterialSkin2Framework.MouseState.HOVER
-        MaterialButton2.Name = "MaterialButton2"
-        MaterialButton2.NoAccentTextColor = Color.Empty
-        MaterialButton2.Size = New Size(75, 26)
-        MaterialButton2.TabIndex = 65
-        MaterialButton2.Text = "Confirm"
-        MaterialButton2.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
-        MaterialButton2.UseAccentColor = False
-        MaterialButton2.UseVisualStyleBackColor = True
-        ' 
-        ' Validation_ForceValidation
-        ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(816, 449)
-        Controls.Add(MaterialButton2)
-        Controls.Add(MaterialButton1)
-        Controls.Add(chkCriminalRecord)
-        Controls.Add(RichTextBox1)
-        Controls.Add(chkRemarks)
-        Controls.Add(lblNumberRecords)
-        Controls.Add(Label3)
-        Controls.Add(Label1)
-        Controls.Add(DataGridView1)
-        Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        Name = "Validation_ForceValidation"
-        PrimaryColor = MaterialSkin2Framework.Primary.Blue700
-        PrimaryDarkColor = MaterialSkin2Framework.Primary.Blue900
-        PrimaryLightColor = MaterialSkin2Framework.Primary.Blue300
-        StartPosition = FormStartPosition.CenterScreen
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
-        ResumeLayout(False)
-        PerformLayout()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Validation_ForceValidation))
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.CrimeID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CrimeCheckBox = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.CrimeFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CrimeMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CrimeLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CrimeOffense = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CrimeCCNO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CrimeISNO = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CrimeRemarks = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lblNumberRecords = New System.Windows.Forms.Label()
+        Me.chkRemarks = New System.Windows.Forms.CheckBox()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.chkCriminalRecord = New System.Windows.Forms.CheckBox()
+        Me.MaterialButton1 = New MaterialSkin2Framework.Controls.MaterialButton()
+        Me.MaterialButton2 = New MaterialSkin2Framework.Controls.MaterialButton()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CrimeID, Me.CrimeCheckBox, Me.CrimeFname, Me.CrimeMname, Me.CrimeLname, Me.CrimeOffense, Me.CrimeCCNO, Me.CrimeISNO, Me.CrimeRemarks})
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle2
+        Me.DataGridView1.Location = New System.Drawing.Point(10, 116)
+        Me.DataGridView1.Name = "DataGridView1"
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.DataGridView1.RowTemplate.Height = 25
+        Me.DataGridView1.Size = New System.Drawing.Size(789, 213)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'CrimeID
+        '
+        Me.CrimeID.HeaderText = "Column1"
+        Me.CrimeID.Name = "CrimeID"
+        Me.CrimeID.Visible = False
+        '
+        'CrimeCheckBox
+        '
+        Me.CrimeCheckBox.HeaderText = ""
+        Me.CrimeCheckBox.Name = "CrimeCheckBox"
+        Me.CrimeCheckBox.Width = 30
+        '
+        'CrimeFname
+        '
+        Me.CrimeFname.HeaderText = "  First Name"
+        Me.CrimeFname.Name = "CrimeFname"
+        '
+        'CrimeMname
+        '
+        Me.CrimeMname.HeaderText = "Middle Name"
+        Me.CrimeMname.Name = "CrimeMname"
+        '
+        'CrimeLname
+        '
+        Me.CrimeLname.HeaderText = "   Last Name"
+        Me.CrimeLname.Name = "CrimeLname"
+        '
+        'CrimeOffense
+        '
+        Me.CrimeOffense.HeaderText = " Crime Offense"
+        Me.CrimeOffense.Name = "CrimeOffense"
+        '
+        'CrimeCCNO
+        '
+        Me.CrimeCCNO.HeaderText = "  CC NO."
+        Me.CrimeCCNO.Name = "CrimeCCNO"
+        '
+        'CrimeISNO
+        '
+        Me.CrimeISNO.HeaderText = "  IS NO."
+        Me.CrimeISNO.Name = "CrimeISNO"
+        '
+        'CrimeRemarks
+        '
+        Me.CrimeRemarks.HeaderText = "  Remarks"
+        Me.CrimeRemarks.Name = "CrimeRemarks"
+        Me.CrimeRemarks.Width = 116
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(210, Byte), Integer))
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(274, 28)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(270, 30)
+        Me.Label1.TabIndex = 52
+        Me.Label1.Text = "Record Found in Database"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Location = New System.Drawing.Point(7, 96)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(114, 17)
+        Me.Label3.TabIndex = 58
+        Me.Label3.Text = "Records Matched:"
+        '
+        'lblNumberRecords
+        '
+        Me.lblNumberRecords.AutoSize = True
+        Me.lblNumberRecords.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lblNumberRecords.Location = New System.Drawing.Point(118, 96)
+        Me.lblNumberRecords.Name = "lblNumberRecords"
+        Me.lblNumberRecords.Size = New System.Drawing.Size(15, 17)
+        Me.lblNumberRecords.TabIndex = 59
+        Me.lblNumberRecords.Text = "0"
+        '
+        'chkRemarks
+        '
+        Me.chkRemarks.AutoSize = True
+        Me.chkRemarks.Checked = True
+        Me.chkRemarks.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkRemarks.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.chkRemarks.Location = New System.Drawing.Point(10, 332)
+        Me.chkRemarks.Name = "chkRemarks"
+        Me.chkRemarks.Size = New System.Drawing.Size(105, 21)
+        Me.chkRemarks.TabIndex = 60
+        Me.chkRemarks.Text = "Add Remarks"
+        Me.chkRemarks.UseVisualStyleBackColor = True
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.RichTextBox1.Location = New System.Drawing.Point(12, 356)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(729, 48)
+        Me.RichTextBox1.TabIndex = 61
+        Me.RichTextBox1.Text = ""
+        '
+        'chkCriminalRecord
+        '
+        Me.chkCriminalRecord.AutoSize = True
+        Me.chkCriminalRecord.Checked = True
+        Me.chkCriminalRecord.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.chkCriminalRecord.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.chkCriminalRecord.Location = New System.Drawing.Point(12, 72)
+        Me.chkCriminalRecord.Name = "chkCriminalRecord"
+        Me.chkCriminalRecord.Size = New System.Drawing.Size(142, 21)
+        Me.chkCriminalRecord.TabIndex = 62
+        Me.chkCriminalRecord.Text = "Set Criminal Record"
+        Me.chkCriminalRecord.UseVisualStyleBackColor = True
+        '
+        'MaterialButton1
+        '
+        Me.MaterialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialButton1.CharacterCasing = MaterialSkin2Framework.Controls.MaterialButton.CharacterCasingEnum.Normal
+        Me.MaterialButton1.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.MaterialButton1.Depth = 0
+        Me.MaterialButton1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.MaterialButton1.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.MaterialButton1.HighEmphasis = True
+        Me.MaterialButton1.Icon = Nothing
+        Me.MaterialButton1.Location = New System.Drawing.Point(747, 356)
+        Me.MaterialButton1.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.MaterialButton1.MaximumSize = New System.Drawing.Size(54, 48)
+        Me.MaterialButton1.MinimumSize = New System.Drawing.Size(54, 48)
+        Me.MaterialButton1.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        Me.MaterialButton1.Name = "MaterialButton1"
+        Me.MaterialButton1.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.MaterialButton1.Size = New System.Drawing.Size(54, 48)
+        Me.MaterialButton1.TabIndex = 64
+        Me.MaterialButton1.Text = "Clear"
+        Me.MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
+        Me.MaterialButton1.UseAccentColor = False
+        Me.MaterialButton1.UseVisualStyleBackColor = True
+        '
+        'MaterialButton2
+        '
+        Me.MaterialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialButton2.CharacterCasing = MaterialSkin2Framework.Controls.MaterialButton.CharacterCasingEnum.Normal
+        Me.MaterialButton2.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.MaterialButton2.Depth = 0
+        Me.MaterialButton2.HighEmphasis = True
+        Me.MaterialButton2.Icon = Nothing
+        Me.MaterialButton2.Location = New System.Drawing.Point(382, 412)
+        Me.MaterialButton2.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.MaterialButton2.MaximumSize = New System.Drawing.Size(75, 26)
+        Me.MaterialButton2.MinimumSize = New System.Drawing.Size(75, 26)
+        Me.MaterialButton2.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        Me.MaterialButton2.Name = "MaterialButton2"
+        Me.MaterialButton2.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.MaterialButton2.Size = New System.Drawing.Size(75, 26)
+        Me.MaterialButton2.TabIndex = 65
+        Me.MaterialButton2.Text = "Confirm"
+        Me.MaterialButton2.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
+        Me.MaterialButton2.UseAccentColor = False
+        Me.MaterialButton2.UseVisualStyleBackColor = True
+        '
+        'Validation_ForceValidation
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(816, 449)
+        Me.Controls.Add(Me.MaterialButton2)
+        Me.Controls.Add(Me.MaterialButton1)
+        Me.Controls.Add(Me.chkCriminalRecord)
+        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.chkRemarks)
+        Me.Controls.Add(Me.lblNumberRecords)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.DataGridView1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "Validation_ForceValidation"
+        Me.PrimaryColor = MaterialSkin2Framework.Primary.Blue700
+        Me.PrimaryDarkColor = MaterialSkin2Framework.Primary.Blue900
+        Me.PrimaryLightColor = MaterialSkin2Framework.Primary.Blue300
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView

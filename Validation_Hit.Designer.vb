@@ -22,152 +22,154 @@ Partial Class Validation_Hit
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim resources As ComponentModel.ComponentResourceManager = New ComponentModel.ComponentResourceManager(GetType(Validation_Hit))
-        Label1 = New Label()
-        Label2 = New Label()
-        Panel3 = New Panel()
-        CancelButton = New MaterialSkin2Framework.Controls.MaterialButton()
-        Panel8 = New Panel()
-        MaterialDivider1 = New MaterialSkin2Framework.Controls.MaterialDivider()
-        Panel2 = New Panel()
-        Label7 = New Label()
-        MaterialDivider2 = New MaterialSkin2Framework.Controls.MaterialDivider()
-        Panel3.SuspendLayout()
-        Panel2.SuspendLayout()
-        SuspendLayout()
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point)
-        Label1.Location = New Point(64, 61)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(222, 32)
-        Label1.TabIndex = 55
-        Label1.Text = "Hit! Records Found:"
-        ' 
-        ' Label2
-        ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point)
-        Label2.Location = New Point(283, 61)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(102, 32)
-        Label2.TabIndex = 57
-        Label2.Text = "Number"
-        ' 
-        ' Panel3
-        ' 
-        Panel3.BackColor = Color.FromArgb(CByte(230), CByte(62), CByte(50))
-        Panel3.Controls.Add(CancelButton)
-        Panel3.ForeColor = Color.White
-        Panel3.Location = New Point(167, 116)
-        Panel3.Name = "Panel3"
-        Panel3.Size = New Size(75, 33)
-        Panel3.TabIndex = 59
-        ' 
-        ' CancelButton
-        ' 
-        CancelButton.AutoSizeMode = AutoSizeMode.GrowAndShrink
-        CancelButton.BackColor = Color.White
-        CancelButton.CharacterCasing = MaterialSkin2Framework.Controls.MaterialButton.CharacterCasingEnum.Normal
-        CancelButton.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.Default
-        CancelButton.Depth = 0
-        CancelButton.HighEmphasis = False
-        CancelButton.Icon = Nothing
-        CancelButton.Location = New Point(0, 0)
-        CancelButton.Margin = New Padding(4, 6, 4, 6)
-        CancelButton.MaximumSize = New Size(75, 33)
-        CancelButton.MinimumSize = New Size(75, 33)
-        CancelButton.MouseState = MaterialSkin2Framework.MouseState.HOVER
-        CancelButton.Name = "CancelButton"
-        CancelButton.NoAccentTextColor = Color.Empty
-        CancelButton.Size = New Size(75, 33)
-        CancelButton.TabIndex = 55
-        CancelButton.Text = "Next"
-        CancelButton.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
-        CancelButton.UseAccentColor = False
-        CancelButton.UseVisualStyleBackColor = False
-        ' 
-        ' Panel8
-        ' 
-        Panel8.BackColor = SystemColors.Control
-        Panel8.BackgroundImage = CType(resources.GetObject("Panel8.BackgroundImage"), Image)
-        Panel8.BackgroundImageLayout = ImageLayout.Zoom
-        Panel8.ForeColor = Color.White
-        Panel8.Location = New Point(14, 56)
-        Panel8.Name = "Panel8"
-        Panel8.Size = New Size(44, 42)
-        Panel8.TabIndex = 56
-        ' 
-        ' MaterialDivider1
-        ' 
-        MaterialDivider1.BackColor = Color.Silver
-        MaterialDivider1.Depth = 0
-        MaterialDivider1.Location = New Point(-10, 105)
-        MaterialDivider1.MouseState = MaterialSkin2Framework.MouseState.HOVER
-        MaterialDivider1.Name = "MaterialDivider1"
-        MaterialDivider1.Size = New Size(425, 2)
-        MaterialDivider1.TabIndex = 60
-        MaterialDivider1.Text = "MaterialDivider1"
-        ' 
-        ' Panel2
-        ' 
-        Panel2.Anchor = AnchorStyles.Top Or AnchorStyles.Left Or AnchorStyles.Right
-        Panel2.AutoSize = True
-        Panel2.BackColor = Color.FromArgb(CByte(3), CByte(59), CByte(106))
-        Panel2.Controls.Add(Label7)
-        Panel2.Location = New Point(-6, -1)
-        Panel2.Name = "Panel2"
-        Panel2.Size = New Size(425, 40)
-        Panel2.TabIndex = 61
-        ' 
-        ' Label7
-        ' 
-        Label7.AutoSize = True
-        Label7.BackColor = Color.FromArgb(CByte(3), CByte(59), CByte(106))
-        Label7.Font = New Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point)
-        Label7.ForeColor = Color.White
-        Label7.Location = New Point(92, 7)
-        Label7.Name = "Label7"
-        Label7.Size = New Size(246, 25)
-        Label7.TabIndex = 47
-        Label7.Text = "Record Found in Database"
-        ' 
-        ' MaterialDivider2
-        ' 
-        MaterialDivider2.BackColor = Color.Silver
-        MaterialDivider2.Depth = 0
-        MaterialDivider2.Location = New Point(-6, 50)
-        MaterialDivider2.MouseState = MaterialSkin2Framework.MouseState.HOVER
-        MaterialDivider2.Name = "MaterialDivider2"
-        MaterialDivider2.Size = New Size(425, 2)
-        MaterialDivider2.TabIndex = 62
-        MaterialDivider2.Text = "MaterialDivider2"
-        ' 
-        ' Validation_Hit
-        ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
-        AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(414, 155)
-        ControlBox = False
-        Controls.Add(MaterialDivider2)
-        Controls.Add(Panel2)
-        Controls.Add(MaterialDivider1)
-        Controls.Add(Panel8)
-        Controls.Add(Panel3)
-        Controls.Add(Label2)
-        Controls.Add(Label1)
-        Icon = CType(resources.GetObject("$this.Icon"), Icon)
-        Name = "Validation_Hit"
-        StartPosition = FormStartPosition.CenterScreen
-        Text = "Validation_Hit"
-        Panel3.ResumeLayout(False)
-        Panel3.PerformLayout()
-        Panel2.ResumeLayout(False)
-        Panel2.PerformLayout()
-        ResumeLayout(False)
-        PerformLayout()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Validation_Hit))
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.CancelButton = New MaterialSkin2Framework.Controls.MaterialButton()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.MaterialDivider1 = New MaterialSkin2Framework.Controls.MaterialDivider()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.MaterialDivider2 = New MaterialSkin2Framework.Controls.MaterialDivider()
+        Me.Panel3.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.SuspendLayout()
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(64, 61)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(222, 32)
+        Me.Label1.TabIndex = 55
+        Me.Label1.Text = "Hit! Records Found:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.Label2.Location = New System.Drawing.Point(283, 61)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(102, 32)
+        Me.Label2.TabIndex = 57
+        Me.Label2.Text = "Number"
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(230, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(50, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.CancelButton)
+        Me.Panel3.ForeColor = System.Drawing.Color.White
+        Me.Panel3.Location = New System.Drawing.Point(167, 116)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(75, 33)
+        Me.Panel3.TabIndex = 59
+        '
+        'CancelButton
+        '
+        Me.CancelButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.CancelButton.BackColor = System.Drawing.Color.White
+        Me.CancelButton.CharacterCasing = MaterialSkin2Framework.Controls.MaterialButton.CharacterCasingEnum.Normal
+        Me.CancelButton.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.CancelButton.Depth = 0
+        Me.CancelButton.HighEmphasis = False
+        Me.CancelButton.Icon = Nothing
+        Me.CancelButton.Location = New System.Drawing.Point(0, 0)
+        Me.CancelButton.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.CancelButton.MaximumSize = New System.Drawing.Size(75, 33)
+        Me.CancelButton.MinimumSize = New System.Drawing.Size(75, 33)
+        Me.CancelButton.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        Me.CancelButton.Name = "CancelButton"
+        Me.CancelButton.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.CancelButton.Size = New System.Drawing.Size(75, 33)
+        Me.CancelButton.TabIndex = 55
+        Me.CancelButton.Text = "Next"
+        Me.CancelButton.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
+        Me.CancelButton.UseAccentColor = False
+        Me.CancelButton.UseVisualStyleBackColor = False
+        '
+        'Panel8
+        '
+        Me.Panel8.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel8.BackgroundImage = CType(resources.GetObject("Panel8.BackgroundImage"), System.Drawing.Image)
+        Me.Panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Panel8.ForeColor = System.Drawing.Color.White
+        Me.Panel8.Location = New System.Drawing.Point(14, 56)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(44, 42)
+        Me.Panel8.TabIndex = 56
+        '
+        'MaterialDivider1
+        '
+        Me.MaterialDivider1.BackColor = System.Drawing.Color.Silver
+        Me.MaterialDivider1.Depth = 0
+        Me.MaterialDivider1.Location = New System.Drawing.Point(-10, 105)
+        Me.MaterialDivider1.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        Me.MaterialDivider1.Name = "MaterialDivider1"
+        Me.MaterialDivider1.Size = New System.Drawing.Size(425, 2)
+        Me.MaterialDivider1.TabIndex = 60
+        Me.MaterialDivider1.Text = "MaterialDivider1"
+        '
+        'Panel2
+        '
+        Me.Panel2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel2.AutoSize = True
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Location = New System.Drawing.Point(-6, -1)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(425, 40)
+        Me.Panel2.TabIndex = 61
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(106, Byte), Integer))
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label7.ForeColor = System.Drawing.Color.White
+        Me.Label7.Location = New System.Drawing.Point(92, 7)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(246, 25)
+        Me.Label7.TabIndex = 47
+        Me.Label7.Text = "Record Found in Database"
+        '
+        'MaterialDivider2
+        '
+        Me.MaterialDivider2.BackColor = System.Drawing.Color.Silver
+        Me.MaterialDivider2.Depth = 0
+        Me.MaterialDivider2.Location = New System.Drawing.Point(-6, 50)
+        Me.MaterialDivider2.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        Me.MaterialDivider2.Name = "MaterialDivider2"
+        Me.MaterialDivider2.Size = New System.Drawing.Size(425, 2)
+        Me.MaterialDivider2.TabIndex = 62
+        Me.MaterialDivider2.Text = "MaterialDivider2"
+        '
+        'Validation_Hit
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(414, 155)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.MaterialDivider2)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.MaterialDivider1)
+        Me.Controls.Add(Me.Panel8)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "Validation_Hit"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "Validation_Hit"
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
