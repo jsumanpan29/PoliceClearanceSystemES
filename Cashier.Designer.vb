@@ -74,8 +74,9 @@ Partial Class Cashier
         '
         'TextBox1
         '
+        Me.TextBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox1.Location = New System.Drawing.Point(671, 99)
+        Me.TextBox1.Location = New System.Drawing.Point(671, 106)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.PlaceholderText = "  Search..."
@@ -86,7 +87,7 @@ Partial Class Cashier
         '
         Me.chbAll.AutoSize = True
         Me.chbAll.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.chbAll.Location = New System.Drawing.Point(15, 106)
+        Me.chbAll.Location = New System.Drawing.Point(15, 113)
         Me.chbAll.Name = "chbAll"
         Me.chbAll.Size = New System.Drawing.Size(79, 21)
         Me.chbAll.TabIndex = 145
@@ -95,16 +96,19 @@ Partial Class Cashier
         '
         'MaterialCard1
         '
+        Me.MaterialCard1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialCard1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.MaterialCard1.Controls.Add(Me.DataGridView1)
         Me.MaterialCard1.Depth = 0
         Me.MaterialCard1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(222, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.MaterialCard1.Location = New System.Drawing.Point(15, 133)
+        Me.MaterialCard1.Location = New System.Drawing.Point(15, 144)
         Me.MaterialCard1.Margin = New System.Windows.Forms.Padding(14)
         Me.MaterialCard1.MouseState = MaterialSkin2Framework.MouseState.HOVER
         Me.MaterialCard1.Name = "MaterialCard1"
         Me.MaterialCard1.Padding = New System.Windows.Forms.Padding(14)
-        Me.MaterialCard1.Size = New System.Drawing.Size(1027, 319)
+        Me.MaterialCard1.Size = New System.Drawing.Size(1036, 418)
         Me.MaterialCard1.TabIndex = 146
         '
         'DataGridView1
@@ -159,7 +163,7 @@ Partial Class Cashier
         Me.DataGridView1.RowTemplate.Height = 52
         Me.DataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.DataGridView1.ShowVerticalScroll = False
-        Me.DataGridView1.Size = New System.Drawing.Size(999, 291)
+        Me.DataGridView1.Size = New System.Drawing.Size(1008, 390)
         Me.DataGridView1.TabIndex = 0
         '
         'ClearanceCheckBox
@@ -202,19 +206,18 @@ Partial Class Cashier
         '
         'MaterialButton1
         '
+        Me.MaterialButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialButton1.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.[Default]
         Me.MaterialButton1.Depth = 0
         Me.MaterialButton1.HighEmphasis = True
         Me.MaterialButton1.Icon = CType(resources.GetObject("MaterialButton1.Icon"), System.Drawing.Image)
-        Me.MaterialButton1.Location = New System.Drawing.Point(957, 99)
-        Me.MaterialButton1.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.MaterialButton1.MaximumSize = New System.Drawing.Size(85, 28)
-        Me.MaterialButton1.MinimumSize = New System.Drawing.Size(85, 28)
+        Me.MaterialButton1.Location = New System.Drawing.Point(957, 103)
+        Me.MaterialButton1.Margin = New System.Windows.Forms.Padding(4)
         Me.MaterialButton1.MouseState = MaterialSkin2Framework.MouseState.HOVER
         Me.MaterialButton1.Name = "MaterialButton1"
         Me.MaterialButton1.NoAccentTextColor = System.Drawing.Color.Empty
-        Me.MaterialButton1.Size = New System.Drawing.Size(85, 28)
+        Me.MaterialButton1.Size = New System.Drawing.Size(94, 36)
         Me.MaterialButton1.TabIndex = 147
         Me.MaterialButton1.Text = "Clear"
         Me.MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
@@ -223,19 +226,18 @@ Partial Class Cashier
         '
         'MaterialButton2
         '
+        Me.MaterialButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MaterialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.MaterialButton2.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.[Default]
         Me.MaterialButton2.Depth = 0
         Me.MaterialButton2.HighEmphasis = True
         Me.MaterialButton2.Icon = Nothing
-        Me.MaterialButton2.Location = New System.Drawing.Point(961, 458)
-        Me.MaterialButton2.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
-        Me.MaterialButton2.MaximumSize = New System.Drawing.Size(81, 30)
-        Me.MaterialButton2.MinimumSize = New System.Drawing.Size(81, 33)
+        Me.MaterialButton2.Location = New System.Drawing.Point(965, 569)
+        Me.MaterialButton2.Margin = New System.Windows.Forms.Padding(4)
         Me.MaterialButton2.MouseState = MaterialSkin2Framework.MouseState.HOVER
         Me.MaterialButton2.Name = "MaterialButton2"
         Me.MaterialButton2.NoAccentTextColor = System.Drawing.Color.Empty
-        Me.MaterialButton2.Size = New System.Drawing.Size(81, 33)
+        Me.MaterialButton2.Size = New System.Drawing.Size(86, 36)
         Me.MaterialButton2.TabIndex = 148
         Me.MaterialButton2.Text = "Confirm"
         Me.MaterialButton2.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
@@ -246,7 +248,7 @@ Partial Class Cashier
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1056, 496)
+        Me.ClientSize = New System.Drawing.Size(1056, 612)
         Me.Controls.Add(Me.MaterialButton2)
         Me.Controls.Add(Me.MaterialButton1)
         Me.Controls.Add(Me.MaterialCard1)

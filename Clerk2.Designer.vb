@@ -113,6 +113,7 @@ Partial Class Clerk2
         Me.MaterialButton2 = New MaterialSkin2Framework.Controls.MaterialButton()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.MaterialButton3 = New MaterialSkin2Framework.Controls.MaterialButton()
+        Me.Label23 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.dataApplicantPending, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -212,7 +213,7 @@ Partial Class Clerk2
         '
         'txtORNo
         '
-        Me.txtORNo.Location = New System.Drawing.Point(256, 382)
+        Me.txtORNo.Location = New System.Drawing.Point(256, 385)
         Me.txtORNo.Name = "txtORNo"
         Me.txtORNo.Size = New System.Drawing.Size(230, 23)
         Me.txtORNo.TabIndex = 17
@@ -221,7 +222,7 @@ Partial Class Clerk2
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(256, 364)
+        Me.Label17.Location = New System.Drawing.Point(256, 367)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(70, 15)
         Me.Label17.TabIndex = 122
@@ -473,18 +474,18 @@ Partial Class Clerk2
         '
         'txtClearanceMname
         '
-        Me.txtClearanceMname.Location = New System.Drawing.Point(333, 150)
+        Me.txtClearanceMname.Location = New System.Drawing.Point(336, 150)
         Me.txtClearanceMname.Name = "txtClearanceMname"
         Me.txtClearanceMname.PlaceholderText = " Middle Name*"
-        Me.txtClearanceMname.Size = New System.Drawing.Size(153, 23)
+        Me.txtClearanceMname.Size = New System.Drawing.Size(150, 23)
         Me.txtClearanceMname.TabIndex = 4
         '
         'txtClearanceFname
         '
-        Me.txtClearanceFname.Location = New System.Drawing.Point(174, 150)
+        Me.txtClearanceFname.Location = New System.Drawing.Point(180, 150)
         Me.txtClearanceFname.Name = "txtClearanceFname"
         Me.txtClearanceFname.PlaceholderText = " First Name*"
-        Me.txtClearanceFname.Size = New System.Drawing.Size(153, 23)
+        Me.txtClearanceFname.Size = New System.Drawing.Size(150, 23)
         Me.txtClearanceFname.TabIndex = 3
         '
         'Label14
@@ -492,16 +493,16 @@ Partial Class Clerk2
         Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(15, 132)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(262, 15)
+        Me.Label14.Size = New System.Drawing.Size(266, 15)
         Me.Label14.TabIndex = 90
-        Me.Label14.Text = "Full Name(Last name, First name, Middle Name)"
+        Me.Label14.Text = "Full Name(Last Name, First Name, Middle Name)"
         '
         'txtClearanceLname
         '
         Me.txtClearanceLname.Location = New System.Drawing.Point(15, 150)
         Me.txtClearanceLname.Name = "txtClearanceLname"
         Me.txtClearanceLname.PlaceholderText = " Last Name*"
-        Me.txtClearanceLname.Size = New System.Drawing.Size(153, 23)
+        Me.txtClearanceLname.Size = New System.Drawing.Size(150, 23)
         Me.txtClearanceLname.TabIndex = 2
         '
         'txtClearanceNo
@@ -523,6 +524,9 @@ Partial Class Clerk2
         '
         'TabControl1
         '
+        Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Location = New System.Drawing.Point(708, 93)
@@ -564,6 +568,9 @@ Partial Class Clerk2
         '
         Me.dataApplicantPending.AllowUserToAddRows = False
         Me.dataApplicantPending.AllowUserToDeleteRows = False
+        Me.dataApplicantPending.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dataApplicantPending.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataApplicantPending.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataPendingClearanceID, Me.dataPendingClearanceNo, Me.dataPendingClearanceFname, Me.dataPendingClearanceMname, Me.dataPendingClearanceLname, Me.dataPendingClearanceStatus, Me.dataPendingClearanceEdit, Me.dataPendingClearanceSetBtn, Me.dataPendingClearanceDelete})
         Me.dataApplicantPending.Location = New System.Drawing.Point(4, 49)
@@ -649,6 +656,9 @@ Partial Class Clerk2
         '
         Me.dataApplicantCompleted.AllowUserToAddRows = False
         Me.dataApplicantCompleted.AllowUserToDeleteRows = False
+        Me.dataApplicantCompleted.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dataApplicantCompleted.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataApplicantCompleted.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataCompletedClearanceID, Me.dataCompletedClearanceNo, Me.dataCompletedClearanceFname, Me.dataCompletedClearanceMname, Me.dataCompletedClearanceLname, Me.dataCompletedClearanceStatus, Me.dataCompletedClearancePrint})
         Me.dataApplicantCompleted.Location = New System.Drawing.Point(4, 49)
@@ -966,11 +976,21 @@ Partial Class Clerk2
         Me.MaterialButton3.UseAccentColor = False
         Me.MaterialButton3.UseVisualStyleBackColor = False
         '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(168, 159)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(10, 15)
+        Me.Label23.TabIndex = 149
+        Me.Label23.Text = ","
+        '
         'Clerk2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1500, 734)
+        Me.Controls.Add(Me.Label23)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
@@ -1146,4 +1166,5 @@ Partial Class Clerk2
     Friend WithEvents MaterialButton2 As MaterialSkin2Framework.Controls.MaterialButton
     Friend WithEvents Panel5 As Panel
     Friend WithEvents MaterialButton3 As MaterialSkin2Framework.Controls.MaterialButton
+    Friend WithEvents Label23 As Label
 End Class
