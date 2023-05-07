@@ -851,10 +851,7 @@ Public Class Clerk2
         End If
     End Sub
 
-    Private Sub btnApplicantPendingSearchCancel_Click(sender As Object, e As System.EventArgs) Handles btnApplicantPendingSearchCancel.Click
-        LoadPCCPending()
-        txtApplicantPendingSearch.Text = ""
-    End Sub
+
 
     Private Sub dataApplicantPending_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles dataApplicantPending.CellPainting
         If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
@@ -904,10 +901,7 @@ Public Class Clerk2
         LoadPCCCompleted(txtApplicantCompletedSearch.Text.Trim)
     End Sub
 
-    Private Sub btnApplicantCompletedSearchCancel_Click(sender As Object, e As System.EventArgs) Handles btnApplicantCompletedSearchCancel.Click
-        LoadPCCCompleted()
-        txtApplicantCompletedSearch.Text = ""
-    End Sub
+
 
     Private Sub dataApplicantCompleted_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles dataApplicantCompleted.CellPainting
         If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
@@ -959,5 +953,14 @@ Public Class Clerk2
         Me.Dispose()
         Login.Show()
     End Sub
-
+    'Pending Cancel Button
+    Private Sub MaterialButton5_Click(sender As Object, e As System.EventArgs) Handles MaterialButton5.Click
+        LoadPCCPending()
+        txtApplicantPendingSearch.Text = ""
+    End Sub
+    'Completed Cancel Button
+    Private Sub MaterialButton6_Click(sender As Object, e As System.EventArgs) Handles MaterialButton6.Click
+        LoadPCCCompleted()
+        txtApplicantCompletedSearch.Text = ""
+    End Sub
 End Class
