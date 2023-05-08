@@ -250,7 +250,7 @@ Public Class Admin
     End Sub
 
 
-    Private Sub dataPolice_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs)
+    Private Sub dataPolice_CellPainting(sender As Object, e As DataGridViewCellPaintingEventArgs) Handles dataPolice.CellPainting
         If e.RowIndex >= 0 AndAlso e.ColumnIndex >= 0 Then
             e.Handled = True
             e.PaintBackground(e.CellBounds, True)
@@ -419,7 +419,7 @@ Public Class Admin
         connection.Close()
     End Sub
 
-    Private Sub dataPolice_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
+    Private Sub dataPolice_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataPolice.CellContentClick
         Dim colname As String = dataPolice.Columns(e.ColumnIndex).Name
         If colname = "dataPoliceBtnEdit" Then
             Try
@@ -461,7 +461,7 @@ Public Class Admin
         txtPoliceSearch.Text = ""
     End Sub
 
-    Private Sub btnCRAdd_Click(sender As Object, e As EventArgs) Handles btnCRAdd.Click, btnCRAdd.Click
+    Private Sub btnCRAdd_Click(sender As Object, e As EventArgs) Handles btnCRAdd.Click
         Dim criminalRecordsForm As New CriminalRecords
         criminalRecordsForm.ShowDialog()
         LoadCRTable()

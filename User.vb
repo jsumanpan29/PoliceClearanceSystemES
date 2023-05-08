@@ -159,9 +159,5 @@ Public Class User
         Me.Dispose()
 
     End Sub
-    Private Sub MaterialDivider1_Click(sender As Object, e As EventArgs) Handles MaterialDivider1.Click
-
-    End Sub
-
 
 End Class

@@ -77,6 +77,15 @@ Partial Class Clerk2
         Me.MaterialButton4 = New MaterialSkin2Framework.Controls.MaterialButton()
         Me.txtApplicantPendingSearch = New System.Windows.Forms.TextBox()
         Me.dataApplicantPending = New System.Windows.Forms.DataGridView()
+        Me.dataPendingClearanceID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPendingClearanceNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPendingClearanceFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPendingClearanceMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPendingClearanceLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPendingClearanceStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataPendingClearanceEdit = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.dataPendingClearanceSetBtn = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.dataPendingClearanceDelete = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.MaterialButton6 = New MaterialSkin2Framework.Controls.MaterialButton()
         Me.dataApplicantCompleted = New System.Windows.Forms.DataGridView()
@@ -106,15 +115,6 @@ Partial Class Clerk2
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.MaterialButton3 = New MaterialSkin2Framework.Controls.MaterialButton()
         Me.Label23 = New System.Windows.Forms.Label()
-        Me.dataPendingClearanceID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPendingClearanceNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPendingClearanceFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPendingClearanceMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPendingClearanceLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPendingClearanceStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.dataPendingClearanceEdit = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.dataPendingClearanceSetBtn = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.dataPendingClearanceDelete = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.dataApplicantPending, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -618,6 +618,68 @@ Partial Class Clerk2
         Me.dataApplicantPending.Size = New System.Drawing.Size(608, 501)
         Me.dataApplicantPending.TabIndex = 142
         '
+        'dataPendingClearanceID
+        '
+        Me.dataPendingClearanceID.HeaderText = "ClearanceID"
+        Me.dataPendingClearanceID.Name = "dataPendingClearanceID"
+        Me.dataPendingClearanceID.ReadOnly = True
+        '
+        'dataPendingClearanceNo
+        '
+        Me.dataPendingClearanceNo.HeaderText = "Clearance Number"
+        Me.dataPendingClearanceNo.Name = "dataPendingClearanceNo"
+        Me.dataPendingClearanceNo.ReadOnly = True
+        Me.dataPendingClearanceNo.Width = 130
+        '
+        'dataPendingClearanceFname
+        '
+        Me.dataPendingClearanceFname.HeaderText = "  First Name"
+        Me.dataPendingClearanceFname.Name = "dataPendingClearanceFname"
+        Me.dataPendingClearanceFname.ReadOnly = True
+        '
+        'dataPendingClearanceMname
+        '
+        Me.dataPendingClearanceMname.HeaderText = "      Middle Name"
+        Me.dataPendingClearanceMname.Name = "dataPendingClearanceMname"
+        Me.dataPendingClearanceMname.ReadOnly = True
+        Me.dataPendingClearanceMname.Width = 120
+        '
+        'dataPendingClearanceLname
+        '
+        Me.dataPendingClearanceLname.HeaderText = "      Last Name"
+        Me.dataPendingClearanceLname.Name = "dataPendingClearanceLname"
+        Me.dataPendingClearanceLname.ReadOnly = True
+        Me.dataPendingClearanceLname.Width = 120
+        '
+        'dataPendingClearanceStatus
+        '
+        Me.dataPendingClearanceStatus.HeaderText = "           Status"
+        Me.dataPendingClearanceStatus.Name = "dataPendingClearanceStatus"
+        Me.dataPendingClearanceStatus.ReadOnly = True
+        '
+        'dataPendingClearanceEdit
+        '
+        Me.dataPendingClearanceEdit.HeaderText = ""
+        Me.dataPendingClearanceEdit.Name = "dataPendingClearanceEdit"
+        Me.dataPendingClearanceEdit.ReadOnly = True
+        Me.dataPendingClearanceEdit.Text = "Edit"
+        Me.dataPendingClearanceEdit.UseColumnTextForButtonValue = True
+        '
+        'dataPendingClearanceSetBtn
+        '
+        Me.dataPendingClearanceSetBtn.HeaderText = ""
+        Me.dataPendingClearanceSetBtn.Name = "dataPendingClearanceSetBtn"
+        Me.dataPendingClearanceSetBtn.ReadOnly = True
+        Me.dataPendingClearanceSetBtn.Text = ""
+        '
+        'dataPendingClearanceDelete
+        '
+        Me.dataPendingClearanceDelete.HeaderText = ""
+        Me.dataPendingClearanceDelete.Name = "dataPendingClearanceDelete"
+        Me.dataPendingClearanceDelete.ReadOnly = True
+        Me.dataPendingClearanceDelete.Text = "Delete"
+        Me.dataPendingClearanceDelete.UseColumnTextForButtonValue = True
+        '
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.MaterialButton6)
@@ -981,68 +1043,6 @@ Partial Class Clerk2
         Me.Label23.Size = New System.Drawing.Size(10, 15)
         Me.Label23.TabIndex = 149
         Me.Label23.Text = ","
-        '
-        'dataPendingClearanceID
-        '
-        Me.dataPendingClearanceID.HeaderText = "ClearanceID"
-        Me.dataPendingClearanceID.Name = "dataPendingClearanceID"
-        Me.dataPendingClearanceID.ReadOnly = True
-        '
-        'dataPendingClearanceNo
-        '
-        Me.dataPendingClearanceNo.HeaderText = "Clearance Number"
-        Me.dataPendingClearanceNo.Name = "dataPendingClearanceNo"
-        Me.dataPendingClearanceNo.ReadOnly = True
-        Me.dataPendingClearanceNo.Width = 130
-        '
-        'dataPendingClearanceFname
-        '
-        Me.dataPendingClearanceFname.HeaderText = "  First Name"
-        Me.dataPendingClearanceFname.Name = "dataPendingClearanceFname"
-        Me.dataPendingClearanceFname.ReadOnly = True
-        '
-        'dataPendingClearanceMname
-        '
-        Me.dataPendingClearanceMname.HeaderText = "      Middle Name"
-        Me.dataPendingClearanceMname.Name = "dataPendingClearanceMname"
-        Me.dataPendingClearanceMname.ReadOnly = True
-        Me.dataPendingClearanceMname.Width = 120
-        '
-        'dataPendingClearanceLname
-        '
-        Me.dataPendingClearanceLname.HeaderText = "      Last Name"
-        Me.dataPendingClearanceLname.Name = "dataPendingClearanceLname"
-        Me.dataPendingClearanceLname.ReadOnly = True
-        Me.dataPendingClearanceLname.Width = 120
-        '
-        'dataPendingClearanceStatus
-        '
-        Me.dataPendingClearanceStatus.HeaderText = "           Status"
-        Me.dataPendingClearanceStatus.Name = "dataPendingClearanceStatus"
-        Me.dataPendingClearanceStatus.ReadOnly = True
-        '
-        'dataPendingClearanceEdit
-        '
-        Me.dataPendingClearanceEdit.HeaderText = ""
-        Me.dataPendingClearanceEdit.Name = "dataPendingClearanceEdit"
-        Me.dataPendingClearanceEdit.ReadOnly = True
-        Me.dataPendingClearanceEdit.Text = "Edit"
-        Me.dataPendingClearanceEdit.UseColumnTextForButtonValue = True
-        '
-        'dataPendingClearanceSetBtn
-        '
-        Me.dataPendingClearanceSetBtn.HeaderText = ""
-        Me.dataPendingClearanceSetBtn.Name = "dataPendingClearanceSetBtn"
-        Me.dataPendingClearanceSetBtn.ReadOnly = True
-        Me.dataPendingClearanceSetBtn.Text = ""
-        '
-        'dataPendingClearanceDelete
-        '
-        Me.dataPendingClearanceDelete.HeaderText = ""
-        Me.dataPendingClearanceDelete.Name = "dataPendingClearanceDelete"
-        Me.dataPendingClearanceDelete.ReadOnly = True
-        Me.dataPendingClearanceDelete.Text = "Delete"
-        Me.dataPendingClearanceDelete.UseColumnTextForButtonValue = True
         '
         'Clerk2
         '

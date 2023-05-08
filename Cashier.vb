@@ -33,15 +33,15 @@ Public Class Cashier
     End Sub
 
     Private Sub MaterialButton2_Click(sender As Object, e As System.EventArgs) Handles MaterialButton2.Click
-        For Each row As DataGridViewRow In DataGridView1.Rows
-            If CBool(row.Cells("ClearanceCheckBox").Value) Then
-                ' Do something with the checked row
-                ' For example:
-                Dim pcc_id As String = CStr(row.Cells("ClearanceID").Value)
-                Dim result As DialogResult = MaterialMessageBox.Show("Confirm Applicant on Payment?",
+        Dim result As DialogResult = MaterialMessageBox.Show("Confirm Applicant on Payment?",
                               "Confirm Applicant",
                               MessageBoxButtons.YesNo, False)
-                If result = DialogResult.Yes Then
+        If result = DialogResult.Yes Then
+            For Each row As DataGridViewRow In DataGridView1.Rows
+                If CBool(row.Cells("ClearanceCheckBox").Value) Then
+                    ' Do something with the checked row
+                    ' For example:
+                    Dim pcc_id As String = CStr(row.Cells("ClearanceID").Value)
                     connection.Open()
                     command = New SqlCommand("", connection)
                     command.CommandText = "UPDATE dbo.[pcc] SET [pcc].[status] = 'PAID', [pcc].[payment_confirmed_date] = @cashier_confirmed_date, [pcc].[payment_confirmed_user] = @user_id_cashier WHERE [pcc].[pcc_id] =" & pcc_id
@@ -51,11 +51,11 @@ Public Class Cashier
                     command.ExecuteNonQuery()
                     connection.Close()
                     command = Nothing
+
                 End If
-            End If
-        Next
-        LoadPCC()
-        'TextBox1.Text = ""
+            Next
+            LoadPCC()
+        End If
     End Sub
 
     Private Sub Cashier_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
