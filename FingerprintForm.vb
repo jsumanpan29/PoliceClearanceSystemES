@@ -4,11 +4,11 @@ Public Class FingerprintForm
     Dim WithEvents ZkFprint As New AxZKFPEngX
     Dim Check As Boolean
     Public Property Fingerprint As Bitmap
-    Private Sub FingerprintForm_Load(sender As Object, e As EventArgs)
-        Controls.Add(ZkFprint)
-        InitialAxZkfp()
+    ' Private Sub FingerprintForm_Load(sender As Object, e As EventArgs)
+    ' Controls.Add(ZkFprint)
+    '  InitialAxZkfp()
 
-    End Sub
+    '   End Sub
     Private Sub InitialAxZkfp()
         Try
             If (ZkFprint.InitEngine = 0) Then
@@ -65,4 +65,8 @@ Public Class FingerprintForm
         fpicture.Image = Nothing
     End Sub
 
+    Private Sub FingerprintForm_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
+        Controls.Add(ZkFprint)
+        InitialAxZkfp()
+    End Sub
 End Class
