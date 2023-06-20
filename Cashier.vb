@@ -66,10 +66,10 @@ Public Class Cashier
             connection.Open()
             command = New SqlCommand("", connection)
             If searchString = "" Then
-                command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname] FROM dbo.[pcc] WHERE [pcc].[status] = 'PENDING' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
+                command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[payment_or_number],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname] FROM dbo.[pcc] WHERE [pcc].[status] = 'PENDING' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
             Else
                 'command.CommandText = "SELECT cr_id AS 'ID', name AS 'NAME', crime_offense AS 'CRIME', ccno AS 'CC NO', isno AS 'IS NO', remarks AS 'REMARKS' FROM criminal_records WHERE (name LIKE '%" & searchString & "%' OR crime_offense LIKE '%" & searchString & "%' OR ccno LIKE '%" & searchString & "%' OR isno LIKE '%" & searchString & "%' OR remarks LIKE '%" & searchString & "%') AND deleted=0"
-                command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname] FROM dbo.[pcc] WHERE ([pcc].[pcc_number] LIKE @searchString OR [pcc].[fname] LIKE @searchString OR [pcc].[mname] LIKE @searchString OR [pcc].[lname] LIKE @searchString) AND [pcc].[status] = 'PENDING' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
+                command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[payment_or_number],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname] FROM dbo.[pcc] WHERE ([pcc].[payment_or_number] LIKE @searchString OR [pcc].[pcc_number] LIKE @searchString OR [pcc].[fname] LIKE @searchString OR [pcc].[mname] LIKE @searchString OR [pcc].[lname] LIKE @searchString) AND [pcc].[status] = 'PENDING' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
                 command.Parameters.Clear()
                 command.Parameters.AddWithValue("@searchString", "%" & searchString & "%")
             End If
@@ -80,6 +80,7 @@ Public Class Cashier
             da.Fill(dt)
             DataGridView1.AutoGenerateColumns = False
             DataGridView1.Columns("ClearanceID").DataPropertyName = "pcc_id"
+            DataGridView1.Columns("ClearanceORNumber").DataPropertyName = "payment_or_number"
             DataGridView1.Columns("ClearanceNo").DataPropertyName = "pcc_number"
             DataGridView1.Columns("ClearanceFname").DataPropertyName = "fname"
             DataGridView1.Columns("ClearanceMname").DataPropertyName = "mname"

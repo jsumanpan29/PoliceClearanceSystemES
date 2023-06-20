@@ -95,5 +95,7 @@ Public Class ReportForm
 
     End Sub
 
-
+    Private Sub MaterialButton3_Click(sender As Object, e As EventArgs) Handles MaterialButton3.Click
+        Me.Dispose()
+    End Sub
 End Class

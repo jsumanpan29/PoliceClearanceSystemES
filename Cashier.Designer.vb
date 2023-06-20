@@ -34,14 +34,15 @@ Partial Class Cashier
         Me.chbAll = New System.Windows.Forms.CheckBox()
         Me.MaterialCard1 = New MaterialSkin2Framework.Controls.MaterialCard()
         Me.DataGridView1 = New MaterialSkin2Framework.Controls.MaterialDataTable()
+        Me.MaterialButton1 = New MaterialSkin2Framework.Controls.MaterialButton()
+        Me.MaterialButton2 = New MaterialSkin2Framework.Controls.MaterialButton()
         Me.ClearanceCheckBox = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ClearanceID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ClearanceORNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClearanceNo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClearanceFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClearanceMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClearanceLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.MaterialButton1 = New MaterialSkin2Framework.Controls.MaterialButton()
-        Me.MaterialButton2 = New MaterialSkin2Framework.Controls.MaterialButton()
         Me.MenuStrip1.SuspendLayout()
         Me.MaterialCard1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -131,7 +132,7 @@ Partial Class Cashier
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeight = 56
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ClearanceCheckBox, Me.ClearanceID, Me.ClearanceNo, Me.ClearanceFname, Me.ClearanceMname, Me.ClearanceLname})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ClearanceCheckBox, Me.ClearanceID, Me.ClearanceORNumber, Me.ClearanceNo, Me.ClearanceFname, Me.ClearanceMname, Me.ClearanceLname})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel)
@@ -165,44 +166,6 @@ Partial Class Cashier
         Me.DataGridView1.ShowVerticalScroll = False
         Me.DataGridView1.Size = New System.Drawing.Size(1008, 390)
         Me.DataGridView1.TabIndex = 0
-        '
-        'ClearanceCheckBox
-        '
-        Me.ClearanceCheckBox.DividerWidth = 1
-        Me.ClearanceCheckBox.FillWeight = 40.0!
-        Me.ClearanceCheckBox.HeaderText = ""
-        Me.ClearanceCheckBox.Name = "ClearanceCheckBox"
-        Me.ClearanceCheckBox.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
-        '
-        'ClearanceID
-        '
-        Me.ClearanceID.DividerWidth = 1
-        Me.ClearanceID.HeaderText = "    Clearance ID"
-        Me.ClearanceID.Name = "ClearanceID"
-        '
-        'ClearanceNo
-        '
-        Me.ClearanceNo.DividerWidth = 1
-        Me.ClearanceNo.HeaderText = "    Clearance Number"
-        Me.ClearanceNo.Name = "ClearanceNo"
-        '
-        'ClearanceFname
-        '
-        Me.ClearanceFname.DividerWidth = 1
-        Me.ClearanceFname.HeaderText = "    First Name"
-        Me.ClearanceFname.Name = "ClearanceFname"
-        '
-        'ClearanceMname
-        '
-        Me.ClearanceMname.DividerWidth = 1
-        Me.ClearanceMname.HeaderText = "   Middle Name"
-        Me.ClearanceMname.Name = "ClearanceMname"
-        '
-        'ClearanceLname
-        '
-        Me.ClearanceLname.DividerWidth = 1
-        Me.ClearanceLname.HeaderText = "   Last Name"
-        Me.ClearanceLname.Name = "ClearanceLname"
         '
         'MaterialButton1
         '
@@ -244,6 +207,56 @@ Partial Class Cashier
         Me.MaterialButton2.UseAccentColor = False
         Me.MaterialButton2.UseVisualStyleBackColor = True
         '
+        'ClearanceCheckBox
+        '
+        Me.ClearanceCheckBox.DividerWidth = 1
+        Me.ClearanceCheckBox.FillWeight = 7.219401!
+        Me.ClearanceCheckBox.HeaderText = ""
+        Me.ClearanceCheckBox.Name = "ClearanceCheckBox"
+        Me.ClearanceCheckBox.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        '
+        'ClearanceID
+        '
+        Me.ClearanceID.DividerWidth = 1
+        Me.ClearanceID.FillWeight = 18.0485!
+        Me.ClearanceID.HeaderText = "    Clearance ID"
+        Me.ClearanceID.Name = "ClearanceID"
+        '
+        'ClearanceORNumber
+        '
+        Me.ClearanceORNumber.DividerWidth = 1
+        Me.ClearanceORNumber.FillWeight = 18.0485!
+        Me.ClearanceORNumber.HeaderText = "    OR Number"
+        Me.ClearanceORNumber.Name = "ClearanceORNumber"
+        '
+        'ClearanceNo
+        '
+        Me.ClearanceNo.DividerWidth = 1
+        Me.ClearanceNo.FillWeight = 18.0485!
+        Me.ClearanceNo.HeaderText = "    Clearance Number"
+        Me.ClearanceNo.Name = "ClearanceNo"
+        '
+        'ClearanceFname
+        '
+        Me.ClearanceFname.DividerWidth = 1
+        Me.ClearanceFname.FillWeight = 18.0485!
+        Me.ClearanceFname.HeaderText = "    First Name"
+        Me.ClearanceFname.Name = "ClearanceFname"
+        '
+        'ClearanceMname
+        '
+        Me.ClearanceMname.DividerWidth = 1
+        Me.ClearanceMname.FillWeight = 18.0485!
+        Me.ClearanceMname.HeaderText = "   Middle Name"
+        Me.ClearanceMname.Name = "ClearanceMname"
+        '
+        'ClearanceLname
+        '
+        Me.ClearanceLname.DividerWidth = 1
+        Me.ClearanceLname.FillWeight = 18.0485!
+        Me.ClearanceLname.HeaderText = "   Last Name"
+        Me.ClearanceLname.Name = "ClearanceLname"
+        '
         'Cashier
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -283,6 +296,7 @@ Partial Class Cashier
     Friend WithEvents MaterialButton2 As MaterialSkin2Framework.Controls.MaterialButton
     Friend WithEvents ClearanceCheckBox As DataGridViewCheckBoxColumn
     Friend WithEvents ClearanceID As DataGridViewTextBoxColumn
+    Friend WithEvents ClearanceORNumber As DataGridViewTextBoxColumn
     Friend WithEvents ClearanceNo As DataGridViewTextBoxColumn
     Friend WithEvents ClearanceFname As DataGridViewTextBoxColumn
     Friend WithEvents ClearanceMname As DataGridViewTextBoxColumn

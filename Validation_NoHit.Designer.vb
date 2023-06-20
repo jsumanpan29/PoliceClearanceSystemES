@@ -177,6 +177,7 @@ Partial Class Validation_NoHit
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Validation_NoHit"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Validation_NoHit"
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()

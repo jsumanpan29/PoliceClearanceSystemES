@@ -118,7 +118,7 @@ Partial Class ReportForm
         Me.MaterialButton3.NoAccentTextColor = System.Drawing.Color.Empty
         Me.MaterialButton3.Size = New System.Drawing.Size(75, 23)
         Me.MaterialButton3.TabIndex = 7
-        Me.MaterialButton3.Text = "Clear"
+        Me.MaterialButton3.Text = "Confirm"
         Me.MaterialButton3.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
         Me.MaterialButton3.UseAccentColor = False
         Me.MaterialButton3.UseVisualStyleBackColor = True
