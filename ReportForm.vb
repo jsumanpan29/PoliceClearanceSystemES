@@ -23,11 +23,14 @@ Public Class ReportForm
             connection.Open()
             command = New SqlCommand("", connection)
             If ComboBox1.SelectedIndex = 0 Then
-                command.CommandText = "SELECT [pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[pcc_issue_date] FROM [dbo].[pcc] WHERE CAST([pcc].[pcc_issue_date] AS DATE) = CAST(GETDATE() AS DATE) AND [pcc].[status] = 'COMPLETED'"
+                'command.CommandText = "SELECT [pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[pcc_issue_date] FROM [dbo].[pcc] WHERE CAST([pcc].[pcc_issue_date] AS DATE) = CAST(GETDATE() AS DATE) AND [pcc].[status] = 'COMPLETED'"
+                command.CommandText = "SELECT [pcc].[pcc_number],[applicant].[fname],[applicant].[mname],[applicant].[lname],[pcc].[pcc_issue_date] FROM [dbo].[pcc] INNER JOIN [dbo].[applicant] ON [pcc].[applicant_id] = [applicant].[applicant_id] WHERE CAST([pcc].[pcc_issue_date] AS DATE) = CAST(GETDATE() AS DATE) AND [pcc].[status] = 'COMPLETED'"
             ElseIf ComboBox1.SelectedIndex = 1 Then
-                command.CommandText = "SELECT [pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[pcc_issue_date] FROM [dbo].[pcc] WHERE DATEDIFF(ww, pcc_issue_date, GETDATE()) = 0 AND [pcc].[status] = 'COMPLETED'"
+                'command.CommandText = "SELECT [pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[pcc_issue_date] FROM [dbo].[pcc] WHERE DATEDIFF(ww, pcc_issue_date, GETDATE()) = 0 AND [pcc].[status] = 'COMPLETED'"
+                command.CommandText = "SELECT [pcc].[pcc_number],[applicant].[fname],[applicant].[mname],[applicant].[lname],[pcc].[pcc_issue_date] FROM [dbo].[pcc] INNER JOIN [dbo].[applicant] ON [pcc].[applicant_id] = [applicant].[applicant_id] WHERE DATEDIFF(ww, pcc_issue_date, GETDATE()) = 0 AND [pcc].[status] = 'COMPLETED'"
             ElseIf ComboBox1.SelectedIndex = 2 Then
-                command.CommandText = "SELECT [pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[pcc_issue_date] FROM [dbo].[pcc] WHERE DATEDIFF(mm, pcc_issue_date, GETDATE()) = 0 AND [pcc].[status] = 'COMPLETED'"
+                'command.CommandText = "SELECT [pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname],[pcc].[pcc_issue_date] FROM [dbo].[pcc] WHERE DATEDIFF(mm, pcc_issue_date, GETDATE()) = 0 AND [pcc].[status] = 'COMPLETED'"
+                command.CommandText = "SELECT [pcc].[pcc_number],[applicant].[fname],[applicant].[mname],[applicant].[lname],[pcc].[pcc_issue_date] FROM [dbo].[pcc] INNER JOIN [dbo].[applicant] ON [pcc].[applicant_id] = [applicant].[applicant_id] WHERE DATEDIFF(mm, pcc_issue_date, GETDATE()) = 0 AND [pcc].[status] = 'COMPLETED'"
             End If
             Dim da As New SqlDataAdapter(command)
             Dim dt As New DataTable()

@@ -24,7 +24,8 @@ Public Class Cashier
         LoadPCC()
 
         Dim pccMapper = New TableDependency.SqlClient.Base.ModelToTableMapper(Of PoliceClearanceCertificate)()
-        pccMapper.AddMapping(Function(c) c.PccNo, "pcc_number").AddMapping(Function(c) c.Fname, "fname").AddMapping(Function(c) c.Mname, "mname").AddMapping(Function(c) c.Lname, "lname").AddMapping(Function(c) c.Status, "status")
+        'pccMapper.AddMapping(Function(c) c.PccNo, "pcc_number").AddMapping(Function(c) c.Fname, "fname").AddMapping(Function(c) c.Mname, "mname").AddMapping(Function(c) c.Lname, "lname").AddMapping(Function(c) c.Status, "status")
+        pccMapper.AddMapping(Function(c) c.PccNo, "pcc_number").AddMapping(Function(c) c.ApplicantId, "applicant_id").AddMapping(Function(c) c.Status, "status")
         pccDependency = New SqlTableDependency(Of PoliceClearanceCertificate)(connString, "pcc", "dbo", pccMapper)
 
         AddHandler pccDependency.OnChanged, AddressOf OnPccDependencyChanged
@@ -66,10 +67,12 @@ Public Class Cashier
             connection.Open()
             command = New SqlCommand("", connection)
             If searchString = "" Then
-                command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[payment_or_number],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname] FROM dbo.[pcc] WHERE [pcc].[status] = 'PENDING' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
+                'command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[payment_or_number],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname] FROM dbo.[pcc] WHERE [pcc].[status] = 'PENDING' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
+                command.CommandText = "SELECT pcc.pcc_id, [pcc].[payment_or_number], [pcc].[pcc_number], [applicant].[fname], [applicant].[mname], [applicant].[lname], pcc.[status] FROM pcc INNER JOIN [dbo].[applicant] ON [pcc].[applicant_id] = [applicant].[applicant_id] WHERE [pcc].[status]  = 'PENDING' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
             Else
                 'command.CommandText = "SELECT cr_id AS 'ID', name AS 'NAME', crime_offense AS 'CRIME', ccno AS 'CC NO', isno AS 'IS NO', remarks AS 'REMARKS' FROM criminal_records WHERE (name LIKE '%" & searchString & "%' OR crime_offense LIKE '%" & searchString & "%' OR ccno LIKE '%" & searchString & "%' OR isno LIKE '%" & searchString & "%' OR remarks LIKE '%" & searchString & "%') AND deleted=0"
-                command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[payment_or_number],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname] FROM dbo.[pcc] WHERE ([pcc].[payment_or_number] LIKE @searchString OR [pcc].[pcc_number] LIKE @searchString OR [pcc].[fname] LIKE @searchString OR [pcc].[mname] LIKE @searchString OR [pcc].[lname] LIKE @searchString) AND [pcc].[status] = 'PENDING' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
+                'command.CommandText = "SELECT [pcc].[pcc_id],[pcc].[payment_or_number],[pcc].[pcc_number],[pcc].[fname],[pcc].[mname],[pcc].[lname] FROM dbo.[pcc] WHERE ([pcc].[payment_or_number] LIKE @searchString OR [pcc].[pcc_number] LIKE @searchString OR [pcc].[fname] LIKE @searchString OR [pcc].[mname] LIKE @searchString OR [pcc].[lname] LIKE @searchString) AND [pcc].[status] = 'PENDING' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
+                command.CommandText = "SELECT pcc.pcc_id, [pcc].[payment_or_number], [pcc].[pcc_number], [applicant].[fname], [applicant].[mname], [applicant].[lname], pcc.[status] FROM pcc INNER JOIN [dbo].[applicant] ON [pcc].[applicant_id] = [applicant].[applicant_id] WHERE ([pcc].[payment_or_number] LIKE @searchString OR [pcc].[pcc_number] LIKE @searchString OR [applicant].[fname] LIKE @searchString OR [applicant].[mname] LIKE @searchString OR [applicant].[lname] LIKE @searchString) AND [pcc].[status]  = 'PENDING' AND CONVERT(date, created_at) = CONVERT(date, Getdate()) ORDER BY updated_at DESC"
                 command.Parameters.Clear()
                 command.Parameters.AddWithValue("@searchString", "%" & searchString & "%")
             End If
@@ -104,8 +107,8 @@ Public Class Cashier
 
         If e.ChangeType <> TableDependency.SqlClient.Base.Enums.ChangeType.None Then
             Dim changedEntity = e.Entity
-            Console.WriteLine("DML operation: " & e.ChangeType.ToString())
-            Console.WriteLine("value: " & changedEntity.Fname)
+            'Console.WriteLine("DML operation: " & e.ChangeType.ToString())
+            'Console.WriteLine("value: " & changedEntity.Fname)
             Dim reloadData As UpdatePccDependency = New UpdatePccDependency(AddressOf LoadPCC)
             Me.Invoke(reloadData, Nothing)
 

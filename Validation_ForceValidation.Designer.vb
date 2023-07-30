@@ -193,9 +193,9 @@ Partial Class Validation_ForceValidation
         Me.chkCriminalRecord.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.chkCriminalRecord.Location = New System.Drawing.Point(12, 72)
         Me.chkCriminalRecord.Name = "chkCriminalRecord"
-        Me.chkCriminalRecord.Size = New System.Drawing.Size(142, 21)
+        Me.chkCriminalRecord.Size = New System.Drawing.Size(143, 21)
         Me.chkCriminalRecord.TabIndex = 62
-        Me.chkCriminalRecord.Text = "Set Criminal Record"
+        Me.chkCriminalRecord.Text = "Is Record Matched?"
         Me.chkCriminalRecord.UseVisualStyleBackColor = True
         '
         'MaterialButton1

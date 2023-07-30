@@ -26,10 +26,6 @@ Partial Class Clerk2
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Clerk2))
-        Me.cbPoliceCertify = New System.Windows.Forms.ComboBox()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.cbPoliceVerify = New System.Windows.Forms.ComboBox()
-        Me.Label21 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -39,8 +35,6 @@ Partial Class Clerk2
         Me.Label17 = New System.Windows.Forms.Label()
         Me.dtClearanceDate = New System.Windows.Forms.DateTimePicker()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.txtContactNo = New System.Windows.Forms.TextBox()
-        Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtCTCIssueAt = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -49,28 +43,6 @@ Partial Class Clerk2
         Me.Label11 = New System.Windows.Forms.Label()
         Me.cbPurpose = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.txtNationality = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.txtHeight = New System.Windows.Forms.TextBox()
-        Me.rbFemale = New System.Windows.Forms.RadioButton()
-        Me.rbMale = New System.Windows.Forms.RadioButton()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.dtBirthDate = New System.Windows.Forms.DateTimePicker()
-        Me.txtBirthPlace = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.cbCivilStatus = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.cbBarangay = New System.Windows.Forms.ComboBox()
-        Me.cbZone = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtClearanceMname = New System.Windows.Forms.TextBox()
-        Me.txtClearanceFname = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.txtClearanceLname = New System.Windows.Forms.TextBox()
-        Me.txtClearanceNo = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.MaterialButton5 = New MaterialSkin2Framework.Controls.MaterialButton()
@@ -99,6 +71,8 @@ Partial Class Clerk2
         Me.txtApplicantCompletedSearch = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PoliceOfficersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -114,7 +88,17 @@ Partial Class Clerk2
         Me.MaterialButton2 = New MaterialSkin2Framework.Controls.MaterialButton()
         Me.Panel5 = New System.Windows.Forms.Panel()
         Me.MaterialButton3 = New MaterialSkin2Framework.Controls.MaterialButton()
-        Me.Label23 = New System.Windows.Forms.Label()
+        Me.btnApplicantAdd = New System.Windows.Forms.Button()
+        Me.btnApplicantSearchClear = New System.Windows.Forms.Button()
+        Me.txtApplicantSearch = New System.Windows.Forms.TextBox()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dataApplicantChkbx = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.dataApplicantID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataApplicantFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataApplicantMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataApplicantLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dataApplicantEditBtn = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.dataApplicantDeleteBtn = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.dataApplicantPending, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -129,41 +113,8 @@ Partial Class Clerk2
         Me.Panel2.SuspendLayout()
         Me.Panel4.SuspendLayout()
         Me.Panel5.SuspendLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'cbPoliceCertify
-        '
-        Me.cbPoliceCertify.FormattingEnabled = True
-        Me.cbPoliceCertify.Location = New System.Drawing.Point(15, 580)
-        Me.cbPoliceCertify.Name = "cbPoliceCertify"
-        Me.cbPoliceCertify.Size = New System.Drawing.Size(471, 23)
-        Me.cbPoliceCertify.TabIndex = 22
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(15, 562)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(68, 15)
-        Me.Label22.TabIndex = 138
-        Me.Label22.Text = "Certified By"
-        '
-        'cbPoliceVerify
-        '
-        Me.cbPoliceVerify.FormattingEnabled = True
-        Me.cbPoliceVerify.Location = New System.Drawing.Point(15, 531)
-        Me.cbPoliceVerify.Name = "cbPoliceVerify"
-        Me.cbPoliceVerify.Size = New System.Drawing.Size(471, 23)
-        Me.cbPoliceVerify.TabIndex = 21
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(15, 515)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(62, 15)
-        Me.Label21.TabIndex = 136
-        Me.Label21.Text = "Verified By"
         '
         'Label20
         '
@@ -198,7 +149,7 @@ Partial Class Clerk2
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(256, 411)
+        Me.Label16.Location = New System.Drawing.Point(256, 484)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(51, 15)
         Me.Label16.TabIndex = 125
@@ -206,7 +157,7 @@ Partial Class Clerk2
         '
         'txtORAmount
         '
-        Me.txtORAmount.Location = New System.Drawing.Point(256, 429)
+        Me.txtORAmount.Location = New System.Drawing.Point(256, 502)
         Me.txtORAmount.Name = "txtORAmount"
         Me.txtORAmount.PlaceholderText = " Amount*"
         Me.txtORAmount.Size = New System.Drawing.Size(230, 23)
@@ -214,7 +165,7 @@ Partial Class Clerk2
         '
         'txtORNo
         '
-        Me.txtORNo.Location = New System.Drawing.Point(256, 385)
+        Me.txtORNo.Location = New System.Drawing.Point(256, 458)
         Me.txtORNo.Name = "txtORNo"
         Me.txtORNo.PlaceholderText = " OR Number*"
         Me.txtORNo.Size = New System.Drawing.Size(230, 23)
@@ -223,7 +174,7 @@ Partial Class Clerk2
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(256, 367)
+        Me.Label17.Location = New System.Drawing.Point(256, 440)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(70, 15)
         Me.Label17.TabIndex = 122
@@ -233,7 +184,7 @@ Partial Class Clerk2
         '
         Me.dtClearanceDate.Enabled = False
         Me.dtClearanceDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtClearanceDate.Location = New System.Drawing.Point(387, 96)
+        Me.dtClearanceDate.Location = New System.Drawing.Point(387, 93)
         Me.dtClearanceDate.Name = "dtClearanceDate"
         Me.dtClearanceDate.Size = New System.Drawing.Size(99, 23)
         Me.dtClearanceDate.TabIndex = 121
@@ -241,33 +192,16 @@ Partial Class Clerk2
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(347, 99)
+        Me.Label15.Location = New System.Drawing.Point(347, 96)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(34, 15)
         Me.Label15.TabIndex = 120
         Me.Label15.Text = "Date:"
         '
-        'txtContactNo
-        '
-        Me.txtContactNo.Location = New System.Drawing.Point(336, 285)
-        Me.txtContactNo.Name = "txtContactNo"
-        Me.txtContactNo.PlaceholderText = " Contact Number*"
-        Me.txtContactNo.Size = New System.Drawing.Size(150, 23)
-        Me.txtContactNo.TabIndex = 14
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(333, 269)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(96, 15)
-        Me.Label13.TabIndex = 117
-        Me.Label13.Text = "Contact Number"
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(15, 458)
+        Me.Label12.Location = New System.Drawing.Point(15, 531)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(55, 15)
         Me.Label12.TabIndex = 116
@@ -275,7 +209,7 @@ Partial Class Clerk2
         '
         'txtCTCIssueAt
         '
-        Me.txtCTCIssueAt.Location = New System.Drawing.Point(15, 476)
+        Me.txtCTCIssueAt.Location = New System.Drawing.Point(15, 549)
         Me.txtCTCIssueAt.Name = "txtCTCIssueAt"
         Me.txtCTCIssueAt.PlaceholderText = " Issued At*"
         Me.txtCTCIssueAt.Size = New System.Drawing.Size(230, 23)
@@ -284,7 +218,7 @@ Partial Class Clerk2
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(15, 411)
+        Me.Label10.Location = New System.Drawing.Point(15, 484)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(59, 15)
         Me.Label10.TabIndex = 114
@@ -293,14 +227,14 @@ Partial Class Clerk2
         'dtCTCIssueDate
         '
         Me.dtCTCIssueDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtCTCIssueDate.Location = New System.Drawing.Point(15, 429)
+        Me.dtCTCIssueDate.Location = New System.Drawing.Point(15, 502)
         Me.dtCTCIssueDate.Name = "dtCTCIssueDate"
         Me.dtCTCIssueDate.Size = New System.Drawing.Size(230, 23)
         Me.dtCTCIssueDate.TabIndex = 18
         '
         'txtCTCNo
         '
-        Me.txtCTCNo.Location = New System.Drawing.Point(15, 385)
+        Me.txtCTCNo.Location = New System.Drawing.Point(15, 458)
         Me.txtCTCNo.Name = "txtCTCNo"
         Me.txtCTCNo.PlaceholderText = " CTC Number*"
         Me.txtCTCNo.Size = New System.Drawing.Size(230, 23)
@@ -309,7 +243,7 @@ Partial Class Clerk2
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(15, 367)
+        Me.Label11.Location = New System.Drawing.Point(15, 440)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(75, 15)
         Me.Label11.TabIndex = 111
@@ -318,7 +252,7 @@ Partial Class Clerk2
         'cbPurpose
         '
         Me.cbPurpose.FormattingEnabled = True
-        Me.cbPurpose.Location = New System.Drawing.Point(15, 335)
+        Me.cbPurpose.Location = New System.Drawing.Point(15, 408)
         Me.cbPurpose.Name = "cbPurpose"
         Me.cbPurpose.Size = New System.Drawing.Size(471, 23)
         Me.cbPurpose.TabIndex = 15
@@ -326,203 +260,11 @@ Partial Class Clerk2
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(15, 319)
+        Me.Label9.Location = New System.Drawing.Point(15, 392)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(50, 15)
         Me.Label9.TabIndex = 109
         Me.Label9.Text = "Purpose"
-        '
-        'txtNationality
-        '
-        Me.txtNationality.Location = New System.Drawing.Point(225, 285)
-        Me.txtNationality.Name = "txtNationality"
-        Me.txtNationality.PlaceholderText = " Nationality*"
-        Me.txtNationality.Size = New System.Drawing.Size(105, 23)
-        Me.txtNationality.TabIndex = 13
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(227, 269)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(65, 15)
-        Me.Label8.TabIndex = 107
-        Me.Label8.Text = "Nationality"
-        '
-        'txtHeight
-        '
-        Me.txtHeight.Location = New System.Drawing.Point(141, 285)
-        Me.txtHeight.Name = "txtHeight"
-        Me.txtHeight.PlaceholderText = " Height*"
-        Me.txtHeight.Size = New System.Drawing.Size(78, 23)
-        Me.txtHeight.TabIndex = 12
-        '
-        'rbFemale
-        '
-        Me.rbFemale.AutoSize = True
-        Me.rbFemale.Location = New System.Drawing.Point(72, 287)
-        Me.rbFemale.Name = "rbFemale"
-        Me.rbFemale.Size = New System.Drawing.Size(63, 19)
-        Me.rbFemale.TabIndex = 11
-        Me.rbFemale.TabStop = True
-        Me.rbFemale.Text = "Female"
-        Me.rbFemale.UseVisualStyleBackColor = True
-        '
-        'rbMale
-        '
-        Me.rbMale.AutoSize = True
-        Me.rbMale.Location = New System.Drawing.Point(15, 287)
-        Me.rbMale.Name = "rbMale"
-        Me.rbMale.Size = New System.Drawing.Size(51, 19)
-        Me.rbMale.TabIndex = 10
-        Me.rbMale.TabStop = True
-        Me.rbMale.Text = "Male"
-        Me.rbMale.UseVisualStyleBackColor = True
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(141, 268)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(59, 15)
-        Me.Label7.TabIndex = 103
-        Me.Label7.Text = "Height(ft)"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(15, 269)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(25, 15)
-        Me.Label6.TabIndex = 102
-        Me.Label6.Text = "Sex"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(333, 225)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(73, 15)
-        Me.Label5.TabIndex = 101
-        Me.Label5.Text = "Date of Birth"
-        '
-        'dtBirthDate
-        '
-        Me.dtBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtBirthDate.Location = New System.Drawing.Point(336, 243)
-        Me.dtBirthDate.Name = "dtBirthDate"
-        Me.dtBirthDate.Size = New System.Drawing.Size(150, 23)
-        Me.dtBirthDate.TabIndex = 9
-        '
-        'txtBirthPlace
-        '
-        Me.txtBirthPlace.Location = New System.Drawing.Point(15, 243)
-        Me.txtBirthPlace.Name = "txtBirthPlace"
-        Me.txtBirthPlace.PlaceholderText = " Place of Birth*"
-        Me.txtBirthPlace.Size = New System.Drawing.Size(274, 23)
-        Me.txtBirthPlace.TabIndex = 8
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(15, 225)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(77, 15)
-        Me.Label4.TabIndex = 98
-        Me.Label4.Text = "Place of Birth"
-        '
-        'cbCivilStatus
-        '
-        Me.cbCivilStatus.FormattingEnabled = True
-        Me.cbCivilStatus.Location = New System.Drawing.Point(336, 199)
-        Me.cbCivilStatus.Name = "cbCivilStatus"
-        Me.cbCivilStatus.Size = New System.Drawing.Size(150, 23)
-        Me.cbCivilStatus.TabIndex = 7
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(333, 181)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(65, 15)
-        Me.Label3.TabIndex = 96
-        Me.Label3.Text = "Civil Status"
-        '
-        'cbBarangay
-        '
-        Me.cbBarangay.FormattingEnabled = True
-        Me.cbBarangay.Location = New System.Drawing.Point(86, 199)
-        Me.cbBarangay.Name = "cbBarangay"
-        Me.cbBarangay.Size = New System.Drawing.Size(203, 23)
-        Me.cbBarangay.TabIndex = 6
-        '
-        'cbZone
-        '
-        Me.cbZone.FormattingEnabled = True
-        Me.cbZone.Location = New System.Drawing.Point(15, 199)
-        Me.cbZone.Name = "cbZone"
-        Me.cbZone.Size = New System.Drawing.Size(68, 23)
-        Me.cbZone.TabIndex = 5
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(15, 181)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(139, 15)
-        Me.Label2.TabIndex = 93
-        Me.Label2.Text = "Address(Zone, Barangay)"
-        '
-        'txtClearanceMname
-        '
-        Me.txtClearanceMname.Location = New System.Drawing.Point(336, 150)
-        Me.txtClearanceMname.Name = "txtClearanceMname"
-        Me.txtClearanceMname.PlaceholderText = " Middle Name*"
-        Me.txtClearanceMname.Size = New System.Drawing.Size(150, 23)
-        Me.txtClearanceMname.TabIndex = 4
-        '
-        'txtClearanceFname
-        '
-        Me.txtClearanceFname.Location = New System.Drawing.Point(180, 150)
-        Me.txtClearanceFname.Name = "txtClearanceFname"
-        Me.txtClearanceFname.PlaceholderText = " First Name*"
-        Me.txtClearanceFname.Size = New System.Drawing.Size(150, 23)
-        Me.txtClearanceFname.TabIndex = 3
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(15, 132)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(266, 15)
-        Me.Label14.TabIndex = 90
-        Me.Label14.Text = "Full Name(Last Name, First Name, Middle Name)"
-        '
-        'txtClearanceLname
-        '
-        Me.txtClearanceLname.Location = New System.Drawing.Point(15, 150)
-        Me.txtClearanceLname.Name = "txtClearanceLname"
-        Me.txtClearanceLname.PlaceholderText = " Last Name*"
-        Me.txtClearanceLname.Size = New System.Drawing.Size(150, 23)
-        Me.txtClearanceLname.TabIndex = 2
-        '
-        'txtClearanceNo
-        '
-        Me.txtClearanceNo.Location = New System.Drawing.Point(102, 95)
-        Me.txtClearanceNo.Name = "txtClearanceNo"
-        Me.txtClearanceNo.PlaceholderText = "Clearance No. "
-        Me.txtClearanceNo.Size = New System.Drawing.Size(95, 23)
-        Me.txtClearanceNo.TabIndex = 1
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(15, 101)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(81, 15)
-        Me.Label1.TabIndex = 87
-        Me.Label1.Text = "Clearance No."
         '
         'TabControl1
         '
@@ -798,24 +540,37 @@ Partial Class Clerk2
         '
         'FileToolStripMenuItem
         '
-        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReportToolStripMenuItem, Me.LogoutToolStripMenuItem})
+        Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem, Me.ReportToolStripMenuItem, Me.LogoutToolStripMenuItem})
         Me.FileToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(44, 24)
         Me.FileToolStripMenuItem.Text = "File"
         '
+        'SettingsToolStripMenuItem
+        '
+        Me.SettingsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PoliceOfficersToolStripMenuItem})
+        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(131, 24)
+        Me.SettingsToolStripMenuItem.Text = "Settings"
+        '
+        'PoliceOfficersToolStripMenuItem
+        '
+        Me.PoliceOfficersToolStripMenuItem.Name = "PoliceOfficersToolStripMenuItem"
+        Me.PoliceOfficersToolStripMenuItem.Size = New System.Drawing.Size(229, 24)
+        Me.PoliceOfficersToolStripMenuItem.Text = "Police Officers Settings"
+        '
         'ReportToolStripMenuItem
         '
         Me.ReportToolStripMenuItem.Image = CType(resources.GetObject("ReportToolStripMenuItem.Image"), System.Drawing.Image)
         Me.ReportToolStripMenuItem.Name = "ReportToolStripMenuItem"
-        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(125, 24)
+        Me.ReportToolStripMenuItem.Size = New System.Drawing.Size(131, 24)
         Me.ReportToolStripMenuItem.Text = "Report"
         '
         'LogoutToolStripMenuItem
         '
         Me.LogoutToolStripMenuItem.Image = CType(resources.GetObject("LogoutToolStripMenuItem.Image"), System.Drawing.Image)
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(125, 24)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(131, 24)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'PictureBox1
@@ -1035,21 +790,99 @@ Partial Class Clerk2
         Me.MaterialButton3.UseAccentColor = False
         Me.MaterialButton3.UseVisualStyleBackColor = False
         '
-        'Label23
+        'btnApplicantAdd
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(168, 159)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(10, 15)
-        Me.Label23.TabIndex = 149
-        Me.Label23.Text = ","
+        Me.btnApplicantAdd.Location = New System.Drawing.Point(411, 120)
+        Me.btnApplicantAdd.Name = "btnApplicantAdd"
+        Me.btnApplicantAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnApplicantAdd.TabIndex = 214
+        Me.btnApplicantAdd.Text = "Add"
+        Me.btnApplicantAdd.UseVisualStyleBackColor = True
+        '
+        'btnApplicantSearchClear
+        '
+        Me.btnApplicantSearchClear.Location = New System.Drawing.Point(332, 120)
+        Me.btnApplicantSearchClear.Name = "btnApplicantSearchClear"
+        Me.btnApplicantSearchClear.Size = New System.Drawing.Size(75, 23)
+        Me.btnApplicantSearchClear.TabIndex = 213
+        Me.btnApplicantSearchClear.Text = "Clear"
+        Me.btnApplicantSearchClear.UseVisualStyleBackColor = True
+        '
+        'txtApplicantSearch
+        '
+        Me.txtApplicantSearch.Location = New System.Drawing.Point(15, 119)
+        Me.txtApplicantSearch.Name = "txtApplicantSearch"
+        Me.txtApplicantSearch.Size = New System.Drawing.Size(311, 23)
+        Me.txtApplicantSearch.TabIndex = 212
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.dataApplicantChkbx, Me.dataApplicantID, Me.dataApplicantFname, Me.dataApplicantMname, Me.dataApplicantLname, Me.dataApplicantEditBtn, Me.dataApplicantDeleteBtn})
+        Me.DataGridView1.Location = New System.Drawing.Point(15, 144)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowTemplate.Height = 25
+        Me.DataGridView1.Size = New System.Drawing.Size(471, 244)
+        Me.DataGridView1.TabIndex = 211
+        '
+        'dataApplicantChkbx
+        '
+        Me.dataApplicantChkbx.HeaderText = ""
+        Me.dataApplicantChkbx.Name = "dataApplicantChkbx"
+        Me.dataApplicantChkbx.Width = 50
+        '
+        'dataApplicantID
+        '
+        Me.dataApplicantID.HeaderText = "ID"
+        Me.dataApplicantID.Name = "dataApplicantID"
+        Me.dataApplicantID.ReadOnly = True
+        '
+        'dataApplicantFname
+        '
+        Me.dataApplicantFname.HeaderText = "First Name"
+        Me.dataApplicantFname.Name = "dataApplicantFname"
+        Me.dataApplicantFname.ReadOnly = True
+        '
+        'dataApplicantMname
+        '
+        Me.dataApplicantMname.HeaderText = "Middle Name"
+        Me.dataApplicantMname.Name = "dataApplicantMname"
+        Me.dataApplicantMname.ReadOnly = True
+        Me.dataApplicantMname.Width = 150
+        '
+        'dataApplicantLname
+        '
+        Me.dataApplicantLname.HeaderText = "Last Name"
+        Me.dataApplicantLname.Name = "dataApplicantLname"
+        Me.dataApplicantLname.ReadOnly = True
+        '
+        'dataApplicantEditBtn
+        '
+        Me.dataApplicantEditBtn.HeaderText = ""
+        Me.dataApplicantEditBtn.Name = "dataApplicantEditBtn"
+        Me.dataApplicantEditBtn.Text = "Edit"
+        Me.dataApplicantEditBtn.ToolTipText = "Edit"
+        Me.dataApplicantEditBtn.UseColumnTextForButtonValue = True
+        '
+        'dataApplicantDeleteBtn
+        '
+        Me.dataApplicantDeleteBtn.HeaderText = ""
+        Me.dataApplicantDeleteBtn.Name = "dataApplicantDeleteBtn"
+        Me.dataApplicantDeleteBtn.Text = "Delete"
+        Me.dataApplicantDeleteBtn.ToolTipText = "Delete"
+        Me.dataApplicantDeleteBtn.UseColumnTextForButtonValue = True
         '
         'Clerk2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1335, 730)
-        Me.Controls.Add(Me.Label23)
+        Me.Controls.Add(Me.btnApplicantAdd)
+        Me.Controls.Add(Me.btnApplicantSearchClear)
+        Me.Controls.Add(Me.txtApplicantSearch)
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel2)
@@ -1059,10 +892,6 @@ Partial Class Clerk2
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.TabControl1)
-        Me.Controls.Add(Me.cbPoliceCertify)
-        Me.Controls.Add(Me.Label22)
-        Me.Controls.Add(Me.cbPoliceVerify)
-        Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.Label18)
@@ -1072,8 +901,6 @@ Partial Class Clerk2
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.dtClearanceDate)
         Me.Controls.Add(Me.Label15)
-        Me.Controls.Add(Me.txtContactNo)
-        Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.txtCTCIssueAt)
         Me.Controls.Add(Me.Label10)
@@ -1082,28 +909,6 @@ Partial Class Clerk2
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.cbPurpose)
         Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.txtNationality)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.txtHeight)
-        Me.Controls.Add(Me.rbFemale)
-        Me.Controls.Add(Me.rbMale)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.dtBirthDate)
-        Me.Controls.Add(Me.txtBirthPlace)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.cbCivilStatus)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.cbBarangay)
-        Me.Controls.Add(Me.cbZone)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txtClearanceMname)
-        Me.Controls.Add(Me.txtClearanceFname)
-        Me.Controls.Add(Me.Label14)
-        Me.Controls.Add(Me.txtClearanceLname)
-        Me.Controls.Add(Me.txtClearanceNo)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
@@ -1111,6 +916,7 @@ Partial Class Clerk2
         Me.PrimaryColor = MaterialSkin2Framework.Primary.Blue700
         Me.PrimaryDarkColor = MaterialSkin2Framework.Primary.Blue900
         Me.PrimaryLightColor = MaterialSkin2Framework.Primary.Blue300
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Clerk"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
@@ -1134,14 +940,11 @@ Partial Class Clerk2
         Me.Panel4.PerformLayout()
         Me.Panel5.ResumeLayout(False)
         Me.Panel5.PerformLayout()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents cbPoliceCertify As ComboBox
-    Friend WithEvents Label22 As Label
-    Friend WithEvents cbPoliceVerify As ComboBox
-    Friend WithEvents Label21 As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label18 As Label
@@ -1151,8 +954,6 @@ Partial Class Clerk2
     Friend WithEvents Label17 As Label
     Friend WithEvents dtClearanceDate As DateTimePicker
     Friend WithEvents Label15 As Label
-    Friend WithEvents txtContactNo As TextBox
-    Friend WithEvents Label13 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents txtCTCIssueAt As TextBox
     Friend WithEvents Label10 As Label
@@ -1161,28 +962,6 @@ Partial Class Clerk2
     Friend WithEvents Label11 As Label
     Friend WithEvents cbPurpose As ComboBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents txtNationality As TextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents txtHeight As TextBox
-    Friend WithEvents rbFemale As RadioButton
-    Friend WithEvents rbMale As RadioButton
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents dtBirthDate As DateTimePicker
-    Friend WithEvents txtBirthPlace As TextBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents cbCivilStatus As ComboBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents cbBarangay As ComboBox
-    Friend WithEvents cbZone As ComboBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents txtClearanceMname As TextBox
-    Friend WithEvents txtClearanceFname As TextBox
-    Friend WithEvents Label14 As Label
-    Friend WithEvents txtClearanceLname As TextBox
-    Friend WithEvents txtClearanceNo As TextBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
     Friend WithEvents txtApplicantPendingSearch As TextBox
@@ -1207,7 +986,6 @@ Partial Class Clerk2
     Friend WithEvents MaterialButton2 As MaterialSkin2Framework.Controls.MaterialButton
     Friend WithEvents Panel5 As Panel
     Friend WithEvents MaterialButton3 As MaterialSkin2Framework.Controls.MaterialButton
-    Friend WithEvents Label23 As Label
     Friend WithEvents MaterialButton4 As MaterialButton
     Friend WithEvents MaterialButton5 As MaterialButton
     Friend WithEvents MaterialButton6 As MaterialButton
@@ -1227,4 +1005,17 @@ Partial Class Clerk2
     Friend WithEvents dataPendingClearanceEdit As DataGridViewButtonColumn
     Friend WithEvents dataPendingClearanceSetBtn As DataGridViewButtonColumn
     Friend WithEvents dataPendingClearanceDelete As DataGridViewButtonColumn
+    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PoliceOfficersToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents btnApplicantAdd As Button
+    Friend WithEvents btnApplicantSearchClear As Button
+    Friend WithEvents txtApplicantSearch As TextBox
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dataApplicantChkbx As DataGridViewCheckBoxColumn
+    Friend WithEvents dataApplicantID As DataGridViewTextBoxColumn
+    Friend WithEvents dataApplicantFname As DataGridViewTextBoxColumn
+    Friend WithEvents dataApplicantMname As DataGridViewTextBoxColumn
+    Friend WithEvents dataApplicantLname As DataGridViewTextBoxColumn
+    Friend WithEvents dataApplicantEditBtn As DataGridViewButtonColumn
+    Friend WithEvents dataApplicantDeleteBtn As DataGridViewButtonColumn
 End Class

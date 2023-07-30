@@ -50,6 +50,7 @@ Public Class Validation_ForceValidation
     Private Sub MaterialButton2_Click(sender As Object, e As EventArgs) Handles MaterialButton2.Click
         Dim chosen_cr_id As Integer
         Dim findingsRemarks As String
+        Dim getPCCNumber = GetPccNo()
         If chkCriminalRecord.Checked = True Then
             For Each row As DataGridViewRow In DataGridView1.Rows
                 If CBool(row.Cells("CrimeCheckBox").Value) Then
@@ -67,10 +68,11 @@ Public Class Validation_ForceValidation
         Try
             connection.Open()
             command = New SqlCommand("", connection)
-            command.CommandText = "UPDATE dbo.[pcc] SET [pcc].[status] = 'VALIDATED', [pcc].[cr_id] = @cr_id, [pcc].[findingsRemarks] = @findingsremarks WHERE [pcc].[pcc_id] =" & pcc_id
+            command.CommandText = "UPDATE dbo.[pcc] SET [pcc].[status] = 'VALIDATED', [pcc].[cr_id] = @cr_id, [pcc].[findingsRemarks] = @findingsremarks, [pcc].[pcc_number] = @pcc_number WHERE [pcc].[pcc_id] =" & pcc_id
             command.Parameters.Clear()
             command.Parameters.AddWithValue("@cr_id", chosen_cr_id)
             command.Parameters.AddWithValue("@findingsremarks", findingsRemarks)
+            command.Parameters.AddWithValue("@pcc_number", getPCCNumber)
             command.ExecuteNonQuery()
             connection.Close()
             command = Nothing
@@ -182,6 +184,33 @@ Public Class Validation_ForceValidation
             'End If
         End If
     End Sub
+    Private Function GetPccNo() As String
+        Dim currentDate As DateTime = DateTime.Now
+        Dim currentYear As Integer = currentDate.Year
+        Dim currentMonth As Integer = currentDate.Month
+        Try
+            connection.Open()
+            command = New SqlCommand("", connection)
+            command.CommandText = "SELECT COUNT(*) AS record_count FROM dbo.pcc WHERE YEAR(pcc_issue_date) = @date AND [pcc].[status] = 'COMPLETED'"
+            command.Parameters.Clear()
+            command.Parameters.AddWithValue("@date", currentYear)
+            Dim recordCount As Integer = 0
+            Dim pccno As String = ""
+            Dim reader As SqlDataReader = command.ExecuteReader()
+            If reader.HasRows Then
+                reader.Read()
+                recordCount = Convert.ToInt32(reader("record_count")) + 1
+                pccno = String.Format("PH8-ESPCS-{0}-{1}-{2}", currentYear, currentMonth, recordCount)
+            End If
 
+            connection.Close()
+            command = Nothing
+            Return pccno
+        Catch ex As Exception
+            connection.Close()
+            MsgBox("Loading Police Clearance Certificate - Get PCC Number Value" & vbCrLf & String.Format("Error: {0}", ex.Message))
+            Return "" ' Return 0 or any other value to indicate an error in case of exception
+        End Try
+    End Function
 
 End Class

@@ -1,18 +1,19 @@
 ﻿
 Public Class PoliceClearanceCertificate
     Public Property Id As Integer
-    Public Property Fname As String
-    Public Property Mname As String
-    Public Property Lname As String
-    Public Property ZoneId As Integer
-    Public Property BarangayId As Integer
-    Public Property CSId As Integer
-    Public Property BirthPlace As String
-    Public Property BirthDate As Date
-    Public Property Sex As Integer
-    Public Property Height As String
-    Public Property Nationality As String
-    Public Property ContactNo As String
+    'Public Property Fname As String
+    'Public Property Mname As String
+    'Public Property Lname As String
+    'Public Property ZoneId As Integer
+    'Public Property BarangayId As Integer
+    'Public Property CSId As Integer
+    'Public Property BirthPlace As String
+    'Public Property BirthDate As Date
+    'Public Property Sex As Integer
+    'Public Property Height As String
+    'Public Property Nationality As String
+    'Public Property ContactNo As String
+    Public Property ApplicantId As Integer
     Public Property PurposeId As Integer
     Public Property CtcNo As String
     Public Property CtcDate As Date
