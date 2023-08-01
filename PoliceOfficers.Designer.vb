@@ -214,7 +214,7 @@ Partial Class PoliceOfficers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1022, 497)
+        Me.ClientSize = New System.Drawing.Size(1020, 497)
         Me.Controls.Add(Me.MaterialLabel2)
         Me.Controls.Add(Me.MaterialLabel1)
         Me.Controls.Add(Me.DataGridView2)
@@ -225,6 +225,7 @@ Partial Class PoliceOfficers
         Me.PrimaryColor = MaterialSkin2Framework.Primary.Blue700
         Me.PrimaryDarkColor = MaterialSkin2Framework.Primary.Blue900
         Me.PrimaryLightColor = MaterialSkin2Framework.Primary.Blue300
+        Me.Sizable = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Police Officers Settings"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

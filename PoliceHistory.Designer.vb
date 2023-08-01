@@ -75,7 +75,7 @@ Partial Class PoliceHistory
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(205, 548)
+        Me.Button1.Location = New System.Drawing.Point(204, 530)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 3
@@ -98,7 +98,7 @@ Partial Class PoliceHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(483, 577)
+        Me.ClientSize = New System.Drawing.Size(483, 560)
         Me.Controls.Add(Me.MaterialLabel1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox1)
@@ -108,6 +108,7 @@ Partial Class PoliceHistory
         Me.PrimaryColor = MaterialSkin2Framework.Primary.Blue700
         Me.PrimaryDarkColor = MaterialSkin2Framework.Primary.Blue900
         Me.PrimaryLightColor = MaterialSkin2Framework.Primary.Blue300
+        Me.Sizable = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Police History"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

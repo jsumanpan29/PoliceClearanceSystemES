@@ -36,6 +36,7 @@ Partial Class Validation_ForceValidation
         Me.CrimeCCNO = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CrimeISNO = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.CrimeRemarks = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CrimeAttachment = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.lblNumberRecords = New System.Windows.Forms.Label()
@@ -60,7 +61,7 @@ Partial Class Validation_ForceValidation
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CrimeID, Me.CrimeCheckBox, Me.CrimeFname, Me.CrimeMname, Me.CrimeLname, Me.CrimeOffense, Me.CrimeCCNO, Me.CrimeISNO, Me.CrimeRemarks})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CrimeID, Me.CrimeCheckBox, Me.CrimeFname, Me.CrimeMname, Me.CrimeLname, Me.CrimeOffense, Me.CrimeCCNO, Me.CrimeISNO, Me.CrimeRemarks, Me.CrimeAttachment})
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
@@ -80,7 +81,7 @@ Partial Class Validation_ForceValidation
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(789, 213)
+        Me.DataGridView1.Size = New System.Drawing.Size(923, 213)
         Me.DataGridView1.TabIndex = 0
         '
         'CrimeID
@@ -131,13 +132,21 @@ Partial Class Validation_ForceValidation
         Me.CrimeRemarks.Name = "CrimeRemarks"
         Me.CrimeRemarks.Width = 116
         '
+        'CrimeAttachment
+        '
+        Me.CrimeAttachment.HeaderText = ""
+        Me.CrimeAttachment.Name = "CrimeAttachment"
+        Me.CrimeAttachment.Text = "Check Attachment"
+        Me.CrimeAttachment.UseColumnTextForButtonValue = True
+        Me.CrimeAttachment.Width = 130
+        '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(118, Byte), Integer), CType(CType(210, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(274, 28)
+        Me.Label1.Location = New System.Drawing.Point(316, 29)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(270, 30)
         Me.Label1.TabIndex = 52
@@ -181,7 +190,7 @@ Partial Class Validation_ForceValidation
         Me.RichTextBox1.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.RichTextBox1.Location = New System.Drawing.Point(12, 356)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(729, 48)
+        Me.RichTextBox1.Size = New System.Drawing.Size(859, 48)
         Me.RichTextBox1.TabIndex = 61
         Me.RichTextBox1.Text = ""
         '
@@ -193,9 +202,9 @@ Partial Class Validation_ForceValidation
         Me.chkCriminalRecord.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.chkCriminalRecord.Location = New System.Drawing.Point(12, 72)
         Me.chkCriminalRecord.Name = "chkCriminalRecord"
-        Me.chkCriminalRecord.Size = New System.Drawing.Size(143, 21)
+        Me.chkCriminalRecord.Size = New System.Drawing.Size(291, 21)
         Me.chkCriminalRecord.TabIndex = 62
-        Me.chkCriminalRecord.Text = "Is Record Matched?"
+        Me.chkCriminalRecord.Text = "Is Identity Matched?(Uncheck if False Positive)"
         Me.chkCriminalRecord.UseVisualStyleBackColor = True
         '
         'MaterialButton1
@@ -208,7 +217,7 @@ Partial Class Validation_ForceValidation
         Me.MaterialButton1.ForeColor = System.Drawing.SystemColors.ControlText
         Me.MaterialButton1.HighEmphasis = True
         Me.MaterialButton1.Icon = Nothing
-        Me.MaterialButton1.Location = New System.Drawing.Point(747, 356)
+        Me.MaterialButton1.Location = New System.Drawing.Point(878, 356)
         Me.MaterialButton1.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.MaterialButton1.MaximumSize = New System.Drawing.Size(54, 48)
         Me.MaterialButton1.MinimumSize = New System.Drawing.Size(54, 48)
@@ -230,7 +239,7 @@ Partial Class Validation_ForceValidation
         Me.MaterialButton2.Depth = 0
         Me.MaterialButton2.HighEmphasis = True
         Me.MaterialButton2.Icon = Nothing
-        Me.MaterialButton2.Location = New System.Drawing.Point(382, 412)
+        Me.MaterialButton2.Location = New System.Drawing.Point(429, 413)
         Me.MaterialButton2.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
         Me.MaterialButton2.MaximumSize = New System.Drawing.Size(75, 26)
         Me.MaterialButton2.MinimumSize = New System.Drawing.Size(75, 26)
@@ -248,7 +257,7 @@ Partial Class Validation_ForceValidation
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(816, 449)
+        Me.ClientSize = New System.Drawing.Size(939, 449)
         Me.Controls.Add(Me.MaterialButton2)
         Me.Controls.Add(Me.MaterialButton1)
         Me.Controls.Add(Me.chkCriminalRecord)
@@ -259,10 +268,12 @@ Partial Class Validation_ForceValidation
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "Validation_ForceValidation"
         Me.PrimaryColor = MaterialSkin2Framework.Primary.Blue700
         Me.PrimaryDarkColor = MaterialSkin2Framework.Primary.Blue900
         Me.PrimaryLightColor = MaterialSkin2Framework.Primary.Blue300
+        Me.Sizable = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -288,4 +299,5 @@ Partial Class Validation_ForceValidation
     Friend WithEvents CrimeCCNO As DataGridViewTextBoxColumn
     Friend WithEvents CrimeISNO As DataGridViewTextBoxColumn
     Friend WithEvents CrimeRemarks As DataGridViewTextBoxColumn
+    Friend WithEvents CrimeAttachment As DataGridViewButtonColumn
 End Class

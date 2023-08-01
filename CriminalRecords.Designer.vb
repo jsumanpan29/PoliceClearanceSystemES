@@ -44,9 +44,15 @@ Partial Class CriminalRecords
         Me.MaterialButton1 = New MaterialSkin2Framework.Controls.MaterialButton()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.CancelButton = New MaterialSkin2Framework.Controls.MaterialButton()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.MaterialButton3 = New MaterialSkin2Framework.Controls.MaterialButton()
         Me.Panel2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtRemarks
@@ -175,7 +181,7 @@ Partial Class CriminalRecords
         Me.Panel2.Controls.Add(Me.Label7)
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(277, 50)
+        Me.Panel2.Size = New System.Drawing.Size(560, 50)
         Me.Panel2.TabIndex = 51
         '
         'Panel8
@@ -184,7 +190,7 @@ Partial Class CriminalRecords
         Me.Panel8.BackgroundImage = CType(resources.GetObject("Panel8.BackgroundImage"), System.Drawing.Image)
         Me.Panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.Panel8.ForeColor = System.Drawing.Color.White
-        Me.Panel8.Location = New System.Drawing.Point(12, 7)
+        Me.Panel8.Location = New System.Drawing.Point(9, 7)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(27, 31)
         Me.Panel8.TabIndex = 47
@@ -195,7 +201,7 @@ Partial Class CriminalRecords
         Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(59, Byte), Integer), CType(CType(106, Byte), Integer))
         Me.Label7.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(62, 10)
+        Me.Label7.Location = New System.Drawing.Point(199, 13)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(162, 25)
         Me.Label7.TabIndex = 46
@@ -206,7 +212,7 @@ Partial Class CriminalRecords
         Me.Panel1.BackColor = System.Drawing.Color.Silver
         Me.Panel1.Controls.Add(Me.MaterialButton1)
         Me.Panel1.ForeColor = System.Drawing.Color.White
-        Me.Panel1.Location = New System.Drawing.Point(50, 403)
+        Me.Panel1.Location = New System.Drawing.Point(181, 403)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(75, 33)
         Me.Panel1.TabIndex = 52
@@ -244,7 +250,7 @@ Partial Class CriminalRecords
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(67, Byte), Integer), CType(CType(54, Byte), Integer))
         Me.Panel3.Controls.Add(Me.CancelButton)
         Me.Panel3.ForeColor = System.Drawing.Color.White
-        Me.Panel3.Location = New System.Drawing.Point(160, 403)
+        Me.Panel3.Location = New System.Drawing.Point(303, 403)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(75, 33)
         Me.Panel3.TabIndex = 55
@@ -270,12 +276,72 @@ Partial Class CriminalRecords
         Me.CancelButton.UseAccentColor = False
         Me.CancelButton.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(293, 84)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(241, 240)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 56
+        Me.PictureBox1.TabStop = False
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(376, 64)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(70, 15)
+        Me.Label8.TabIndex = 57
+        Me.Label8.Text = "Attachment"
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.MaterialButton3)
+        Me.Panel4.Location = New System.Drawing.Point(376, 335)
+        Me.Panel4.MaximumSize = New System.Drawing.Size(73, 26)
+        Me.Panel4.MinimumSize = New System.Drawing.Size(73, 26)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(73, 26)
+        Me.Panel4.TabIndex = 59
+        '
+        'MaterialButton3
+        '
+        Me.MaterialButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialButton3.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(86, Byte), Integer), CType(CType(147, Byte), Integer))
+        Me.MaterialButton3.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.MaterialButton3.Depth = 0
+        Me.MaterialButton3.DrawShadows = False
+        Me.MaterialButton3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(86, Byte), Integer), CType(CType(147, Byte), Integer))
+        Me.MaterialButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
+        Me.MaterialButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.MaterialButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.MaterialButton3.ForeColor = System.Drawing.Color.White
+        Me.MaterialButton3.HighEmphasis = False
+        Me.MaterialButton3.Icon = Nothing
+        Me.MaterialButton3.Location = New System.Drawing.Point(0, 0)
+        Me.MaterialButton3.Margin = New System.Windows.Forms.Padding(4, 6, 4, 6)
+        Me.MaterialButton3.MaximumSize = New System.Drawing.Size(73, 26)
+        Me.MaterialButton3.MinimumSize = New System.Drawing.Size(73, 26)
+        Me.MaterialButton3.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        Me.MaterialButton3.Name = "MaterialButton3"
+        Me.MaterialButton3.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.MaterialButton3.Size = New System.Drawing.Size(73, 26)
+        Me.MaterialButton3.TabIndex = 54
+        Me.MaterialButton3.Text = "Upload"
+        Me.MaterialButton3.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
+        Me.MaterialButton3.UseAccentColor = False
+        Me.MaterialButton3.UseVisualStyleBackColor = False
+        '
         'CriminalRecords
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(277, 447)
+        Me.ClientSize = New System.Drawing.Size(559, 447)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Panel4)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
@@ -306,6 +372,9 @@ Partial Class CriminalRecords
         Me.Panel1.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -332,4 +401,8 @@ Partial Class CriminalRecords
     Friend WithEvents MaterialButton1 As MaterialSkin2Framework.Controls.MaterialButton
     Friend WithEvents Panel3 As Panel
     Friend WithEvents CancelButton As MaterialSkin2Framework.Controls.MaterialButton
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents MaterialButton3 As MaterialSkin2Framework.Controls.MaterialButton
 End Class

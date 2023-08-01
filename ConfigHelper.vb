@@ -47,4 +47,13 @@ Public Class ConfigHelper
             Return appDataFolder + "\" + projectName + "\" + policeSigFolderName + "\"
         End Get
     End Property
+    Public ReadOnly Property GetCriminalRecordsAttachmentPath() As String
+        Get
+            Dim configuration = (New ConfigurationBuilder()).AddJsonFile("appsettings.json", True, True).Build()
+            Dim projectName As String = Assembly.GetExecutingAssembly().GetName().Name
+            Dim appDataFolder As String = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)
+            Dim policeSigFolderName As String = configuration.GetSection("AppSettings")("ImgCriminalRecordsAttachmentPath")
+            Return appDataFolder + "\" + projectName + "\" + policeSigFolderName + "\"
+        End Get
+    End Property
 End Class

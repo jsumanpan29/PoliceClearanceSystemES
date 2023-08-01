@@ -94,6 +94,18 @@ Public Class Validation_ForceValidation
                     checkBox.Value = False
                 End If
             Next
+        ElseIf DataGridView1.Columns(e.ColumnIndex).Name = "CrimeAttachment" Then
+            Try
+                Dim row As DataGridViewRow = DataGridView1.Rows(e.RowIndex)
+                Dim cr_id As Integer = row.Cells("CrimeID").Value
+                Dim criminalAttachment As New Attachment
+                criminalAttachment.cr_id = cr_id
+                criminalAttachment.ShowDialog()
+
+            Catch ex As Exception
+                MsgBox("Criminal Records Table - Check Attachment error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+            End Try
+
         End If
     End Sub
 
