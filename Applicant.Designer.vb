@@ -68,7 +68,7 @@ Partial Class Applicant
         Me.txtContactNo.Name = "txtContactNo"
         Me.txtContactNo.PlaceholderText = " Contact Number*"
         Me.txtContactNo.Size = New System.Drawing.Size(150, 23)
-        Me.txtContactNo.TabIndex = 162
+        Me.txtContactNo.TabIndex = 13
         '
         'Label13
         '
@@ -85,7 +85,7 @@ Partial Class Applicant
         Me.txtNationality.Name = "txtNationality"
         Me.txtNationality.PlaceholderText = " Nationality*"
         Me.txtNationality.Size = New System.Drawing.Size(105, 23)
-        Me.txtNationality.TabIndex = 161
+        Me.txtNationality.TabIndex = 12
         '
         'Label8
         '
@@ -102,7 +102,7 @@ Partial Class Applicant
         Me.txtHeight.Name = "txtHeight"
         Me.txtHeight.PlaceholderText = " Height*"
         Me.txtHeight.Size = New System.Drawing.Size(78, 23)
-        Me.txtHeight.TabIndex = 160
+        Me.txtHeight.TabIndex = 11
         '
         'rbFemale
         '
@@ -110,8 +110,7 @@ Partial Class Applicant
         Me.rbFemale.Location = New System.Drawing.Point(76, 230)
         Me.rbFemale.Name = "rbFemale"
         Me.rbFemale.Size = New System.Drawing.Size(63, 19)
-        Me.rbFemale.TabIndex = 159
-        Me.rbFemale.TabStop = True
+        Me.rbFemale.TabIndex = 10
         Me.rbFemale.Text = "Female"
         Me.rbFemale.UseVisualStyleBackColor = True
         '
@@ -121,7 +120,7 @@ Partial Class Applicant
         Me.rbMale.Location = New System.Drawing.Point(19, 230)
         Me.rbMale.Name = "rbMale"
         Me.rbMale.Size = New System.Drawing.Size(51, 19)
-        Me.rbMale.TabIndex = 158
+        Me.rbMale.TabIndex = 9
         Me.rbMale.TabStop = True
         Me.rbMale.Text = "Male"
         Me.rbMale.UseVisualStyleBackColor = True
@@ -160,7 +159,7 @@ Partial Class Applicant
         Me.dtBirthDate.Location = New System.Drawing.Point(340, 186)
         Me.dtBirthDate.Name = "dtBirthDate"
         Me.dtBirthDate.Size = New System.Drawing.Size(150, 23)
-        Me.dtBirthDate.TabIndex = 157
+        Me.dtBirthDate.TabIndex = 8
         '
         'txtBirthPlace
         '
@@ -168,7 +167,7 @@ Partial Class Applicant
         Me.txtBirthPlace.Name = "txtBirthPlace"
         Me.txtBirthPlace.PlaceholderText = " Place of Birth*"
         Me.txtBirthPlace.Size = New System.Drawing.Size(274, 23)
-        Me.txtBirthPlace.TabIndex = 156
+        Me.txtBirthPlace.TabIndex = 7
         '
         'Label4
         '
@@ -185,7 +184,7 @@ Partial Class Applicant
         Me.cbCivilStatus.Location = New System.Drawing.Point(340, 142)
         Me.cbCivilStatus.Name = "cbCivilStatus"
         Me.cbCivilStatus.Size = New System.Drawing.Size(150, 23)
-        Me.cbCivilStatus.TabIndex = 155
+        Me.cbCivilStatus.TabIndex = 6
         '
         'Label3
         '
@@ -202,7 +201,7 @@ Partial Class Applicant
         Me.cbBarangay.Location = New System.Drawing.Point(90, 142)
         Me.cbBarangay.Name = "cbBarangay"
         Me.cbBarangay.Size = New System.Drawing.Size(203, 23)
-        Me.cbBarangay.TabIndex = 154
+        Me.cbBarangay.TabIndex = 5
         '
         'cbZone
         '
@@ -210,7 +209,7 @@ Partial Class Applicant
         Me.cbZone.Location = New System.Drawing.Point(19, 142)
         Me.cbZone.Name = "cbZone"
         Me.cbZone.Size = New System.Drawing.Size(68, 23)
-        Me.cbZone.TabIndex = 153
+        Me.cbZone.TabIndex = 4
         '
         'Label2
         '
@@ -227,7 +226,7 @@ Partial Class Applicant
         Me.txtMname.Name = "txtMname"
         Me.txtMname.PlaceholderText = " Middle Name*"
         Me.txtMname.Size = New System.Drawing.Size(150, 23)
-        Me.txtMname.TabIndex = 152
+        Me.txtMname.TabIndex = 3
         '
         'txtFname
         '
@@ -235,7 +234,7 @@ Partial Class Applicant
         Me.txtFname.Name = "txtFname"
         Me.txtFname.PlaceholderText = " First Name*"
         Me.txtFname.Size = New System.Drawing.Size(150, 23)
-        Me.txtFname.TabIndex = 151
+        Me.txtFname.TabIndex = 2
         '
         'Label14
         '
@@ -252,7 +251,7 @@ Partial Class Applicant
         Me.txtLname.Name = "txtLname"
         Me.txtLname.PlaceholderText = " Last Name*"
         Me.txtLname.Size = New System.Drawing.Size(150, 23)
-        Me.txtLname.TabIndex = 150
+        Me.txtLname.TabIndex = 1
         '
         'Panel3
         '
@@ -279,7 +278,7 @@ Partial Class Applicant
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.NoAccentTextColor = System.Drawing.Color.Empty
         Me.btnCancel.Size = New System.Drawing.Size(132, 25)
-        Me.btnCancel.TabIndex = 55
+        Me.btnCancel.TabIndex = 15
         Me.btnCancel.Text = "Cancel"
         Me.btnCancel.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
         Me.btnCancel.UseAccentColor = False
@@ -317,7 +316,7 @@ Partial Class Applicant
         Me.btnConfirm.Name = "btnConfirm"
         Me.btnConfirm.NoAccentTextColor = System.Drawing.Color.Empty
         Me.btnConfirm.Size = New System.Drawing.Size(132, 25)
-        Me.btnConfirm.TabIndex = 53
+        Me.btnConfirm.TabIndex = 14
         Me.btnConfirm.Text = "Confirm"
         Me.btnConfirm.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
         Me.btnConfirm.UseAccentColor = False

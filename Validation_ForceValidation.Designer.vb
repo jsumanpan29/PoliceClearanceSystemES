@@ -181,7 +181,7 @@ Partial Class Validation_ForceValidation
         Me.chkRemarks.Location = New System.Drawing.Point(10, 332)
         Me.chkRemarks.Name = "chkRemarks"
         Me.chkRemarks.Size = New System.Drawing.Size(105, 21)
-        Me.chkRemarks.TabIndex = 60
+        Me.chkRemarks.TabIndex = 2
         Me.chkRemarks.Text = "Add Remarks"
         Me.chkRemarks.UseVisualStyleBackColor = True
         '
@@ -191,7 +191,7 @@ Partial Class Validation_ForceValidation
         Me.RichTextBox1.Location = New System.Drawing.Point(12, 356)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(859, 48)
-        Me.RichTextBox1.TabIndex = 61
+        Me.RichTextBox1.TabIndex = 3
         Me.RichTextBox1.Text = ""
         '
         'chkCriminalRecord
@@ -203,7 +203,7 @@ Partial Class Validation_ForceValidation
         Me.chkCriminalRecord.Location = New System.Drawing.Point(12, 72)
         Me.chkCriminalRecord.Name = "chkCriminalRecord"
         Me.chkCriminalRecord.Size = New System.Drawing.Size(291, 21)
-        Me.chkCriminalRecord.TabIndex = 62
+        Me.chkCriminalRecord.TabIndex = 1
         Me.chkCriminalRecord.Text = "Is Identity Matched?(Uncheck if False Positive)"
         Me.chkCriminalRecord.UseVisualStyleBackColor = True
         '
@@ -225,7 +225,7 @@ Partial Class Validation_ForceValidation
         Me.MaterialButton1.Name = "MaterialButton1"
         Me.MaterialButton1.NoAccentTextColor = System.Drawing.Color.Empty
         Me.MaterialButton1.Size = New System.Drawing.Size(54, 48)
-        Me.MaterialButton1.TabIndex = 64
+        Me.MaterialButton1.TabIndex = 4
         Me.MaterialButton1.Text = "Clear"
         Me.MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
         Me.MaterialButton1.UseAccentColor = False
@@ -247,7 +247,7 @@ Partial Class Validation_ForceValidation
         Me.MaterialButton2.Name = "MaterialButton2"
         Me.MaterialButton2.NoAccentTextColor = System.Drawing.Color.Empty
         Me.MaterialButton2.Size = New System.Drawing.Size(75, 26)
-        Me.MaterialButton2.TabIndex = 65
+        Me.MaterialButton2.TabIndex = 5
         Me.MaterialButton2.Text = "Confirm"
         Me.MaterialButton2.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
         Me.MaterialButton2.UseAccentColor = False

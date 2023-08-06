@@ -83,7 +83,7 @@ Partial Class Validation_Hit
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.NoAccentTextColor = System.Drawing.Color.Empty
         Me.CancelButton.Size = New System.Drawing.Size(75, 33)
-        Me.CancelButton.TabIndex = 55
+        Me.CancelButton.TabIndex = 1
         Me.CancelButton.Text = "Next"
         Me.CancelButton.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
         Me.CancelButton.UseAccentColor = False

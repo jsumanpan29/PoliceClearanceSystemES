@@ -42,7 +42,7 @@ Partial Class ReportForm
         Me.ComboBox1.Location = New System.Drawing.Point(60, 79)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 23)
-        Me.ComboBox1.TabIndex = 0
+        Me.ComboBox1.TabIndex = 1
         '
         'Label1
         '
@@ -86,7 +86,7 @@ Partial Class ReportForm
         Me.MaterialButton1.Name = "MaterialButton1"
         Me.MaterialButton1.NoAccentTextColor = System.Drawing.Color.Empty
         Me.MaterialButton1.Size = New System.Drawing.Size(75, 23)
-        Me.MaterialButton1.TabIndex = 7
+        Me.MaterialButton1.TabIndex = 2
         Me.MaterialButton1.Text = "Generate"
         Me.MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
         Me.MaterialButton1.UseAccentColor = False
@@ -117,7 +117,7 @@ Partial Class ReportForm
         Me.MaterialButton3.Name = "MaterialButton3"
         Me.MaterialButton3.NoAccentTextColor = System.Drawing.Color.Empty
         Me.MaterialButton3.Size = New System.Drawing.Size(75, 23)
-        Me.MaterialButton3.TabIndex = 7
+        Me.MaterialButton3.TabIndex = 3
         Me.MaterialButton3.Text = "Confirm"
         Me.MaterialButton3.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
         Me.MaterialButton3.UseAccentColor = False
@@ -135,6 +135,11 @@ Partial Class ReportForm
         Me.Controls.Add(Me.ComboBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ReportForm"
+        Me.PrimaryColor = MaterialSkin2Framework.Primary.Blue700
+        Me.PrimaryDarkColor = MaterialSkin2Framework.Primary.Blue900
+        Me.PrimaryLightColor = MaterialSkin2Framework.Primary.Blue300
+        Me.Sizable = False
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Report"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

@@ -70,7 +70,7 @@ Partial Class Police
         Me.txtMname.Name = "txtMname"
         Me.txtMname.PlaceholderText = " Middle Name*"
         Me.txtMname.Size = New System.Drawing.Size(197, 25)
-        Me.txtMname.TabIndex = 11
+        Me.txtMname.TabIndex = 2
         '
         'txtFname
         '
@@ -85,7 +85,7 @@ Partial Class Police
         Me.txtFname.Name = "txtFname"
         Me.txtFname.PlaceholderText = " First Name*"
         Me.txtFname.Size = New System.Drawing.Size(197, 25)
-        Me.txtFname.TabIndex = 10
+        Me.txtFname.TabIndex = 1
         '
         'txtLname
         '
@@ -99,7 +99,7 @@ Partial Class Police
         Me.txtLname.Name = "txtLname"
         Me.txtLname.PlaceholderText = " Last Name*"
         Me.txtLname.Size = New System.Drawing.Size(197, 25)
-        Me.txtLname.TabIndex = 8
+        Me.txtLname.TabIndex = 3
         '
         'cbRank
         '
@@ -111,7 +111,7 @@ Partial Class Police
         Me.cbRank.MinimumSize = New System.Drawing.Size(197, 0)
         Me.cbRank.Name = "cbRank"
         Me.cbRank.Size = New System.Drawing.Size(197, 23)
-        Me.cbRank.TabIndex = 44
+        Me.cbRank.TabIndex = 5
         Me.cbRank.Tag = ""
         '
         'Label4
@@ -136,7 +136,7 @@ Partial Class Police
         Me.txtContactNo.Name = "txtContactNo"
         Me.txtContactNo.PlaceholderText = " Contact #"
         Me.txtContactNo.Size = New System.Drawing.Size(197, 25)
-        Me.txtContactNo.TabIndex = 42
+        Me.txtContactNo.TabIndex = 4
         '
         'Label13
         '
@@ -158,7 +158,7 @@ Partial Class Police
         Me.cbPosition.MinimumSize = New System.Drawing.Size(197, 0)
         Me.cbPosition.Name = "cbPosition"
         Me.cbPosition.Size = New System.Drawing.Size(197, 23)
-        Me.cbPosition.TabIndex = 46
+        Me.cbPosition.TabIndex = 6
         '
         'Label2
         '
@@ -281,7 +281,7 @@ Partial Class Police
         Me.MaterialButton1.Name = "MaterialButton1"
         Me.MaterialButton1.NoAccentTextColor = System.Drawing.Color.Empty
         Me.MaterialButton1.Size = New System.Drawing.Size(75, 33)
-        Me.MaterialButton1.TabIndex = 53
+        Me.MaterialButton1.TabIndex = 8
         Me.MaterialButton1.Text = "Save"
         Me.MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
         Me.MaterialButton1.UseAccentColor = False
@@ -312,7 +312,7 @@ Partial Class Police
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.NoAccentTextColor = System.Drawing.Color.Empty
         Me.CancelButton.Size = New System.Drawing.Size(75, 33)
-        Me.CancelButton.TabIndex = 55
+        Me.CancelButton.TabIndex = 9
         Me.CancelButton.Text = "Cancel"
         Me.CancelButton.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
         Me.CancelButton.UseAccentColor = False
@@ -351,7 +351,7 @@ Partial Class Police
         Me.MaterialButton3.Name = "MaterialButton3"
         Me.MaterialButton3.NoAccentTextColor = System.Drawing.Color.Empty
         Me.MaterialButton3.Size = New System.Drawing.Size(73, 26)
-        Me.MaterialButton3.TabIndex = 54
+        Me.MaterialButton3.TabIndex = 7
         Me.MaterialButton3.Text = "Upload"
         Me.MaterialButton3.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
         Me.MaterialButton3.UseAccentColor = False

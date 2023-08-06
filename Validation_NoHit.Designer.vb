@@ -97,7 +97,7 @@ Partial Class Validation_NoHit
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.NoAccentTextColor = System.Drawing.Color.Empty
         Me.CancelButton.Size = New System.Drawing.Size(75, 33)
-        Me.CancelButton.TabIndex = 55
+        Me.CancelButton.TabIndex = 2
         Me.CancelButton.Text = "Cancel"
         Me.CancelButton.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
         Me.CancelButton.UseAccentColor = False
@@ -135,7 +135,7 @@ Partial Class Validation_NoHit
         Me.MaterialButton1.Name = "MaterialButton1"
         Me.MaterialButton1.NoAccentTextColor = System.Drawing.Color.Empty
         Me.MaterialButton1.Size = New System.Drawing.Size(75, 33)
-        Me.MaterialButton1.TabIndex = 53
+        Me.MaterialButton1.TabIndex = 1
         Me.MaterialButton1.Text = "Save"
         Me.MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
         Me.MaterialButton1.UseAccentColor = False

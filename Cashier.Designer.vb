@@ -34,8 +34,6 @@ Partial Class Cashier
         Me.chbAll = New System.Windows.Forms.CheckBox()
         Me.MaterialCard1 = New MaterialSkin2Framework.Controls.MaterialCard()
         Me.DataGridView1 = New MaterialSkin2Framework.Controls.MaterialDataTable()
-        Me.MaterialButton1 = New MaterialSkin2Framework.Controls.MaterialButton()
-        Me.MaterialButton2 = New MaterialSkin2Framework.Controls.MaterialButton()
         Me.ClearanceCheckBox = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         Me.ClearanceID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClearanceORNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -43,6 +41,8 @@ Partial Class Cashier
         Me.ClearanceFname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClearanceMname = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ClearanceLname = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.MaterialButton1 = New MaterialSkin2Framework.Controls.MaterialButton()
+        Me.MaterialButton2 = New MaterialSkin2Framework.Controls.MaterialButton()
         Me.MenuStrip1.SuspendLayout()
         Me.MaterialCard1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -82,7 +82,7 @@ Partial Class Cashier
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.PlaceholderText = "  Search..."
         Me.TextBox1.Size = New System.Drawing.Size(279, 28)
-        Me.TextBox1.TabIndex = 3
+        Me.TextBox1.TabIndex = 2
         '
         'chbAll
         '
@@ -91,7 +91,7 @@ Partial Class Cashier
         Me.chbAll.Location = New System.Drawing.Point(15, 113)
         Me.chbAll.Name = "chbAll"
         Me.chbAll.Size = New System.Drawing.Size(79, 21)
-        Me.chbAll.TabIndex = 145
+        Me.chbAll.TabIndex = 1
         Me.chbAll.Text = "Select All"
         Me.chbAll.UseVisualStyleBackColor = True
         '
@@ -167,46 +167,6 @@ Partial Class Cashier
         Me.DataGridView1.Size = New System.Drawing.Size(1008, 390)
         Me.DataGridView1.TabIndex = 0
         '
-        'MaterialButton1
-        '
-        Me.MaterialButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MaterialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialButton1.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.[Default]
-        Me.MaterialButton1.Depth = 0
-        Me.MaterialButton1.HighEmphasis = True
-        Me.MaterialButton1.Icon = CType(resources.GetObject("MaterialButton1.Icon"), System.Drawing.Image)
-        Me.MaterialButton1.Location = New System.Drawing.Point(957, 103)
-        Me.MaterialButton1.Margin = New System.Windows.Forms.Padding(4)
-        Me.MaterialButton1.MouseState = MaterialSkin2Framework.MouseState.HOVER
-        Me.MaterialButton1.Name = "MaterialButton1"
-        Me.MaterialButton1.NoAccentTextColor = System.Drawing.Color.Empty
-        Me.MaterialButton1.Size = New System.Drawing.Size(94, 36)
-        Me.MaterialButton1.TabIndex = 147
-        Me.MaterialButton1.Text = "Clear"
-        Me.MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
-        Me.MaterialButton1.UseAccentColor = False
-        Me.MaterialButton1.UseVisualStyleBackColor = True
-        '
-        'MaterialButton2
-        '
-        Me.MaterialButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.MaterialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.MaterialButton2.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.[Default]
-        Me.MaterialButton2.Depth = 0
-        Me.MaterialButton2.HighEmphasis = True
-        Me.MaterialButton2.Icon = Nothing
-        Me.MaterialButton2.Location = New System.Drawing.Point(965, 569)
-        Me.MaterialButton2.Margin = New System.Windows.Forms.Padding(4)
-        Me.MaterialButton2.MouseState = MaterialSkin2Framework.MouseState.HOVER
-        Me.MaterialButton2.Name = "MaterialButton2"
-        Me.MaterialButton2.NoAccentTextColor = System.Drawing.Color.Empty
-        Me.MaterialButton2.Size = New System.Drawing.Size(86, 36)
-        Me.MaterialButton2.TabIndex = 148
-        Me.MaterialButton2.Text = "Confirm"
-        Me.MaterialButton2.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
-        Me.MaterialButton2.UseAccentColor = False
-        Me.MaterialButton2.UseVisualStyleBackColor = True
-        '
         'ClearanceCheckBox
         '
         Me.ClearanceCheckBox.DividerWidth = 1
@@ -256,6 +216,46 @@ Partial Class Cashier
         Me.ClearanceLname.FillWeight = 18.0485!
         Me.ClearanceLname.HeaderText = "   Last Name"
         Me.ClearanceLname.Name = "ClearanceLname"
+        '
+        'MaterialButton1
+        '
+        Me.MaterialButton1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MaterialButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialButton1.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.MaterialButton1.Depth = 0
+        Me.MaterialButton1.HighEmphasis = True
+        Me.MaterialButton1.Icon = CType(resources.GetObject("MaterialButton1.Icon"), System.Drawing.Image)
+        Me.MaterialButton1.Location = New System.Drawing.Point(957, 103)
+        Me.MaterialButton1.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaterialButton1.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        Me.MaterialButton1.Name = "MaterialButton1"
+        Me.MaterialButton1.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.MaterialButton1.Size = New System.Drawing.Size(94, 36)
+        Me.MaterialButton1.TabIndex = 3
+        Me.MaterialButton1.Text = "Clear"
+        Me.MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.MaterialButton1.UseAccentColor = False
+        Me.MaterialButton1.UseVisualStyleBackColor = True
+        '
+        'MaterialButton2
+        '
+        Me.MaterialButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.MaterialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.MaterialButton2.Density = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonDensity.[Default]
+        Me.MaterialButton2.Depth = 0
+        Me.MaterialButton2.HighEmphasis = True
+        Me.MaterialButton2.Icon = Nothing
+        Me.MaterialButton2.Location = New System.Drawing.Point(965, 569)
+        Me.MaterialButton2.Margin = New System.Windows.Forms.Padding(4)
+        Me.MaterialButton2.MouseState = MaterialSkin2Framework.MouseState.HOVER
+        Me.MaterialButton2.Name = "MaterialButton2"
+        Me.MaterialButton2.NoAccentTextColor = System.Drawing.Color.Empty
+        Me.MaterialButton2.Size = New System.Drawing.Size(86, 36)
+        Me.MaterialButton2.TabIndex = 4
+        Me.MaterialButton2.Text = "Confirm"
+        Me.MaterialButton2.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Contained
+        Me.MaterialButton2.UseAccentColor = False
+        Me.MaterialButton2.UseVisualStyleBackColor = True
         '
         'Cashier
         '

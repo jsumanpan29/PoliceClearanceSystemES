@@ -161,7 +161,7 @@ Partial Class Clerk2
         Me.txtORAmount.Name = "txtORAmount"
         Me.txtORAmount.PlaceholderText = " Amount*"
         Me.txtORAmount.Size = New System.Drawing.Size(230, 23)
-        Me.txtORAmount.TabIndex = 19
+        Me.txtORAmount.TabIndex = 8
         '
         'txtORNo
         '
@@ -169,7 +169,7 @@ Partial Class Clerk2
         Me.txtORNo.Name = "txtORNo"
         Me.txtORNo.PlaceholderText = " OR Number*"
         Me.txtORNo.Size = New System.Drawing.Size(230, 23)
-        Me.txtORNo.TabIndex = 17
+        Me.txtORNo.TabIndex = 6
         '
         'Label17
         '
@@ -213,7 +213,7 @@ Partial Class Clerk2
         Me.txtCTCIssueAt.Name = "txtCTCIssueAt"
         Me.txtCTCIssueAt.PlaceholderText = " Issued At*"
         Me.txtCTCIssueAt.Size = New System.Drawing.Size(230, 23)
-        Me.txtCTCIssueAt.TabIndex = 20
+        Me.txtCTCIssueAt.TabIndex = 9
         '
         'Label10
         '
@@ -230,7 +230,7 @@ Partial Class Clerk2
         Me.dtCTCIssueDate.Location = New System.Drawing.Point(15, 502)
         Me.dtCTCIssueDate.Name = "dtCTCIssueDate"
         Me.dtCTCIssueDate.Size = New System.Drawing.Size(230, 23)
-        Me.dtCTCIssueDate.TabIndex = 18
+        Me.dtCTCIssueDate.TabIndex = 7
         '
         'txtCTCNo
         '
@@ -238,7 +238,7 @@ Partial Class Clerk2
         Me.txtCTCNo.Name = "txtCTCNo"
         Me.txtCTCNo.PlaceholderText = " CTC Number*"
         Me.txtCTCNo.Size = New System.Drawing.Size(230, 23)
-        Me.txtCTCNo.TabIndex = 16
+        Me.txtCTCNo.TabIndex = 5
         '
         'Label11
         '
@@ -255,7 +255,7 @@ Partial Class Clerk2
         Me.cbPurpose.Location = New System.Drawing.Point(15, 408)
         Me.cbPurpose.Name = "cbPurpose"
         Me.cbPurpose.Size = New System.Drawing.Size(471, 23)
-        Me.cbPurpose.TabIndex = 15
+        Me.cbPurpose.TabIndex = 4
         '
         'Label9
         '
@@ -629,7 +629,7 @@ Partial Class Clerk2
         Me.btnClear_Cancel.Name = "btnClear_Cancel"
         Me.btnClear_Cancel.NoAccentTextColor = System.Drawing.Color.Empty
         Me.btnClear_Cancel.Size = New System.Drawing.Size(132, 25)
-        Me.btnClear_Cancel.TabIndex = 55
+        Me.btnClear_Cancel.TabIndex = 14
         Me.btnClear_Cancel.Text = "Clear"
         Me.btnClear_Cancel.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
         Me.btnClear_Cancel.UseAccentColor = False
@@ -667,7 +667,7 @@ Partial Class Clerk2
         Me.btnAdd_Saved.Name = "btnAdd_Saved"
         Me.btnAdd_Saved.NoAccentTextColor = System.Drawing.Color.Empty
         Me.btnAdd_Saved.Size = New System.Drawing.Size(132, 25)
-        Me.btnAdd_Saved.TabIndex = 53
+        Me.btnAdd_Saved.TabIndex = 13
         Me.btnAdd_Saved.Text = "Add"
         Me.btnAdd_Saved.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
         Me.btnAdd_Saved.UseAccentColor = False
@@ -706,7 +706,7 @@ Partial Class Clerk2
         Me.MaterialButton1.Name = "MaterialButton1"
         Me.MaterialButton1.NoAccentTextColor = System.Drawing.Color.Empty
         Me.MaterialButton1.Size = New System.Drawing.Size(75, 23)
-        Me.MaterialButton1.TabIndex = 53
+        Me.MaterialButton1.TabIndex = 10
         Me.MaterialButton1.Text = "Upload"
         Me.MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
         Me.MaterialButton1.UseAccentColor = False
@@ -745,7 +745,7 @@ Partial Class Clerk2
         Me.MaterialButton2.Name = "MaterialButton2"
         Me.MaterialButton2.NoAccentTextColor = System.Drawing.Color.Empty
         Me.MaterialButton2.Size = New System.Drawing.Size(75, 23)
-        Me.MaterialButton2.TabIndex = 53
+        Me.MaterialButton2.TabIndex = 11
         Me.MaterialButton2.Text = "Upload"
         Me.MaterialButton2.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
         Me.MaterialButton2.UseAccentColor = False
@@ -784,7 +784,7 @@ Partial Class Clerk2
         Me.MaterialButton3.Name = "MaterialButton3"
         Me.MaterialButton3.NoAccentTextColor = System.Drawing.Color.Empty
         Me.MaterialButton3.Size = New System.Drawing.Size(75, 23)
-        Me.MaterialButton3.TabIndex = 54
+        Me.MaterialButton3.TabIndex = 12
         Me.MaterialButton3.Text = "Upload"
         Me.MaterialButton3.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
         Me.MaterialButton3.UseAccentColor = False
@@ -795,7 +795,7 @@ Partial Class Clerk2
         Me.btnApplicantAdd.Location = New System.Drawing.Point(411, 120)
         Me.btnApplicantAdd.Name = "btnApplicantAdd"
         Me.btnApplicantAdd.Size = New System.Drawing.Size(75, 23)
-        Me.btnApplicantAdd.TabIndex = 214
+        Me.btnApplicantAdd.TabIndex = 3
         Me.btnApplicantAdd.Text = "Add"
         Me.btnApplicantAdd.UseVisualStyleBackColor = True
         '
@@ -804,7 +804,7 @@ Partial Class Clerk2
         Me.btnApplicantSearchClear.Location = New System.Drawing.Point(332, 120)
         Me.btnApplicantSearchClear.Name = "btnApplicantSearchClear"
         Me.btnApplicantSearchClear.Size = New System.Drawing.Size(75, 23)
-        Me.btnApplicantSearchClear.TabIndex = 213
+        Me.btnApplicantSearchClear.TabIndex = 2
         Me.btnApplicantSearchClear.Text = "Clear"
         Me.btnApplicantSearchClear.UseVisualStyleBackColor = True
         '
@@ -813,7 +813,7 @@ Partial Class Clerk2
         Me.txtApplicantSearch.Location = New System.Drawing.Point(15, 119)
         Me.txtApplicantSearch.Name = "txtApplicantSearch"
         Me.txtApplicantSearch.Size = New System.Drawing.Size(311, 23)
-        Me.txtApplicantSearch.TabIndex = 212
+        Me.txtApplicantSearch.TabIndex = 1
         '
         'DataGridView1
         '

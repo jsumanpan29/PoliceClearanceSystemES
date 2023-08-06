@@ -88,7 +88,7 @@ Partial Class CameraForm
         Me.ComboboxSources.Location = New System.Drawing.Point(235, 397)
         Me.ComboboxSources.Name = "ComboboxSources"
         Me.ComboboxSources.Size = New System.Drawing.Size(166, 23)
-        Me.ComboboxSources.TabIndex = 8
+        Me.ComboboxSources.TabIndex = 1
         '
         'Panel2
         '
@@ -115,7 +115,7 @@ Partial Class CameraForm
         Me.ConfirmButton.Name = "ConfirmButton"
         Me.ConfirmButton.NoAccentTextColor = System.Drawing.Color.Empty
         Me.ConfirmButton.Size = New System.Drawing.Size(75, 23)
-        Me.ConfirmButton.TabIndex = 7
+        Me.ConfirmButton.TabIndex = 4
         Me.ConfirmButton.Text = "Save"
         Me.ConfirmButton.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
         Me.ConfirmButton.UseAccentColor = False
@@ -146,7 +146,7 @@ Partial Class CameraForm
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.NoAccentTextColor = System.Drawing.Color.Empty
         Me.CancelButton.Size = New System.Drawing.Size(75, 23)
-        Me.CancelButton.TabIndex = 8
+        Me.CancelButton.TabIndex = 5
         Me.CancelButton.Text = "Cancel"
         Me.CancelButton.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
         Me.CancelButton.UseAccentColor = False
@@ -177,7 +177,7 @@ Partial Class CameraForm
         Me.BtnCapture.Name = "BtnCapture"
         Me.BtnCapture.NoAccentTextColor = System.Drawing.Color.Empty
         Me.BtnCapture.Size = New System.Drawing.Size(75, 23)
-        Me.BtnCapture.TabIndex = 8
+        Me.BtnCapture.TabIndex = 3
         Me.BtnCapture.Text = "Capture"
         Me.BtnCapture.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
         Me.BtnCapture.UseAccentColor = False
@@ -200,7 +200,7 @@ Partial Class CameraForm
         Me.BtnStart.Name = "BtnStart"
         Me.BtnStart.NoAccentTextColor = System.Drawing.Color.Empty
         Me.BtnStart.Size = New System.Drawing.Size(75, 23)
-        Me.BtnStart.TabIndex = 7
+        Me.BtnStart.TabIndex = 2
         Me.BtnStart.Text = "Start"
         Me.BtnStart.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
         Me.BtnStart.UseAccentColor = False

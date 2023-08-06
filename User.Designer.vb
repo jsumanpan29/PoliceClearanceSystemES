@@ -60,7 +60,7 @@ Partial Class User
         Me.txtMname.Name = "txtMname"
         Me.txtMname.PlaceholderText = " Middle Name"
         Me.txtMname.Size = New System.Drawing.Size(309, 23)
-        Me.txtMname.TabIndex = 7
+        Me.txtMname.TabIndex = 2
         '
         'txtFname
         '
@@ -71,7 +71,7 @@ Partial Class User
         Me.txtFname.Name = "txtFname"
         Me.txtFname.PlaceholderText = " First Name"
         Me.txtFname.Size = New System.Drawing.Size(309, 23)
-        Me.txtFname.TabIndex = 6
+        Me.txtFname.TabIndex = 1
         '
         'Label1
         '
@@ -94,7 +94,7 @@ Partial Class User
         Me.txtLname.Name = "txtLname"
         Me.txtLname.PlaceholderText = " Last Name"
         Me.txtLname.Size = New System.Drawing.Size(309, 23)
-        Me.txtLname.TabIndex = 4
+        Me.txtLname.TabIndex = 3
         '
         'txtContactNo
         '
@@ -105,7 +105,7 @@ Partial Class User
         Me.txtContactNo.Name = "txtContactNo"
         Me.txtContactNo.PlaceholderText = " Contact #"
         Me.txtContactNo.Size = New System.Drawing.Size(309, 23)
-        Me.txtContactNo.TabIndex = 32
+        Me.txtContactNo.TabIndex = 6
         '
         'Label13
         '
@@ -128,7 +128,7 @@ Partial Class User
         Me.txtUname.Name = "txtUname"
         Me.txtUname.PlaceholderText = " Username"
         Me.txtUname.Size = New System.Drawing.Size(309, 23)
-        Me.txtUname.TabIndex = 34
+        Me.txtUname.TabIndex = 4
         '
         'Label2
         '
@@ -151,7 +151,7 @@ Partial Class User
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PlaceholderText = " Password"
         Me.txtPassword.Size = New System.Drawing.Size(309, 23)
-        Me.txtPassword.TabIndex = 36
+        Me.txtPassword.TabIndex = 5
         '
         'Label3
         '
@@ -186,7 +186,7 @@ Partial Class User
         Me.cbUsertype.Location = New System.Drawing.Point(11, 380)
         Me.cbUsertype.Name = "cbUsertype"
         Me.cbUsertype.Size = New System.Drawing.Size(309, 25)
-        Me.cbUsertype.TabIndex = 40
+        Me.cbUsertype.TabIndex = 7
         '
         'Label5
         '

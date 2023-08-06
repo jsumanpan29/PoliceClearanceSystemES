@@ -61,7 +61,7 @@ Partial Class CriminalRecords
         Me.txtRemarks.Name = "txtRemarks"
         Me.txtRemarks.PlaceholderText = " Remarks"
         Me.txtRemarks.Size = New System.Drawing.Size(262, 23)
-        Me.txtRemarks.TabIndex = 42
+        Me.txtRemarks.TabIndex = 7
         '
         'Label2
         '
@@ -78,7 +78,7 @@ Partial Class CriminalRecords
         Me.txtISNO.Name = "txtISNO"
         Me.txtISNO.PlaceholderText = " I.S. #"
         Me.txtISNO.Size = New System.Drawing.Size(262, 23)
-        Me.txtISNO.TabIndex = 40
+        Me.txtISNO.TabIndex = 6
         '
         'Label13
         '
@@ -95,7 +95,7 @@ Partial Class CriminalRecords
         Me.txtCCNO.Name = "txtCCNO"
         Me.txtCCNO.PlaceholderText = " Criminal Case #"
         Me.txtCCNO.Size = New System.Drawing.Size(262, 23)
-        Me.txtCCNO.TabIndex = 38
+        Me.txtCCNO.TabIndex = 5
         '
         'txtCrime
         '
@@ -103,7 +103,7 @@ Partial Class CriminalRecords
         Me.txtCrime.Name = "txtCrime"
         Me.txtCrime.PlaceholderText = " Crime/Offense Committed"
         Me.txtCrime.Size = New System.Drawing.Size(262, 23)
-        Me.txtCrime.TabIndex = 37
+        Me.txtCrime.TabIndex = 4
         '
         'Label1
         '
@@ -120,7 +120,7 @@ Partial Class CriminalRecords
         Me.txtFName.Name = "txtFName"
         Me.txtFName.PlaceholderText = " First Name"
         Me.txtFName.Size = New System.Drawing.Size(262, 23)
-        Me.txtFName.TabIndex = 35
+        Me.txtFName.TabIndex = 1
         '
         'Label3
         '
@@ -155,7 +155,7 @@ Partial Class CriminalRecords
         Me.txtMName.Name = "txtMName"
         Me.txtMName.PlaceholderText = " Middle Name"
         Me.txtMName.Size = New System.Drawing.Size(262, 23)
-        Me.txtMName.TabIndex = 47
+        Me.txtMName.TabIndex = 2
         '
         'Label6
         '
@@ -172,7 +172,7 @@ Partial Class CriminalRecords
         Me.txtLName.Name = "txtLName"
         Me.txtLName.PlaceholderText = " Last Name"
         Me.txtLName.Size = New System.Drawing.Size(262, 23)
-        Me.txtLName.TabIndex = 49
+        Me.txtLName.TabIndex = 3
         '
         'Panel2
         '
@@ -239,7 +239,7 @@ Partial Class CriminalRecords
         Me.MaterialButton1.Name = "MaterialButton1"
         Me.MaterialButton1.NoAccentTextColor = System.Drawing.Color.Empty
         Me.MaterialButton1.Size = New System.Drawing.Size(75, 33)
-        Me.MaterialButton1.TabIndex = 53
+        Me.MaterialButton1.TabIndex = 9
         Me.MaterialButton1.Text = "Save"
         Me.MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
         Me.MaterialButton1.UseAccentColor = False
@@ -270,7 +270,7 @@ Partial Class CriminalRecords
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.NoAccentTextColor = System.Drawing.Color.Empty
         Me.CancelButton.Size = New System.Drawing.Size(75, 33)
-        Me.CancelButton.TabIndex = 55
+        Me.CancelButton.TabIndex = 10
         Me.CancelButton.Text = "Cancel"
         Me.CancelButton.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
         Me.CancelButton.UseAccentColor = False
@@ -327,7 +327,7 @@ Partial Class CriminalRecords
         Me.MaterialButton3.Name = "MaterialButton3"
         Me.MaterialButton3.NoAccentTextColor = System.Drawing.Color.Empty
         Me.MaterialButton3.Size = New System.Drawing.Size(73, 26)
-        Me.MaterialButton3.TabIndex = 54
+        Me.MaterialButton3.TabIndex = 8
         Me.MaterialButton3.Text = "Upload"
         Me.MaterialButton3.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
         Me.MaterialButton3.UseAccentColor = False

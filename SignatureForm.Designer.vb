@@ -138,7 +138,7 @@ Partial Class SignatureForm
         Me.MaterialButton1.Name = "MaterialButton1"
         Me.MaterialButton1.NoAccentTextColor = System.Drawing.Color.Empty
         Me.MaterialButton1.Size = New System.Drawing.Size(75, 33)
-        Me.MaterialButton1.TabIndex = 53
+        Me.MaterialButton1.TabIndex = 1
         Me.MaterialButton1.Text = "Confirm"
         Me.MaterialButton1.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Outlined
         Me.MaterialButton1.UseAccentColor = False
@@ -170,7 +170,7 @@ Partial Class SignatureForm
         Me.MaterialButton2.Name = "MaterialButton2"
         Me.MaterialButton2.NoAccentTextColor = System.Drawing.Color.Empty
         Me.MaterialButton2.Size = New System.Drawing.Size(75, 33)
-        Me.MaterialButton2.TabIndex = 55
+        Me.MaterialButton2.TabIndex = 2
         Me.MaterialButton2.Text = "Cancel"
         Me.MaterialButton2.Type = MaterialSkin2Framework.Controls.MaterialButton.MaterialButtonType.Text
         Me.MaterialButton2.UseAccentColor = False

@@ -70,7 +70,7 @@ Partial Class AdminSettings
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.PlaceholderText = " Password"
         Me.txtPassword.Size = New System.Drawing.Size(153, 23)
-        Me.txtPassword.TabIndex = 52
+        Me.txtPassword.TabIndex = 6
         '
         'Label3
         '
@@ -89,7 +89,7 @@ Partial Class AdminSettings
         Me.txtUname.Name = "txtUname"
         Me.txtUname.PlaceholderText = " Username"
         Me.txtUname.Size = New System.Drawing.Size(153, 23)
-        Me.txtUname.TabIndex = 50
+        Me.txtUname.TabIndex = 4
         '
         'Label2
         '
@@ -107,7 +107,7 @@ Partial Class AdminSettings
         Me.txtContactNo.Name = "txtContactNo"
         Me.txtContactNo.PlaceholderText = " Contact Number"
         Me.txtContactNo.Size = New System.Drawing.Size(153, 23)
-        Me.txtContactNo.TabIndex = 48
+        Me.txtContactNo.TabIndex = 5
         '
         'Label13
         '
@@ -125,7 +125,7 @@ Partial Class AdminSettings
         Me.txtMname.Name = "txtMname"
         Me.txtMname.PlaceholderText = " Middle Name"
         Me.txtMname.Size = New System.Drawing.Size(153, 23)
-        Me.txtMname.TabIndex = 46
+        Me.txtMname.TabIndex = 2
         '
         'txtFname
         '
@@ -133,7 +133,7 @@ Partial Class AdminSettings
         Me.txtFname.Name = "txtFname"
         Me.txtFname.PlaceholderText = " First Name"
         Me.txtFname.Size = New System.Drawing.Size(153, 23)
-        Me.txtFname.TabIndex = 45
+        Me.txtFname.TabIndex = 1
         '
         'Label1
         '
@@ -151,7 +151,7 @@ Partial Class AdminSettings
         Me.txtLname.Name = "txtLname"
         Me.txtLname.PlaceholderText = " Last Name"
         Me.txtLname.Size = New System.Drawing.Size(153, 23)
-        Me.txtLname.TabIndex = 43
+        Me.txtLname.TabIndex = 3
         '
         'Panel2
         '
