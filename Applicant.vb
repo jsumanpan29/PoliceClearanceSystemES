@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports AForge.Controls
 Imports System.Drawing.Imaging
+Imports MaterialSkin2Framework.Controls
 
 Public Class Applicant
     Friend applicant_id As Integer
@@ -34,78 +35,100 @@ Public Class Applicant
     '    command = Nothing
     'End Sub
     Private Sub btnConfirm_Click(sender As Object, e As EventArgs) Handles btnConfirm.Click
-        If applicant_id <> Nothing Then
-
-            'Insert UPDATE data codes Here
-            Try
-                connection.Open()
-                'UPDATE police SET fname = @fname, mname = @mname, lname = @lname, contact_no = @contactno, police_sig = @policesig, rank_id = @rankid, position_id = @positionid WHERE police_id =" & police_id
-                command = New SqlCommand("", connection)
-                command.CommandText = "UPDATE dbo.[applicant] SET [fname] = @fname, [mname] = @mname, [lname] = @lname, [zone_id] = @zone_id,[barangay_id] = @barangay_id,[cs_id] = @cs_id,[place_of_birth] = @place_of_birth,[date_of_birth] = @date_of_birth,[sex] = @sex,[height] = @height,[nationality] = @nationality,[contact_no] = @contact_no WHERE [applicant_id] = " & applicant_id
-                command.Parameters.Clear()
-                command.Parameters.AddWithValue("@fname", txtFname.Text.Trim)
-                command.Parameters.AddWithValue("@mname", txtMname.Text.Trim)
-                command.Parameters.AddWithValue("@lname", txtLname.Text.Trim)
-                command.Parameters.AddWithValue("@barangay_id", cbBarangay.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@zone_id", cbZone.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@cs_id", cbCivilStatus.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@place_of_birth", txtBirthPlace.Text.Trim)
-                command.Parameters.AddWithValue("@date_of_birth", dtBirthDate.Value.Date)
-                If rbMale.Checked = True Then
-                    bSex = male
-                ElseIf rbFemale.Checked = True Then
-                    bSex = female
-                Else
-                    bSex = 0
-                End If
-                command.Parameters.AddWithValue("@sex", bSex)
-                command.Parameters.AddWithValue("@height", txtHeight.Text.Trim)
-                command.Parameters.AddWithValue("@nationality", txtNationality.Text.Trim)
-                command.Parameters.AddWithValue("@contact_no", txtContactNo.Text.Trim)
-                command.ExecuteNonQuery()
-                connection.Close()
-                command = Nothing
-                Me.Dispose()
-            Catch ex As Exception
-                connection.Close()
-                MsgBox("Update Police Clearance error" & vbCrLf & String.Format("Error: {0}", ex.Message))
-            End Try
+        If String.IsNullOrEmpty(txtFname.Text) Then
+            ' Code to execute if txtFname.Text is empty or null
+            ' For example:
+            MaterialMessageBox.Show("Please enter a first name.", "Applicant", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, False)
+        ElseIf String.IsNullOrEmpty(txtMname.Text) Then
+            MaterialMessageBox.Show("Please enter a middle name.", "Applicant", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, False)
+        ElseIf String.IsNullOrEmpty(txtLname.Text) Then
+            MaterialMessageBox.Show("Please enter a last name.", "Applicant", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, False)
+        ElseIf String.IsNullOrEmpty(txtBirthPlace.Text) Then
+            MaterialMessageBox.Show("Please enter birth place.", "Applicant", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, False)
+        ElseIf String.IsNullOrEmpty(txtHeight.Text) Then
+            MaterialMessageBox.Show("Please enter height.", "Applicant", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, False)
+        ElseIf String.IsNullOrEmpty(txtNationality.Text) Then
+            MaterialMessageBox.Show("Please enter nationality.", "Applicant", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, False)
+        ElseIf String.IsNullOrEmpty(txtContactNo.Text) Then
+            MaterialMessageBox.Show("Please enter contact number.", "Applicant", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, False)
         Else
-            Try
-                'SqlData()
-                connection.Open()
-                command = New SqlCommand("", connection)
-                command.CommandText = "INSERT INTO dbo.[applicant]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[deleted]) VALUES(@fname,@mname,@lname,@zone_id,@barangay_id,@cs_id,@place_of_birth,@date_of_birth,@sex,@height,@nationality,@contact_no,0)"
-                command.Parameters.Clear()
-                command.Parameters.AddWithValue("@fname", txtFname.Text.Trim)
-                command.Parameters.AddWithValue("@mname", txtMname.Text.Trim)
-                command.Parameters.AddWithValue("@lname", txtLname.Text.Trim)
-                command.Parameters.AddWithValue("@barangay_id", cbBarangay.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@zone_id", cbZone.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@cs_id", cbCivilStatus.SelectedValue.ToString)
-                command.Parameters.AddWithValue("@place_of_birth", txtBirthPlace.Text.Trim)
-                command.Parameters.AddWithValue("@date_of_birth", dtBirthDate.Value.Date)
-                If rbMale.Checked = True Then
-                    bSex = male
-                ElseIf rbFemale.Checked = True Then
-                    bSex = female
-                Else
-                    bSex = 0
-                End If
-                command.Parameters.AddWithValue("@sex", bSex)
-                command.Parameters.AddWithValue("@height", txtHeight.Text.Trim)
-                command.Parameters.AddWithValue("@nationality", txtNationality.Text.Trim)
-                command.Parameters.AddWithValue("@contact_no", txtContactNo.Text.Trim)
-                command.ExecuteNonQuery()
-                connection.Close()
-                command = Nothing
-                'File.Copy(imgFileToUpload, fileSavePath, True)
-                Me.Dispose()
-            Catch ex As Exception
-                connection.Close()
-                MsgBox("Insert Police Clearance error" & vbCrLf & String.Format("Error: {0}", ex.Message))
-            End Try
+            If applicant_id <> Nothing Then
+
+                'Insert UPDATE data codes Here
+                Try
+                    connection.Open()
+                    'UPDATE police SET fname = @fname, mname = @mname, lname = @lname, contact_no = @contactno, police_sig = @policesig, rank_id = @rankid, position_id = @positionid WHERE police_id =" & police_id
+                    command = New SqlCommand("", connection)
+                    command.CommandText = "UPDATE dbo.[applicant] SET [fname] = @fname, [mname] = @mname, [lname] = @lname, [zone_id] = @zone_id,[barangay_id] = @barangay_id,[cs_id] = @cs_id,[place_of_birth] = @place_of_birth,[date_of_birth] = @date_of_birth,[sex] = @sex,[height] = @height,[nationality] = @nationality,[contact_no] = @contact_no WHERE [applicant_id] = " & applicant_id
+                    command.Parameters.Clear()
+                    command.Parameters.AddWithValue("@fname", txtFname.Text.Trim)
+                    command.Parameters.AddWithValue("@mname", txtMname.Text.Trim)
+                    command.Parameters.AddWithValue("@lname", txtLname.Text.Trim)
+                    command.Parameters.AddWithValue("@barangay_id", cbBarangay.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@zone_id", cbZone.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@cs_id", cbCivilStatus.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@place_of_birth", txtBirthPlace.Text.Trim)
+                    command.Parameters.AddWithValue("@date_of_birth", dtBirthDate.Value.Date)
+                    If rbMale.Checked = True Then
+                        bSex = male
+                    ElseIf rbFemale.Checked = True Then
+                        bSex = female
+                    Else
+                        bSex = 0
+                    End If
+                    command.Parameters.AddWithValue("@sex", bSex)
+                    command.Parameters.AddWithValue("@height", txtHeight.Text.Trim)
+                    command.Parameters.AddWithValue("@nationality", txtNationality.Text.Trim)
+                    command.Parameters.AddWithValue("@contact_no", txtContactNo.Text.Trim)
+                    command.ExecuteNonQuery()
+                    connection.Close()
+                    command = Nothing
+                    Me.Dispose()
+                Catch ex As Exception
+                    connection.Close()
+                    MsgBox("Update Police Clearance error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+                End Try
+            Else
+                Try
+                    'SqlData()
+                    connection.Open()
+                    command = New SqlCommand("", connection)
+                    command.CommandText = "INSERT INTO dbo.[applicant]([fname],[mname],[lname],[zone_id],[barangay_id],[cs_id],[place_of_birth],[date_of_birth],[sex],[height],[nationality],[contact_no],[deleted]) VALUES(@fname,@mname,@lname,@zone_id,@barangay_id,@cs_id,@place_of_birth,@date_of_birth,@sex,@height,@nationality,@contact_no,0)"
+                    command.Parameters.Clear()
+                    command.Parameters.AddWithValue("@fname", txtFname.Text.Trim)
+                    command.Parameters.AddWithValue("@mname", txtMname.Text.Trim)
+                    command.Parameters.AddWithValue("@lname", txtLname.Text.Trim)
+                    command.Parameters.AddWithValue("@barangay_id", cbBarangay.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@zone_id", cbZone.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@cs_id", cbCivilStatus.SelectedValue.ToString)
+                    command.Parameters.AddWithValue("@place_of_birth", txtBirthPlace.Text.Trim)
+                    command.Parameters.AddWithValue("@date_of_birth", dtBirthDate.Value.Date)
+                    If rbMale.Checked = True Then
+                        bSex = male
+                    ElseIf rbFemale.Checked = True Then
+                        bSex = female
+                    Else
+                        bSex = 0
+                    End If
+                    command.Parameters.AddWithValue("@sex", bSex)
+                    command.Parameters.AddWithValue("@height", txtHeight.Text.Trim)
+                    command.Parameters.AddWithValue("@nationality", txtNationality.Text.Trim)
+                    command.Parameters.AddWithValue("@contact_no", txtContactNo.Text.Trim)
+                    command.ExecuteNonQuery()
+                    connection.Close()
+                    command = Nothing
+                    'File.Copy(imgFileToUpload, fileSavePath, True)
+                    Me.Dispose()
+                Catch ex As Exception
+                    connection.Close()
+                    MsgBox("Insert Police Clearance error" & vbCrLf & String.Format("Error: {0}", ex.Message))
+                End Try
+            End If
         End If
+
+
+
+
     End Sub
 
     Private Sub PopulateComboboxZone()
@@ -206,5 +229,11 @@ Public Class Applicant
 
 
         If connection.State = ConnectionState.Open Then connection.Close()
+    End Sub
+
+    Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        If connection.State = ConnectionState.Open Then connection.Close()
+        Me.Dispose()
+
     End Sub
 End Class
